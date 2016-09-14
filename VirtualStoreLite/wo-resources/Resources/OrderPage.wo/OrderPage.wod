@@ -1,0 +1,23 @@
+
+Form2: WOForm { }
+Repetition1: WORepetition { 
+	list = session.shoppingCart;
+	item = detailOrder;
+}
+
+String1: WOString {
+	value = detailOrderProduct;
+}
+String2: WOString {
+	value = detailOrderQuantity;
+}
+SubmitButton1: WOSubmitButton {
+	action = validate;
+	name = "VALIDATE";
+	value = "Validate";
+}
+TextField1: WOTextField {
+	name = "NAME";
+	size = 30;
+	value = username;
+}

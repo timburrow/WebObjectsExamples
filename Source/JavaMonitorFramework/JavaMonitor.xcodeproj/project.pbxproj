@@ -1,0 +1,117 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXFileReference section */
+		886FEE5605D9BD280091015F /* build.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
+		8892C864061E18790047113C /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dist; sourceTree = "<group>"; };
+		EB1F04E80B4D0B5100A89370 /* build-properties.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "build-properties.xml"; sourceTree = "<group>"; };
+		EB7179080AF6E60900FDF176 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		EB71790A0AF6E60900FDF176 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		EB71790D0AF6E60900FDF176 /* wo-resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "wo-resources"; sourceTree = "<group>"; };
+		EBD500F20AAE02B4001F3D83 /* doc */ = {isa = PBXFileReference; lastKnownFileType = folder; name = doc; path = "/Library/Application Support/Apple/Developer Tools/Project Templates/WebObjects Ant/WebObjects Ant Framework/doc"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		88230FFA05D9926E00FE8D22 = {
+			isa = PBXGroup;
+			children = (
+				886FEE5605D9BD280091015F /* build.xml */,
+				EB1F04E80B4D0B5100A89370 /* build-properties.xml */,
+				EB71790A0AF6E60900FDF176 /* src */,
+				EB71790D0AF6E60900FDF176 /* wo-resources */,
+				EB7179080AF6E60900FDF176 /* lib */,
+				EBD500F20AAE02B4001F3D83 /* doc */,
+				8892C864061E18790047113C /* dist */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		8823100505D9929B00FE8D22 /* JavaMonitor */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-emacs $(ACTION)";
+			buildConfigurationList = 0AA805D408BBAA4C008E12F1 /* Build configuration list for PBXLegacyTarget "JavaMonitor" */;
+			buildPhases = (
+			);
+			buildToolPath = /Developer/Java/Ant/bin/ant;
+			dependencies = (
+			);
+			name = JavaMonitor;
+			passBuildSettingsInEnvironment = 1;
+			productName = JavaMonitor;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		88230FFE05D9926E00FE8D22 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 0AA805D808BBAA4C008E12F1 /* Build configuration list for PBXProject "JavaMonitor" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 88230FFA05D9926E00FE8D22;
+			projectDirPath = "";
+			targets = (
+				8823100505D9929B00FE8D22 /* JavaMonitor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		0AA805D508BBAA4C008E12F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				PRODUCT_NAME = JavaMonitor;
+			};
+			name = Debug;
+		};
+		0AA805D608BBAA4C008E12F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				PRODUCT_NAME = JavaMonitor;
+			};
+			name = Release;
+		};
+		0AA805D908BBAA4C008E12F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		0AA805DA08BBAA4C008E12F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AA805D408BBAA4C008E12F1 /* Build configuration list for PBXLegacyTarget "JavaMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA805D508BBAA4C008E12F1 /* Debug */,
+				0AA805D608BBAA4C008E12F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA805D808BBAA4C008E12F1 /* Build configuration list for PBXProject "JavaMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA805D908BBAA4C008E12F1 /* Debug */,
+				0AA805DA08BBAA4C008E12F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88230FFE05D9926E00FE8D22 /* Project object */;
+}

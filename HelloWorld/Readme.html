@@ -1,0 +1,35 @@
+<HTML>
+	<HEAD>
+		<TITLE>Hello World</TITLE>
+	</HEAD>
+	<BODY BGCOLOR=#FFFFFF>
+	<P ALIGN=CENTER><FONT SIZE+2><B>HelloWorld</B></FONT></P>
+	<B>Difficulty Level:</B> Beginner<P><B>Topics Covered:</B> Page Navigation/Key-value coding
+		use/Localization</P>
+	<P ALIGN=LEFT><B>Framework Classes Used:</B></P>
+	<P ALIGN=LEFT><B>Reference Sites:</B></P>
+	<P ALIGN=LEFT><B>Overview:</B></P>
+	The Hello World application is a simple application that asks you to enter your name. Then it
+	displays a personalized message. It's a good example of how to dynamically generate HTML with
+	user input.
+	<P ALIGN=LEFT><B>Usage:</B></P>
+	Start the application using project builder . The application then will try to open a browser
+	window with the proper URL and so it will establish a connection to the application.
+	<P ALIGN=LEFT><B>Description:</B></P>
+	<P ALIGN=LEFT>The Main component is specified by a template file (Main.html), a declarations
+		file (Main.wod), and a java class (defined in Main.java). When a request is made for the
+		Main page, WebObjects finds (or instantiates) an object of the Main class, which in turn
+		uses the template and declarations file to determine the HTML representation to send to the
+		browser. When the user interacts with the page and then submits it, the Main object's
+		sayHello method is invoked, creating the next page.<BR>
+		The Hello component is similar in design to the Main component, being specified by a
+		template file (Hello.html), a declarations file (Hello.wod), and an java object (defined in
+		Hello.java). It's function is to display a page containing the name passed in from the Main
+		page. It is interesting to observe that the communication between components is being done
+		by using &nbsp;key-value coding to pass information between objects without having to
+		implement accessor methods<BR>
+		<BR>
+		Finally, the example shows how to localize a WebObjects application. HelloWorld supports
+		English, French, Spanish, German, and Japanese. Change your browser's languages preferences
+		to view the different languages.</P></BODY>
+</HTML>

@@ -1,0 +1,30 @@
+ 
+CurrentLabel: WOString {
+    value = getLabel;
+}
+
+CurrentSelectionString: WOString {
+    value = selectedItem;
+}
+
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXNestedList";
+}
+
+NestedList: WXNestedList {
+    list = application.list;
+    item = currentItem;
+    index = currentIndex;
+    level = currentLevel;
+    sublist = getSublist;
+    action = nestedListClicked;
+    isOrdered = isOrderedList;
+}
+
+NewImage: WXImage {
+    filename = "New.gif";
+}
+
+NewImageConditional: WOConditional {
+    condition = getIsNew;
+}

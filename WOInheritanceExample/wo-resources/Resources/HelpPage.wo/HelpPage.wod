@@ -1,0 +1,40 @@
+CollapsibleComponentContent1: WOCollapsibleComponentContent {
+	closedLabel = "Show Overview";
+	condition = 1;
+	openedLabel = "Hide Overview";
+}
+
+Image1: WOImage {
+	filename = "EntityDiagram.jpg";
+	framework = "app";
+	width = 627;
+	height = 415;
+}
+
+Image2: WOImage {
+	filename = "EntityRelationships.jpg";
+	framework = "app";
+	width = 632;
+	height = 426;
+}
+
+Image3: WOImage {
+	filename = "VerticalSchema.jpg";
+	framework = "app";
+	width = 634;
+	height = 440;
+}
+
+Image4: WOImage {
+	filename = "HorizontalSchema.jpg";
+	framework = "app";
+	width = 652;
+	height = 432;
+}
+
+Image5: WOImage {
+	filename = "SingleTableSchema.jpg";
+	framework = "app";
+	width = 658;
+	height = 326;
+}

@@ -1,0 +1,70 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = USER_DEFAULTS;
+           externalType = object;
+           name = userDefaults;
+           valueClassName = NSString;
+           valueType = E;
+       }, 
+       
+       {
+           columnName = USER_DEFAULTS_ID;
+           externalType = integer;
+           name = userDefaultsID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = USER_ID;
+           externalType = integer;
+           name = userID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       userDefaults, 
+       userDefaultsID, 
+       userID
+    );
+    className = EOGenericRecord;
+    classProperties = 
+    (
+       user, 
+       userDefaults
+    );
+    externalName = USER_DEFAULTS;
+    internalInfo = 
+    {};
+    name = UserDefaults;
+    primaryKeyAttributes = 
+    (
+       userDefaultsID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = User;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = userID;
+                  sourceAttribute = userID;
+              }
+           );
+           name = user;
+       }
+    );
+}

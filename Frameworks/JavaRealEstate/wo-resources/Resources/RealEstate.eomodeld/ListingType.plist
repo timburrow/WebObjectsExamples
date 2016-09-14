@@ -1,0 +1,77 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = LISTING_TYPE;
+           externalType = char;
+           internalInfo = 
+           {
+               _nameInObjectStore = PROPERTY_TYPE;
+           };
+           name = listingType;
+           valueClassName = NSString;
+           valueType = c;
+           width = 40;
+       }, 
+       
+       {
+           columnName = LISTING_TYPE_ID;
+           externalType = integer;
+           internalInfo = 
+           {
+               _nameInObjectStore = PROPERTY_TYPE_ID;
+           };
+           name = listingTypeID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       listingType, 
+       listingTypeID
+    );
+    className = EOGenericRecord;
+    classProperties = 
+    (
+       listingType
+    );
+    externalName = LISTING_TYPE;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           listingType
+        );
+        _nameInObjectStore = PROPERTY_TYPE;
+    };
+    name = ListingType;
+    primaryKeyAttributes = 
+    (
+       listingTypeID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Listing;
+           internalInfo = 
+           {
+               _nameInObjectStore = properties;
+           };
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = listingTypeID;
+                  sourceAttribute = listingTypeID;
+              }
+           );
+           name = listings;
+       }
+    );
+}

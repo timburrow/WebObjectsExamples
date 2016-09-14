@@ -1,0 +1,49 @@
+ChooseAgentLink: WOHyperlink {
+	action = chooseAgentAction;
+}
+
+HomeLink: WOHyperlink {
+	action = homeAction;
+}
+
+IfShowAdministratorOptions: WOConditional {
+	condition = session.userHasAdministrationPrivileges;
+}
+
+IfShowChooseAgentOption: WOConditional {
+	condition = session.customer;
+}
+IfShowGeneralUserOptions: WOConditional {
+	condition = session.userLoggedIn;
+	negate = true;
+}
+
+IfShowRegisteredUserOptions: WOConditional {
+	condition = session.userLoggedIn;
+}
+
+LogOutLink: WOHyperlink {
+	action = logoutAction;
+}
+
+MainLink: WOHyperlink {
+	action = mainAction;
+}
+
+NewAgentLink: WOHyperlink {
+	action = newAgent;
+}
+
+NewPropertyLink: WOHyperlink {
+	action = newListingAction;
+}
+
+PersonalInformationLink: WOHyperlink {
+	action = editUserAction;
+}
+
+SearchLink: WOHyperlink {
+	action = searchAction;
+}
+
+

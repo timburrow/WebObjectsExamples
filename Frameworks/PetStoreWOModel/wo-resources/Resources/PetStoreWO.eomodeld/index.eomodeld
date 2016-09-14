@@ -1,0 +1,88 @@
+
+{
+    EOModelVersion = 2.1;
+    adaptorName = JDBC;
+    connectionDictionary = 
+    {
+        password = "";
+        URL = jdbc:derby:petstore;
+        username = "";
+        driver = org.apache.derby.jdbc.EmbeddedDriver;
+        plugin = "";
+    };
+    entities = 
+    (
+       
+       {
+           className = Account;
+           name = Account;
+       }, 
+       
+       {
+           className = Category;
+           name = Category;
+       }, 
+       
+       {
+           className = Inventory;
+           name = Inventory;
+       }, 
+       
+       {
+           className = Item;
+           name = Item;
+       }, 
+       
+       {
+           className = LineItem;
+           name = LineItem;
+       }, 
+       
+       {
+           className = Order;
+           name = Order;
+       }, 
+       
+       {
+           className = OrderStatus;
+           name = OrderStatus;
+       }, 
+       
+       {
+           className = Product;
+           name = Product;
+       }, 
+       
+       {
+           className = Profile;
+           name = Profile;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = Supplier;
+       }
+    );
+    userInfo = 
+    {
+        _EntityModeler = 
+        {
+            activeDatabaseConfigName = Default;
+            databaseConfigs = 
+            {
+                Default = 
+                {
+                    adaptorName = JDBC;
+                    connectionDictionary = 
+                    {
+                        password = "";
+                        URL = jdbc:derby:petstore;
+                        username = "";
+                        driver = org.apache.derby.jdbc.EmbeddedDriver;
+                        plugin = "";
+                    };
+                };
+            };
+        };
+    };
+}

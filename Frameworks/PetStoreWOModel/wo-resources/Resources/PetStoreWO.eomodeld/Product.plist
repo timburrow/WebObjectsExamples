@@ -1,0 +1,111 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = CATEGORY;
+           externalType = char;
+           name = catid;
+           valueClassName = NSString;
+           valueType = c;
+           width = 10;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = DESCN;
+           externalType = varchar;
+           name = descn;
+           valueClassName = NSString;
+           valueType = S;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = NAME;
+           externalType = char;
+           name = name;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           columnName = PRODUCTID;
+           externalType = char;
+           name = productid;
+           valueClassName = NSString;
+           valueType = c;
+           width = 10;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       catid, 
+       descn, 
+       name, 
+       productid
+    );
+    cachesObjects = Y;
+    className = Product;
+    classProperties = 
+    (
+       category, 
+       catid, 
+       descn, 
+       items, 
+       name, 
+       productid
+    );
+    externalName = PRODUCT;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           category, 
+           descn, 
+           name
+        );
+    };
+    isReadOnly = Y;
+    name = Product;
+    primaryKeyAttributes = 
+    (
+       productid
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Category;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = catid;
+                  sourceAttribute = catid;
+              }
+           );
+           name = category;
+       }, 
+       
+       {
+           destination = Item;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = productid;
+                  sourceAttribute = productid;
+              }
+           );
+           name = items;
+       }
+    );
+}

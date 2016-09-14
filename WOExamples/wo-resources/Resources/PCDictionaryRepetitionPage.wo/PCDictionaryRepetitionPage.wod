@@ -1,0 +1,18 @@
+ 
+DictionaryRepetition: WODictionaryRepetition {
+    dictionary = dictionary;
+    key = currentKey;
+    item = currentItem;
+}
+
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WODictionaryRepetition";
+}
+
+KeyString: WOString {
+    value = currentKey;
+}
+
+ValueString: WOString {
+    value = currentItem;
+}

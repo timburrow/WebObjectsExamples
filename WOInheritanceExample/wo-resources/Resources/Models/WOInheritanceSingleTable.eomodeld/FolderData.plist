@@ -1,0 +1,43 @@
+{
+    attributes = (
+        {
+            columnName = data_id; 
+            externalType = integer; 
+            name = dataId; 
+            precision = 10; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = folder_id; 
+            externalType = integer; 
+            name = folderId; 
+            precision = 10; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (dataId, folderId); 
+    className = EOGenericRecord; 
+    externalName = Folder_Data; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_clientClassPropertyNames = (); }; 
+    name = FolderData; 
+    primaryKeyAttributes = (folderId, dataId); 
+    relationships = (
+        {
+            destination = Creature; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = creatureId; sourceAttribute = dataId; }); 
+            name = creature; 
+        }, 
+        {
+            destination = Folder; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = folderId; sourceAttribute = folderId; }); 
+            name = folder; 
+        }
+    ); 
+}

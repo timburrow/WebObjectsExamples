@@ -1,0 +1,47 @@
+BackToMain: WOHyperlink {
+    pageName = "Main";
+    string = "[Back to Main]";
+}
+BodyTag: WOExampleBody {
+    leftmargin=0;
+    topmargin=0;
+}
+
+DataImage: WOImage {
+    data = aFileContents;
+    mimeType = "image/gif";
+}
+
+DataString: WOText {
+    value = aFileContents;
+    rows = 10;
+    cols = 50;
+    escapeHTML = "YES";
+}
+
+FileName: WOString {
+    value = aFileName;
+}
+
+Footer: WOExampleFooter {}
+
+Form1: WOForm {
+    enctype = "multipart/form-data";
+    multipleSubmit = false;
+}
+
+ShowImage: WOConditional {
+    condition = hasUploadData;
+}
+
+SubmitButton1: WOSubmitButton {
+    action = submitClicked;
+    value = "Click here when done";
+}
+
+Upload1: WOFileUpload {
+    inputStream = is;
+    filePath = aFileName;
+    size = "20";
+    mimeType = aMimeType;
+}

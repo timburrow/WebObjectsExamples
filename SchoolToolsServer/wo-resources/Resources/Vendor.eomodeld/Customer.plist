@@ -1,0 +1,90 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = ADDRESS; 
+            externalType = char; 
+            name = address; 
+            valueClassName = NSString;
+            valueType = c; 
+            width = 30; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = CITY; 
+            externalType = char; 
+            name = city; 
+            valueClassName = NSString;
+            valueType = c;  
+            width = 30; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = CUSTOMER_ID; 
+            externalType = char; 
+            name = customerID; 
+            valueClassName = NSString; 
+            valueType = c;  
+            width = 30; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = CUSTOMER_NAME; 
+            externalType = char; 
+            name = customerName; 
+            valueClassName = NSString;
+            valueType = c;   
+            width = 50; 
+        }, 
+        {
+            columnName = OID; 
+            externalType = integer; 
+            name = oid; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = STATE; 
+            externalType = char; 
+            name = state; 
+            valueClassName = NSString;
+            valueType = c;   
+            width = 30; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = ZIP4; 
+            externalType = char; 
+            name = zip4; 
+            valueClassName = NSString;
+            valueType = c;   
+            width = 4; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = ZIPCODE; 
+            externalType = char; 
+            name = zipcode; 
+            valueClassName = NSString;
+            valueType = c;   
+            width = 5; 
+        }
+    ); 
+    attributesUsedForLocking = (customerID, oid, address, city, state, zipcode, zip4, customerName); 
+    className = webobjectsexamples.SchoolTools.Customer; 
+    classProperties = (customerID, address, city, state, zipcode, zip4, toOrders, customerName); 
+    externalName = CUSTOMER; 
+    fetchSpecificationDictionary = {}; 
+    name = Customer; 
+    primaryKeyAttributes = (oid); 
+    relationships = (
+        {
+            destination = Order; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = oidCustomer; sourceAttribute = oid; }); 
+            name = toOrders; 
+        }
+    ); 
+}

@@ -1,0 +1,27 @@
+ 
+CheckBoxList: WXCheckBoxList {
+    list = application.list;
+    item = currentItem;
+    index = currentIndex;
+    selections = checkBoxListSelections;
+}
+
+CheckBoxListForm: WXForm {
+    action = checkBoxListSubmitted;
+}
+
+CurrentIndexString: WOString {
+    value = currentIndex;
+}
+
+CurrentLabel: WOString {
+    value = getLabel;
+}
+
+CurrentSelectionsString: WOString {
+    value = checkBoxListSelections;
+}
+
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXCheckBoxList";
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd"><html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+	<title>Readme for XMLInteroperate</title>
+</head>
+<body>
+	<p align=center><font size="+2"><b>XMLInteroperate</b></font></p>
+	<b>Difficult Level:</b> Medium
+	
+	<p><b>Topics Covered:</b></p>
+	<ul>
+	  <li>XML serialization (using NSXMLOutputStream and WOXMLDecoder)</li>
+	  <li>XSLT transformation</li>
+	</ul>
+		
+	<p align=left><b>Important Framework Classes Used:</b></p>
+	<ul>
+	  <li>com.webobjects.foundation.xml.NSXMLOutputStream</li>
+	  <li>com.webobjects.appserver.xml.WOXMLDecoder</li>
+	</ul>
+		
+	<p align=left><b>Reference Sites:</b>
+		<a href="http://www.w3.org/TR/xslt">XSL Transformations</a>,
+		XSLT <a href="http://www.w3schools.com/xsl">tutorial</a></p>
+
+	<p align=left><b>Overview:</b></p>
+	<p>This example simulates a client/server backend system that communicates using XML.</p>
+ 
+	<p align=left><b>Usage:</b></p>
+	<ul>
+	  <li>Ensure that OpenBase has started the WORealEstate database.</li>
+	  <li>Start the application using Project Builder . The application will then open a browser	window with the proper URL and it will establish a connection to the application. Click on the "latest price" button and experiment with it.</li>
+	</ul>
+	
+	<p align=left><b>Description:</b></p>
+	<p>This example simulates a client/server backend system that communicates using XML (at least the request is). The client is this project, which is an WO application that allows an user to ask for the latest price for a property. The client contacts an property exchange to find out the real-time fluctuating price of the property. It sends the exchange an XML description of the property.</p>
+
+	<p>For the sake of this example, the client can only be written using WebObjects 5.2 (or above). Thus, this project uses NSXMLOutputStream to serialize out the property object as XML. The exchange was created a little while back using WebObjects 5 and thus uses WOXMLDecoder to decode XML data. Hence, this project has to use XSLT to transform the XML from one format to another, thereby illustrating the versatility of XSLT.</p>
+
+	<p>To avoid the client/server complexity, this example fakes the exchange and does everything in the project. Keep that in mind to avoid confusion.</p>
+
+	<p>To help you understand the project better, we actually put comments in the class file. So make sure that you open the project and read the comments. We also comment a little on the transformation stylesheet (TransformKey.xsl) but you should consult a good book/website to learn more. As well, you will notice that during the execution of the program, you will see the pre-transformation XML in the console and the post-transformation XML at the bottom of the browser. Enjoy!</p>
+</body>
+</html>

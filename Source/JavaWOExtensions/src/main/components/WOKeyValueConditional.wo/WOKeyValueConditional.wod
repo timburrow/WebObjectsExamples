@@ -1,0 +1,8 @@
+Conditional: WOConditional {
+	condition = condition;
+	negate = negate;
+}
+
+Content: WOComponentContent {
+	_unroll = true;
+}

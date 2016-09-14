@@ -1,0 +1,14 @@
+BodyContainer: WOExampleBody {}
+
+ExampleName: WOHyperlink {
+    string = currentComponentTitle;
+    action = componentTitleClicked;
+	target = "ExampleFrame";
+}
+
+ExamplesOrderedList: WORepetition {
+    list = sortedComponentTitles;
+    item = currentComponentTitle;
+}
+
+

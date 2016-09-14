@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+    <TITLE>ThinkMovies Example README</TITLE>
+</HTML>
+
+<BODY>
+<P>
+    <CENTER>
+    <FONT size+2><B>ThinkMovies</B></FONT>
+    </CENTER>
+</P>
+<P>
+<B>Difficulty Level:</B> Beginner
+</P>
+<P>
+<B>Topics Covered:</B> WebObjects, EOF
+</P>
+<P>
+<B>Overview: </B>
+<BR>
+The ThinkMovies application allows you to search and browse the contents of the example Movies database, which is supplied with WebObjects.  This application is implemented in Java and uses Direct Actions.  Direct Actions enable bookmarkable URLs and session-less applications that do not require clients to be bound to a session, and hence be bound to a particular instance of a WebObjects application.  Another feature of the application is the ability to add reviews/ratings of the Movies, providing the essence of a "public poll" on the quality and popularity of each movie.</P>
+<P>
+<B>Usage: </B>
+<BR>
+ThinkMovies' eomodel is configured to work with the JDBC adaptor and the OpenBase  database. The 'ToolbarComponent' is on every page and allows you to navigate to the different areas/pages of the application.  The 'MasterIndex' is an open-ended search of the entire Movies database and provides a WODisplayGroup-based interface for browsing through the database.</P>
+<P>
+<B>Description:</B>
+<BR>
+ThinkMovies is implemented entirely using Direct Actions; it does not use the WOSession class to store state.  Each page transition invokes a Direct Action and all of the "state" is built based on information in the URL and form values.  This allows the URLs to be bookmarkable and the client requests to be load-balanced to different instances on subsequent requests (when more than one instance is running).  Since a Direct Action does not have a session, any EOEditingContext used in the Direct Action needs be locked to ensure thread safety.  For more information about locking editing contexts see the <b>lock</b> and <b>unlock</b> methods on EOEditingContext (in the EOControl framework).</P>
+<P>
+A typical ThinkMovies page deals with a Movie as its main object of
+interest. Since we need a simple way to identify and restore a Movie,
+we use the primary key, <b>movieID</b> (represented as an integer in
+the database).  The <b>movieID</b> is encoded in the URL for the new
+page, and the convenience method
+<b>EOUtilities.objectWithPrimaryKeyValue</b> is called to recreate the
+desired object, if necessary, for a new page.  (See the methods
+<b>lookupMovieIDFromRequest</b> and <b>lookupByID</b> in
+DirectAction.java.)  Reviews are handled similarly by looking up the
+<b>reviewID</b>.
+</P>
+</BODY>
+</HTML>    

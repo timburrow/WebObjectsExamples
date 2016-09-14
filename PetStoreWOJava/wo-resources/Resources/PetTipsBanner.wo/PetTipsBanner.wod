@@ -1,0 +1,4 @@
+Image1: WOImage {
+	filename = imageFile;
+	mimeType = "image/gif";
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wodefinitions>
+	<wo class="FolderViewComponent" wocomponentcontent="false">
+
+		<binding name="parentFolder"/>
+		<binding name="currentLevelString"/>
+		<binding name="levelIncrementString"/>
+		<binding name="selectedFolder"/>
+		<binding name="editName"/>
+
+		<validation message="&apos;parentFolder&apos; is a required binding">
+			<unbound name="parentFolder"/>
+		</validation>
+
+		<validation message="&apos;currentLevelString&apos; is a required binding">
+			<unbound name="currentLevelString"/>
+		</validation>
+
+		<validation message="&apos;levelIncrementString&apos; is a required binding">
+			<unbound name="levelIncrementString"/>
+		</validation>
+
+		<validation message="&apos;selectedFolder&apos; must be bound to a settable value">
+			<unsettable name="selectedFolder"/>
+		</validation>
+
+		<validation message="&apos;editName&apos; must be bound to a settable value">
+			<unsettable name="editName"/>
+		</validation>
+	</wo>
+</wodefinitions>

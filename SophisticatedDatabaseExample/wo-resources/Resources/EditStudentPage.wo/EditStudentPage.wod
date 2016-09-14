@@ -1,0 +1,89 @@
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+Hyperlink1: WOHyperlink {
+	action = mainPage;
+}
+
+Hyperlink2: WOHyperlink {
+	action = administrationPage;
+}
+
+Hyperlink3: WOHyperlink {
+	action = selectStudent;
+}
+
+Repetition1: WORepetition {
+	item = selectedStudent;
+	list = students;
+}
+
+String1: WOString {
+	value = selectedStudent.login;
+}
+
+String2: WOString {
+	value = selectedStudent.lastName;
+}
+
+String3: WOString {
+	value = selectedStudent.firstName;
+}
+
+String4: WOString {
+	value = selectedStudent.password;
+}
+
+TextField1: WOTextField {
+	value = student.firstName;
+}
+
+TextField10: WOTextField {
+	value = homeAddress.emailAddress;
+}
+
+TextField2: WOTextField {
+	value = student.lastName;
+}
+
+TextField3: WOTextField {
+	value = homeAddress.street;
+}
+
+TextField4: WOTextField {
+	value = homeAddress.city;
+}
+
+TextField5: WOTextField {
+	value = homeAddress.state;
+}
+
+TextField6: WOTextField {
+	value = homeAddress.zip;
+}
+
+TextField7: WOTextField {
+	value = student.dateOfBirth;
+	dateformat = "%m/%d/%y";
+}
+
+TextField8: WOTextField {
+	value = student.login;
+}
+
+TextField9: WOTextField {
+	value = student.password;
+}
+
+UpdateActiveImage: WOImageButton {
+	action = deleteStudent;
+	filename = "DBWizardDelete.gif";
+	framework = "app";
+}
+
+UpdateActiveImage2: WOImageButton {
+	action = saveChanges;
+	filename = "DBWizardUpdate.gif";
+}

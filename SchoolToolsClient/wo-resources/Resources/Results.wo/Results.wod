@@ -1,0 +1,45 @@
+Conditional1: WOConditional {
+	condition = getStatus;
+}
+
+Conditional2: WOConditional {
+	condition = getStatus;
+	negate = true;
+}
+
+Image1: WOImage {
+	border = 0;
+	filename = "ac_img_diversity.jpg";
+	framework = "app";
+	width = 180;
+	height = 131;
+}
+
+Image2: WOImage {
+	filename = "Wakefield.jpg";
+	framework = "app";
+	width = 603;
+	height = 41;
+}
+ 
+PageWrapper: ToolsPageWrapper {
+    pageTitle = "Step 4";
+}
+
+StepFourImage: WOImage {
+    filename = "school_tools_four.jpg";
+    width = 20;
+    height = 30;
+}
+
+String1: WOString {
+	value = session.firstName;
+}
+
+String2: WOString {
+	value = getConfirmationNumber;
+}
+
+String4: WOString {
+	value = session.firstName;
+}

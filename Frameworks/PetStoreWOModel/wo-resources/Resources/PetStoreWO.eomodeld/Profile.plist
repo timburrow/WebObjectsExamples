@@ -1,0 +1,86 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = BANNEROPT;
+           externalType = int;
+           name = banneropt;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = FAVCATEGORY;
+           externalType = char;
+           name = favcategory;
+           valueClassName = NSString;
+           valueType = c;
+           width = 30;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = LANGPREF;
+           externalType = char;
+           name = langpref;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = MYLISTOPT;
+           externalType = int;
+           name = mylistopt;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = USERID;
+           externalType = char;
+           name = userID;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       banneropt, 
+       favcategory, 
+       langpref, 
+       mylistopt, 
+       userID
+    );
+    className = Profile;
+    classProperties = 
+    (
+       banneropt, 
+       favcategory, 
+       langpref, 
+       mylistopt, 
+       userID
+    );
+    externalName = PROFILE;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           banneropt, 
+           favcategory, 
+           langpref, 
+           mylistopt
+        );
+    };
+    name = Profile;
+    primaryKeyAttributes = 
+    (
+       userID
+    );
+}

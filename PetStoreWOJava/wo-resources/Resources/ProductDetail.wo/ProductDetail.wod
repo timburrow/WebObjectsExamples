@@ -1,0 +1,56 @@
+ActiveImage1: WOActiveImage {
+	action = addToShoppingCart;
+	filename = "button_cart-add.gif";
+	framework = "app";
+        key = "10";
+	mimeType = "image/gif";
+}
+
+Conditional1: WOConditional {
+	condition = item.inStock;
+}
+
+Form1: WOForm {
+}
+
+Image1: WOImage {
+	filename = item.product.imageName;
+	framework = "app";
+	key = item.product.imageName;
+	mimeType = "image/gif";
+}
+
+PageBack1: PageBack {
+}
+
+String1: WOString {
+	value = item.attr1;
+}
+
+String2: WOString {
+	escapeHTML = false;
+	value = item.product.description;
+}
+
+String3: WOString {
+	numberformat = "$#,##0.00";
+	value = item.listPrice;
+}
+
+String4: WOString {
+	value = item.inventory.qty;
+}
+
+String5: WOString {
+	value = item.product.name;
+}
+
+Template1: Template {
+}
+
+TextField1: WOTextField {
+	maxlength = 4;
+	size = 3;
+	value = qty;
+	numberformat = "0";
+}

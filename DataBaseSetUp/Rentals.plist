@@ -1,0 +1,357 @@
+{
+    CreditCard = {
+        attributeNames = (
+            authorizationDate, 
+            authorizationNum, 
+            cardNumber, 
+            customerID, 
+            expirationDate, 
+            limit
+        ); 
+        rows = (
+            ("Jan 24 1996 21:57", 1111, 1111000011110000, 1, "Jan 24 1997 00:00", 150), 
+            ("Jan 24 1996 22:01", 2222, 2222000022220000, 2, "Oct 24 1996 00:00", 150), 
+            ("Jan 24 1996 22:05", 4444, 4444000044440000, 4, "Feb 16 1998 00:00", 150), 
+            ("Jan 24 1996 22:03", 3333, 3333000033330000, 5, "Jan 01 1998 00:00", 150), 
+            ("Jan 24 1996 22:07", 5555, 5555000055550000, 6, "Aug 12 1996 00:00", 150), 
+            ("Jan 24 1996 22:07", 5555, 5555000055550000, 15, "Aug 12 1996 00:00", 150), 
+            ("Jan 24 1996 22:08", 6666, 6666000066660000, 7, "Jul 11 1996 00:00", 150), 
+            ("Jan 24 1996 22:08", 6666, 6666000066660000, 16, "Jul 11 1996 00:00", 150), 
+            ("Jan 24 1996 22:10", 7777, 7777000077770000, 8, "Mar 04 1998 00:00", 150), 
+            ("Jan 24 1996 22:12", 8888, 8888000088880000, 9, "Jun 03 1997 00:00", 150), 
+            ("Jan 24 1996 22:13", 9999, 9999000099990000, 10, "Jan 24 1999 00:00", 150), 
+            ("Jan 24 1996 22:15", 0011, 0000111100001111, 11, "Jan 03 1997 00:00", 150), 
+            ("Jan 24 1996 22:18", 0033, 0000333300003333, 13, "Jan 12 2001 12:00", 150), 
+            ("Jan 24 1996 22:19", 0044, 4444000044440000, 14, "Nov 05 1999 00:00", 150), 
+            ("Jan 24 1996 22:24", 0077, 7777000077770000, 17, "May 20 1999 00:00", 150)
+        ); 
+    }; 
+    Customer = {
+        attributeNames = (
+            city, 
+            customerID, 
+            firstName, 
+            lastName, 
+            memberSince, 
+            phone, 
+            state, 
+            streetAddress, 
+            zip
+        ); 
+        rows = (
+            (
+                "San Francisco", 
+                1, 
+                William, 
+                Anthony, 
+                "Jan 24 1996 21:55", 
+                4155552525, 
+                CA, 
+                "200 Arroyo Drive", 
+                94567
+            ), 
+            (
+                "Menlo Park", 
+                2, 
+                Joanne, 
+                Boyles, 
+                "Jan 24 1996 22:00", 
+                4155553636, 
+                CA, 
+                "29 Timber Creek Drive", 
+                93211
+            ), 
+            (
+                "San Bruno", 
+                5, 
+                Mark, 
+                Capra, 
+                "Jan 24 1996 22:02", 
+                4155558787, 
+                CA, 
+                "2777 North Capitol #26", 
+                98564
+            ), 
+            (
+                "San Francisco", 
+                4, 
+                Jerry, 
+                Drummber, 
+                "Jan 24 1996 22:04", 
+                4155558989, 
+                CA, 
+                "59 Fowler St.", 
+                96857
+            ), 
+            (
+                "San Francisco", 
+                7, 
+                Freddy, 
+                Filmore, 
+                "Jan 24 1996 22:07", 
+                4155552426, 
+                CA, 
+                "39 Geary St.", 
+                96321
+            ), 
+            (
+                "San Bruno", 
+                6, 
+                Maria, 
+                Eyler, 
+                "Jan 24 1996 22:06", 
+                4155557171, 
+                CA, 
+                "150 Saratoga St.", 
+                99874
+            ), 
+            (
+                Woodside, 
+                8, 
+                Jamie, 
+                Grace, 
+                "Jan 24 1996 22:09", 
+                4155556687, 
+                CA, 
+                "555 Custer Ave.", 
+                97485
+            ), 
+            (
+                "San Mateo", 
+                9, 
+                Craig, 
+                Hartnell, 
+                "Jan 24 1996 22:11", 
+                4155559817, 
+                CA, 
+                "67 Lazy River Way", 
+                91586
+            ), 
+            (
+                Hillsborough, 
+                10, 
+                Richard, 
+                Ingle, 
+                "Jan 24 1996 22:12", 
+                4155557428, 
+                CA, 
+                "356 Sedgewood", 
+                96487
+            ), 
+            (
+                "San Francisco", 
+                11, 
+                Julia, 
+                Jeffers, 
+                "Jan 24 1996 22:14", 
+                4155558875, 
+                CA, 
+                "260 Forbes Lane", 
+                98612
+            ), 
+            (
+                "San Mateo", 
+                13, 
+                Franklin, 
+                Lewis, 
+                "Jan 24 1996 22:17", 
+                4155556644, 
+                CA, 
+                "44 Desertwood Circle", 
+                97578
+            ), 
+            (
+                "Palo Alto", 
+                14, 
+                Lisa, 
+                Mathews, 
+                "Jan 24 1996 22:18", 
+                4155554849, 
+                CA, 
+                "1 Main Street", 
+                94848
+            ), 
+            (
+                "San Francisco", 
+                15, 
+                Elliot, 
+                Nunez, 
+                "Jan 24 1996 22:20", 
+                4155552581, 
+                CA, 
+                "100 Union St.", 
+                98787
+            ), 
+            (
+                Woodside, 
+                16, 
+                Paul, 
+                Peters, 
+                "Jan 24 1996 22:22", 
+                4155554789, 
+                CA, 
+                "685 Almaden Road", 
+                98758
+            ), 
+            (
+                "Menlo Park", 
+                17, 
+                Linda, 
+                Stark, 
+                "Jan 24 1996 22:23", 
+                4155553374, 
+                CA, 
+                "108 Melrose Ave", 
+                93588
+            )
+        ); 
+    }; 
+    Fee = {
+        attributeNames = (amount, datePaid, feeID, feeTypeID, rentalID); 
+        rows = (
+            (14.99, "Jan 22 1996 18:28", 4, 1, 4), 
+            (2.99, "Jan 24 1996 19:08", 5, 1, 5), 
+            (4.99, "Jan 24 1996 19:08", 6, 1, 6), 
+            (2.99, "Jan 24 1996 19:08", 7, 1, 7), 
+            (4.99, "Jan 24 1996 23:39", 8, 1, 8)
+        ); 
+    }; 
+    FeeType = {
+        attributeNames = (enabled, feeType, feeTypeID, orderBy); 
+        rows = ((1, Rent, 1, 1), (1, Late, 2, 2)); 
+    }; 
+    Rental = {
+        attributeNames = (customerID, dateOut, dateReturned, rentalID, unitID); 
+        rows = (
+            (9, "Jan 31 1997 18:26", __NULL__, 4, 3), 
+            (2, "Feb 18 1997 19:08", __NULL__, 7, 110), 
+            (2, "Feb 14 1997 19:07", __NULL__, 5, 115), 
+            (2, "Feb 17 1997 19:07", __NULL__, 6, 43), 
+            (7, "Jan 24 1997 23:39", __NULL__, 8, 46)
+        ); 
+    }; 
+    RentalTerms = {
+        attributeNames = (checkOutLength, cost, depositAmount, name, rentalTermsID); 
+        rows = (
+            (2, 3.99, 20, "New release", 1), 
+            (2, 14.99, 200, "16 Bits game console", 10), 
+            (3, 4.99, 50, "Video games", 11), 
+            (5, 2.99, 20, Economy, 13), 
+            (3, 19.99, 300, "32 Bits game console", 14)
+        ); 
+    }; 
+    Unit = {
+        attributeNames = (dateAcquired, notes, unitID, videoID); 
+        rows = (
+            ("Jan 05 1996 12:00", __NULL__, 3, 1), 
+            ("Jan 05 1996 12:00", __NULL__, 43, 1), 
+            ("Jan 05 1996 12:00", __NULL__, 46, 1), 
+            ("Jan 05 1996 12:00", __NULL__, 28, 1), 
+            ("Jan 05 1996 12:00", __NULL__, 29, 1), 
+            ("Jan 05 1996 12:00", __NULL__, 26, 1), 
+            ("Jan 05 1996 12:00", __NULL__, 35, 7), 
+            ("Jan 05 1996 12:00", __NULL__, 36, 7), 
+            ("Jan 05 1996 12:00", __NULL__, 37, 8), 
+            ("Jan 06 1995 12:00", __NULL__, 47, 14), 
+            ("Jan 10 1996 22:48", __NULL__, 88, 14), 
+            ("Jan 06 1990 12:00", __NULL__, 48, 15), 
+            ("Jan 06 1991 12:00", __NULL__, 50, 16), 
+            ("Jan 06 1992 12:00", __NULL__, 49, 16), 
+            ("Jan 06 1982 12:00", __NULL__, 54, 17), 
+            ("Jan 06 1982 12:00", __NULL__, 52, 17), 
+            ("Jan 06 1995 12:00", __NULL__, 53, 18), 
+            ("Jan 06 1994 12:00", __NULL__, 51, 18), 
+            ("Jan 06 1991 12:00", __NULL__, 57, 19), 
+            ("Jan 06 1991 12:00", __NULL__, 56, 19), 
+            ("Jan 06 1991 12:00", __NULL__, 55, 19), 
+            ("Jan 06 1981 12:00", __NULL__, 61, 20), 
+            ("Jan 06 1981 12:00", __NULL__, 60, 20), 
+            ("Jan 06 1981 12:00", __NULL__, 58, 20), 
+            ("Jan 06 1981 12:00", __NULL__, 59, 20), 
+            ("Jan 06 1989 12:00", __NULL__, 62, 21), 
+            ("Jan 06 1979 12:00", __NULL__, 63, 24), 
+            ("Jan 15 1996 13:22", __NULL__, 121, 24), 
+            ("Jan 17 1996 13:46", __NULL__, 124, 24), 
+            ("Jan 20 1996 16:35", __NULL__, 125, 24), 
+            ("Jan 08 1996 18:47", __NULL__, 82, 32), 
+            ("Jan 08 1996 18:47", __NULL__, 83, 32), 
+            ("Jan 08 1996 18:47", __NULL__, 81, 32), 
+            ("Jan 10 1996 22:53", __NULL__, 91, 35), 
+            ("Jan 10 1996 22:53", __NULL__, 90, 35), 
+            ("Jan 11 1996 01:29", "slightly warped", 94, 43), 
+            ("Jan 11 1996 01:29", __NULL__, 97, 43), 
+            ("Jan 11 1996 01:32", "needs to be replaced", 92, 44), 
+            ("Jan 11 1996 01:33", __NULL__, 96, 41), 
+            ("Jan 11 1996 01:31", __NULL__, 95, 39), 
+            ("Jan 11 1996 01:30", __NULL__, 99, 40), 
+            ("Jan 11 1996 01:25", __NULL__, 93, 38), 
+            ("Jan 11 1996 01:39", __NULL__, 109, 54), 
+            ("Jan 11 1996 01:39", "needs to be cleaned", 106, 54), 
+            ("Jan 11 1996 01:39", __NULL__, 107, 54), 
+            ("Jan 11 1996 01:39", __NULL__, 101, 54), 
+            ("Jan 11 1996 01:43", __NULL__, 115, 51), 
+            ("Jan 11 1996 01:43", __NULL__, 112, 51), 
+            ("Jan 11 1996 01:35", __NULL__, 108, 53), 
+            ("Jan 11 1996 01:41", "needs to be replaced", 104, 50), 
+            ("Jan 11 1996 01:38", __NULL__, 118, 49), 
+            ("Jan 11 1996 01:38", __NULL__, 114, 49), 
+            ("Jan 11 1996 01:38", "cover is stained", 105, 49), 
+            ("Jan 11 1996 01:38", __NULL__, 103, 49), 
+            ("Jan 11 1996 01:38", __NULL__, 102, 49), 
+            ("Jan 11 1996 01:40", __NULL__, 100, 48), 
+            ("Jan 11 1996 01:40", "slightly damaged", 113, 47), 
+            ("Jan 11 1996 01:40", __NULL__, 110, 47), 
+            ("Jan 11 1996 01:37", "needs to be cleaned", 117, 45), 
+            ("Jan 12 1996 23:04", "torn cover", 119, 55), 
+            ("Jan 12 1996 23:04", __NULL__, 120, 55), 
+            ("Jan 15 1996 19:09", __NULL__, 123, 64), 
+            ("Jan 15 1996 19:09", __NULL__, 122, 64)
+        ); 
+    }; 
+    User = {
+        attributeNames = (accessLevel, customerID, password, userID, username); 
+        rows = (
+            (1, __NULL__, admin, 1, admin), 
+            (2, __NULL__, bob, 2, bob), 
+            (2, __NULL__, alice, 3, alice), 
+            (3, 10, ringle, 4, ringle), 
+            (3, 2, jboyles, 5, jboyles), 
+            (3, 17, lstark, 6, lstark)
+        ); 
+    }; 
+    Video = {
+        attributeNames = (movieID, rentalTermsID, videoID); 
+        rows = (
+            (121, 13, 1), 
+            (120, 13, 7), 
+            (118, 13, 8), 
+            (158, 1, 14), 
+            (128, 13, 15), 
+            (131, 13, 16), 
+            (115, 13, 17), 
+            (132, 13, 18), 
+            (142, 13, 19), 
+            (198, 13, 20), 
+            (144, 13, 21), 
+            (159, 13, 24), 
+            (102, 1, 32), 
+            (114, 13, 35), 
+            (146, 13, 43), 
+            (175, 1, 44), 
+            (171, 13, 41), 
+            (186, 13, 39), 
+            (190, 13, 40), 
+            (179, 13, 38), 
+            (169, 1, 54), 
+            (180, 13, 51), 
+            (203, 13, 53), 
+            (162, 13, 50), 
+            (164, 1, 49), 
+            (185, 13, 48), 
+            (187, 13, 47), 
+            (188, 13, 45), 
+            (135, 13, 55), 
+            (111, 1, 64)
+        ); 
+    }; 
+}

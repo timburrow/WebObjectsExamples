@@ -1,0 +1,330 @@
+<!--
+  -- Main.html
+  -- [FileUpload Project]
+  --
+   -- Copyright:  Copyright 2001-2007 Apple, Inc. All rights reserved.
+  --
+  -- Disclaimer:
+  --      IMPORTANT:  This Apple software is supplied to you by Apple Computer, Inc.
+  --      ("Apple") in consideration of your agreement to the following terms, and your
+  --      use, installation, modification or redistribution of this Apple software
+  --      constitutes acceptance of these terms.  If you do not agree with these terms,
+  --      please do not use, install, modify or redistribute this Apple software.
+  --
+  --      In consideration of your agreement to abide by the following terms, and subject
+  --      to these terms, Apple grants you a personal, non-exclusive license, under AppleUs
+  --      copyrights in this original Apple software (the "Apple Software"), to use,
+  --      reproduce, modify and redistribute the Apple Software, with or without
+  --      modifications, in source and/or binary forms; provided that if you redistribute
+  --      the Apple Software in its entirety and without modifications, you must retain
+  --      this notice and the following text and disclaimers in all such redistributions of
+  --      the Apple Software.  Neither the name, trademarks, service marks or logos of
+  --      Apple Computer, Inc. may be used to endorse or promote products derived from the
+  --      Apple Software without specific prior written permission from Apple.  Except as
+  --      expressly stated in this notice, no other rights or licenses, express or implied,
+  --      are granted by Apple herein, including but not limited to any patent rights that
+  --      may be infringed by your derivative works or by other works in which the Apple
+  --      Software may be incorporated.
+  --
+  --      The Apple Software is provided by Apple on an "AS IS" basis.  APPLE MAKES NO
+  --      WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED
+  --      WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+  --      PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN
+  --      COMBINATION WITH YOUR PRODUCTS.
+  --
+  --      IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR
+  --      CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+  --      GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  --      ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION
+  --      OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT
+  --      (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN
+  --      ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+--> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+	<HEAD>
+		<META NAME="generator" CONTENT="WebObjects 5.0">
+		<TITLE>FileUpload : Main</TITLE>
+	</HEAD>
+	<WEBOBJECT NAME=BodyTag>
+			<CENTER>
+				<P>
+				<TABLE BORDER=0 CELLPADDING=5 CELLSPACING=10 WIDTH="90%">
+					<TR>
+						<TD COLSPAN=3 ALIGN=LEFT VALIGN=TOP>
+							<WEBOBJECT NAME=TitleImage></WEBOBJECT>
+						</TD>
+					</TR>
+					<TR>
+						<TD ALIGN=LEFT VALIGN=TOP WIDTH="50%">
+							<P>
+							<FONT FACE="Geneva, Arial" SIZE=1>
+								This example application demonstrates the creation and use
+								of WOFileUpload elements, allowing you to transport files from
+								client machines to your application server (and the application,
+								if required).  This example will demonstrate many uploading
+								methods, from the basic use (with both direct and component actions)
+								to multiple file uploads on a single page, streaming or not.
+								<BR><BR>
+								There are also some additional pages demonstrating the use of the 
+								various streaming options for both raw uploading and raw downloading 
+								of data.
+								<BR><BR>
+								For demonstration purposes, several pages of the application are set to
+								render images that are uploaded to the application. Attempting to display 
+								the uploaded files as images, requires reading them into memory. Thus, 
+								only the 'Component File to File Upload', 'Multiple Component File to File 
+								Upload in Form' and 'Direct Action Iterator Upload' examples may be used 
+								to upload arbitrarily large files. Note that the 'Direct Action Streaming 
+								Download' and 'Direct Action Request Content Streaming Upload' examples can be 
+								used with arbitrarily large files as well.	
+								<BR><BR>
+								Since the images are not part of the demo, the uploads will be
+								placed in a temporary folder (<WEBOBJECTS NAME=TempDir></WEBOBJECTS>) rather than in the project folder.
+							</FONT>
+							</P>								
+						</TD>
+					
+						<TD ALIGN=LEFT VALIGN=TOP WIDTH="5">&nbsp;</TD>
+					
+						<TD ALIGN=LEFT VALIGN=TOP WIDTH="45%">
+							<TABLE WIDTH="100%">
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Component Data Upload</B><BR>
+											File upload using a component action with the 'data' binding.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME=BasicUpload>
+											<WEBOBJECT NAME= ArrowButton ></WEBOBJECT>
+										</WEBOBJECT>
+									</TD>
+								</TR>
+								
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Multiple Component Data Upload</B><BR>
+											Uploading multiple files on one page using component actions with 'data' bindings.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME=MultipleUpload>
+											<WEBOBJECT NAME= ArrowButton ></WEBOBJECT>
+										</WEBOBJECT>
+									</TD>
+								</TR>
+								
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Component Data Upload in Form</B><BR>
+											Uploading files using a component action with the 'data' binding while updating other form values as well.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME=FormElementsUpload><WEBOBJECT NAME= ArrowButton ></WEBOBJECT></WEBOBJECT>
+									</TD>
+								</TR>
+
+								
+							    <TR><TD><BR><HR></TD></TR>
+
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Component OutputStream Upload</B><BR>
+											File upload using the 'outputStream' binding.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME=BasicUploadOS>
+											<WEBOBJECT NAME= ArrowButton ></WEBOBJECT>
+										</WEBOBJECT>
+									</TD>
+								</TR>
+								
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Multiple Component OutputStream Upload</B><BR>
+											Uploading multiple files on one page, using component actions with the 'outputStream' binding.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME=MultipleUploadOS>
+											<WEBOBJECT NAME= ArrowButton ></WEBOBJECT>
+										</WEBOBJECT>
+									</TD>
+								</TR>
+								
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+										    <B>Multiple Component OutputStream Upload in Form</B><BR>
+											Uploading multiple files on one page, using component actions with the 'outputStream' binding while updating other form values, with several submit buttons.</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME= MultipleUploadOSForm ><WEBOBJECT NAME= ArrowButton ></WEBOBJECT></WEBOBJECT>
+									</TD>
+								</TR>
+
+							    <TR><TD><BR><HR></TD></TR>
+
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Component InputStream Upload</B><BR>
+											File upload using a component action with the 'inputStream' binding.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME= BasicUploadIS >
+											<WEBOBJECT NAME= ArrowButton ></WEBOBJECT>
+										</WEBOBJECT>
+									</TD>
+								</TR>
+								
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Component InputStream Upload in Form</B><BR>
+											File upload using a component action using component actions with the 'inputStream' binding while updating other form values.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME= UploadISForm ><WEBOBJECT NAME= ArrowButton ></WEBOBJECT></WEBOBJECT>
+									</TD>
+								</TR>
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Bad Component InputStream Upload in Form</B><BR>
+											Intentionally Broken file upload using a component action using component actions with the 'inputStream' binding while updating other form values.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME= BadUploadISForm ><WEBOBJECT NAME= ArrowButton ></WEBOBJECT></WEBOBJECT>
+									</TD>
+								</TR>
+
+							    <TR><TD><BR><HR></TD></TR>
+
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1><B>Component File to File Upload</B><BR>
+										File upload using component action and 'streamToFilePath' binding.</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME= BasicUploadSTFP ><WEBOBJECT NAME= ArrowButton ></WEBOBJECT></WEBOBJECT>
+									</TD>
+								</TR>
+								
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1><B>Multiple Component File to File Upload in Form</B><BR>
+										Uploading multiple files on one page, using component actions with the 'streamToFilePath' binding while updating other form values, with several submit buttons.</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME= MultipleUploadSTFPForm ><WEBOBJECT NAME= ArrowButton ></WEBOBJECT></WEBOBJECT>
+									</TD>
+								</TR>
+
+							    <TR><TD><BR><HR></TD></TR>
+
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Direct Action Data Upload</B><BR>
+											File upload using a Direct Action and NSData.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME=DAUploadData>
+											<WEBOBJECT NAME= ArrowButton ></WEBOBJECT>
+										</WEBOBJECT>
+									</TD>
+								</TR>
+
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Direct Action Iterator Upload</B><BR>
+											File upload using a Direct Action and WOMultipartIterator.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME=DAUploadIterator>
+											<WEBOBJECT NAME= ArrowButton ></WEBOBJECT>
+										</WEBOBJECT>
+									</TD>
+								</TR>
+
+							    <TR><TD><BR><HR></TD></TR>
+
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Direct Action Streaming Download</B><BR>
+											File download using a Direct Action.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME=DADownload>
+											<WEBOBJECT NAME= ArrowButton ></WEBOBJECT>
+										</WEBOBJECT>
+									</TD>
+								</TR>
+
+								<TR><TD COLSPAN=2><FONT FACE="Geneva, Arial" SIZE=1>&nbsp;</FONT></TD></TR>
+								
+								<TR>
+									<TD ALIGN=LEFT VALIGN=CENTER>
+										<FONT FACE="Geneva, Arial" SIZE=1>
+											<B>Direct Action Request Content Streaming Upload</B><BR>
+											Getting the entire request content as an InputStream.
+										</FONT>
+									</TD>
+									<TD ALIGN=CENTER VALIGN=CENTER>
+										<WEBOBJECT NAME=DARequestContent>
+											<WEBOBJECT NAME= ArrowButton ></WEBOBJECT>
+										</WEBOBJECT>
+									</TD>
+								</TR>
+
+							</TABLE>
+						</TD>
+
+					</TR>
+				</TABLE>
+			</CENTER>		
+			<WEBOBJECT NAME=Footer></WEBOBJECT>
+	</WEBOBJECT>
+</HTML>

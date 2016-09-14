@@ -1,0 +1,123 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = folder_id;
+           externalType = integer;
+           name = folderId;
+           precision = 10;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = name;
+           externalType = char;
+           name = name;
+           valueClassName = NSString;
+           valueType = c;
+           width = 50;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = parent_node_id;
+           externalType = integer;
+           name = parentNodeId;
+           precision = 10;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       folderId, 
+       name, 
+       parentNodeId
+    );
+    className = Folder;
+    classProperties = 
+    (
+       children, 
+       creatures, 
+       name, 
+       parent
+    );
+    externalName = Folder;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           children, 
+           creatures, 
+           name, 
+           parent
+        );
+    };
+    name = Folder;
+    primaryKeyAttributes = 
+    (
+       folderId
+    );
+    relationships = 
+    (
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = Folder;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = parentNodeId;
+                  sourceAttribute = folderId;
+              }
+           );
+           name = children;
+           ownsDestination = Y;
+       }, 
+       
+       {
+           definition = folderDatas.creature;
+           name = creatures;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = FolderData;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = folderId;
+                  sourceAttribute = folderId;
+              }
+           );
+           name = folderDatas;
+           ownsDestination = Y;
+           propagatesPrimaryKey = Y;
+       }, 
+       
+       {
+           destination = Folder;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = folderId;
+                  sourceAttribute = parentNodeId;
+              }
+           );
+           name = parent;
+       }
+    );
+}

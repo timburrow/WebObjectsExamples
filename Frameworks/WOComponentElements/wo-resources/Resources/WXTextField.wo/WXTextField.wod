@@ -1,0 +1,8 @@
+ 
+TextField: WOGenericElement {
+    elementName = "input";
+    type = "text";
+    name = context.elementID;
+    value = ^value;
+    formValue = ^value;
+}

@@ -1,0 +1,112 @@
+
+{
+    SearchListing = 
+    {
+        class = EOFetchSpecification;
+        entityName = Listing;
+        fetchLimit = 0;
+        isDeep = YES;
+        qualifier = 
+        {
+            class = EOAndQualifier;
+            qualifiers = 
+            (
+               
+               {
+                   class = EOOrQualifier;
+                   qualifiers = 
+                   (
+                      
+                      {
+                          class = EOKeyValueQualifier;
+                          key = address.state;
+                          selectorName = isEqualTo:;
+                          value = 
+                          {
+                              _key = state;
+                              class = EOQualifierVariable;
+                          };
+                      }, 
+                      
+                      {
+                          class = EOKeyValueQualifier;
+                          key = address.zip;
+                          selectorName = isEqualTo:;
+                          value = 
+                          {
+                              _key = zip;
+                              class = EOQualifierVariable;
+                          };
+                      }
+                   );
+               }, 
+               
+               {
+                   class = EOKeyValueQualifier;
+                   key = address.city;
+                   selectorName = isEqualTo:;
+                   value = 
+                   {
+                       _key = city;
+                       class = EOQualifierVariable;
+                   };
+               }, 
+               
+               {
+                   class = EOKeyValueQualifier;
+                   key = address.street;
+                   selectorName = isEqualTo:;
+                   value = 
+                   {
+                       _key = street;
+                       class = EOQualifierVariable;
+                   };
+               }, 
+               
+               {
+                   class = EOKeyValueQualifier;
+                   key = askingPrice;
+                   selectorName = isGreaterThanOrEqualTo:;
+                   value = 
+                   {
+                       _key = lowerLimitPrice;
+                       class = EOQualifierVariable;
+                   };
+               }, 
+               
+               {
+                   class = EOKeyValueQualifier;
+                   key = askingPrice;
+                   selectorName = isLessThanOrEqualTo:;
+                   value = 
+                   {
+                       _key = upperLimitPrice;
+                       class = EOQualifierVariable;
+                   };
+               }, 
+               
+               {
+                   class = EOKeyValueQualifier;
+                   key = bedrooms;
+                   selectorName = isGreaterThanOrEqualTo:;
+                   value = 
+                   {
+                       _key = bedrooms;
+                       class = EOQualifierVariable;
+                   };
+               }, 
+               
+               {
+                   class = EOKeyValueQualifier;
+                   key = bathrooms;
+                   selectorName = isGreaterThanOrEqualTo:;
+                   value = 
+                   {
+                       _key = bathrooms;
+                       class = EOQualifierVariable;
+                   };
+               }
+            );
+        };
+    };
+}

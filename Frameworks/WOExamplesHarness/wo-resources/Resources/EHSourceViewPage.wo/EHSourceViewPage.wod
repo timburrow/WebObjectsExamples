@@ -1,0 +1,13 @@
+ 
+BodyContainer: WOGenericContainer {
+    elementName = "body";
+    bgcolor = "#FFFFFF";
+}
+
+ComponentNameString: WOString {
+    value = componentName;
+}
+
+SourceView: EHSourceView {
+    componentName = componentName;
+}

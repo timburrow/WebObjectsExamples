@@ -1,0 +1,125 @@
+
+{
+    EOModelVersion = 2.1;
+    adaptorName = JDBC;
+    connectionDictionary = 
+    {
+        URL = jdbc:derby:vertical;
+        driver = org.apache.derby.jdbc.EmbeddedDriver;
+        password = "";
+        plugin = "";
+        username = "";
+    };
+    entities = 
+    (
+       
+       {
+           className = Adult;
+           name = Adult;
+           parent = Person;
+       }, 
+       
+       {
+           className = Animal;
+           name = Animal;
+           parent = Creature;
+       }, 
+       
+       {
+           className = Bear;
+           name = Bear;
+           parent = Wild;
+       }, 
+       
+       {
+           className = Cat;
+           name = Cat;
+           parent = Domesticated;
+       }, 
+       
+       {
+           className = Child;
+           name = Child;
+           parent = Person;
+       }, 
+       
+       {
+           className = Cow;
+           name = Cow;
+           parent = Domesticated;
+       }, 
+       
+       {
+           className = Creature;
+           name = Creature;
+       }, 
+       
+       {
+           className = Dog;
+           name = Dog;
+           parent = Domesticated;
+       }, 
+       
+       {
+           className = Domesticated;
+           name = Domesticated;
+           parent = Animal;
+       }, 
+       
+       {
+           className = Folder;
+           name = Folder;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = FolderData;
+       }, 
+       
+       {
+           className = Horse;
+           name = Horse;
+           parent = Domesticated;
+       }, 
+       
+       {
+           className = Lion;
+           name = Lion;
+           parent = Wild;
+       }, 
+       
+       {
+           className = Person;
+           name = Person;
+           parent = Creature;
+       }, 
+       
+       {
+           className = Wild;
+           name = Wild;
+           parent = Animal;
+       }
+    );
+    userInfo = 
+    {
+        _EntityModeler = 
+        {
+            activeDatabaseConfigName = Default;
+            databaseConfigs = 
+            {
+                Default = 
+                {
+                    adaptorName = JDBC;
+                    connectionDictionary = 
+                    {
+                        password = "";
+                        URL = jdbc:derby:vertical;
+                        username = "";
+                        driver = org.apache.derby.jdbc.EmbeddedDriver;
+                        plugin = "";
+                    };
+                };
+            };
+        };
+    };
+}

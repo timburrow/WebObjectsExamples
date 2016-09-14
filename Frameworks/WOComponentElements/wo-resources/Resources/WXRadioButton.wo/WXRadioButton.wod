@@ -1,0 +1,10 @@
+ 
+
+RadioButtonElement: WOGenericElement {
+    elementName = "input";
+    type = "radio";
+    value = "1";
+    name = context.elementID;
+    formValue = ^checked;
+    otherTagString = isChecked;
+}

@@ -1,0 +1,15 @@
+ 
+ActionTest: WXHyperlink {
+    action = hyperlinkClicked;
+}
+
+ClickCountString: WOString {
+    value = clickCount;
+}
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXHyperlink";
+}
+
+PageNameTest: WXHyperlink {
+    pageName = "WOStatsPage";
+}

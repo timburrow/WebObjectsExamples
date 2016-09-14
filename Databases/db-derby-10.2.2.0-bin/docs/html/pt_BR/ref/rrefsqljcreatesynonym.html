@@ -1,0 +1,122 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br" xml:lang="pt-br">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="reference" name="DC.Type" />
+<meta name="DC.Title" content="Instru????o CREATE SYNONYM" />
+<meta content="Instru????o CREATE SYNONYM, Sin??nimos, cria????o" name="DC.subject" />
+<meta content="Instru????o CREATE SYNONYM, Sin??nimos, cria????o" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj95081.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefcreatefunctionstatement.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj20937.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefcreateprocedurestatement.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj31580.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj24513.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj43125.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj15446.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="rrefsqljcreatesynonym" name="DC.Identifier" />
+<meta content="pt-br" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/pt_BR/reftemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>Instru????o CREATE SYNONYM</title>
+</head>
+<body id="rrefsqljcreatesynonym"><a name="rrefsqljcreatesynonym"><!-- --></a>
+
+
+<h1 class="topictitle1">Instru????o CREATE SYNONYM</h1>
+
+
+<div>
+<div class="section">
+<p>A instru????o CREATE SYNONYM ?? utilizada para fornecer um nome alternativo para
+uma tabela ou vis??o presente no mesmo esquema ou em outro esquema.
+Tamb??m podem ser criados sin??nimos para outros sin??nimos, resultando em
+sin??nimos aninhados.
+O sin??nimo pode ser utilizado no lugar do nome qualificado original da tabela ou
+da vis??o, nas instru????es SELECT, INSERT, UPDATE, DELETE e LOCK TABLE.
+Pode ser criado um sin??nimo para uma tabela ou uma vis??o que n??o existe, mas a
+tabela ou vis??o de destino dever?? existir antes do sin??nimo poder ser utilizado.</p>
+
+<p>Os sin??nimos compartilham o mesmo espa??o de nomes das tabelas e vis??es.
+N??o pode ser criado um sin??nimo com o mesmo nome de uma tabela que j?? existe no
+mesmo esquema.
+De maneira semelhante, n??o pode ser criada uma tabela ou vis??o com nome
+correspondente a um sin??nimo j?? existente.</p>
+
+<p>O sin??nimo pode ser definido para uma tabela ou vis??o que n??o existe quando o
+sin??nimo ?? criado.
+Se a tabela ou vis??o n??o existir, ser?? recebida uma mensagem de advert??ncia
+(SQLState  01522).
+O objeto referenciado dever?? existir quando o sin??nimo for utilizado em uma
+instru????o da DML.</p>
+
+<p>Pode ser criado sin??nimo aninhado (um sin??nimo para outro sin??nimo), mas
+qualquer tentativa de criar um sin??nimo que resulte em uma refer??ncia circular
+retorna uma mensagem de erro (SQLState 42916).</p>
+
+<p>N??o podem ser definidos sin??nimos nos esquemas do sistema. Todos os esquemas
+come??ando por 'SYS' s??o considerados esquemas do sistema, e s??o reservados pelo
+<span>Derby</span>.</p>
+
+<p>N??o pode ser definido um sin??nimo para uma tabela tempor??ria. A tentativa de
+definir um sin??nimo para uma tabela tempor??ria retorna uma mensagem de erro
+(SQLState XCL51).</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Sintaxe</h4>
+
+<pre><strong>CREATE SYNONYM <a href="rrefsynonymname.html#rrefsynonymname">nome-do-sin??nimo</a> FOR { <a href="rrefviewname.html#rrefviewname">nome-da-vis??o</a> | <a href="rreftablename.html#rreftablename">nome-da-tabela</a> }</strong>
+</pre>
+Na instru????o,
+<a href="rrefsynonymname.html#rrefsynonymname">nome-do-sin??nimo</a>
+representa o nome do sin??nimo sendo atribu??do ?? tabela ou vis??o de destino,
+enquanto
+<a href="rrefviewname.html#rrefviewname">nome-da-vis??o</a> e
+<a href="rreftablename.html#rreftablename">nome-da-tabela</a> representam
+o nome original da tabela ou vis??o de destino.</div>
+
+<div class="example"><h4 class="sectiontitle">Exemplo</h4>
+CREATE SYNONYM SAMP.T1 FOR SAMP.TABELA_COM_NOME_COMPRIDO</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>T??pico pai:</strong> <a href="crefsqlj95081.html" title="">Instru????es CREATE</a></div>
+</div>
+<div class="relref"><strong>Refer??ncias relacionadas</strong><br />
+<div><a href="rrefcreatefunctionstatement.html" title="A instru????o CREATE FUNCTION permite criar fun????es Java que podem ser utilizadas em express??es.">Instru????o CREATE FUNCTION</a></div>
+<div><a href="rrefsqlj20937.html" title="">Instru????o CREATE INDEX</a></div>
+<div><a href="rrefcreateprocedurestatement.html" title="">Instru????o CREATE PROCEDURE</a></div>
+<div><a href="rrefsqlj31580.html" title="">Instru????o CREATE SCHEMA</a></div>
+<div><a href="rrefsqlj24513.html" title="">Instru????o CREATE TABLE</a></div>
+<div><a href="rrefsqlj43125.html" title="">Instru????o CREATE TRIGGER</a></div>
+<div><a href="rrefsqlj15446.html" title="">Instru????o CREATE VIEW</a></div>
+</div>
+</div>
+
+</body>
+</html>

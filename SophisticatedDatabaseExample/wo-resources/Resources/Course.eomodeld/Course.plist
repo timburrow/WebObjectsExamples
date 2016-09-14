@@ -1,0 +1,82 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = COURSE_ID;
+           externalType = integer;
+           name = courseID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = DETAILS;
+           externalType = char;
+           name = details;
+           valueClassName = NSString;
+           width = 256;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = NAME;
+           externalType = char;
+           name = name;
+           valueClassName = NSString;
+           width = 32;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SHORT_DESCRIPTION;
+           externalType = char;
+           name = shortDescription;
+           valueClassName = NSString;
+           width = 64;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       courseID, 
+       details, 
+       name, 
+       shortDescription
+    );
+    className = webobjectsexamples.sophisticateddatabaseexample.Course;
+    classProperties = 
+    (
+       details, 
+       name, 
+       scheduledclasss, 
+       shortDescription
+    );
+    externalName = COURSE;
+    internalInfo = 
+    {};
+    name = Course;
+    primaryKeyAttributes = 
+    (
+       courseID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = ScheduledClass;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = courseID;
+                  sourceAttribute = courseID;
+              }
+           );
+           name = scheduledclasss;
+       }
+    );
+}

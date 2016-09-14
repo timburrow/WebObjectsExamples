@@ -1,0 +1,12 @@
+ 
+CollapsibleNestedListEntry: WXCollapsibleNestedListEntry {
+    item = ^item;
+    sublist = ^sublist;
+}
+
+Content: WOComponentContent {}
+
+Repetition: WORepetition {
+    list = ^list;
+    item = ^item;
+}

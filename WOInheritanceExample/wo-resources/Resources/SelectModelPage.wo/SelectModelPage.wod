@@ -1,0 +1,26 @@
+ 
+Form1: WOForm {
+}
+
+RadioButton1: WORadioButton {
+	value = "Vertical";
+	selection = selectedModelType;
+	name = "group";
+}
+
+RadioButton2: WORadioButton {
+	name = "group";
+	value = "Horizontal";
+	selection = selectedModelType;
+}
+
+RadioButton3: WORadioButton {
+	name = "group";
+	value = "SingleTable";
+	selection = selectedModelType;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = selectModel;
+	value = "Select Model";
+}

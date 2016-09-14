@@ -1,0 +1,120 @@
+ActiveImage1: WOActiveImage {
+	action = saveChanges;
+	filename = "button_submit.gif";
+	framework = "app";
+}
+
+CheckBox1: WOCheckBox {
+	checked = account.profile.mylistopt;
+}
+
+CheckBox2: WOCheckBox {
+	checked = account.profile.banneropt;
+}
+
+Conditional1: WOConditional {
+	condition = invalid;
+}
+
+Conditional2: WOConditional {
+	condition = invalid;
+	negate = true;
+}
+
+Conditional3: WOConditional {
+	condition = isLoggedIn;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = isLoggedIn;
+	negate = true;
+}
+
+Conditional5: WOConditional {
+	condition = isLoggedIn;
+}
+
+Form1: WOForm {
+	multipleSubmit = false;
+}
+
+Hyperlink1: WOHyperlink {
+	action = tryAgain;
+}
+
+PageBack1: PageBack {
+}
+
+PopUpButton2: WOPopUpButton {
+	list = states;
+	selection = account.state;
+}
+
+PopUpButton3: WOPopUpButton {
+	list = countries;
+	selection = account.country;
+}
+
+PopUpButton4: WOPopUpButton {
+	list = languages;
+	selection = account.profile.langpref;
+}
+
+PopUpButton5: WOPopUpButton {
+	list = categories;
+	noSelectionString = "Any";
+	selection = account.profile.favcategory;
+}
+
+String1: WOString {
+	value = account.userID;
+}
+
+String2: WOString {
+	value = invalidErrorMessage;
+}
+
+Template1: Template {
+}
+
+TextField1: WOTextField {
+	value = account.addr2;
+}
+
+TextField10: WOTextField {
+	value = account.phone;
+}
+
+TextField2: WOPasswordField {
+	value = account.password;
+}
+
+TextField3: WOTextField {
+	value = account.email;
+}
+
+TextField4: WOTextField {
+	value = account.userID;
+}
+
+TextField5: WOTextField {
+	value = account.city;
+}
+
+TextField6: WOTextField {
+	value = account.addr1;
+}
+
+TextField7: WOTextField {
+	value = account.lastname;
+}
+
+TextField8: WOTextField {
+	value = account.firstname;
+}
+
+TextField9: WOTextField {
+	value = account.zip;
+}
+

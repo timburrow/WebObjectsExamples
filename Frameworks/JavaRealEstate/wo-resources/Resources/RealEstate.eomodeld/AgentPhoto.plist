@@ -1,0 +1,65 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = AGENT_ID;
+           externalType = integer;
+           name = agentID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = PHOTO;
+           externalType = blob;
+           name = photo;
+           valueClassName = NSData;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       agentID
+    );
+    className = EOGenericRecord;
+    classProperties = 
+    (
+       agent, 
+       photo
+    );
+    externalName = AGENT_PHOTO;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           agent, 
+           photo
+        );
+    };
+    name = AgentPhoto;
+    primaryKeyAttributes = 
+    (
+       agentID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Agent;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = userID;
+                  sourceAttribute = agentID;
+              }
+           );
+           name = agent;
+       }
+    );
+}

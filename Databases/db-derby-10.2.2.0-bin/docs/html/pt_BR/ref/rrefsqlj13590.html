@@ -1,0 +1,657 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br" xml:lang="pt-br">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="reference" name="DC.Type" />
+<meta name="DC.Title" content="Cl??usula CONSTRAINT" />
+<meta content="Cl??usula CONSTRAINT, Restri????es, Propriedades de armazenamento, para ??ndices apoiando restri????es, Apoio a ??ndices, especifica????o de propriedades de armazenamento, Tabelas, especifica????o do tamanho da p??gina, especifica????o das propriedades" name="DC.subject" />
+<meta content="Cl??usula CONSTRAINT, Restri????es, Propriedades de armazenamento, para ??ndices apoiando restri????es, Apoio a ??ndices, especifica????o de propriedades de armazenamento, Tabelas, especifica????o do tamanho da p??gina, especifica????o das propriedades" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj39374.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj22771.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj81859.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj95081.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj80721.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqljrenamestatements.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj35312.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefcallprocedure.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefdeclaretemptable.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj35981.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj31783.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj21583.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj32654.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj14854.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj35034.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj40774.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj29840.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj18922.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj40506.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj13658.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj21571.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj57522.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefscalarsubquery.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefselectexpression.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj41360.html" />
+<meta scheme="URI" name="DC.Relation" content="rreftableexpression.html" />
+<meta scheme="URI" name="DC.Relation" content="rreftablesubquery.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj26498.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj11277.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj33602.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj15309.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj16095.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj42154.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj16357.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj91438.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="rrefsqlj13590" name="DC.Identifier" />
+<meta content="pt-br" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/pt_BR/reftemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>Cl??usula CONSTRAINT</title>
+</head>
+<body id="rrefsqlj13590"><a name="rrefsqlj13590"><!-- --></a>
+
+
+<h1 class="topictitle1">Cl??usula CONSTRAINT</h1>
+
+
+<div>
+<div class="section">
+<p>A cl??usula CONSTRAINT ?? uma parte opcional da
+<a href="rrefsqlj24513.html#rrefsqlj24513">Instru????o CREATE TABLE</a> e da
+<a href="rrefsqlj81859.html#rrefsqlj81859">Instru????o ALTER TABLE</a>.
+A restri????o ?? uma regra com a qual os dados devem estar em conformidade.
+O nome da restri????o ?? opcional.</p>
+
+<div class="p">A restri????o pode ser:
+<ul>
+<li>
+
+
+restri????o no n??vel-de-coluna
+<p>As restri????es no n??vel-de-coluna fazem refer??ncia a uma ??nica coluna
+da tabela, e n??o especificam o nome da coluna (exceto as restri????es de
+verifica????o).
+Se referem ?? coluna a qual seguem.</p>
+
+</li>
+
+<li>
+
+
+restri????o no n??vel-de-tabela
+<p>As restri????es no n??vel-de-tabela fazem refer??ncia a uma ou mais colunas da
+tabela.
+As restri????es no n??vel-de-tabela especificam os nomes das colunas ??s quais se
+aplicam.
+As restri????es de verifica????o (CHECK) no n??vel de tabela podem fazer refer??ncia a
+zero ou mais colunas da tabela.</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="p">
+
+
+As restri????es de coluna incluem:
+<ul>
+<li>NOT NULL
+<p>Especifica que a coluna n??o pode conter valores nulos (n??o pode ser dado nome
+a restri????es deste tipo).</p>
+
+</li>
+
+<li>PRIMARY KEY
+
+<p>Especifica a coluna que identifica unicamente uma linha da tabela.
+A coluna identificada deve ser definida como NOT NULL.</p>
+
+<div class="note"><span class="notetitle">Nota: </span>Se for tentado adicionar uma chave prim??ria utilizando a instru????o
+ALTER TABLE, e alguma coluna inclu??da na chave prim??ria contiver valores
+nulos, ser?? gerado um erro e a chave prim??ria n??o ser?? adicionada.
+Para obter mais informa????es deve ser consultada a
+<a href="rrefsqlj81859.html#rrefsqlj81859">Instru????o ALTER TABLE</a>.</div>
+
+</li>
+
+<li>UNIQUE
+<p>Especifica que os valores na coluna devem ser ??nicos.
+N??o s??o permitidos valores nulos.</p>
+
+</li>
+
+<li>FOREIGN KEY
+<p>Especifica que os valores na coluna devem corresponder a valores em uma
+coluna de chave prim??ria ou de chave ??nica referenciada, ou que s??o nulos.</p>
+
+</li>
+
+<li>CHECK
+<p>Especifica regras para os valores da coluna.</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="p">
+
+As restri????es de tabela incluem:
+<ul>
+<li>PRIMARY KEY
+
+<p>Especifica a coluna ou colunas que identificam unicamente uma linha da
+tabela.
+N??o s??o permitidos valores nulos.</p>
+
+</li>
+
+<li>UNIQUE
+<p>Especifica que os valores nas colunas devem ser ??nicos.
+As colunas identificadas devem ser definidas como NOT NULL.</p>
+</li>
+
+<li>FOREIGN KEY
+<p>Especifica que os valores nas colunas devem corresponder a valores em
+colunas de uma chave prim??ria ou chave ??nica referenciada, ou que s??o nulos.</p>
+
+<div class="note"><span class="notetitle">Nota: </span>Se a chave estrangeira for formada por v??rias colunas, e se
+<em>alguma</em> coluna for nula, toda a chave ser?? considerada nula.
+A inser????o ser?? permitida n??o importando o que esteja presente nas colunas
+n??o-nulas.</div>
+
+</li>
+
+<li>CHECK
+<p>Especifica diversas regras para os valores na tabela.</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+
+As restri????es de coluna e restri????es de tabela possuem a mesma fun????o;
+a diferen??a ?? onde s??o especificadas.
+As restri????es de tabela permitem especificar mais de uma coluna na defini????o da
+restri????o PRIMARY KEY, UNIQUE, CHECK e FOREIGN KEY.
+As restri????es no n??vel-de-coluna (exceto as restri????es de verifica????o) fazem
+refer??ncia a apenas uma coluna.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Sintaxe</h4>
+ </div>
+
+<div class="section"><h4 class="sectiontitle">Restri????es de chave prim??ria e de unicidade</h4>
+
+<p>
+
+
+A chave prim??ria define o conjunto de colunas que identificam unicamente as
+linhas da tabela.</p>
+
+<p>Quando se cria uma restri????o de chave prim??ria, nenhuma das colunas inclu??das
+na chave prim??ria pode ter a restri????o NULL; ou seja, n??o podem permitir
+valores nulos.</p>
+
+<p>A instru????o ALTER TABLE ADD PRIMARY KEY permite incluir colunas existentes
+em uma chave prim??ria, caso estas tenham sido anteriormente definidas como
+NOT NULL.
+Os valores NULL n??o s??o permitidos.
+Se as colunas contiverem valores nulos, o sistema n??o adicionar?? a restri????o de
+chave prim??ria.
+Para obter mais informa????es deve ser consultada a
+<a href="rrefsqlj81859.html#rrefsqlj81859">Instru????o ALTER TABLE</a>.</p>
+
+<p>A tabela pode ter no m??ximo uma restri????o PRIMARY KEY, mas pode ter v??rias
+restri????es UNIQUE.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Restri????es de chave estrangeira</h4>
+
+<p>
+
+
+As chaves estrangeiras fornecem um meio de impor a integridade referencial de
+um banco de dados.
+A chave estrangeira ?? uma coluna, ou grupo de colunas, dentro da tabela que
+fazem refer??ncia a uma chave de alguma outra tabela (ou algumas vezes, embora
+raramente, ?? mesma tabela).
+A chave estrangeira deve incluir sempre colunas cujos tipos correspondem
+exatamente aos tipos das colunas da restri????o de chave prim??ria ou de unicidade
+referenciada.</p>
+
+<p>Em uma restri????o de chave estrangeira no n??vel-de-tabela, para a qual s??o
+especificadas as colunas da tabela que comp??em a restri????o, a mesma coluna n??o
+pode ser usada mais de uma vez.</p>
+
+<p>Se houver uma lista de colunas na <em>Especifica????oReferencias</em>
+(lista das colunas na tabela referenciada), esta lista dever?? corresponder
+a uma restri????o de chave prim??ria ou a uma restri????o de unicidade da tabela
+referenciada.
+A <em>Especifica????oReferencias</em> pode omitir a lista de colunas da tabela
+referenciada, se esta tabela possuir uma chave prim??ria declarada.</p>
+
+<p>Se n??o houver uma lista de colunas na <em>Especifica????oReferencias</em>, e a
+tabela referenciada n??o possuir uma chave prim??ria, ser?? lan??ada uma exce????o de
+instru????o (Isto significa que se a tabela referenciada possuir apenas chaves
+??nicas, ?? necess??rio incluir a lista de colunas na
+<em>Especifica????oReferencias</em>).</p>
+
+<div class="p">A restri????o de chave estrangeira est?? satisfeita quando h?? um valor
+correspondente na coluna de unicidade ou de chave prim??ria correspondente.
+Se a chave estrangeira for composta por v??rias colunas, o valor da chave
+estrangeira ser?? considerado nulo quando qualquer uma de suas colunas tiver o
+valor nulo.
+<div class="note"><span class="notetitle">Nota: </span>?? poss??vel que uma chave estrangeira formada por v??rias colunas permita
+que uma de suas colunas contenha um valor para o qual n??o exista valor
+correspondente nas colunas referenciadas, de acordo com o padr??o SQL-92.
+Para evitar esta situa????o, devem ser criadas restri????es NOT NULL em todas as
+colunas da chave estrangeira.</div>
+
+</div>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Restri????es de chave estrangeira e a DML</h4>
+
+<p>Quando ?? feita uma inser????o ou atualiza????o em uma tabela que possui uma
+restri????o de chave estrangeira habilitada, o
+<span>Derby</span>
+verifica se a linha n??o viola a restri????o de chave estrangeira procurando a
+chave referenciada correspondente na tabela referenciada.
+Se a restri????o n??o for satisfeita, o
+<span>Derby</span>
+rejeitar?? a inser????o ou a atualiza????o atrav??s de uma exce????o de instru????o.</p>
+
+<p>Quando uma linha de uma tabela com uma chave referenciada (uma restri????o de
+chave prim??ria ou de unicidade referenciada por uma chave estrangeira) ??
+atualizada ou removida, o
+<span>Derby</span>
+verifica todas as restri????es de chave estrangeira que fazem refer??ncia ?? chave,
+para ter certeza que a remo????o ou a modifica????o da linha n??o causa viola????o da
+restri????o.
+Se a remo????o ou a modifica????o da linha causar uma viola????o da restri????o,
+a atualiza????o ou remo????o n??o ser?? permitida, e o
+<span>Derby</span>
+lan??ar?? uma exce????o de instru????o.</p>
+
+<p>O <span>Derby</span> realiza as
+verifica????es de restri????o no momento em que a instru????o ?? executada, e n??o
+quando a transa????o ?? efetivada.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">??ndices de apoio</h4>
+
+<p>
+
+
+As restri????es UNIQUE, PRIMARY KEY e FOREIGN KEY geram ??ndices que imp??em, ou
+"apoiam", ?? restri????o (sendo algumas vezes chamados de <em>??ndices de apoio</em>).
+As restri????es UNIQUE e PRIMARY KEY geram ??ndices ??nicos.
+As restri????es FOREIGN KEY geram ??ndices que n??o s??o ??nicos.
+Portanto, se uma coluna, ou conjunto de colunas, estiverem envolvidas em uma
+restri????o UNIQUE, PRIMARY KEY ou FOREIGN KEY, n??o ?? necess??rio criar ??ndices
+nestas colunas para melhorar o desempenho, o
+<span>Derby</span>
+j?? ter?? criado o ??ndice.
+Consulte
+<a href="rrefsqlj20937.html#rrefsqlj20937__sqlj27363">??ndices e restri????es</a>.</p>
+
+<p>Estes ??ndices ficam dispon??veis para o otimizador para a otimiza????o de
+comandos (consulte a <a href="rrefsqlj20937.html#rrefsqlj20937">Instru????o CREATE INDEX</a>),
+e possuem nomes gerados pelo sistema.</p>
+
+<p>N??o ?? permitido remover um ??ndice de apoio atrav??s da instru????o DROP INDEX;
+?? necess??rio remover a restri????o ou a tabela.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Restri????es de verifica????o</h4>
+
+<p>
+
+As restri????es de verifica????o podem ser utilizadas para especificar
+diversas regras para o conte??do da tabela.
+?? especificada uma condi????o de procura (que ?? uma express??o booleana), para a
+restri????o de verifica????o.
+Esta condi????o de procura deve ser satisfeita por todas as linhas da tabela.
+A condi????o de procura ?? aplicada a toda linha modificada por uma instru????o
+INSERT ou UPDATE, na hora em que a linha ?? modificada.
+A instru????o ?? interrompida por completo quando qualquer restri????o de
+verifica????o ?? violada.</p>
+
+</div>
+
+<div class="section" id="rrefsqlj13590__sqlj57077"><a name="rrefsqlj13590__sqlj57077"><!-- --></a><h4 class="sectiontitle">Requisitos da condi????o de procura</h4>
+
+<p>Se a restri????o de verifica????o for especificada como parte da
+defini????o-da-coluna, a refer??ncia a coluna somente poder?? ser feita para a
+mesma coluna.
+As restri????es de verifica????o especificadas como parte da defini????o da tabela,
+podem possuir refer??ncia a colunas que identificam colunas definidas
+anteriormente na instru????o CREATE TABLE.</p>
+
+<div class="p">A condi????o de procura deve retornar sempre o mesmo valor quando for aplicada
+aos mesmos valores.
+Portanto, n??o pode conter:
+<ul>
+<li>Par??metros din??micos (?)</li>
+
+<li>Fun????es de Data/Hora (CURRENT_DATE, CURRENT_TIME, CURRENT_TIMESTAMP)</li>
+
+<li>Subconsultas</li>
+
+<li>Fun????es de usu??rio (tal como USER, SESSION_USER, CURRENT_USER)</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">A????es referenciais</h4>
+
+<p>
+
+
+Quando a chave estrangeira ?? definida, pode ser especificada uma cl??usula
+ON DELETE e/ou ON UPDATE seguida pela a????o apropriada
+(CASCADE, RESTRICT, SET NULL ou NO ACTION).
+Estas cl??usulas especificam se o
+<span>Derby</span>
+deve modificar os valores da chave estrangeira correspondente ou n??o permitir
+a opera????o, para manter o relacionamento de chave estrangeira intacto quando o
+valor da chave prim??ria for atualizado ou exclu??do da tabela.</p>
+
+<p>A regra de atualiza????o ou de exclus??o da restri????o referencial ?? especificada
+quando a restri????o referencial ?? definida.</p>
+
+<p>A regra de atualiza????o ?? aplicada quando uma linha da tabela m??e ou da tabela
+dependente ?? atualizada.
+As escolhas s??o NO ACTION e RESTRICT. </p>
+
+<p>Quando se atualiza o valor de uma coluna da chave prim??ria da tabela m??e,
+e a regra de atualiza????o est?? especificada como RESTRICT, o
+<span>Derby</span>
+verifica as tabelas dependentes com rela????o ??s restri????es de chave estrangeira.
+Se alguma linha de tabela dependente violar a restri????o de chave estrangeira,
+a transa????o ser?? desfeita.</p>
+
+<p>Se a regra de atualiza????o for NO ACTION, o
+<span>Derby</span>
+verificar?? as tabelas dependentes com rela????o ??s restri????es de chave estrangeira
+<em>ap??s</em> todas as exclus??es terem sido executadas, mas <em>antes</em> dos
+gatilhos serem executados.
+Se alguma linha de tabela dependente violar a restri????o de chave estrangeira,
+a instru????o ser?? rejeitada.</p>
+
+<p>Quando ?? atualizado o valor de uma coluna em uma tabela dependente, e este
+valor faz parte da chave estrangeira, a regra de atualiza????o impl??cita ??
+NO ACTION.
+NO ACTION significa que se a chave estrangeira for atualizada com um valor
+n??o-nulo, o valor atualizado dever?? corresponder a um valor na chave prim??ria
+da tabela m??e quando a instru????o estiver completa.
+Se a atualiza????o n??o corresponder a um valor na chave prim??ria da tabela m??e,
+a instru????o ser?? rejeitada.</p>
+
+<p>A regra de exclus??o ?? aplicada quando uma linha da tabela m??e ?? exclu??da,
+e esta linha possui dependentes na tabela dependente da restri????o referencial.
+Quando s??o exclu??das linhas da tabela dependente, a opera????o de exclus??o
+da tabela m??e ?? dita como <em>propagada</em> para a tabela dependente.
+Se a tabela dependente tamb??m for uma tabela m??e, a a????o especificada ser??
+aplicada, por sua vez, ??s suas tabelas dependentes.</p>
+
+<p>As escolhas s??o NO ACTION, RESTRICT, CASCADE e SET NULL.
+SET NULL somente poder?? ser especificada quando alguma coluna da
+chave estrangeira permitir valores nulos.</p>
+
+<p>Se a regra de exclus??o for:</p>
+
+<p>NO ACTION, o
+<span>Derby</span>
+verificar?? as tabelas dependentes com rela????o ??s restri????es referenciais
+<em>ap??s</em> todas as exclus??es terem sido executadas, mas <em>antes</em>
+dos gatilhos serem executados.
+Se alguma linha da tabela dependente violar a restri????o de chave estrangeira,
+a instru????o ser?? rejeitada.</p>
+
+<p>RESTRICT, o
+<span>Derby</span>
+verificar?? as tabelas dependentes com rela????o ??s chaves estrangeiras.
+Se alguma linha da tabela dependente violar a restri????o de chave estrangeira,
+a transa????o ser?? desfeita.</p>
+
+<p>CASCADE, a opera????o de exclus??o ser?? propagada para a tabela dependente
+(e para as dependentes desta tabela, caso se aplique).</p>
+
+<p>SET NULL, todas as colunas da chave estrangeira da tabela dependente que
+aceitam o valor nulo, receber??o o valor nulo (Novamente, se a tabela dependente
+tamb??m possuir tabelas dependentes, as colunas das chaves estrangeiras destas
+tabelas que aceitam o valor nulo, receber??o o valor nulo)</p>
+
+<p>Cada restri????o referencial onde a tabela ?? a tabela m??e, possui suas pr??prias
+regras de exclus??o; todas as regras de exclus??o aplic??veis s??o utilizadas para
+determinar o resultado da opera????o de exclus??o.
+Portanto, n??o poder?? ser exclu??da uma linha que possua dependentes em uma
+restri????o referencial com regra de exclus??o RESTRICT ou NO ACTION.
+De forma semelhante, a linha n??o poder?? ser exclu??da quando a exclus??o se
+propagar em cascata para alguma de suas descendentes que seja dependente em
+uma restri????o referencial com a regra de exclus??o RESTRICT ou NO ACTION.</p>
+
+<div class="p">A exclus??o de uma linha da tabela m??e envolve outras tabelas.
+Qualquer tabela envolvida em uma opera????o de exclus??o na tabela m??e ?? dita
+como sendo conectada-para-exclus??o com a tabela m??e.
+A exclus??o pode afetar as linhas destas tabelas das seguintes maneiras:
+<ul>
+<li>Se a regra de exclus??o for RESTRICT ou NO ACTION, a tabela dependente
+estar?? envolvida na opera????o, mas n??o ser?? afetada pela opera????o (ou seja, o
+<span>Derby</span>
+verificar?? os valores na tabela, mas n??o excluir?? qualquer valor).</li>
+
+<li>Se a regra de exclus??o for SET NULL, as linhas da tabela dependente poder??o
+ser atualizadas quando uma linha da tabela m??e for objeto de uma exclus??o ou
+de uma opera????o de exclus??o propagada.</li>
+
+<li>Se a regra de exclus??o for CASCADE, as linhas da tabela dependente poder??o
+ser exclu??das quando a tabela m??e for objeto de uma exclus??o. </li>
+
+<li>Se a tabela dependente tamb??m for uma tabela m??e, as a????es descritas nesta
+lista ser??o aplicadas, por sua vez, ??s suas tabelas dependentes.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="example" id="rrefsqlj13590__sqljidx6080"><a name="rrefsqlj13590__sqljidx6080"><!-- --></a><h4 class="sectiontitle">Exemplos</h4>
+
+<pre><strong>-- restri????o de chave prim??ria no n??vel-de-coluna chamada PK_SA??DA:
+CREATE TABLE SAMP.CAIXA_SA??DA
+        (
+        ENVIO       TIMESTAMP,
+        DESTINO     CHAR(8),
+        ASSUNTO     CHAR(64) NOT NULL CONSTRAINT PK_CAIXA_SA??DA PRIMARY KEY,
+        TEXTO_NOTA  VARCHAR(3000)
+   );
+
+-- a defini????o de chave prim??ria no n??vel-de-tabela permite
+-- incluir duas colunas na defini????o da chave prim??ria:
+CREATE TABLE SAMP.AGENDA
+        (
+        COD_CLASSE CHAR(7)  NOT NULL,
+        DIA        SMALLINT NOT NULL,
+        IN??CIO     TIME,
+        FIM        TIME,
+        PRIMARY KEY (COD_CLASSE, DIA)
+        );
+
+-- Uso de uma restri????o no n??vel-de-coluna para verifica????o aritm??tica.
+-- Uso de uma restri????o no n??vel-de-tabela para ter certeza que os
+-- impostos do empregado n??o s??o maiores que os b??nus.
+CREATE TABLE SAMP.EMP
+        (
+        NUM_EMP      CHAR(6)      NOT NULL CONSTRAINT PK_EMP PRIMARY KEY,
+        NOME         CHAR(12)     NOT NULL,
+        INICIAL_MEIO VARCHAR(12)  NOT NULL,
+        SOBRENOME    VARCHAR(15)  NOT NULL,
+        SAL??RIO      DECIMAL(9,2) CONSTRAINT VERIF_SAL CHECK (SAL??RIO &gt;= 10000),
+        B??NUS        DECIMAL(9,2),
+        IMPOSTOS     DECIMAL(9,2),
+        CONSTRAINT VERIF_B??NUS CHECK (B??NUS &gt; IMPOSTOS)
+        );
+
+-- Uso de uma restri????o de verifica????o para permitir
+-- apenas as abreviaturas apropriadas para as refei????es
+CREATE TABLE V??OS
+        (
+        ID_V??O            CHAR(6) NOT NULL ,
+        N??MERO_SEGMENTO   INTEGER NOT NULL ,
+        AEROPORTO_ORIGEM  CHAR(3),
+        HORA_PARTIDA      TIME,
+        AEROPORTO_DESTINO CHAR(3),
+        HORA_CHEGADA      TIME,
+        REFEI????O          CHAR(1) CONSTRAINT VERIF_REFEI????O
+                                  CHECK (REFEI????O IN ('B', 'L', 'D', 'S')),
+        PRIMARY KEY (ID_V??O, N??MERO_SEGMENTO)
+        );
+
+CREATE TABLE METROPOLITANO
+        (
+        ID_HOTEL   INT NOT NULL CONSTRAINT PK_HOT??IS PRIMARY KEY,
+        NOME_HOTEL VARCHAR(40) NOT NULL,
+        ID_CIDADE  INT CONSTRAINT FK_METRO REFERENCES CIDADES
+        );
+
+-- cria????o de uma tabela com uma restri????o de chave prim??ria
+-- e uma restri????o de chave estrangeira no n??vel-de-tabela
+CREATE TABLE V??OS_DISP
+        (
+        ID_V??O                            CHAR(6) NOT NULL,
+        N??MERO_SEGMENTO                   INT NOT NULL,
+        DATA_V??O                          DATE NOT NULL,
+        ASSENTOS_ECON??MICOS_OCUPADOS      INT,
+        ASSENTOS_EXECUTIVOS_OCUPADOS      INT,
+        ASSENTOS_PRIMEIRA_CLASSE_OCUPADOS INT,
+        CONSTRAINT PK_V??OS_DISP PRIMARY KEY (ID_V??O, N??MERO_SEGMENTO),
+        CONSTRAINT FK_V??OS
+                   FOREIGN KEY (ID_V??O, N??MERO_SEGMENTO)
+                   REFERENCES V??OS (ID_V??O, N??MERO_SEGMENTO)
+        );
+
+<span>-- adicionar uma restri????o de unicidade a uma coluna</span>
+ALTER TABLE SAMP.PROJETO
+ADD CONSTRAINT UNQ_PROJ UNIQUE (NOME_PROJ);
+
+-- criar uma tabela cuja coluna ID_CIDADE fa??a refer??ncia
+-- ?? chave prim??ria da tabela CIDADES utilizando uma
+-- restri????o de chave estrangeira no n??vel-de-coluna
+CREATE TABLE CONDOM??NIOS
+        (
+        ID_COND   INT NOT NULL CONSTRAINT PK_HOT??IS PRIMARY KEY,
+        NOME_COND VARCHAR(40) NOT NULL,
+        ID_CIDADE INT CONSTRAINT FK_CIDADE
+                      REFERENCES CIDADES
+                      ON DELETE CASCADE
+                      ON UPDATE RESTRICT
+        );</strong>
+</pre>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Sistema de depend??ncia de instru????o</h4>
+
+<p>As instru????es INSERT e UPDATE dependem de todas as restri????es da tabela de
+destino.
+As instru????es DELETE dependem das restri????es de unicidade, chave prim??ria e
+de chave estrangeira.
+Estas instru????es s??o invalidadas quando ?? adicionada ou
+removida uma restri????o na tabela de destino.</p>
+
+</div>
+
+</div>
+
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="rrefsqlj16095.html">restri????o no n??vel-de-coluna</a></strong><br />
+</li>
+<li class="ulchildlink"><strong><a href="rrefsqlj42154.html">restri????o no n??vel-de-tabela</a></strong><br />
+</li>
+<li class="ulchildlink"><strong><a href="rrefsqlj16357.html">Especifica????o da refer??ncia</a></strong><br />
+</li>
+<li class="ulchildlink"><strong><a href="rrefsqlj91438.html">Condi????oProcura</a></strong><br />
+</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>T??pico pai:</strong> <a href="crefsqlj39374.html" title="">Instru????es</a></div>
+</div>
+<div class="relconcepts"><strong>Conceitos relacionados</strong><br />
+<div><a href="crefsqlj22771.html" title="">Intera????o com o sistema de depend??ncias</a></div>
+<div><a href="crefsqlj95081.html" title="">Instru????es CREATE</a></div>
+<div><a href="crefsqlj80721.html" title="">Instru????es DROP</a></div>
+<div><a href="crefsqljrenamestatements.html" title="">Instru????es RENAME</a></div>
+<div><a href="crefsqlj35312.html" title="">Instru????es SET</a></div>
+</div>
+<div class="relref"><strong>Refer??ncias relacionadas</strong><br />
+<div><a href="rrefsqlj81859.html" title="">Instru????o ALTER TABLE</a></div>
+<div><a href="rrefcallprocedure.html" title="">CALL (PROCEDIMENTO)</a></div>
+<div><a href="rrefdeclaretemptable.html" title="">Instru????o DECLARE GLOBAL TEMPORARY TABLE</a></div>
+<div><a href="rrefsqlj35981.html" title="">Instru????o DELETE</a></div>
+<div><a href="rrefsqlj31783.html" title="">Cl??usula FOR UPDATE</a></div>
+<div><a href="rrefsqlj21583.html" title="">Cl??usula FROM</a></div>
+<div><a href="rrefsqlj32654.html" title="">Cl??usula GROUP BY</a></div>
+<div><a href="rrefsqlj14854.html" title="">Cl??usula HAVING</a></div>
+<div><a href="rrefsqlj35034.html" title="">INNER JOIN</a></div>
+<div><a href="rrefsqlj40774.html" title="">Instru????o INSERT</a></div>
+<div><a href="rrefsqlj29840.html" title="">Opera????o JOIN</a></div>
+<div><a href="rrefsqlj18922.html" title="">LEFT OUTER JOIN</a></div>
+<div><a href="rrefsqlj40506.html" title="">Instru????o LOCK TABLE</a></div>
+<div><a href="rrefsqlj13658.html" title="">Cl??usula ORDER BY</a></div>
+<div><a href="rrefsqlj21571.html" title="">Consulta</a></div>
+<div><a href="rrefsqlj57522.html" title="">RIGHT OUTER JOIN</a></div>
+<div><a href="rrefscalarsubquery.html" title="">SubconsultaEscalar</a></div>
+<div><a href="rrefselectexpression.html" title="">Express??oSele????o</a></div>
+<div><a href="rrefsqlj41360.html" title="">Instru????o SELECT</a></div>
+<div><a href="rreftableexpression.html" title="">Express??oTabela</a></div>
+<div><a href="rreftablesubquery.html" title="">SubconsultaTabela</a></div>
+<div><a href="rrefsqlj26498.html" title="">Instru????o UPDATE</a></div>
+<div><a href="rrefsqlj11277.html" title="">VALUES Express??o</a></div>
+<div><a href="rrefsqlj33602.html" title="">Cl??usula WHERE</a></div>
+<div><a href="rrefsqlj15309.html" title="">Cl??usula WHERE CURRENT OF</a></div>
+</div>
+</div>
+
+</body>
+</html>

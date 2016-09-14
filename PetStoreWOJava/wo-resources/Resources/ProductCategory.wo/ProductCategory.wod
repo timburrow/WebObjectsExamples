@@ -1,0 +1,28 @@
+GenericContainer1: WOGenericContainer {
+	bgcolor = "#336666";
+	elementName = "TR";
+}
+
+GenericContainer2: WOGenericContainer {
+	bgcolor = "#faff93";
+	border = 1;
+	cellpadding = 0;
+	cellspacing = 0;
+	elementName = "TABLE";
+	width = 350;
+}
+
+PageBack1: PageBack {}
+
+ProductList1: ProductList {
+	categoryName = categoryName;
+}
+
+String1: WOString {
+	value = categoryName;
+}
+
+Template: Template {
+	isFrontPage = false;
+}
+

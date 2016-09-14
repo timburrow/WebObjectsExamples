@@ -1,0 +1,83 @@
+ArrowButton: WOImage {
+	filename = "arrow_button.gif";
+	border = "0";
+	width = 22;
+	height = 21;
+}
+
+BadUploadISForm: WOHyperlink {
+	pageName = "BadUploadISFormPage";
+}
+
+DADownload: WOHyperlink {
+	directActionName = "directDownload";
+}
+
+DARequestContent: WOHyperlink {
+	directActionName = "directRequestContent";
+}
+
+BasicUpload: WOHyperlink {
+	pageName = "BasicUploadPage";
+}
+
+DAUploadData: WOHyperlink {
+	directActionName = "directData";
+}
+
+DAUploadIterator: WOHyperlink {
+	directActionName = "directIterator";
+}
+
+BasicUploadIS: WOHyperlink {
+	pageName = "BasicUploadISPage";
+}
+
+BasicUploadOS: WOHyperlink {
+	pageName = "BasicUploadOSPage";
+}
+
+BasicUploadSTFP: WOHyperlink {
+	pageName = "BasicUploadSTFPPage";
+}
+
+BodyTag: WOExampleBody {
+    leftmargin=0;
+    topmargin=0;
+}
+
+Footer: WOExampleFooter {}
+
+FormElementsUpload: WOHyperlink {
+	pageName = "FormElementsUploadPage";
+}
+
+MultipleUpload: WOHyperlink {
+	pageName = "MultipleUploadPage";
+}
+
+MultipleUploadOS: WOHyperlink {
+	pageName = "MultipleUploadOSPage";
+}
+
+MultipleUploadOSForm: WOHyperlink {
+	pageName = "MultipleUploadOSFormPage";
+}
+
+MultipleUploadSTFPForm: WOHyperlink {
+	pageName = "MultipleUploadSTFPFormPage";
+}
+
+TitleImage: WOImage {
+	filename = "title_file_upload.gif";
+	width = 340;
+	height = 163;
+}
+
+TempDir: WOString {
+    value = fileUploadPath;
+}
+UploadISForm: WOHyperlink {
+	pageName = "UploadISFormPage";
+}
+

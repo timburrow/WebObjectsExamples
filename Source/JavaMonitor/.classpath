@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="wo-resources/Resources"/>
+	<classpathentry kind="src" path="wo-resources/WebServerResources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaEOControl"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaFoundation"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaMonitorFramework"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaWebObjects"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaWOExtensions"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaXML"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

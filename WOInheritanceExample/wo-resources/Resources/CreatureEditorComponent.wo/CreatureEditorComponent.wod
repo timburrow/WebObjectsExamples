@@ -1,0 +1,18 @@
+
+String1: WOString {
+	value = creatureClassName;
+}
+
+TextField4: WOTextField {
+	value = creature.firstName;
+}
+
+TextField5: WOTextField {
+	dateformat = "%m/%d/%Y";
+	value = creature.dateOfBirth;
+}
+
+TextField6: WOTextField {
+	numberformat = "0";
+	value = creature.numberOfLegs;
+}

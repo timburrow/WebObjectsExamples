@@ -1,0 +1,34 @@
+CollapsibleComponentContent1: WOCollapsibleComponentContent {
+	closedLabel = "Click for the technical details";
+	openedLabel = "close details";
+}
+
+CollapsibleComponentContent2: WOCollapsibleComponentContent {
+	closedLabel = "Click for a stack trace";
+	openedLabel = "close stack trace";
+}
+
+GenericContainer1:WOGenericContainer{
+elementName ="TABLE";
+background = "bkg-topbar.gif";
+}
+
+Hyperlink1: WOHyperlink {
+	directActionName = "default";
+}
+
+MainLogo: WOActiveImage {
+	filename = "logo-topbar.gif";
+	framework = "app";
+	border = 0;
+	action = showMain;
+}
+
+String1: WOString {
+	value = exception.getMessage;
+	valueWhenEmpty = "No error message";
+}
+
+String2: WOString {
+	value = stackTrace;
+}

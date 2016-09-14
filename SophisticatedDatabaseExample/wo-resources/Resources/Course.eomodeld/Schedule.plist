@@ -1,0 +1,64 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = DAY;
+           externalType = char;
+           name = day;
+           valueClassName = NSString;
+           width = 32;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = HOURS;
+           externalType = int;
+           name = hours;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = SCHEDULE_ID;
+           externalType = integer;
+           name = scheduleID;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = TIME;
+           externalType = datetime;
+           name = time;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSCalendarDate;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       day, 
+       hours, 
+       scheduleID, 
+       time
+    );
+    className = webobjectsexamples.sophisticateddatabaseexample.Schedule;
+    classProperties = 
+    (
+       day, 
+       hours, 
+       time
+    );
+    externalName = SCHEDULE;
+    internalInfo = 
+    {};
+    name = Schedule;
+    primaryKeyAttributes = 
+    (
+       scheduleID
+    );
+}

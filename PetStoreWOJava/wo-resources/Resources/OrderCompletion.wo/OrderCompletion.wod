@@ -1,0 +1,122 @@
+GenericContainer1: WOGenericContainer {
+	bgcolor = "#336666";
+	elementName = "TR";
+}
+
+Repetition2: WORepetition {
+	item = lineItem;
+	list = order.lineItems;
+}
+
+String1: WOString {
+	dateformat = "%m/%d/%y";
+	value = currentDate;
+}
+
+String11: WOString {
+	value = lineItem.item.product.name;
+}
+
+String12: WOString {
+	value = lineItem.item.itemid;
+}
+
+String13: WOString {
+	value = order.billaddr1;
+}
+
+String14: WOString {
+	value = order.billaddr2;
+}
+
+String15: WOString {
+	value = order.billcity;
+}
+
+String16: WOString {
+	value = order.billstate;
+}
+
+String17: WOString {
+	value = order.billzip;
+}
+
+String18: WOString {
+	value = order.shipzip;
+}
+
+String19: WOString {
+	value = order.shipstate;
+}
+
+String2: WOString {
+	value = currentAccount.userID;
+}
+
+String20: WOString {
+	value = order.shipcity;
+}
+
+String21: WOString {
+	value = order.shipaddr2;
+}
+
+String22: WOString {
+	value = order.shipaddr1;
+}
+
+String23: WOString {
+	value = order.shiptolastname;
+}
+
+String24: WOString {
+	value = order.shiptofirstname;
+}
+
+String25: WOString {
+	value = order.cardtype;
+}
+
+String26: WOString {
+	value = order.creditcard;
+}
+
+String27: WOString {
+	value = order.exprdate;
+}
+
+String3: WOString {
+	value = order.orderid;
+}
+
+String4: WOString {
+	value = lineItem.totalPrice;
+	numberformat = "$#,##0.00";
+}
+
+String5: WOString {
+	value = order.billtofirstname;
+}
+
+String6: WOString {
+	value = order.billtolastname;
+}
+
+String7: WOString {
+	numberformat = "$###,##0.00";
+	value = order.totalprice;
+}
+
+String8: WOString {
+	value = lineItem.quantity;
+}
+
+String9: WOString {
+	value = lineItem.item.listPrice;
+	numberformat = "$#,##0.00";
+}
+
+Template: Template {
+	isFrontPage = false;
+}
+

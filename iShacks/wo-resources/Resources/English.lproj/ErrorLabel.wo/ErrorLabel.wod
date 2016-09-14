@@ -1,0 +1,16 @@
+errorLabelValueString: WOString {
+	value = errorLabelValue;
+}
+
+ifNotShowError: WOConditional {
+	condition = showErrorValue;
+	negate = true;
+}
+
+ifShowError: WOConditional {
+	condition = showErrorValue;
+}
+
+labelValueString: WOString {
+	value = labelValue;
+}

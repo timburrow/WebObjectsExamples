@@ -1,0 +1,5 @@
+ 
+HeaderFooter: PCHeaderFooter {
+    sourcePageName = "PCFramePage";
+    sharedComponentName = "WXFrame";
+}

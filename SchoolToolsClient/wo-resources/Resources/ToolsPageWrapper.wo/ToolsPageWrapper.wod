@@ -1,0 +1,15 @@
+
+AdminTechImage: WOImage {
+    filename = "school_tools_admin_tech.jpg";
+    width = 243;
+    height = 282;
+}
+
+Content: WOComponentContent {}
+
+Footer: WOExampleFooter {
+}
+ 
+Title: WOString {
+    value = pageTitle;
+}

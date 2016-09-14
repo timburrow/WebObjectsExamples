@@ -1,0 +1,47 @@
+Conditional1: WOConditional {
+	condition = loginFailed;
+}
+
+Form1: WOForm {
+	action = loginAction;
+}
+
+Hyperlink1: WOHyperlink {
+	action = newUserAction;
+}
+
+LayoutComponent: LayoutComponent {
+}
+
+RemeberMyPasswordCheckBox: WOCheckBox {
+	checked = session.remeberPassword;
+}
+
+String1: WOString {
+	value = application.name;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = loginAction;
+	value = "Login";
+}
+
+TextField1: WOTextField {
+	value = login;
+	maxlength = 20;
+	size = 20;
+}
+
+TextField2: WOPasswordField {
+	value = password;
+	maxlength = 20;
+	size = 20;
+}
+
+UserNameFromCookie: WOString {
+	value = userFromCookie;
+}
+
+ifShowUserFromCookie: WOConditional {
+	condition = showUserNameFromCookie;
+}

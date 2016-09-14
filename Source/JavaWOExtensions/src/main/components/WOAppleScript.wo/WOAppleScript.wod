@@ -1,0 +1,10 @@
+Embed: WOGenericElement {
+	controller = controller;
+	elementName = "EMBED";
+	height = height;
+	scriptcomment = ^scriptcomment;
+	scripttext = ^scripttext;
+	scripttitle = ^scripttitle;
+	type = "AppleScript";
+	width = width;
+}

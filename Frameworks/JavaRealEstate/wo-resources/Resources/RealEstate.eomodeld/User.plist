@@ -1,0 +1,134 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = FIRST_NAME;
+           externalType = char;
+           name = firstName;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           columnName = LAST_NAME;
+           externalType = char;
+           name = lastName;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           columnName = LOGIN;
+           externalType = char;
+           name = login;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }, 
+       
+       {
+           columnName = PASSWORD;
+           externalType = char;
+           name = password;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }, 
+       
+       {
+           columnName = USER_ID;
+           externalType = integer;
+           name = userID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = USER_TYPE;
+           externalType = int;
+           name = userType;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       firstName, 
+       lastName, 
+       login, 
+       password, 
+       userID, 
+       userType
+    );
+    className = webobjectsexamples.realestate.common.User;
+    classProperties = 
+    (
+       contactInfo, 
+       defaults, 
+       firstName, 
+       lastName, 
+       login, 
+       password, 
+       userType
+    );
+    externalName = USER;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           contactInfo, 
+           firstName, 
+           lastName, 
+           login
+        );
+        _javaClientClassName = webobjectsexamples.realestate.common.User;
+    };
+    isAbstractEntity = Y;
+    maxNumberOfInstancesToBatchFetch = 25;
+    name = User;
+    primaryKeyAttributes = 
+    (
+       userID
+    );
+    relationships = 
+    (
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = ContactInfo;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = userID;
+                  sourceAttribute = userID;
+              }
+           );
+           name = contactInfo;
+           numberOfToManyFaultsToBatchFetch = 0;
+           ownsDestination = Y;
+       }, 
+       
+       {
+           destination = UserDefaults;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = userID;
+                  sourceAttribute = userID;
+              }
+           );
+           name = defaults;
+           ownsDestination = Y;
+       }
+    );
+}

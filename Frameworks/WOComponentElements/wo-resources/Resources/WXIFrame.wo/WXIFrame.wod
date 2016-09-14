@@ -1,0 +1,19 @@
+ 
+AltContent: WOComponentContent {}
+
+IFrameContainer: WOGenericContainer {
+    elementName = "iframe";
+    src = srcUrl;
+    frameborder = ^frameborder;
+    align = ^align;
+    height = ^height;
+    width = ^width;
+    marginheight = ^marginheight;
+    marginwidth = ^marginwidth;
+    name = ^name;
+    scrolling = ^scrolling;
+    longdesc = ^longdesc;
+    // ** Only used for pageName and value;
+    invokeAction = getFrameContent;
+}
+ 

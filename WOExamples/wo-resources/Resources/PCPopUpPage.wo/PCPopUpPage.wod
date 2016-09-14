@@ -1,0 +1,29 @@
+ 
+CurrentIndexString: WOString {
+    value = currentIndex;
+}
+
+CurrentLabel: WOString {
+    value = getLabel;
+}
+
+CurrentSelectionString: WOString {
+    value = popUpSelection;
+}
+
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXPopUp";
+}
+
+PopUpForm: WXForm {
+    action = popUpSubmitted;
+}
+
+PopUpTest: WXPopUp {
+    list = application.list;
+    item = currentItem;
+    index = currentIndex;
+    selection = popUpSelection;
+    size = 5;
+    multiple = true;
+}

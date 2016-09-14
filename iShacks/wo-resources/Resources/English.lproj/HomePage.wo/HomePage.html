@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+    <HEAD>
+        <TITLE><WEBOBJECT NAME=ApplicationNameString></WEBOBJECT></TITLE>
+    </HEAD>
+    <WEBOBJECT NAME=LayoutComponent>
+            <WEBOBJECT NAME=IfShowCustomerInfo>
+            	<TABLE CELLSPACING=1 CELLPADDING=2 BORDER=0 WIDTH="100%">
+            		<TR>
+            			<TD WIDTH="75%" VALIGN=TOP>
+					
+            					<TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="100%">
+            						<TR>
+            							<TD BGCOLOR="#cbcbcb">
+            								<TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="100%">
+            									<TR>
+            										<TD BGCOLOR="#ffffff" COLSPAN=2>
+            											<TABLE CELLSPACING=0 CELLPADDING=3 BORDER=0 WIDTH="100%">
+            												<TR>
+            													<TD BGCOLOR="#ddddbb"><B>Suggested properties</B></TD>
+            												</TR>
+            											</TABLE>
+            										</TD>
+            									</TR>
+            									<TR>
+            										<TD BGCOLOR="#ffffff" COLSPAN=2>
+            											<TABLE CELLSPACING=0 CELLPADDING=3 BORDER=0 WIDTH="100%">
+            												<WEBOBJECT NAME=IfShowPropertiesList>
+															<WEBOBJECT NAME=IterateForSuggestedListings>
+            														<TR>
+            															<TD WIDTH="85%" BGCOLOR="#f8f8f8"><WEBOBJECT NAME=SelectPropertyLink><WEBOBJECT NAME=ListingStreetString></WEBOBJECT>
+            																<WEBOBJECT NAME=ListingApartmentNumberString></WEBOBJECT>
+            																<WEBOBJECT NAME=ListingCityString></WEBOBJECT></WEBOBJECT></TD>
+            														<TD BGCOLOR="#e9ad7e"><WEBOBJECT NAME=DeleteLink><FONT SIZE=2>Not for me</FONT></WEBOBJECT></TD>
+            													</TR>
+            													</WEBOBJECT>
+														</WEBOBJECT>
+														<WEBOBJECT NAME=IfShowNoListYetMessage>
+            													<TR>
+            														<TD BGCOLOR="#f8f8f8">Shortly, your agent will add a list of properties that might interest you. Please come back
+            															later to this site to find out what we have found for you.
+            															<P>iShacks, thinking different.</P></TD>
+            														<TD></TD>
+            													</TR>
+														</WEBOBJECT>
+            											</TABLE>
+            										</TD>
+            									</TR>
+            								</TABLE>
+            							</TD>
+            						</TR>
+            					</TABLE>
+            				</TD>
+            			<TD>
+            				<TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="100%">
+            					<TR>
+            						<TD BGCOLOR="#cbcbcb">
+            							<TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="100%">
+            								<TR>
+            									<TD BGCOLOR="#ffffff" COLSPAN=2>
+            										<TABLE CELLSPACING=0 CELLPADDING=3 BORDER=0 WIDTH="100%">
+            											<TR>
+            												<TD BGCOLOR="#ddddbb"><B>Your Agent is:</B></TD>
+            											</TR>
+            										</TABLE>
+            									</TD>
+            								</TR>
+            								<TR>
+            									<TD BGCOLOR="#ffffff" COLSPAN=2>
+            										<TABLE CELLSPACING=0 CELLPADDING=3 BORDER=0 WIDTH="100%">
+            											<TR>
+            												<TD BGCOLOR="#f8f8f8"><WEBOBJECT NAME=AgentPhotoImage></WEBOBJECT></TD>
+            											</TR>
+            											<TR>
+            												<TD BGCOLOR="#f8f8f8"><FONT SIZE=2><WEBOBJECT NAME=ViewAgentLink><WEBOBJECT NAME=AgentFirstNameString></WEBOBJECT>
+            														<WEBOBJECT NAME=AgentLastNameString></WEBOBJECT></WEBOBJECT></FONT>
+            													<P></P>
+            												</TD>
+            											</TR>
+            											<TR>
+            												<TD ALIGN=LEFT BGCOLOR="#f8f8f8"><FONT SIZE=2><WEBOBJECT NAME=ChangeAgentLink>Click here</WEBOBJECT>
+            													to change to another agent.</FONT></TD>
+            											</TR>
+            										</TABLE>
+            									</TD>
+            								</TR>
+            							</TABLE>
+            						</TD>
+            					</TR>
+            				</TABLE>
+            			</TD>
+            		</TR>
+            	</TABLE></WEBOBJECT>
+			<WEBOBJECT NAME=IfShowAgentInfo>
+                <TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="100%">
+                    <TR>
+                        <TD BGCOLOR="#cbcbcb">
+                            <TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="100%">
+                                <TR>
+                                    <TD BGCOLOR="#ffffff" COLSPAN=2>
+                                        <TABLE CELLPADDING=3 CELLSPACING=0 BORDER=0 WIDTH="100%">
+                                            <TR>
+                                                <TD BGCOLOR="#ddddbb">
+													<B>Contacts</B>
+												</TD>
+                                            </TR>
+                                        </TABLE>
+                                    </TD>
+                                </TR>
+                                <WEBOBJECT NAME=IterateForCustomers>
+                                    <TR>
+                                        <TD BGCOLOR="#ffffff" COLSPAN=2>
+                                            <TABLE CELLPADDING=3 CELLSPACING=0 BORDER=0 WIDTH="100%">
+                                                <TR>
+                                                    <TD BGCOLOR="#f8f8f8">
+                                                        <WEBOBJECT NAME=CustomerFirstNameString></WEBOBJECT> 
+                                                        <WEBOBJECT NAME=CustomerLastNameString></WEBOBJECT>
+                                                    </TD>
+                                                </TR>
+                                            </TABLE>
+                                        </TD>
+                                    </TR>
+                                </WEBOBJECT>
+							</TABLE>
+						</TD>
+					</TR>
+				</TABLE>
+				<P></P>
+                <TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="100%">
+                    <TR>
+                        <TD BGCOLOR="#cbcbcb">
+                            <TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="100%">
+                                <TR>
+                                    <TD BGCOLOR="#ffffff" COLSPAN=2>
+                                        <TABLE CELLPADDING=3 CELLSPACING=0 BORDER=0 WIDTH="100%">
+                                            <TR>
+                                                <TD BGCOLOR="#ddddbb">
+													<B>Properties</B>
+												</TD>
+                                            </TR>
+                                        </TABLE>
+                                    </TD>
+                                </TR>
+                                <WEBOBJECT NAME=IterateForListings>
+                                    <TR>
+                                        <TD BGCOLOR="#ffffff" COLSPAN=2>
+                                            <TABLE CELLPADDING=3 CELLSPACING=0 BORDER=0 WIDTH="100%">
+                                                <TR>
+                                                    <TD BGCOLOR="#f8f8f8">
+                                                        <WEBOBJECT NAME=SelectListingLink><WEBOBJECT NAME=ListingStreetString></WEBOBJECT> 
+                                                        <WEBOBJECT NAME=ListingApartmentNumberString></WEBOBJECT><WEBOBJECT NAME=ListingCityString></WEBOBJECT></WEBOBJECT>
+                                                    </TD>
+                                                </TR>
+                                            </TABLE>
+                                        </TD>
+                                    </TR>
+                                </WEBOBJECT>
+							</TABLE>
+						</TD>
+					</TR>
+				</TABLE>
+        		</WEBOBJECT>
+		</WEBOBJECT>
+</HTML>

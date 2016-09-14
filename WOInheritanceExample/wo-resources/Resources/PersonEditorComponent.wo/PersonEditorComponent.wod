@@ -1,0 +1,22 @@
+ 
+ActiveImage1: WOActiveImage {
+	action = domesticatedAnimalDisplayGroup.qualifyDataSource;
+	filename = "bino-btn.gif";
+	framework = "JavaDirectToWeb";
+}
+
+PopUpButton1: WOPopUpButton {
+	displayString = aDomesticatedAnimal.customDescription;
+	item = aDomesticatedAnimal;
+	list = domesticatedAnimalDisplayGroup.allObjects;
+	noSelectionString = "-- none --";
+	selection = creature.favoriteDomesticatedAnimal;
+}
+
+TextField1: WOTextField {
+	value = creature.lastName;
+}
+
+TextField2: WOTextField {
+	value = creature.ssn;
+}

@@ -1,0 +1,56 @@
+ 
+AddButton: WOImage {
+    filename = "BtnAdd.gif";
+    width = "89";
+    height = "42";
+    border = "0";
+}
+
+AddLink: WOHyperlink {
+    directActionName = "AddMovie";
+}
+
+HelpButton: WOImage {
+    filename = "BtnHelp.gif";
+    width = "89";
+    height = "42";
+    border = "0";
+}
+
+HelpLink: WOHyperlink {
+    directActionName = "Help";
+}
+
+HomeButton: WOImage {
+    filename = "BtnHome.gif";
+    width = "89";
+    height = "42";
+    border = "0";
+}
+
+HomeLink: WOHyperlink {
+    directActionName = "Home";
+}
+
+MasterIndexButton: WOImage {
+    filename = "BtnMstrIndx.gif";
+    width = "89";
+    height = "42";
+    border = "0";
+}
+
+MasterIndexLink: WOHyperlink {
+    directActionName = "MasterIndex";
+}
+
+SearchButton: WOImage {
+    filename = "BtnSearch.gif";
+    width = "89";
+    height = "42";
+    border = "0";
+}
+
+SearchLink: WOHyperlink {
+    directActionName = "Search";
+}
+

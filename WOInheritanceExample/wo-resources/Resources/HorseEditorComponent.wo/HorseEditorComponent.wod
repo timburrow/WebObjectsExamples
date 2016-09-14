@@ -1,0 +1,5 @@
+
+TextField1: WOTextField {
+	size = 6;
+	value = creature.breed;
+}

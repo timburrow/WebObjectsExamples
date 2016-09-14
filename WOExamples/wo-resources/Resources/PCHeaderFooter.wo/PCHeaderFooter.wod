@@ -1,0 +1,11 @@
+ 
+Content: WOComponentContent {}
+
+EHHeaderFooter: EHHeaderFooter {
+    sourcePageName = ^sourcePageName;
+}
+
+ViewSourceLink: WOHyperlink {
+    action = viewComponentSource;
+    target = "PCSourceView";
+}

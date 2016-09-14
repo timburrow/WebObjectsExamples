@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wodefinitions>
+	<wo class="FullInheritanceEditorComponent" wocomponentcontent="false">
+
+		<binding name="currentClass"/>
+		<binding name="creature"/>
+
+		<validation message="&apos;creature&apos; is a required binding">
+			<unbound name="creature"/>
+		</validation>
+	</wo>
+</wodefinitions>

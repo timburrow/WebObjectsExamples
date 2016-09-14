@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<false/>
+	<key>GroupName</key>
+	<string>_appserverusr</string>
+	<key>Label</key>
+	<string>com.webobjects.womonitor</string>
+	<key>OnDemand</key>
+	<false/>
+	<key>Program</key>
+	<string>/System/Library/WebObjects/JavaApplications/JavaMonitor.woa/JavaMonitor</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>JavaMonitor</string>
+		<string>-WOPort</string>
+		<string>56789</string>
+		<string>-WOHost</string>
+		<string>localhost</string>
+	</array>
+	<key>ServiceIPC</key>
+	<false/>
+	<key>UserName</key>
+	<string>_appserver</string>
+</dict>
+</plist>

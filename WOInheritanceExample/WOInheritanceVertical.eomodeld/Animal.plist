@@ -1,0 +1,151 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = creature_id;
+           externalType = integer;
+           name = creatureId;
+           precision = 10;
+           serverTimeZone = US/Eastern;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = creature.dateOfBirth;
+           externalType = datetime;
+           name = dateOfBirth;
+           serverTimeZone = US/Eastern;
+           valueClassName = NSCalendarDate;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = creature.firstName;
+           externalType = char;
+           name = firstName;
+           serverTimeZone = US/Eastern;
+           valueClassName = NSString;
+           valueType = c;
+           width = 50;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = is_carnivore;
+           externalType = integer;
+           name = isCarnivore;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = creature.numberOfLegs;
+           externalType = integer;
+           name = numberOfLegs;
+           precision = 10;
+           serverTimeZone = US/Eastern;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = scientific_name;
+           externalType = char;
+           name = scientificName;
+           valueClassName = NSString;
+           valueType = c;
+           width = 50;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       creatureId, 
+       dateOfBirth, 
+       firstName, 
+       isCarnivore, 
+       numberOfLegs, 
+       scientificName
+    );
+    className = Animal;
+    classProperties = 
+    (
+       dateOfBirth, 
+       firstName, 
+       folders, 
+       isCarnivore, 
+       numberOfLegs, 
+       scientificName
+    );
+    externalName = Animal;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           dateOfBirth, 
+           firstName, 
+           isCarnivore, 
+           numberOfLegs, 
+           scientificName
+        );
+    };
+    isAbstractEntity = Y;
+    name = Animal;
+    parent = Creature;
+    primaryKeyAttributes = 
+    (
+       creatureId
+    );
+    relationships = 
+    (
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = Creature;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = creatureId;
+                  sourceAttribute = creatureId;
+              }
+           );
+           name = creature;
+           ownsDestination = Y;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = FolderData;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = dataId;
+                  sourceAttribute = creatureId;
+              }
+           );
+           name = folderDatas;
+           ownsDestination = Y;
+           propagatesPrimaryKey = Y;
+       }, 
+       
+       {
+           definition = folderDatas.folder;
+           name = folders;
+       }
+    );
+}

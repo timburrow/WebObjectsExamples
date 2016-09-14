@@ -1,0 +1,109 @@
+(
+             {
+                 "label" = "Alpha";
+                 "value" = "A";
+                 "sublist" = (
+                              {
+                                  "label" = "Alpha.1";
+                                  "value" = "A.1";
+                                  "sublist" = (
+                                               {
+                                                   "label" = "Alpha.2.1";
+                                                   "value" = "A.2.1";
+                                               },
+                                               {
+                                                   "label" = "Alpha.2.2";
+                                                   "value" = "A.2.2";
+                                                   "isNew" = 1;
+                                               },
+                                               );
+                              },
+                              );
+             },
+             {
+                 "label" = "Beta";
+                 "value" = "B";
+                 "isNew" = 1;
+                 "sublist" = (
+                              {
+                                  "label" = "Beta.1";
+                                  "value" = "B.1";
+                              },
+                              {
+                                  "label" = "Beta.2";
+                                  "value" = "B.2";
+                                  "sublist" = (
+                                               {
+                                                   "label" = "Beta.2.1";
+                                                   "value" = "B.2.1";
+                                               },
+                                               );
+                              },
+                              {
+                                  "label" = "Beta.3";
+                                  "value" = "B.3";
+                              },
+                              );
+             },
+             {
+                 "label" = "Delta";
+                 "value" = "D";
+                 "isNew" = 1;
+             },
+             {
+                 "label" = "Gamma";
+                 "value" = "G";
+             },
+             {
+                 "label" = "Iota";
+                 "value" = "I";
+                 "sublist" = (
+                              {
+                                  "label" = "Iota.1";
+                                  "value" = "I.1";
+                                  "sublist" = (
+                                               {
+                                                   "label" = "Iota.1.1";
+                                                   "value" = "I.1.1";
+                                                   "sublist" = (
+                                                                {
+                                                                    "label" = "Iota.1.1.1";
+                                                                    "value" = "I.1.1.1";
+                                                                },
+                                                                );
+                                               },
+                                               );
+                              },
+                              );
+             },
+             {
+                 "label" = "Omega";
+                 "value" = "UU";
+                 "sublist" = (
+                              {
+                                  "label" = "Omega.1";
+                                  "value" = "UU.1";
+                              },
+                              );
+             },
+             {
+                 "label" = "Omicron";
+                 "value" = "OU";
+                 "sublist" = (
+                              {
+                                  "label" = "Omicron.1";
+                                  "value" = "OU.1";
+                              },
+                              );
+             },
+             {
+                 "label" = "Zeta";
+                 "value" = "Z";
+                 "sublist" = (
+                              {
+                                  "label" = "Zeta.1";
+                                  "value" = "Z.1";
+                              },
+                              );
+             },
+    )

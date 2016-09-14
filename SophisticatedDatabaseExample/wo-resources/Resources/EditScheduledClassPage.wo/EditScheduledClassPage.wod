@@ -1,0 +1,92 @@
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+Hyperlink1: WOHyperlink {
+	action = mainPage;
+}
+
+Hyperlink2: WOHyperlink {
+	action = administrationPage;
+}
+
+Hyperlink3: WOHyperlink {
+	action = selectScheduledClass;
+}
+
+PopUpButton1: WOPopUpButton {
+	displayString = selectedCourse.name;
+	item = selectedCourse;
+	list = availableCourses;
+	selection = scheduledClass.course;
+}
+
+PopUpButton2: WOPopUpButton {
+	displayString = selectedClassroom.room;
+	item = selectedClassroom;
+	list = availableClassrooms;
+	selection = scheduledClass.classroom;
+}
+
+PopUpButton3: WOPopUpButton {
+	displayString = selectedDay;
+	item = selectedDay;
+	list = availableDays;
+	selection = selectedDay;
+}
+
+PopUpButton4: WOPopUpButton {
+	displayString = selectedTime;
+	item = selectedTime;
+	list = availiableTimes;
+	selection = selectedTime;
+}
+
+PopUpButton5: WOPopUpButton {
+	displayString = selectedTeacher.lastName;
+	item = selectedTeacher;
+	list = availableTeachers;
+	selection = scheduledClass.teacher;
+}
+
+Repetition1: WORepetition {
+	item = selectedScheduledClass;
+	list = scheduledClasses;
+}
+
+String1: WOString {
+	value = selectedScheduledClass.classroom.room;
+}
+
+String2: WOString {
+	value = selectedScheduledClass.schedule.day;
+}
+
+String3: WOString {
+	value = selectedScheduledClass.course.name;
+}
+
+String4: WOString {
+	value = selectedScheduledClass.schedule.time;
+	dateformat = "%I:%M %p";
+}
+
+String5: WOString {
+	value = selectedScheduledClass.classroom.building;
+}
+
+String6: WOString {
+	value = selectedScheduledClass.teacher.lastName;
+}
+
+UpdateActiveImage: WOImageButton {
+	action = deleteScheduledClass;
+	filename = "DBWizardDelete.gif";
+	framework = "app";
+}
+
+UpdateActiveImage2: WOImageButton {
+	action = saveChanges;
+	filename = "DBWizardUpdate.gif";
+}

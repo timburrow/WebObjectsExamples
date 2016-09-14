@@ -1,0 +1,388 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br" xml:lang="pt-br">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="reference" name="DC.Type" />
+<meta name="DC.Title" content="Instru????o ALTER TABLE" />
+<meta content="Instru????o ALTER TABLE, Compress??o de tabelas, Tabelas, altera????o, compress??o, Colunas, adi????o, Restri????es, remo????o, Padr??es, adi????, Adi????o de colunas, Adi????o de restri????es, Remo????o de restri????es, defini????o, altera??ao da granularidade do bloqueio, Tipos de dado, modifica????o" name="DC.subject" />
+<meta content="Instru????o ALTER TABLE, Compress??o de tabelas, Tabelas, altera????o, compress??o, Colunas, adi????o, Restri????es, remo????o, Padr??es, adi????, Adi????o de colunas, Adi????o de restri????es, Remo????o de restri????es, defini????o, altera??ao da granularidade do bloqueio, Tipos de dado, modifica????o" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj39374.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj22771.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj95081.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj80721.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqljrenamestatements.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj35312.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefcallprocedure.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj13590.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefdeclaretemptable.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj35981.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj31783.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj21583.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj32654.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj14854.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj35034.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj40774.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj29840.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj18922.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj40506.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj13658.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj21571.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj57522.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefscalarsubquery.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefselectexpression.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj41360.html" />
+<meta scheme="URI" name="DC.Relation" content="rreftableexpression.html" />
+<meta scheme="URI" name="DC.Relation" content="rreftablesubquery.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj26498.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj11277.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj33602.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj15309.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="rrefsqlj81859" name="DC.Identifier" />
+<meta content="pt-br" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/pt_BR/reftemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>Instru????o ALTER TABLE</title>
+</head>
+<body id="rrefsqlj81859"><a name="rrefsqlj81859"><!-- --></a>
+
+
+<h1 class="topictitle1">Instru????o ALTER TABLE</h1>
+
+
+<div>
+<div class="section">
+<div class="p">A instru????o ALTER TABLE permite:
+<ul>
+<li>adicionar coluna ?? tabela</li>
+
+<li>adicionar restri????o ?? tabela</li>
+
+<li>remover da tabela uma restri????o existente</li>
+
+<li>aumentar o comprimento de coluna VARCHAR, CHAR VARYING e CHARACTER VARYING</li>
+
+<li>sobrepor o bloqueio no n??vel de linha para a tabela (ou remover a sobreposi????o)</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Sintaxe</h4>
+
+<pre><strong>ALTER TABLE <em><a href="rreftablename.html#rreftablename">nome-da-tabela</a></em>
+{
+    ADD COLUMN <em><a href="rrefsqlj81859.html#rrefsqlj81859__rrefaltercolumndef">defini????o-da-coluna</a></em> |
+    ADD <em><a href="rrefsqlj13590.html#rrefsqlj13590">CONSTRAINT cl??usula</a></em> |
+    DROP { PRIMARY KEY | FOREIGN KEY nome-da-restri????o | UNIQUE  nome-da-restri????o |
+           CHECK nome-da-restri????o | CONSTRAINT nome-da-restri????o }
+    ALTER <em><a href="rrefsqlj81859.html#rrefsqlj81859__rrefsqlj37860">altera????o-da-coluna</a></em> |
+    LOCKSIZE { ROW | TABLE }
+}</strong>
+</pre>
+</div>
+
+<div class="example" id="rrefsqlj81859__rrefaltercolumndef"><a name="rrefsqlj81859__rrefaltercolumndef"><!-- --></a><h4 class="sectiontitle">defini????o-da-coluna</h4>
+
+<pre><strong><em><a href="rrefsimplecolumnname.html#rrefsimplecolumnname">nome-de-coluna-simples</a></em> <em>tipo-de-dado</em>
+[ <em><a href="rrefsqlj16095.html#rrefsqlj16095">restri????o no n??vel-de-coluna</a></em> ]*
+[ [ WITH ] DEFAULT {<em>Express??oConstante</em> | NULL } ]</strong>
+</pre>
+
+</div>
+
+<div class="example" id="rrefsqlj81859__rrefsqlj37860"><a name="rrefsqlj81859__rrefsqlj37860"><!-- --></a><h4 class="sectiontitle">altera????o-da-coluna</h4>
+
+<pre><strong><em>nome-da-coluna</em> SET DATA TYPE VARCHAR(inteiro) |
+<em>nome-da-coluna</em> SET INCREMENT BY constante-inteira</strong>
+</pre>
+
+</div>
+
+<div class="section">
+<p>Na altera????o-da-coluna, SET INCREMENT BY constante-inteira especifica
+o intervalo entre valores consecutivos da coluna de identidade.
+O pr??ximo valor a ser gerado para a coluna de identidade ser?? determinado a
+partir do ??ltimo valor atribu??do e o incremento a ser aplicado.
+A coluna deve ter sido definida com o atributo IDENTITY.</p>
+
+<p>ALTER TABLE n??o afeta nenhuma vis??o que faz refer??ncia ?? tabela sendo
+alterada.
+Isto inclui as vis??es que possuem "*" na lista do SELECT.
+Estas vis??es devem ser removidas e recriadas para que retornem a nova coluna.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Adi????o de colunas</h4>
+
+<p>A sintaxe para a
+<em><a href="rrefsqlj81859.html#rrefsqlj81859__rrefaltercolumndef">defini????o-da-coluna</a></em>
+de uma nova coluna ?? a mesma que para a coluna na instru????o CREATE TABLE.
+Isto significa que pode ser colocada uma restri????o de coluna para a nova coluna
+na instru????o ALTER TABLE ADD COLUMN.
+Entretanto, somente pode ser adicionada uma coluna com a restri????o NOT NULL
+a uma tabela existente se for fornecido um valor padr??o; caso contr??rio,
+?? lan??ada uma exce????o ao ser executada a instru????o ALTER TABLE.</p>
+
+<p>Assim como em CREATE TABLE, se a defini????o da coluna incluir uma restri????o
+de unicidade ou de chave prim??ria, a coluna n??o poder?? conter valores nulos e,
+portanto, tamb??m deve ser especificado o atributo NOT NULL (SQLState 42831).</p>
+
+<div class="note"><span class="notetitle">Nota: </span>Se a tabela possuir um gatilho de UPDATE sem uma lista de colunas
+expl??cita, adicionar uma coluna ?? tabela adicionar?? esta coluna ?? lista de
+colunas de atualiza????o impl??cita sobre a qual o gatilho est?? definido, e todas
+as refer??ncias a vari??veis de transi????o ser??o invalidadas para que incluam a
+nova coluna.</div>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Adi????o de restri????es</h4>
+
+<div class="p">ALTER TABLE ADD CONSTRAINT adiciona restri????o no n??vel-de-tabela a uma
+tabela existente.
+Pode ser adicionado atrav??s de ALTER TABLE qualquer tipo de restri????o
+no n??vel-de-tabela suportado.
+Existem as seguintes limita????es para adicionar restri????o a uma tabela
+existente:
+<ul>
+<li>Ao adicionar uma restri????o de chave estrangeira ou de verifica????o a uma
+tabela existente, o
+<span>Derby</span>
+verifica a tabela para ter certeza que as linhas existentes satisfazem a
+restri????o.
+Se alguma linha for inv??lida, o
+<span>Derby</span>
+lan??ar?? uma exce????o de instru????o, e a restri????o n??o ser?? adicionada.</li>
+
+<li>Todas as colunas inclu??das na chave prim??ria devem conter dados n??o nulos
+e serem ??nicas.
+<p>ALTER TABLE ADD UNIQUE e PRIMARY KEY disp??em de um m??todo resumido para
+definir uma chave prim??ria formada por uma ??nica coluna.
+Se for especificado PRIMARY KEY na defini????o da coluna C, o efeito ser?? o mesmo
+de especificar a cl??usula PRIMARY KEY(C) como uma cl??usula em separado.
+A coluna n??o pode conter valores nulos, portanto o atributo NOT NULL
+tamb??m deve ser especificado.</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>Para obter informa????es sobre a sintaxe das restri????es deve ser consultada a
+<a href="rrefsqlj13590.html#rrefsqlj13590">Cl??usula CONSTRAINT</a>.
+Ao se adicionar restri????es com a sintaxe ALTER TABLE ADD CONSTRAINT, deve ser
+utilizada a sintaxe para restri????o no n??vel-de-tabela.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Remo????o de restri????es</h4>
+
+<p>ALTER TABLE DROP CONSTRAINT remove uma restri????o de uma tabela existente.
+Para remover uma restri????o sem nome, deve ser especificado o nome gerado para a
+restri????o armazenado em <em>SYS.SYSCONSTRAINTS</em> na forma de um identificador
+delimitado.</p>
+
+<p>A remo????o da restri????o de chave prim??ria, de unicidade ou de chave
+estrangeira remove o ??ndice f??sico que imp??e a restri????o (tamb??m conhecido
+por <em>??ndice de apoio</em>).</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Modifica????o de colunas</h4>
+
+<div class="p">A <em><a href="rrefsqlj81859.html#rrefsqlj81859__rrefsqlj37860">altera????o-da-coluna</a></em>
+permite alterar a coluna especificada das seguintes maneiras:
+<ul>
+<li>Aumentar o comprimento de uma coluna VARCHAR existente.
+Pode ser utilizado CHARACTER VARYING ou CHAR VARYING como sin??nimo para a
+palavra chave VARCHAR.
+<p>Para aumentar o comprimento de uma coluna deste tipo, deve ser especificado
+o tipo de dado e o novo tamanho ap??s o nome da coluna.</p>
+
+<p>N??o ?? permitido diminuir o tamanho ou mudar o tipo de dado.
+N??o ?? permitido aumentar o comprimento de uma coluna que faz parte de uma
+chave prim??ria ou chave de unicidade referenciada por uma restri????o de chave
+estrangeira, ou que seja parte de uma restri????o de chave estrangeira.</p>
+
+</li>
+
+<li>Especifica????o do intervalo entre valores consecutivos da coluna de identidade.
+<p>Para definir o intervalo entre valores consecutivos da coluna de identidade
+deve ser especificada uma constante-inteira.
+A coluna deve ter sido definida anteriormente com o atributo IDENTITY
+(SQLState 42837).
+Caso existam linhas na tabela, os valores na coluna para a qual o padr??o para
+SET INCREMENT foi adicionado n??o mudam.</p>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Defini????o de padr??o</h4>
+
+<p>Pode ser especificado um valor padr??o para a nova coluna.
+O valor padr??o ?? o valor inserido na coluna se n??o for especificado nenhum
+outro valor.
+Quando n??o ?? especificado explicitamente, o valor padr??o da coluna ?? NULL.
+Se for especificado valor padr??o para uma nova coluna, as linhas existentes
+na tabela receber??o o valor padr??o na nova coluna.</p>
+
+<p>Para obter mais informa????es sobre valor padr??o deve ser consultada a
+<a href="rrefsqlj24513.html#rrefsqlj24513">Instru????o CREATE TABLE</a>.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Altera????o da granularidade do bloqueio da tabela</h4>
+
+<p>A cl??usula LOCKSIZE permite sobrepor o bloqueio no n??vel-de-linha para uma
+determinada tabela, se o sistema utilizar a defini????o padr??o de bloqueio no
+n??vel-de-linha (Se o sistema estiver definido com bloqueio no n??vel-de-tabela,
+n??o ser?? poss??vel alterar a granularidade do bloqueio, embora o
+<span>Derby</span>
+permita utilizar a cl??usula LOCKSIZE nesta situa????o sem lan??ar uma exce????o).
+Para sobrepor o bloqueio no n??vel-de-linha de uma determinada tabela,
+deve ser definido o bloqueio da tabela como TABLE.
+Se a tabela tiver sido criada com a granularidade de bloqueio no
+n??vel-de-tabela, o bloqueio poder?? passar a ser no n??vel-de-linha especificando
+ROW na cl??usula LOCKSIZE da instru????o ALTER TABLE.
+Para obter informa????es sobre porque algumas vezes esta altera????o ?? ??til, deve
+ser consultado o
+<cite><span><em>Ajuste do Derby</em></span></cite>.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Exemplos</h4>
+
+<pre><strong><span>-- Adicionar uma nova coluna com restri????o no
+-- n??vel-de-coluna a uma tabela existente.
+-- Se a tabela tiver alguma linha ser?? lan??ada uma exce????o,
+-- uma vez que a nova coluna ser?? inicializada com NULL
+-- em todas as linhas da tabela.
+</span>
+ALTER TABLE CIDADES ADD COLUMN REGI??O VARCHAR(26)
+CONSTRAINT NOVA_RESTRI????O CHECK (REGI??O IS NOT NULL);
+
+<span>-- Adicionar uma restri????o de unicidade a uma tabela existente.
+-- Ser?? lan??ada uma exce????o se forem encontradas chaves duplicadas.
+</span>
+ALTER TABLE SAMP.DEPARTAMENTOS
+ADD CONSTRAINT NOVA_UNICIDADE UNIQUE (NUM_DEP);
+
+<span>-- Adicionar uma restri????o de chave estrangeira ??
+-- tabela cidades. Cada linha de cidades ?? verificada
+-- para ter certeza que satisfaz a restri????o.
+-- Se alguma linha n??o satisfizer a restri????o, a
+-- restri????o n??o ser?? adicionada
+</span>
+ALTER TABLE CIDADES ADD CONSTRAINT FK_PA??SES
+FOREIGN KEY (PA??S) REFERENCES PA??SES (PA??S);
+
+<span>-- Adicionar uma restri????o de chave prim??ria ?? tabela.
+-- Primeiro, criar a tabela.</span>
+CREATE TABLE ATIVIDADES (ID_CIDADE INT NOT NULL,
+ESTA????O CHAR(2), ATIVIDADE VARCHAR(32) NOT NULL);
+
+<span>-- N??o ser?? poss??vel adicionar esta restri????o se as
+-- colunas que comp??em a chave prim??ria possu??rem
+-- dados nulos ou valores duplicados.</span>
+ALTER TABLE ATIVIDADES ADD PRIMARY KEY (ID_CIDADE, ATIVIDADE);
+
+<span>-- Remover a restri????o de chave prim??ria da tabela cidades.</span>
+ALTER TABLE CIDADES DROP CONSTRAINT PK_CIDADES;
+
+<span>-- Remover a restri????o de chave estrangeira da tabela cidades.</span>
+ALTER TABLE CIDADES DROP CONSTRAINT FK_PA??SES;
+
+<span>-- Adicionar a coluna NUM_DEP com valor padr??o igual a 1.</span>
+ALTER TABLE SAMP.ATIV_EMP ADD COLUMN NUM_DEP INT DEFAULT 1;
+
+<span>-- Aumentar o comprimento da coluna VARCHAR.</span>
+ALTER TABLE SAMP.EMP_FOTO ALTER FORMATO_FOTO SET DATA TYPE VARCHAR(30);
+
+<span>-- Alterar a granularidade do bloqueio da tabela.</span>
+ALTER TABLE SAMP.VENDAS LOCKSIZE TABLE;</strong>
+</pre>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Resultados</h4>
+
+<p>A instru????o ALTER TABLE faz com que todas as instru????es que dependem da tabela
+sendo alterada sejam recompiladas antes de sua pr??xima execu????o.
+A instru????o ALTER TABLE n??o ?? permitida caso existam cursores abertos fazendo
+refer??ncia ?? tabela sendo alterada.</p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>T??pico pai:</strong> <a href="crefsqlj39374.html" title="">Instru????es</a></div>
+</div>
+<div class="relconcepts"><strong>Conceitos relacionados</strong><br />
+<div><a href="crefsqlj22771.html" title="">Intera????o com o sistema de depend??ncias</a></div>
+<div><a href="crefsqlj95081.html" title="">Instru????es CREATE</a></div>
+<div><a href="crefsqlj80721.html" title="">Instru????es DROP</a></div>
+<div><a href="crefsqljrenamestatements.html" title="">Instru????es RENAME</a></div>
+<div><a href="crefsqlj35312.html" title="">Instru????es SET</a></div>
+</div>
+<div class="relref"><strong>Refer??ncias relacionadas</strong><br />
+<div><a href="rrefcallprocedure.html" title="">CALL (PROCEDIMENTO)</a></div>
+<div><a href="rrefsqlj13590.html" title="">Cl??usula CONSTRAINT</a></div>
+<div><a href="rrefdeclaretemptable.html" title="">Instru????o DECLARE GLOBAL TEMPORARY TABLE</a></div>
+<div><a href="rrefsqlj35981.html" title="">Instru????o DELETE</a></div>
+<div><a href="rrefsqlj31783.html" title="">Cl??usula FOR UPDATE</a></div>
+<div><a href="rrefsqlj21583.html" title="">Cl??usula FROM</a></div>
+<div><a href="rrefsqlj32654.html" title="">Cl??usula GROUP BY</a></div>
+<div><a href="rrefsqlj14854.html" title="">Cl??usula HAVING</a></div>
+<div><a href="rrefsqlj35034.html" title="">INNER JOIN</a></div>
+<div><a href="rrefsqlj40774.html" title="">Instru????o INSERT</a></div>
+<div><a href="rrefsqlj29840.html" title="">Opera????o JOIN</a></div>
+<div><a href="rrefsqlj18922.html" title="">LEFT OUTER JOIN</a></div>
+<div><a href="rrefsqlj40506.html" title="">Instru????o LOCK TABLE</a></div>
+<div><a href="rrefsqlj13658.html" title="">Cl??usula ORDER BY</a></div>
+<div><a href="rrefsqlj21571.html" title="">Consulta</a></div>
+<div><a href="rrefsqlj57522.html" title="">RIGHT OUTER JOIN</a></div>
+<div><a href="rrefscalarsubquery.html" title="">SubconsultaEscalar</a></div>
+<div><a href="rrefselectexpression.html" title="">Express??oSele????o</a></div>
+<div><a href="rrefsqlj41360.html" title="">Instru????o SELECT</a></div>
+<div><a href="rreftableexpression.html" title="">Express??oTabela</a></div>
+<div><a href="rreftablesubquery.html" title="">SubconsultaTabela</a></div>
+<div><a href="rrefsqlj26498.html" title="">Instru????o UPDATE</a></div>
+<div><a href="rrefsqlj11277.html" title="">VALUES Express??o</a></div>
+<div><a href="rrefsqlj33602.html" title="">Cl??usula WHERE</a></div>
+<div><a href="rrefsqlj15309.html" title="">Cl??usula WHERE CURRENT OF</a></div>
+</div>
+</div>
+
+</body>
+</html>

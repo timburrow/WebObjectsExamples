@@ -1,0 +1,152 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = ADDRESS_ID;
+           externalType = integer;
+           name = addressID;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.addressType;
+           externalType = int;
+           name = addressType;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.city;
+           externalType = char;
+           name = city;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 32;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = COMPANY;
+           externalType = char;
+           name = company;
+           valueClassName = NSString;
+           width = 64;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = MAIL_STOP;
+           externalType = char;
+           name = mailStop;
+           valueClassName = NSString;
+           width = 64;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.phone;
+           externalType = char;
+           name = phone;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 16;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.state;
+           externalType = char;
+           name = state;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 32;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.street;
+           externalType = char;
+           name = street;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.zip;
+           externalType = char;
+           name = zip;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 16;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       addressID, 
+       addressType, 
+       city, 
+       company, 
+       mailStop, 
+       phone, 
+       state, 
+       street, 
+       zip
+    );
+    className = webobjectsexamples.sophisticateddatabaseexample.WorkAddress;
+    classProperties = 
+    (
+       addressType, 
+       city, 
+       company, 
+       mailStop, 
+       phone, 
+       state, 
+       street, 
+       zip
+    );
+    externalName = WORK_ADDRESS;
+    internalInfo = 
+    {};
+    maxNumberOfInstancesToBatchFetch = 10;
+    name = WorkAddress;
+    parent = Address;
+    primaryKeyAttributes = 
+    (
+       addressID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Address;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = addressID;
+                  sourceAttribute = addressID;
+              }
+           );
+           name = toAddress;
+       }
+    );
+    restrictingQualifier = "(addressType = 2)";
+}

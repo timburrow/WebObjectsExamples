@@ -1,0 +1,25 @@
+ 
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXIFrame";
+}
+
+PageNameIFrame: WXIFrame {
+    pageName = "PCFrameOnePage";
+    width = "75%";
+    height = 400;
+    scrolling = "auto";
+}
+
+SrcIFrame: WXIFrame {
+    src = "http://www.apple.com";
+    width = "75%";
+    height = 400;
+    scrolling = "auto";
+}
+
+ValueIFrame: WXIFrame {
+    value = iframePage;
+    width = "75%";
+    height = 400;
+    scrolling = "auto";
+}

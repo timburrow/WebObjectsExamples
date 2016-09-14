@@ -1,0 +1,9 @@
+ 
+Content: WOComponentContent {}
+
+Form: WOGenericContainer {
+    elementName = "form";
+    method = "post";
+    action = context.componentActionURL;
+    invokeAction = ^action;
+}

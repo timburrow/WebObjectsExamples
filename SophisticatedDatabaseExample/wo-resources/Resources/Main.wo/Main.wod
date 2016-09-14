@@ -1,0 +1,96 @@
+Conditional1: WOConditional {
+	condition = session.isLoggedIn;
+}
+
+Conditional2: WOConditional {
+	condition = session.isLoggedIn;
+	negate = true;
+}
+
+Conditional3: WOConditional {
+	condition = session.isAdmin;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = session.isAdmin;
+}
+
+Conditional5: WOConditional {
+	condition = session.isValidUser;
+	negate = true;
+}
+
+Conditional6: WOConditional {
+	condition = session.isValidUser;
+}
+
+Form1: WOForm {
+}
+
+Form2: WOForm {
+}
+
+Hyperlink1: WOHyperlink {
+	action = cataloguePage;
+}
+
+Hyperlink2: WOHyperlink {
+	action = schedulePage;
+}
+
+Hyperlink3: WOHyperlink {
+	action = enrollmentPage;
+}
+
+Hyperlink4: WOHyperlink {
+	action = administrationPage;
+}
+
+Hyperlink5: WOHyperlink {
+	action = logout;
+}
+
+Hyperlink6: WOHyperlink {
+	action = logout;
+}
+
+Image1: WOImage {
+	filename = "basicbrain.gif";
+	framework = "app";
+	width = 327;
+	height = 220;
+}
+
+Image2: WOImage {
+	filename = "stop.gif";
+	framework = "app";
+	width = 32;
+	height = 32;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = verifyLogin;
+	value = "Login";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = verifyLogin;
+	value = "Login";
+}
+
+TextField1: WOTextField {
+	value = session.login;
+}
+
+TextField2: WOTextField {
+	value = session.login;
+}
+
+WOPasswordField: WOPasswordField {
+	value = session.password;
+}
+
+WOPasswordField2: WOPasswordField {
+	value = session.password;
+}

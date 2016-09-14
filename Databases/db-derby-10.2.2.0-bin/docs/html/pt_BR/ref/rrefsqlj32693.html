@@ -1,0 +1,109 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br" xml:lang="pt-br">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="reference" name="DC.Type" />
+<meta name="DC.Title" content="AVG" />
+<meta content="Fun????o de agrega????o AVG" name="DC.subject" />
+<meta content="Fun????o de agrega????o AVG" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj29026.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="rrefsqlj32693" name="DC.Identifier" />
+<meta content="pt-br" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/pt_BR/reftemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>AVG</title>
+</head>
+<body id="rrefsqlj32693"><a name="rrefsqlj32693"><!-- --></a>
+
+
+<h1 class="topictitle1">AVG</h1>
+
+
+<div>
+<div class="section">
+<p>AVG ?? uma fun????o de agrega????o que calcula a m??dia de uma express??o sobre
+um conjunto de linhas (consulte
+<a href="rrefsqlj33923.html#rrefsqlj33923">Agrega????es (fun????es de conjunto)</a>).
+AVG somente ?? permitida nas express??es que t??m como resultado tipos de dado
+num??ricos.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Sintaxe</h4>
+
+<pre><strong>AVG ( [ DISTINCT | ALL ] <em>Express??o</em> )</strong></pre>
+
+<p>
+
+O qualificador DISTINCT elimina as linhas duplicadas.
+O qualificador ALL mant??m as linhas duplicadas.
+ALL ?? o valor padr??o, se nem ALL nem DISTINCT for especificado.
+Por exemplo, se uma coluna contiver os valores 1.0, 1.0, 1.0, 1.0 e 2.0,
+AVG(coluna) retornar?? um valor menor que AVG(DISTINCT coluna).</p>
+
+<div class="p">Somente ?? permitida uma express??o de agrega????o DISTINCT por
+<em><a href="rrefselectexpression.html#rrefselectexpression">Express??oSele????o</a></em>.
+Por exemplo, a seguinte consulta n??o ?? v??lida:
+<pre><strong>SELECT AVG (DISTINCT TEMPO_V??O), SUM (DISTINCT MILHAS)
+FROM V??OS</strong>
+</pre>
+
+</div>
+
+<p>A express??o pode conter v??rias refer??ncias a colunas ou express??es, mas
+n??o pode conter outra agrega????o ou subconsulta.
+Deve ter como resultado um tipo de dado num??rico do SQL-92.
+Portanto, podem ser chamados m??todos que t??m como resultado tipos de dado SQL-92.
+Se uma express??o for avaliada como NULL, a agrega????o saltar?? este valor.</p>
+
+<div class="p">O tipo de dado do resultado ?? o mesmo da express??o em que opera (nunca
+estoura).
+Por exemplo, a seguinte consulta retorna o INTEGER <em>1</em>, que pode n??o ser
+o esperado:
+<pre><strong>SELECT AVG(C1)
+FROM (VALUES (1), (1), (1), (1), (2)) AS MINHA_TABELA (C1)</strong>
+</pre>
+
+</div>
+
+<div class="p">Se for desejada uma precis??o maior, a express??o dever?? ser convertida para
+outro tipo de dado:
+<pre><strong>SELECT AVG(CAST (C1 AS DOUBLE PRECISION))
+FROM (VALUES (1), (1), (1), (1), (2)) AS MINHA_TABELA (c1)</strong>
+</pre>
+
+</div>
+ </div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>T??pico pai:</strong> <a href="rrefsqlj29026.html" title="">Fun????es nativas</a></div>
+</div>
+</div>
+
+</body>
+</html>

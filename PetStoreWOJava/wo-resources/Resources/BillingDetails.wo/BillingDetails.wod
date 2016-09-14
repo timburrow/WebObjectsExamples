@@ -1,0 +1,189 @@
+ActiveImage1: WOActiveImage {
+	filename = "button_cont.gif";
+	framework = "app";
+	action = finishOrder;
+}
+
+ActiveImage2: WOActiveImage {
+	filename = "button_cont.gif";
+	framework = "app";
+	action = confirmShippingData;
+}
+
+CheckBox1: WOCheckBox {
+	checked = shipToBilling;
+}
+
+Conditional1: WOConditional {
+	condition = isConfirmShipping;
+	negate = true;
+}
+
+Conditional2: WOConditional {
+	condition = isConfirmShipping;
+}
+
+Conditional3: WOConditional {
+	condition = hasEntryError;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = hasEntryError;
+}
+
+Conditional5: WOConditional {
+	condition = editCCInfo;
+}
+
+Conditional7: WOConditional {
+	condition = editCCInfo;
+}
+
+Conditional8: WOConditional {
+	condition = editCCInfo;
+	negate = true;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+Hyperlink1: WOHyperlink {
+	action = editBillingInfo;
+}
+
+PageBack1: PageBack {
+}
+
+PopUpButton1: WOPopUpButton {
+	list = creditCardTypes;
+	item = creditCardType;
+	selection = order.cardtype;
+}
+
+PopUpButton2: WOPopUpButton {
+	list = months;
+	item = month;
+	selection = month;
+}
+
+PopUpButton3: WOPopUpButton {
+	list = years;
+	item = year;
+	selection = year;
+}
+
+PopUpButton4: WOPopUpButton {
+	list = states;
+	selection = state;
+}
+
+PopUpButton5: WOPopUpButton {
+	list = countries;
+	selection = country;
+}
+
+String1: WOString {
+	value = order.billtofirstname;
+}
+
+String10: WOString {
+	value = order.shipaddr1;
+}
+
+String11: WOString {
+	value = order.shipaddr2;
+}
+
+String12: WOString {
+	value = order.shipcity;
+}
+
+String13: WOString {
+	value = order.shipstate;
+}
+
+String14: WOString {
+	value = order.shipzip;
+}
+
+String15: WOString {
+	value = errorMessage;
+}
+
+String2: WOString {
+	value = order.billtolastname;
+}
+
+String3: WOString {
+	value = order.billaddr1;
+}
+
+String4: WOString {
+	value = order.billaddr2;
+}
+
+String5: WOString {
+	value = order.billcity;
+}
+
+String6: WOString {
+	value = order.billstate;
+}
+
+String7: WOString {
+	value = order.billzip;
+}
+
+String8: WOString {
+	value = order.shiptofirstname;
+}
+
+String9: WOString {
+	value = order.shiptolastname;
+}
+
+Template: Template {
+	isFrontPage = false;
+}
+
+TextField1: WOTextField {
+	value = order.creditcard;
+	size = 25;
+}
+
+TextField2: WOTextField {
+	value = lastname;
+	size = 35;
+}
+
+TextField3: WOTextField {
+	value = addr1;
+	size = 35;
+}
+
+TextField4: WOTextField {
+	value = addr2;
+	size = 35;
+}
+
+TextField5: WOTextField {
+	value = city;
+	size = 35;
+}
+
+TextField6: WOTextField {
+	value = firstname;
+	size = 35;
+}
+
+TextField7: WOTextField {
+	value = zip;
+	size = 10;
+}
+
+TextField8: WOTextField {
+	value = currentAccount.phone;
+}
+

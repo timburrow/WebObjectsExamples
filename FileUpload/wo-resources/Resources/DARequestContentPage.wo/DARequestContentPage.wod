@@ -1,0 +1,30 @@
+BackToMain: WOHyperlink {
+    pageName = "Main";
+    string = "[Back to Main]";
+}
+
+BodyTag: WOExampleBody {
+    leftmargin=0;
+    topmargin=0;
+}
+
+FileName: WOString {
+    value = fileName;
+}
+
+Footer: WOExampleFooter {}
+
+Form1: WOForm {
+    enctype = "multipart/form-data";
+    href = processRequestContentURL;
+}
+
+ShowFile: WOConditional {
+    condition = hasFile;
+}
+
+Upload1 : WOFileUpload {
+    filePath = fileName;
+    inputStream = inputStream;
+    name = "thefile";
+}

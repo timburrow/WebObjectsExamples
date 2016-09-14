@@ -1,0 +1,11 @@
+ 
+BoldToggleLink: WXHyperlink {
+    action = toggleBold;
+}
+
+HeaderFooter: EHHeaderFooter {}
+
+OptionalBold: WOGenericContainer {
+    elementName = "b";
+    omitTags = isBoldDisabled;
+}

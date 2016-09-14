@@ -1,0 +1,22 @@
+FileUpload1: WOFileUpload {
+	data = imageData;
+	filePath = imagePath;
+	mimeType = imageType;
+}
+
+Form1: WOForm {
+    enctype = "multipart/form-data";
+	multipleSubmit = true;
+}
+
+LayoutComponent1: LayoutComponent {
+}
+
+String1: WOString {
+	value = application.name;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = loadImageAction;
+	value = "Load Image";
+}

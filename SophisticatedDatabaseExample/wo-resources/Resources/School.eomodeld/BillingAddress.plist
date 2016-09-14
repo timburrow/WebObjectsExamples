@@ -1,0 +1,163 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = ACCOUNT_NUMBER;
+           externalType = char;
+           name = accountNumber;
+           valueClassName = NSString;
+           width = 16;
+       }, 
+       
+       {
+           columnName = ADDRESS_ID;
+           externalType = integer;
+           name = addressID;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.addressType;
+           externalType = int;
+           name = addressType;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.city;
+           externalType = char;
+           name = city;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 32;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = EXPIRATION_DATE;
+           externalType = datetime;
+           name = expirationDate;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSCalendarDate;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = PAYMENT_METHOD;
+           externalType = char;
+           name = paymentMethod;
+           valueClassName = NSString;
+           width = 16;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.phone;
+           externalType = char;
+           name = phone;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 16;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.state;
+           externalType = char;
+           name = state;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 32;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.street;
+           externalType = char;
+           name = street;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = toAddress.zip;
+           externalType = char;
+           name = zip;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 16;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       accountNumber, 
+       addressID, 
+       addressType, 
+       city, 
+       expirationDate, 
+       paymentMethod, 
+       phone, 
+       state, 
+       street, 
+       zip
+    );
+    className = webobjectsexamples.sophisticateddatabaseexample.BillingAddress;
+    classProperties = 
+    (
+       accountNumber, 
+       addressType, 
+       city, 
+       expirationDate, 
+       paymentMethod, 
+       phone, 
+       state, 
+       street, 
+       zip
+    );
+    externalName = BILLING_ADDRESS;
+    internalInfo = 
+    {};
+    maxNumberOfInstancesToBatchFetch = 10;
+    name = BillingAddress;
+    parent = Address;
+    primaryKeyAttributes = 
+    (
+       addressID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Address;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = addressID;
+                  sourceAttribute = addressID;
+              }
+           );
+           name = toAddress;
+       }
+    );
+    restrictingQualifier = "(addressType = 3)";
+}

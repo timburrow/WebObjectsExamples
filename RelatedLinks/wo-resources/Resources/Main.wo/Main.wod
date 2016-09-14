@@ -1,0 +1,77 @@
+
+BodyTag: WOExampleBody {}
+
+CollapsibleComponentContent: WOCollapsibleComponentContent {
+	closedLabel = currLink.name;
+	openedLabel = currLink.name;
+}
+
+Conditional1: WOConditional {
+	condition = currLink.isRelatedLink;
+}
+
+Conditional2: WOConditional {
+	condition = currLink.isTopic;
+}
+
+Conditional3: WOConditional {
+	condition = currTopicLink.isRelatedLink;
+}
+
+Footer: WOExampleFooter {}
+
+Form1: WOForm {
+        multipleSubmit = true;
+}
+
+Hyperlink1: WOHyperlink {
+	href = currLink.href;
+	string = currLink.name;
+}
+
+Hyperlink2: WOHyperlink {
+	href = currTopicLink.href;
+	string = currTopicLink.name;
+}
+
+Repetition1: WORepetition {
+	item = currLink;
+	list = relatedLinks;
+}
+
+Repetition2: WORepetition {
+	item = currTopicLink;
+	list = currLink.relatedLinks;
+}
+
+String1: WOString {
+	value = relatedLinksInfo;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = relatedLinksAsHyperlinks;
+	value = "related links via tree walking";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = linksViaMapping;
+	value = "related links via mapping model";
+}
+
+SubmitButton3: WOSubmitButton {
+	action = relatedLinksAsFormattedText;
+	value = "formatted related links info";
+}
+SubmitButton4: WOSubmitButton {
+	action = relatedLinksAsRawXML;
+	value = "related links as raw XML";
+}
+
+TextField1: WOTextField {
+	size = 40;
+	value = webSite;
+}
+
+TitleImage: WOImage {
+	filename = "title_related_links.gif";
+}

@@ -1,0 +1,4 @@
+ 
+ResourceURLString: WOString {
+    value = resourceURL;
+}

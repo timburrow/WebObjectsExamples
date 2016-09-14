@@ -1,0 +1,375 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = BILLADDR1;
+           externalType = char;
+           name = billaddr1;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = BILLADDR2;
+           externalType = char;
+           name = billaddr2;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = BILLCITY;
+           externalType = char;
+           name = billcity;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = BILLCOUNTRY;
+           externalType = char;
+           name = billcountry;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = BILLSTATE;
+           externalType = char;
+           name = billstate;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = BILLTOFIRSTNAME;
+           externalType = char;
+           name = billtofirstname;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = BILLTOLASTNAME;
+           externalType = char;
+           name = billtolastname;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = BILLZIP;
+           externalType = char;
+           name = billzip;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = CARDTYPE;
+           externalType = char;
+           name = cardtype;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = COURIER;
+           externalType = char;
+           name = courier;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = CREDITCARD;
+           externalType = char;
+           name = creditcard;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = EXPRDATE;
+           externalType = char;
+           name = exprdate;
+           valueClassName = NSString;
+           valueType = c;
+           width = 7;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ORDERDATE;
+           externalType = timestamp;
+           name = orderdate;
+           valueClassName = NSCalendarDate;
+           valueType = T;
+       }, 
+       
+       {
+           columnName = ORDERID;
+           externalType = int;
+           name = orderid;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SHIPADDR1;
+           externalType = char;
+           name = shipaddr1;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SHIPADDR2;
+           externalType = char;
+           name = shipaddr2;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SHIPCITY;
+           externalType = char;
+           name = shipcity;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SHIPCOUNTRY;
+           externalType = char;
+           name = shipcountry;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SHIPSTATE;
+           externalType = char;
+           name = shipstate;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SHIPTOFIRSTNAME;
+           externalType = char;
+           name = shiptofirstname;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SHIPTOLASTNAME;
+           externalType = char;
+           name = shiptolastname;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SHIPZIP;
+           externalType = char;
+           name = shipzip;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = TOTALPRICE;
+           externalType = decimal;
+           name = totalprice;
+           precision = 10;
+           scale = 2;
+           valueClassName = NSNumber;
+           valueType = B;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = USERID;
+           externalType = char;
+           name = userID;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       billaddr1, 
+       billaddr2, 
+       billcity, 
+       billcountry, 
+       billstate, 
+       billtofirstname, 
+       billtolastname, 
+       billzip, 
+       cardtype, 
+       courier, 
+       creditcard, 
+       exprdate, 
+       orderdate, 
+       orderid, 
+       shipaddr1, 
+       shipaddr2, 
+       shipcity, 
+       shipcountry, 
+       shipstate, 
+       shiptofirstname, 
+       shiptolastname, 
+       shipzip, 
+       totalprice, 
+       userID
+    );
+    className = Order;
+    classProperties = 
+    (
+       billaddr1, 
+       billaddr2, 
+       billcity, 
+       billcountry, 
+       billstate, 
+       billtofirstname, 
+       billtolastname, 
+       billzip, 
+       cardtype, 
+       courier, 
+       creditcard, 
+       exprdate, 
+       lineItems, 
+       orderStatus, 
+       orderdate, 
+       orderid, 
+       shipaddr1, 
+       shipaddr2, 
+       shipcity, 
+       shipcountry, 
+       shipstate, 
+       shiptofirstname, 
+       shiptolastname, 
+       shipzip, 
+       totalprice, 
+       userID
+    );
+    externalName = ORDERS;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           billaddr1, 
+           billaddr2, 
+           billcity, 
+           billcountry, 
+           billstate, 
+           billtofirstname, 
+           billtolastname, 
+           billzip, 
+           cardtype, 
+           courier, 
+           creditcard, 
+           exprdate, 
+           orderdate, 
+           shipaddr1, 
+           shipaddr2, 
+           shipcity, 
+           shipcountry, 
+           shipstate, 
+           shiptofirstname, 
+           shiptolastname, 
+           shipzip, 
+           totalprice
+        );
+    };
+    name = Order;
+    primaryKeyAttributes = 
+    (
+       orderid
+    );
+    relationships = 
+    (
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = LineItem;
+           isMandatory = Y;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = orderid;
+                  sourceAttribute = orderid;
+              }
+           );
+           name = lineItems;
+           ownsDestination = Y;
+           propagatesPrimaryKey = Y;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = OrderStatus;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = orderid;
+                  sourceAttribute = orderid;
+              }
+           );
+           name = orderStatus;
+           ownsDestination = Y;
+           propagatesPrimaryKey = Y;
+       }
+    );
+}

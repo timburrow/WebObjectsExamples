@@ -1,0 +1,34 @@
+Form: WOForm {}
+
+LoginButton: WOSubmitButton {
+	action = gotoAdministrationPage;
+    value = "Submit";
+}
+
+LoginName: WOTextField {
+    value = loginName;
+}
+
+LoginPassword: WOPasswordField {
+    value = loginPassword;
+}
+
+LogoImage: WOImage {
+    filename = "school_tools_logo.jpg";
+    width = 263;
+    height = 288;
+}
+
+LogoName: WOImage {
+    filename = "school_tools_name.gif";
+    width = 292;
+    height = 73;
+}
+
+Body1: WOBody {
+	filename = "aqua_background.jpg";
+	framework = "app";
+}
+
+Footer1: WOExampleFooter {
+}

@@ -1,0 +1,31 @@
+<HTML>
+	<HEAD>
+		<TITLE>WOPetStore</TITLE>
+	</HEAD>
+	<BODY BGCOLOR=#FFFFFF>
+	<P ALIGN=CENTER><FONT SIZE+2><B>WOPetStore</B></FONT></P>
+	<B>Difficult Level:</B> Advanced<P><B>Topics Covered:</B> Conversion of a J2EE application to WebObjects</P>
+	<P ALIGN=LEFT><B>Framework Classed Used:</B> /Library/Frameworks/PetStoreWOModel.framework</P>
+	<P ALIGN=LEFT><B>Reference Sites:</B> <a href="http://developer.java.sun.com/developer/sampsource/petstore/petstore1_1_2.html">
+	http://developer.java.sun.com/developer/sampsource/petstore/petstore1_1_2.html</a></P>
+	<P ALIGN=LEFT><B>Usage:</B></P>
+	Start the application using Project Builder . The application then will try to open a browser
+	window with the proper URL and so it will establish a connection to the application.
+	<P ALIGN=LEFT><B>Description:</B></P>
+	<P ALIGN=LEFT>
+	The WOPetstore is a WebObjects port of Sun's JavaPetstore v 1.1.2. Sun's version of the Petstore is based on the J2EE technologies, such as JSP, EJB and JNDI, whereas the WOPetstore is 100% WebObjects based, utilizing the standard frameworks and tools that are part of the WebObjects product, such as the EOF and WOF frameworks. The Sun Petstore demonstrates some of the patterns, examples and guidelines for using the J2EE technology. Many developers have asked us what the difference is between developing under J2EE and WebObjects. The best way to answer this is to compare two identical applications, each built with one particular technology and toolset. Thus, one can compare the WOPetstore and Sun's JavaPetstore and see the basic differences in design patterns and the complexity in implementing a basic version of an e-commerce site.</p>
+
+<P ALIGN=LEFT>The WOPetstore is designed to use the same database schema and data set as the JavaPetstore, and include the same feature set and user interface  which gives an eaiser way to compare the two applications more evenly. Every attempt has been made to mirror Sun's version of the petstore, however some minor differences in behavior may become apparent due to the nature of the two platforms and differences in coding. </p>
+
+The following is a list of the known differences between the WOPetstore and the JavaPetstore:<BR>
+
+<ol>
+	<li>WOPetstore uses Openbase for the database as a default, Sun's JavaPetstore uses Cloudscape. Either can use Oracle, by changing the appropriate configuration and loading the data into Oracle. </li>
+<li>Even though the WOPetstore application allows you to select your language preference, either English or Japanese, this version of the WOPetstore does not include the nationalized version for Japanese.</li>
+<li>The admin application and associated functionality(i.e. email notification) included in the Javapetstore is not included in this version of the WOPetstore.</li>
+<li>There may be differences in the types of exceptions thrown. The WOPetstore will display a common, friendly error page for any unexpected exceptions which is not part of the JavaPetstore. The WOPetstore may not capture exceptions for certian  "business logic violations" that the JavaPetstore does.</li>
+</ol>
+
+
+</BODY>
+</HTML>

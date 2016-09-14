@@ -1,0 +1,25 @@
+
+Hyperlink1: WOHyperlink {
+	action = enrollmentPage;
+}
+
+Hyperlink2: WOHyperlink {
+	action = mainPage;
+}
+
+Repetition1: WORepetition {
+	item = course;
+	list = courses;
+}
+
+String1: WOString {
+	value = course.name;
+}
+
+String2: WOString {
+	value = course.shortDescription;
+}
+
+String3: WOString {
+	value = course.details;
+}

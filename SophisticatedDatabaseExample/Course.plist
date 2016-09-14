@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Classroom</key>
+	<dict>
+		<key>attributeNames</key>
+		<array>
+			<string>building</string>
+			<string>classroomID</string>
+			<string>room</string>
+		</array>
+		<key>rows</key>
+		<array>
+			<array>
+				<string>Annie Hall</string>
+				<string>1</string>
+				<string>234</string>
+			</array>
+			<array>
+				<string>Cow Palace</string>
+				<string>2</string>
+				<string>567</string>
+			</array>
+			<array>
+				<string>Terrarium</string>
+				<string>3</string>
+				<string>111</string>
+			</array>
+			<array>
+				<string>High Building</string>
+				<string>6</string>
+				<string>888</string>
+			</array>
+			<array>
+				<string>Show Theater</string>
+				<string>7</string>
+				<string>711</string>
+			</array>
+		</array>
+	</dict>
+	<key>Course</key>
+	<dict>
+		<key>attributeNames</key>
+		<array>
+			<string>courseID</string>
+			<string>details</string>
+			<string>name</string>
+			<string>shortDescription</string>
+		</array>
+		<key>rows</key>
+		<array>
+			<array>
+				<string>1</string>
+				<string>Callouses, cause and treatment</string>
+				<string>Physics</string>
+				<string>The real world</string>
+			</array>
+			<array>
+				<string>2</string>
+				<string>Behavior and structure of human primates</string>
+				<string>Biology</string>
+				<string>The opposite sex</string>
+			</array>
+			<array>
+				<string>3</string>
+				<string>Acquisition and retention of large sums of cash</string>
+				<string>Economics</string>
+				<string>Money and its lack</string>
+			</array>
+			<array>
+				<string>4</string>
+				<string>How say something and still get elected</string>
+				<string>Government</string>
+				<string>Staying out of trouble</string>
+			</array>
+			<array>
+				<string>5</string>
+				<string>Figure out what works, and what doesn't</string>
+				<string>History</string>
+				<string>Trial and error</string>
+			</array>
+		</array>
+	</dict>
+	<key>Schedule</key>
+	<dict>
+		<key>attributeNames</key>
+		<array>
+			<string>day</string>
+			<string>hours</string>
+			<string>scheduleID</string>
+			<string>time</string>
+		</array>
+		<key>rows</key>
+		<array>
+			<array>
+				<string>Monday</string>
+				<string>__NULL__</string>
+				<string>1</string>
+				<string>Jan 01 2001 08:00</string>
+			</array>
+			<array>
+				<string>Friday</string>
+				<string>__NULL__</string>
+				<string>2</string>
+				<string>Jan 01 2001 16:00</string>
+			</array>
+			<array>
+				<string>Wednesday</string>
+				<string>__NULL__</string>
+				<string>3</string>
+				<string>Jan 01 2001 10:00</string>
+			</array>
+			<array>
+				<string>Thursday</string>
+				<string>__NULL__</string>
+				<string>5</string>
+				<string>Jan 01 2001 11:00</string>
+			</array>
+			<array>
+				<string>Tuesday</string>
+				<string>__NULL__</string>
+				<string>6</string>
+				<string>Jan 01 2001 15:00</string>
+			</array>
+		</array>
+	</dict>
+	<key>ScheduledClass</key>
+	<dict>
+		<key>attributeNames</key>
+		<array>
+			<string>classroomID</string>
+			<string>courseID</string>
+			<string>scheduleID</string>
+			<string>scheduledClassID</string>
+			<string>teacherID</string>
+		</array>
+		<key>rows</key>
+		<array>
+			<array>
+				<string>1</string>
+				<string>1</string>
+				<string>1</string>
+				<string>1</string>
+				<string>4</string>
+			</array>
+			<array>
+				<string>2</string>
+				<string>2</string>
+				<string>2</string>
+				<string>2</string>
+				<string>11</string>
+			</array>
+			<array>
+				<string>3</string>
+				<string>3</string>
+				<string>3</string>
+				<string>3</string>
+				<string>13</string>
+			</array>
+			<array>
+				<string>6</string>
+				<string>4</string>
+				<string>5</string>
+				<string>5</string>
+				<string>12</string>
+			</array>
+			<array>
+				<string>7</string>
+				<string>5</string>
+				<string>6</string>
+				<string>6</string>
+				<string>14</string>
+			</array>
+		</array>
+	</dict>
+</dict>
+</plist>

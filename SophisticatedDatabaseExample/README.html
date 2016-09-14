@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+    <TITLE>SophisticatedDatabaseExample Example README</TITLE>
+</HTML>
+
+<BODY>
+<P>
+    <CENTER>
+    <FONT size+2><B>SophisticatedDatabaseExample</B></FONT>
+    </CENTER>
+</P>
+<P>
+<B>Difficulty Level:</B> Intermediate
+</P>
+<P>
+<B>Topics Covered:</B> WebObjects, EOF
+</P>
+<P>
+<B>Overview: </B>
+<BR>
+The SophisticatedDatabaseExample application maintains a simple university
+web site that allows students to enroll and sign up for classes.  
+The site is administered by an "admin" user who adds and deletes students,
+classes, classrooms, and teachers.
+The purpose of the example is to demonstrate the more
+sophisticated modeling techniques, such as inheritance, flattened attributes
+and relationships, and the use of multiple models.
+<P>
+<B>Usage: </B>
+<BR>
+The SophisticatedDatabaseExample's eomodel consists of 2 models <I>School</I> 
+and <I>Course</I>, with some relationships spanning both models. It is
+configured to work with the JDBC adaptor and the OpenBase database
+<I>WOSchool</I>.
+A script <I>makeDatabaseFromPlist.sh</I> is provided that will populate
+the database.
+</P>
+<P>
+The user "logs in" either as a guest ("guest/guest") or as
+the administrator ("admin/admin"). The "guest" user is allowed to view
+existing courses, enroll as a student, and select courses to study.
+The "admin" user maintains the site, and can add, modify, or remove
+Students, Teachers, Classrooms, or Courses.
+<P>
+<B>Description:</B>
+<P>
+The SophisticatedDatabaseExample demonstrates the use of inheritance,
+flattening, and multiple models.
+</P>
+<P>
+The <I>Person</I> class is abstract.
+<I>Student</I>, <I>Parent</I> and <I>Employee</I> inherit from <I>Person</I>
+using horizontal inheritance. The <I>Admin</I>,<I>Staff</I>, <I>Teacher</I>
+classes all inherit from <I>Employee</I> using single-table inheritance.
+The <I>HomeAddress</I>, <I>WorkAddress</I>, and <I>BillingAddress</I> inherit
+from <I>Address</I> using vertical inheritance.
+</P>
+<P>
+The relationship between Student and ScheduledCourse is an example of a
+many-to-many "flattened" relationship. The normal indirect "join" table
+values are extracted into each side of the relationship, giving the
+appearance of a direct many-to-many relationship between entities(classes).
+This relationship is interesting because <I>Student</I> is an entity
+in the <I>School</I> model but <I>ScheduledClass</I> is an entity in the
+<I>Course</I> model.
+</P>
+</BODY>
+</HTML>    

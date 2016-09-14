@@ -1,0 +1,9 @@
+ 
+CheckBoxElement: WOGenericElement {
+    elementName = "input";
+    type = "checkbox";
+    value = "1";
+    name = context.elementID;
+    formValue = ^checked;
+    otherTagString = isChecked;
+}

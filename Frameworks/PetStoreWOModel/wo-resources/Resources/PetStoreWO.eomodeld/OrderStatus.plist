@@ -1,0 +1,71 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = LINENUM;
+           externalType = int;
+           name = linenum;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = ORDERID;
+           externalType = int;
+           name = orderid;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = STATUS;
+           externalType = char;
+           name = status;
+           valueClassName = NSString;
+           valueType = c;
+           width = 2;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = UPDATEDATE;
+           externalType = timestamp;
+           name = updatedate;
+           valueClassName = NSCalendarDate;
+           valueType = T;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       linenum, 
+       orderid, 
+       status, 
+       updatedate
+    );
+    className = OrderStatus;
+    classProperties = 
+    (
+       linenum, 
+       orderid, 
+       status, 
+       updatedate
+    );
+    externalName = ORDERSTATUS;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           status, 
+           updatedate
+        );
+    };
+    name = OrderStatus;
+    primaryKeyAttributes = 
+    (
+       linenum, 
+       orderid
+    );
+}

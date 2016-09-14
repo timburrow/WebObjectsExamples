@@ -1,0 +1,129 @@
+<!--
+  -- SearchPage.html
+  -- [ThinkMovies Project]
+  --
+  -- Copyright:  Copyright 2001-2007 Apple, Inc. All rights reserved.
+  --
+  -- Disclaimer:
+  --      IMPORTANT:  This Apple software is supplied to you by Apple Computer, Inc.
+  --      ("Apple") in consideration of your agreement to the following terms, and your
+  --      use, installation, modification or redistribution of this Apple software
+  --      constitutes acceptance of these terms.  If you do not agree with these terms,
+  --      please do not use, install, modify or redistribute this Apple software.
+  --
+  --      In consideration of your agreement to abide by the following terms, and subject
+  --      to these terms, Apple grants you a personal, non-exclusive license, under AppleUs
+  --      copyrights in this original Apple software (the "Apple Software"), to use,
+  --      reproduce, modify and redistribute the Apple Software, with or without
+  --      modifications, in source and/or binary forms; provided that if you redistribute
+  --      the Apple Software in its entirety and without modifications, you must retain
+  --      this notice and the following text and disclaimers in all such redistributions of
+  --      the Apple Software.  Neither the name, trademarks, service marks or logos of
+  --      Apple Computer, Inc. may be used to endorse or promote products derived from the
+  --      Apple Software without specific prior written permission from Apple.  Except as
+  --      expressly stated in this notice, no other rights or licenses, express or implied,
+  --      are granted by Apple herein, including but not limited to any patent rights that
+  --      may be infringed by your derivative works or by other works in which the Apple
+  --      Software may be incorporated.
+  --
+  --      The Apple Software is provided by Apple on an "AS IS" basis.  APPLE MAKES NO
+  --      WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED
+  --      WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+  --      PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN
+  --      COMBINATION WITH YOUR PRODUCTS.
+  --
+  --      IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR
+  --      CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+  --      GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  --      ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION
+  --      OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT
+  --      (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN
+  --      ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+  
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+	<HEAD>
+		<META NAME="generator" CONTENT="WebObjects 5.0">
+		<TITLE>Think Movies : Search</TITLE>
+	</HEAD>
+	<BODY BGCOLOR=#FFFFFF>
+	
+		<CENTER>
+			
+			<WEBOBJECT name=Toolbar></WEBOBJECT>
+			<BR>
+			<BR>
+			<H3>Search for Movies</H3>
+			
+		</CENTER>
+		<BR>
+
+		<WEBOBJECT NAME=SearchForm>
+		<CENTER>
+		
+			<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 BGCOLOR=#000000> 
+				
+				<!-- Border Table -->
+				<WEBOBJECT NAME=Conditional1>
+					<TR VALIGN=MIDDLE>
+						<TD>
+							<TABLE ALIGN=center CELLPADDING=10 BORDER=0 WIDTH=100% CELLSPACING=1 BGCOLOR=#CFCFFF>
+								<TR VALIGN=top>
+									<TD ALIGN=center>
+										<WEBOBJECT NAME="ErrorTable">
+											<TR>
+												<TD> 
+													<FONT COLOR=FFFFFF>
+														<B><WEBOBJECT NAME="ErrorMessage"></WEBOBJECT></B>
+													</FONT>
+												</TD>
+											</TR>
+										</WEBOBJECT>
+									</TD>
+								</TR>
+							</TABLE>
+						</TD>
+					</TR>
+				</WEBOBJECT>        
+					<TR>
+						<TD>
+							<TABLE ALIGN=center BORDER=0 CELLPADDING=10 CELLSPACING=1 BGCOLOR=#CFCFFF>
+								<TR>
+									<TD BGCOLOR=#AFAFFF ALIGN=RIGHT>Title</TD>
+									<TD BGCOLOR=#CFCFFF ALGIN=LEFT>
+										<WEBOBJECT NAME=Operator3></WEBOBJECT>
+										<WEBOBJECT NAME=TitleTextField></WEBOBJECT>
+									</TD>
+								</TR>
+								<TR>
+									<TD BGCOLOR="#AFAFFF" ALIGN=RIGHT>Category</TD>
+									<TD BGCOLOR="#CFCFFF" ALIGN=LEFT>
+										<WEBOBJECT NAME=Operator2></WEBOBJECT>
+										<WEBOBJECT name=CategoryTextField></WEBOBJECT>
+									</TD>
+								</TR>
+								<TR>
+									<TD BGCOLOR="#AFAFFF" ALIGN=RIGHT>Date released</TD>
+									<TD BGCOLOR="#CFCFFF" ALIGN=LEFT>
+										<WEBOBJECT name=Operator></WEBOBJECT>
+										<WEBOBJECT name=DateQual></WEBOBJECT><B>*</B>
+									</TD>		
+								</TR>
+								<TR>
+									<TD BGCOLOR="#CFCFFF" colspan=2 align=center>
+										<INPUT TYPE=RESET VALUE=Reset><INPUT TYPE=submit VALUE="Submit Query">
+									</TD>
+								</TR>
+							</TABLE>
+						</TD>
+					</TR>
+				</TABLE> 
+		
+				<!-- Border Table -->
+				* <font size=-1>Enter dates in the following format: MM/DD/YYYY</font>
+			</CENTER>
+		</WEBOBJECT>
+	
+	</BODY>
+</HTML>

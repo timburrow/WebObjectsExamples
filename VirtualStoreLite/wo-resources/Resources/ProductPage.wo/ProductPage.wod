@@ -1,0 +1,46 @@
+
+Condition1: WOConditional {
+	condition = imageProduct;
+}
+
+Condition2: WOConditional {
+	condition = movieProduct;
+}
+
+Form1: WOForm {}
+
+Hyperlink1: WOHyperlink {
+	pageName = "VirtualStorePage";
+}
+
+Image1: WOImage {
+	filename = session.selectedProduct.src;
+}
+
+Movie1: WOQuickTime {
+	filename = session.selectedProduct.src;
+	controller = true;
+        Width = 320;
+        Height = 360;
+}
+
+String1: WOString {
+	value = session.selectedProduct.name;
+}
+
+String2: WOString {
+	value = session.selectedProduct.name;
+}
+
+Submit1: WOSubmitButton {
+	action = takeOrder;
+	name = "SUBMIT";
+	value = "Order";
+}
+
+TextField1: WOTextField {
+	value = quantity;
+	size = 5;
+	name = "QUANTITY";
+	numberformat = ",0";
+}

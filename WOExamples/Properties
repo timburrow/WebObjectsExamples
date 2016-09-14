@@ -1,0 +1,19 @@
+{
+    EHExamplePages = {
+        "Active Images" = PCActiveImagePage; 
+        Browser = PCBrowserPage; 
+        "CheckBox List" = PCCheckBoxListPage; 
+        "Dictionary Repetition" = PCDictionaryRepetitionPage; 
+        Frames = PCFramePage; 
+        Hyperlink = PCHyperlinkPage; 
+        Image = PCImagePage; 
+        "Inline Frames" = PCIFramePage; 
+        Introduction = PCIntroductionPage; 
+        "Localized Strings" = PCLocalizedStringPage; 
+        "Multiple Submit Buttons" = PCMultipleSubmitButtonPage; 
+        "Nested List" = PCNestedListPage; 
+        "Optional Containers" = PCOptionalContainerPage; 
+        "PopUp Button" = PCPopUpPage; 
+        "RadioButton List" = PCRadioButtonListPage; 
+    }; 
+}

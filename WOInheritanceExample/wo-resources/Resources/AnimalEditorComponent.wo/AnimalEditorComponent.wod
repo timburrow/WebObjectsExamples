@@ -1,0 +1,8 @@
+
+CheckBox1: WOCheckBox {
+	checked = creature.isCarnivore;
+}
+
+TextField1: WOTextField {
+	value = creature.scientificName;
+}

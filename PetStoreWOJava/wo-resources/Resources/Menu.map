@@ -1,0 +1,5 @@
+rect showBirds 72,2 280,250
+rect showReptiles 140,270 210,340
+rect showDogs 60,250 130,320
+rect showCats 225,240 295,310
+rect showFish 2,180 72,250

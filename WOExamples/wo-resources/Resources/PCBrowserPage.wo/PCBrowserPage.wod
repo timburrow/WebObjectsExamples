@@ -1,0 +1,29 @@
+ 
+BrowserForm: WXForm {
+    action = browserSubmitted;
+}
+
+BrowserTest: WXBrowser {
+    list = application.list;
+    item = currentItem;
+    index = currentIndex;
+    selections = browserSelections;
+    size = 5;
+    multiple = true;
+}
+
+CurrentIndexString: WOString {
+    value = currentIndex;
+}
+
+CurrentLabel: WOString {
+    value = getLabel;
+}
+
+CurrentSelectionsString: WOString {
+    value = browserSelections;
+}
+
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXBrowser";
+}

@@ -1,0 +1,48 @@
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+Hyperlink1: WOHyperlink {
+	action = mainPage;
+}
+
+Hyperlink2: WOHyperlink {
+	action = administrationPage;
+}
+
+Hyperlink3: WOHyperlink {
+	action = selectClassroom;
+}
+
+Repetition1: WORepetition {
+	item = selectedClassroom;
+	list = classrooms;
+}
+
+String1: WOString {
+	value = selectedClassroom.building;
+}
+
+String3: WOString {
+	value = selectedClassroom.room;
+}
+
+TextField1: WOTextField {
+	value = classroom.room;
+}
+
+TextField2: WOTextField {
+	value = classroom.building;
+}
+
+UpdateActiveImage: WOImageButton {
+	action = deleteClassroom;
+	filename = "DBWizardDelete.gif";
+	framework = "app";
+}
+
+UpdateActiveImage2: WOImageButton {
+	action = saveChanges;
+	filename = "DBWizardUpdate.gif";
+}

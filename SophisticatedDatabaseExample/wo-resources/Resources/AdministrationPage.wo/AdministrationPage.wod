@@ -1,0 +1,24 @@
+
+Hyperlink1: WOHyperlink {
+	action = editStudentPage;
+}
+
+Hyperlink2: WOHyperlink {
+	action = editClassroomPage;
+}
+
+Hyperlink3: WOHyperlink {
+	action = editScheduledClassPage;
+}
+
+Hyperlink4: WOHyperlink {
+	action = mainPage;
+}
+
+Hyperlink5: WOHyperlink {
+	action = editCoursePage;
+}
+
+Hyperlink6: WOHyperlink {
+	action = editTeacherPage;
+}

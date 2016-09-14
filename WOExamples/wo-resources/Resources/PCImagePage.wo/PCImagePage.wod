@@ -1,0 +1,9 @@
+ 
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXImage";
+}
+
+PoweredByImage: WXImage {
+    filename = "PoweredByWebObjects.gif";
+    framework = "JavaWOExtensions";
+}

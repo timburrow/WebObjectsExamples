@@ -1,0 +1,112 @@
+
+{
+    EOModelVersion = 2.1;
+    adaptorName = JDBC;
+    connectionDictionary = 
+    {
+        URL = jdbc:derby:school;
+        driver = org.apache.derby.jdbc.EmbeddedDriver;
+        password = "";
+        plugin = "";
+        username = "";
+    };
+    entities = 
+    (
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Address;
+           name = Address;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Admin;
+           name = Admin;
+           parent = Employee;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.BillingAddress;
+           name = BillingAddress;
+           parent = Address;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Employee;
+           name = Employee;
+           parent = Person;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.HomeAddress;
+           name = HomeAddress;
+           parent = Address;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Parent;
+           name = Parent;
+           parent = Person;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Person;
+           name = Person;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Staff;
+           name = Staff;
+           parent = Employee;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Student;
+           name = Student;
+           parent = Person;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.StudentParent;
+           name = StudentParent;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.StudentScheduledClass;
+           name = StudentScheduledClass;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Teacher;
+           name = Teacher;
+           parent = Employee;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.WorkAddress;
+           name = WorkAddress;
+           parent = Address;
+       }
+    );
+    userInfo = 
+    {
+        _EntityModeler = 
+        {
+            activeDatabaseConfigName = Default;
+            databaseConfigs = 
+            {
+                Default = 
+                {
+                    adaptorName = JDBC;
+                    connectionDictionary = 
+                    {
+                        URL = jdbc:derby:school;
+                        driver = org.apache.derby.jdbc.EmbeddedDriver;
+                        password = "";
+                        plugin = "";
+                        username = "";
+                    };
+                };
+            };
+        };
+    };
+}

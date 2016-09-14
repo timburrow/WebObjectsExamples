@@ -1,0 +1,23 @@
+{
+    EOModelVersion = 2.1; 
+    adaptorName = JDBC; 
+    connectionDictionary = {
+        URL = "jdbc:derby:school";
+        driver = "org.apache.derby.jdbc.EmbeddedDriver";
+        password = ""; 
+        plugin = ""; 
+        username = ""; 
+    }; 
+    entities = (
+        {className = webobjectsexamples.SchoolTools.Customer; name = Customer; }, 
+        {className = webobjectsexamples.SchoolTools.Order; name = Order; }, 
+        {className = webobjectsexamples.SchoolTools.OrderItems; name = OrderItems; }
+    ); 
+    internalInfo = {
+        _schemaSynchronizationOptions = {
+            EOSchemaSynchronizationForeignKeyConstraintsKey = YES; 
+            EOSchemaSynchronizationPrimaryKeyConstraintsKey = YES; 
+            EOSchemaSynchronizationPrimaryKeySupportKey = YES; 
+        }; 
+    }; 
+}

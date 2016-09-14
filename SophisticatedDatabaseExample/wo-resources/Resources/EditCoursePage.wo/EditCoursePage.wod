@@ -1,0 +1,52 @@
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+Hyperlink1: WOHyperlink {
+	action = mainPage;
+}
+
+Hyperlink2: WOHyperlink {
+	action = administrationPage;
+}
+
+Hyperlink3: WOHyperlink {
+	action = selectCourse;
+}
+
+Repetition1: WORepetition {
+	item = selectedCourse;
+	list = courses;
+}
+
+String1: WOString {
+	value = selectedCourse.shortDescription;
+}
+
+String3: WOString {
+	value = selectedCourse.name;
+}
+
+TextField1: WOTextField {
+	value = course.name;
+}
+
+TextField2: WOTextField {
+	value = course.shortDescription;
+}
+
+TextField7: WOTextField {
+	value = course.details;
+}
+
+UpdateActiveImage: WOImageButton {
+	action = deleteCourse;
+	filename = "DBWizardDelete.gif";
+	framework = "app";
+}
+
+UpdateActiveImage2: WOImageButton {
+	action = saveChanges;
+	filename = "DBWizardUpdate.gif";
+}

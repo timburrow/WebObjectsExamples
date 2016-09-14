@@ -1,0 +1,34 @@
+ 
+CheckBox: WOGenericElement {
+    elementName = "input";
+    type = "checkbox";
+    // ** this is elementID of the wrapper so all
+    // ** checkboxes in this list will have the same name.
+    name = wrapperElementID;
+    value = ^index;
+    otherTagString = isCurrentItemChecked;
+}
+
+CheckBoxRepetition: WORepetition {
+    list = ^list;
+    item = currentItem;
+    index = ^index;
+}
+
+/* (This implementation is very similar to WXRadioButtonList.)  The tricky thing 
+ * here is to use a generic container as a wrapper which has an elementID which is 
+ * used by all the radio buttons in the list, but this wrapper element is also used 
+ * to grab the formValue from the request.  Since the names of the radio buttons will 
+ * have the wrapper's elementID, asking the wrapper for the formValue just works 
+ * because the formValue attribute means "get the formValue using the elementID of the 
+ * current element."
+ */
+ 
+CheckBoxWrapper: WOGenericContainer {
+    // ** Because there's no elementName, this is an invisible wrapper element.
+    elementID = wrapperElementID;
+    name = context.elementID;
+    formValues = selections;
+}
+
+Content: WOComponentContent {}

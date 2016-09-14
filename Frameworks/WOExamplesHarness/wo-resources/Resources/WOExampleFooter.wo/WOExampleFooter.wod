@@ -1,0 +1,25 @@
+ 
+AppName: WOString {
+	value = application.name;
+}
+
+AppleImage: WOImage {
+	filename = "small_blue_apple.gif";
+	framework = "WOExamplesHarness";
+	border = "0";
+	width = 25;
+	height = 26;
+}
+
+AppleLink: WOHyperlink {
+	href = "http://www.apple.com";
+}
+
+OpenLink: WOHyperlink {
+	action = openProject;
+	string = "[Open example project]";
+}
+
+ShowOpenLink: WOConditional {
+	condition = projectPath.length;
+}

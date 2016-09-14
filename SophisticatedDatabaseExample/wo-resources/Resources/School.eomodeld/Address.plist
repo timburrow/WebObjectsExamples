@@ -1,0 +1,108 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = ADDRESS_ID;
+           externalType = integer;
+           name = addressID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ADDRESS_TYPE;
+           externalType = int;
+           name = addressType;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = CITY;
+           externalType = char;
+           name = city;
+           valueClassName = NSString;
+           width = 32;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = PHONE;
+           externalType = char;
+           name = phone;
+           valueClassName = NSString;
+           width = 16;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = STATE;
+           externalType = char;
+           name = state;
+           valueClassName = NSString;
+           width = 32;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = STREET;
+           externalType = char;
+           name = street;
+           valueClassName = NSString;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ZIP;
+           externalType = char;
+           name = zip;
+           valueClassName = NSString;
+           width = 16;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       addressID, 
+       addressType, 
+       city, 
+       phone, 
+       state, 
+       street, 
+       zip
+    );
+    className = webobjectsexamples.sophisticateddatabaseexample.Address;
+    classProperties = 
+    (
+       addressType, 
+       city, 
+       phone, 
+       state, 
+       street, 
+       zip
+    );
+    externalName = ADDRESS;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           addressType, 
+           city, 
+           phone, 
+           state, 
+           street, 
+           zip
+        );
+    };
+    maxNumberOfInstancesToBatchFetch = 10;
+    name = Address;
+    primaryKeyAttributes = 
+    (
+       addressID
+    );
+    restrictingQualifier = "(addressType = 0)";
+}

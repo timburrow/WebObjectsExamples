@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaEOAccess"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaEOControl"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaFoundation"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaWebObjects"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaXML"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaJDBCAdaptor"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

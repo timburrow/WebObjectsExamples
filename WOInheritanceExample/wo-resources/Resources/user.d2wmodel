@@ -1,0 +1,1973 @@
+{
+	"rules" = (
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Animal";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Bear";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Horse";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Cat";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Dog";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Domesticated";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Adult";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Cow";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Lion";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Child";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Creature";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Person";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = "Never";
+				"keyPath" = "editability";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "type";
+						"selectorName" = "isEqualTo";
+						"key" = "propertyKey";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Wild";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "widgetController";
+						"selectorName" = "isEqualTo";
+						"key" = "controllerType";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = ();
+				"keyPath" = "enumerationEntityNames";
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore",
+					"type"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Animal";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Animal";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Animal";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"scientificName",
+					"firstName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Animal";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore",
+					"type"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Bear";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Bear";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Bear";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"scientificName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Bear";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore",
+					"breed",
+					"type"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Horse";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Horse";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore",
+					"breed"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Horse";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"scientificName",
+					"breed"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Horse";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore",
+					"type"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Cat";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Cat";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Cat";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"scientificName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Cat";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore",
+					"type"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Dog";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Dog";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Dog";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"scientificName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Dog";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore",
+					"type"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Domesticated";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Domesticated";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Domesticated";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"scientificName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Domesticated";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"lastName",
+					"driversLicense",
+					"ssn",
+					"dateOfBirth",
+					"numberOfLegs",
+					"type",
+					"favoriteDomesticatedAnimal"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Adult";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName",
+					"lastName",
+					"driversLicense",
+					"ssn"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Adult";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"lastName",
+					"driversLicense",
+					"dateOfBirth",
+					"ssn",
+					"numberOfLegs"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Adult";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"lastName",
+					"dateOfBirth",
+					"ssn",
+					"driversLicense"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Adult";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore",
+					"isDairyBreed",
+					"type"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Cow";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Cow";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore",
+					"isDairyBreed"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Cow";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"scientificName",
+					"isDairyBreed"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Cow";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"name",
+					"parent",
+					"children",
+					"creatures"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Folder";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"name"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Folder";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"parent.name",
+					"name",
+					"creatures.customDescription"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Folder";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"name"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Folder";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore",
+					"type"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Lion";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Lion";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"scientificName",
+					"isCarnivore"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Lion";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"scientificName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Lion";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"lastName",
+					"dateOfBirth",
+					"ssn",
+					"type",
+					"favoriteDomesticatedAnimal"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Child";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName",
+					"lastName",
+					"ssn"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Child";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"lastName",
+					"ssn",
+					"dateOfBirth",
+					"numberOfLegs"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Child";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"lastName",
+					"dateOfBirth",
+					"ssn"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Child";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs",
+					"type"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Creature";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "form";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Creature";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "identify";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"type",
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Creature";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "list";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"dateOfBirth",
+					"numberOfLegs"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Creature";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"firstName",
+					"lastName",
+					"dateOfBirth",
+					"ssn"
+				);
+				"keyPath" = "keys";
+			};
+			"lhs" = {
+				"class" = "com.webobjects.eocontrol.EOAndQualifier";
+				"qualifiers" = (
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "Person";
+						"selectorName" = "isEqualTo";
+						"key" = "entity.name";
+					},
+					{
+						"class" = "com.webobjects.eocontrol.EOKeyValueQualifier";
+						"value" = "query";
+						"selectorName" = "isEqualTo";
+						"key" = "task";
+					}
+				);
+			};
+		},
+		{
+			"class" = "com.webobjects.directtoweb.Rule";
+			"author" = "100";
+			"rhs" = {
+				"class" = "com.webobjects.directtoweb.Assignment";
+				"value" = (
+					"Creature",
+					"Person",
+					"Child",
+					"Adult",
+					"Animal",
+					"Domesticated",
+					"Horse",
+					"Cat",
+					"Dog",
+					"Cow",
+					"Wild",
+					"Lion",
+					"Bear",
+					"Folder"
+				);
+				"keyPath" = "mainEntityNames";
+			};
+		}
+	);
+}

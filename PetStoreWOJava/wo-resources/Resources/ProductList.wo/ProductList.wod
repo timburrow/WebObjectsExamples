@@ -1,0 +1,36 @@
+ActiveImage1: WOActiveImage {
+	action = dg.displayNextBatch;
+	filename = "button_more.gif";
+	framework = "app";
+}
+
+ActiveImage2: WOActiveImage {
+	action = dg.displayPreviousBatch;
+	filename = "button_prev.gif";
+	framework = "app";
+}
+
+Conditional1: WOConditional {
+	condition = displayPrevious;
+}
+
+Conditional2: WOConditional {
+	condition = displayMore;
+}
+
+Hyperlink1: WOHyperlink {
+	action = showProductItem;
+}
+
+Repetition1: WORepetition {
+	list = dg.displayedObjects;
+	item = currentProduct;
+}
+
+String2: WOString {
+	value = currentProduct.productid;
+}
+
+String3: WOString {
+	value = currentProduct.name;
+}

@@ -1,0 +1,39 @@
+
+Form1: WOForm {
+	?movieID = movieID;
+	directActionName = "ProcessVote";
+	method = "post";
+	onSubmit = "return submitForm(this)";
+}
+
+JavaScript1: WOJavaScript {
+	hideInComment = true;
+	scriptFile = "validationScript.js";
+}
+
+String4: WOString {
+	value = movie.title;
+}
+
+String5: WOString {
+	numberformat = "0.0";
+	value = movie.voting.runningAverage;
+}
+
+String6: WOString {
+	value = movie.voting.numberOfVotes;
+}
+
+SubmitButton1: WOSubmitButton {
+	value = "Cast Vote";
+	method = "post";
+	directActionName = "ProcessVote";
+	onSubmit = "return submitForm(this)";
+}
+
+TextField1: WOTextField {
+	name = "vote";
+	value = newVote;
+}
+
+Toolbar: ToolbarComponent { }

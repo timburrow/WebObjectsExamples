@@ -1,0 +1,80 @@
+AppImage: WOImage {
+	alt = "Applications";
+	filename = appImageName;
+	height = 42;
+	width = 124;
+	border = 0;
+}
+AppLink: WOHyperlink {
+	action = ApplicationsPageClicked;
+}
+
+HostImage: WOImage {
+	alt = "Hosts";
+	filename = hostImageName;
+	height = 42;
+	width = 119;
+	border = 0;
+}
+HostLink: WOHyperlink {
+	action = HostsPageClicked;
+}
+
+SiteImage: WOImage {
+	alt = "Site Config";
+	filename = siteImageName;
+	height = 42;
+	width = 119;
+	border = 0;
+}
+SiteLink: WOHyperlink {
+	action = ConfigurePageClicked;
+}
+
+PrefImage: WOImage {
+	alt = "Monitor Preferences";
+	filename = prefImageName;
+	height = 42;
+	width = 119;
+	border = 0;
+}
+PrefLink: WOHyperlink {
+	action = PrefsPageClicked;
+}
+
+HelpImage: WOImage {
+	alt = "Monitor Help";
+	filename = helpImageName;
+	height = 42;
+	width = 124;
+	border = 0;
+}
+HelpLink: WOHyperlink {
+	action = HelpPageClicked;
+}
+
+BarImage: WOImage {
+	filename = barImageName;
+	height = 26;
+	width = 605;
+	border = 0;
+}
+
+BackgroundContainer: WOGenericContainer {
+	elementName = "TD";
+	vAlign = "top";
+        width = "49%";
+        background = backgroundImageSrc;
+}
+
+AppleImage: WOImage {
+	filename = appleImageName;
+	height = 36;
+	width = 30;
+	align = "right";
+	border = 0;
+}
+
+WOVersionString: WOString {
+	value = versionString;
+}

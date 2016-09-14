@@ -1,0 +1,139 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = ADDR1;
+           externalType = char;
+           name = addr1;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ADDR2;
+           externalType = char;
+           name = addr2;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = CITY;
+           externalType = char;
+           name = city;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = NAME;
+           externalType = char;
+           name = name;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = PHONE;
+           externalType = char;
+           name = phone;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = STATE;
+           externalType = char;
+           name = state;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = STATUS;
+           externalType = char;
+           name = status;
+           valueClassName = NSString;
+           valueType = c;
+           width = 2;
+       }, 
+       
+       {
+           columnName = SUPPID;
+           externalType = int;
+           name = suppid;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ZIP;
+           externalType = char;
+           name = zip;
+           valueClassName = NSString;
+           valueType = c;
+           width = 5;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       addr1, 
+       addr2, 
+       city, 
+       name, 
+       phone, 
+       state, 
+       status, 
+       suppid, 
+       zip
+    );
+    className = EOGenericRecord;
+    classProperties = 
+    (
+       addr1, 
+       addr2, 
+       city, 
+       name, 
+       phone, 
+       state, 
+       status, 
+       suppid, 
+       zip
+    );
+    externalName = SUPPLIER;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           addr1, 
+           addr2, 
+           city, 
+           name, 
+           phone, 
+           state, 
+           status, 
+           zip
+        );
+    };
+    name = Supplier;
+    primaryKeyAttributes = 
+    (
+       suppid
+    );
+}

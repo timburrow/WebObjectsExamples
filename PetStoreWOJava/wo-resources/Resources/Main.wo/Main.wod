@@ -1,0 +1,97 @@
+ActiveImage1: WOActiveImage {
+	filename = "splash.gif";
+	framework = "app";
+	imageMapFile = "Menu.map";
+        key = "14";
+	action = miss;
+	border = 0;
+}
+
+ActiveImage7: WOActiveImage {
+	filename = "nav-fish.gif";
+        key = "15";
+	framework = "app";
+}
+
+Conditional1: WOConditional {
+	condition = hasLastPage;
+}
+
+
+Hyperlink1: WOHyperlink {
+	action = showFish;
+}
+
+Hyperlink2: WOHyperlink {
+	action = showDogs;
+}
+
+Hyperlink3: WOHyperlink {
+	action = showReptiles;
+}
+
+Hyperlink4: WOHyperlink {
+	action = showCats;
+}
+
+Hyperlink5: WOHyperlink {
+	action = showBirds;
+}
+
+Hyperlink6: WOHyperlink {
+	action = goBackToLastPage;
+}
+
+Image1: WOImage {
+	filename = "nav-fish.gif";
+	framework = "app";
+        key = "2";
+	border = 0;
+	width = 40;
+	height = 20;
+}
+
+Image2: WOImage {
+	filename = "nav-dogs.gif";
+	framework = "app";
+        key = "3";
+	border = 0;
+	width = 46;
+	height = 20;
+}
+
+Image3: WOImage {
+	filename = "nav-reptiles.gif";
+	framework = "app";
+        key = "4";
+	border = 0;
+	width = 78;
+	height = 20;
+}
+
+Image4: WOImage {
+	filename = "nav-cats.gif";
+	framework = "app";
+        key = "5";
+	border = 0;
+	width = 43;
+	height = 20;
+}
+
+Image5: WOImage {
+	filename = "nav-birds.gif";
+	framework = "app";
+        key = "6";
+	border = 0;
+	width = 50;
+	height = 20;
+}
+
+String1: WOString {
+	value = pageDisplayName;
+}
+
+Template: Template {
+	isFrontPage = true;
+}
+

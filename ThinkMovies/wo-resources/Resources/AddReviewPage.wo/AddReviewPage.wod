@@ -1,0 +1,34 @@
+
+Form1: WOForm {
+	?movieID = movieID;
+	directActionName = "ProcessAddReview";
+	method = "post";
+}
+
+Hyperlink1: WOHyperlink {
+	?movieID = movieID;
+	directActionName = "DisplayMovie";
+}
+
+Hyperlink2: WOHyperlink {
+	?movieID = movieID;
+	directActionName = "Voting";
+}
+
+String1: WOString {
+	value = movie.title;
+}
+
+Text1: WOText {
+	cols = 60;
+	name = "review";
+	rows = 15;
+	value = review;
+}
+
+TextField1: WOTextField {
+	name = "reviewer";
+	value = reviewer;
+}
+
+Toolbar: ToolbarComponent { }

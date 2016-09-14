@@ -1,0 +1,148 @@
+ActiveImage2: WOActiveImage {
+	action = checkout;
+	filename = "button_checkout.gif";
+        key = "11";
+	framework = "app";
+}
+
+ActiveImage3: WOActiveImage {
+	action = showBillingAndShipping;
+	filename = "button_cont.gif";
+        key = "12";
+	framework = "app";
+}
+
+ActiveImage4: WOActiveImage {
+	action = noActionSubmit;
+	filename = "cart-update.gif";
+        key = "13";
+	framework = "app";
+}
+
+Conditional1: WOConditional {
+	condition = cart.hasCartItems;
+	negate = true;
+}
+
+Conditional10: WOConditional {
+	condition = isConfirmation;
+}
+
+Conditional11: WOConditional {
+	condition = currentAccount.profile.mylistopt;
+}
+
+Conditional12: WOConditional {
+	condition = isConfirmation;
+	negate = true;
+}
+
+Conditional2: WOConditional {
+	condition = cart.hasCartItems;
+}
+
+Conditional3: WOConditional {
+	condition = isConfirmation;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = isConfirmation;
+	negate = true;
+}
+
+Conditional5: WOConditional {
+	condition = isConfirmation;
+	negate = true;
+}
+
+Conditional6: WOConditional {
+	condition = isConfirmation;
+}
+
+Conditional7: WOConditional {
+	condition = isConfirmation;
+}
+
+Conditional8: WOConditional {
+	condition = isConfirmation;
+	negate = true;
+}
+
+Conditional9: WOConditional {
+	condition = isConfirmation;
+	negate = true;
+}
+
+Form2: WOForm {
+}
+
+Hyperlink1: WOHyperlink {
+	action = checkout;
+}
+
+Hyperlink2: WOHyperlink {
+	action = removeCartItem;
+}
+
+Image3: WOImage {
+	filename = "button_remove.gif";
+	framework = "app";
+        key = "1";
+	border = 0;
+	width = 78;
+	height = 14;
+}
+
+PageBack1: PageBack {}
+
+ProductList1: ProductList {
+	categoryName = currentAccount.profile.favcategory;
+}
+
+Repetition1: WORepetition {
+	item = currentCartItem;
+	list = cart.cartItems;
+}
+
+String1: WOString {
+	value = currentCartItem.item.itemid;
+}
+
+String10: WOString {
+	value = currentCartItem.item.inStock;
+}
+
+String2: WOString {
+	value = currentCartItem.item.product.name;
+}
+
+String3: WOString {
+	numberformat = "$###,##0.00";
+	value = currentCartItem.item.listPrice;
+}
+
+String4: WOString {
+	value = currentCartItem.qty;
+}
+
+String5: WOString {
+	numberformat = "$###,##0.00";
+	value = currentCartItem.total;
+}
+
+String7: WOString {
+	numberformat = "$###,##0.00";
+	value = cart.cartTotal;
+}
+
+Template: Template {
+	isFrontPage = false;
+}
+
+TextField1: WOTextField {
+	size = 4;
+	value = currentCartItem.qty;
+	numberformat = "0";
+}
+

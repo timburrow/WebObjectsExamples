@@ -1,0 +1,125 @@
+Conditional1: WOConditional {
+	condition = listing.address.aptNum;
+}
+
+Conditional2: WOConditional {
+	condition = listing.virtualTourURL;
+}
+
+Conditional3: WOConditional {
+	condition = session.userHasAdministrationPrivileges;
+}
+
+Conditional4: WOConditional {
+	condition = session.userHasAdministrationPrivileges;
+}
+
+Form1: WOForm {
+}
+
+Hyperlink1: WOHyperlink {
+	href = listing.virtualTourURL;
+}
+
+Hyperlink2: WOHyperlink {
+	action = editListingAction;
+}
+
+Hyperlink3: WOHyperlink {
+	action = deleteListingAction;
+}
+
+Image1: WOImage {
+	data = listing.primaryPhoto.photo;
+	height = 144;
+	mimeType = "image/jpeg";
+	width = 256;
+}
+
+LayoutComponent: LayoutComponent {
+}
+
+Repetition1: WORepetition {
+	item = feature;
+	list = listing.features;
+}
+
+String1: WOString {
+	value = listing.address.street;
+}
+
+String10: WOString {
+	value = application.name;
+}
+
+String11: WOString {
+	value = listing.yearBuilt;
+}
+
+String12: WOString {
+	value = listing.agent.firstName;
+}
+
+String13: WOString {
+	value = listing.agent.lastName;
+}
+
+String14: WOString {
+	numberformat = "#,##0.00";
+	value = listing.sizeSqFt;
+}
+
+String15: WOString {
+	value = listing.listingNumber;
+}
+
+String16: WOString {
+	numberformat = "#,##0.00";
+	value = listing.lotSqFt;
+}
+
+String2: WOString {
+	value = listing.address.city;
+}
+
+String3: WOString {
+	value = listing.address.state;
+}
+
+String4: WOString {
+	value = feature.feature;
+}
+
+String5: WOString {
+	value = listing.address.zip;
+}
+
+String6: WOString {
+	value = listing.address.aptNum;
+}
+
+String7: WOString {
+	numberformat = "$#,##0";
+	value = listing.askingPrice;
+}
+
+String8: WOString {
+	numberformat = "0.0";
+	value = listing.bedrooms;
+}
+
+String9: WOString {
+	numberformat = "0.0";
+	value = listing.bathrooms;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = recommendToCustomerAction;
+	value = "Recommend";
+}
+
+TextField1: WOTextField {
+	maxlength = 20;
+	size = 20;
+	value = login;
+}

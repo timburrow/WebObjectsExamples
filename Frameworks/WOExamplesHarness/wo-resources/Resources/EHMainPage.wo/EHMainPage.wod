@@ -1,0 +1,9 @@
+ 
+ControlFrame: WOFrame {
+    pageName = "EHControlPage";
+}
+
+ExampleFrame: WOFrame {
+    pageName = introductionPageName;
+    name = "ExampleFrame";
+}

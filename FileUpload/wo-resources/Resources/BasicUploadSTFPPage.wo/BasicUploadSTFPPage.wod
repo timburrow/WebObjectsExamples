@@ -1,0 +1,37 @@
+BackToMain: WOHyperlink {
+    pageName = "Main";
+    string = "[Back to Main]";
+}
+BodyTag: WOExampleBody {
+    leftmargin=0;
+    topmargin=0;
+}
+
+FileName: WOString {
+    value = actualFilePath;
+}
+
+Footer: WOExampleFooter {}
+
+Form1: WOForm {
+    enctype = "multipart/form-data";
+}
+
+SubmitButton1: WOSubmitButton {
+    action = submitClicked;
+    value = "Click here when done";
+}
+
+ShowFile: WOConditional {
+    condition = hasFile;
+}
+
+Upload1: WOFileUpload {
+    streamToFilePath = dynamicName;
+    finalFilePath = actualFilePath;
+    overwrite = false;
+    bufferSize = 2000;
+    filePath = aFileName;
+    size = "20";
+    mimeType = aMimeType;
+}

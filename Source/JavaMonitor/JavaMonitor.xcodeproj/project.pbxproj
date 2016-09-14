@@ -1,0 +1,1808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXApplicationTarget section */
+		017C6100FFD43DA37F000001 /* JavaMonitor */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = EBB133740A5C73E800773CE3 /* Build configuration list for PBXApplicationTarget "JavaMonitor" */;
+			buildPhases = (
+				017C6103FFD43DA37F000001 /* Sources */,
+				017C6104FFD43DA37F000001 /* Resources */,
+				017C6105FFD43DA37F000001 /* JavaArchive */,
+				017C6106FFD43DA37F000001 /* Frameworks */,
+				017C6107FFD43DA37F000001 /* ShellScript */,
+				017C6108FFD43DA37F000001 /* ShellScript */,
+				01CC6D570020D11111CD2B8D /* ShellScript */,
+				EBD795380A5EFDC70098C011 /* CopyFiles */,
+				EBC8FC860A683C990055CDE1 /* CopyFiles */,
+			);
+			dependencies = (
+				017C6101FFD43DA37F000001 /* PBXTargetDependency */,
+				017C6102FFD43DA37F000001 /* PBXTargetDependency */,
+			);
+			name = JavaMonitor;
+			productInstallPath = "$(LOCAL_LIBRARY_DIR)/WebObjects/Applications";
+			productName = NewWrapper;
+			productReference = 017C60FFFFD43DA37F000001 /* JavaMonitor.woa */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>JavaMonitor</string>
+	<key>CFBundleGetInfoString</key>
+	<string>JavaMonitor</string>
+	<key>CFBundleIconFile</key>
+	<string>WOAfile.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.WebobjectsMonitor</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>JavaMonitor</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>5.4</string>
+	<key>CFBundleSignature</key>
+	<string>webo</string>
+	<key>CFBundleVersion</key>
+	<string>0.0.1d1</string>
+	<key>Java</key>
+	<dict>
+		<key>JVMVersion</key>
+		<string>1.4+</string>
+	</dict>
+	<key>NSExecutable</key>
+	<string>JavaMonitor</string>
+	<key>NSJavaClientRoot</key>
+	<string>Contents/WebServerResources/Java</string>
+	<key>NSJavaNeeded</key>
+	<true/>
+	<key>NSJavaPath</key>
+	<array>
+		<string>javamonitor.jar</string>
+	</array>
+	<key>NSJavaPathClient</key>
+	<string>JavaMonitor.jar</string>
+	<key>NSJavaRoot</key>
+	<string>Contents/Resources/Java</string>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		016FA8CBFFE5B8A311CD2B8D /* Main.wo in Resources */ = {isa = PBXBuildFile; fileRef = 016FA8CAFFE5B8A311CD2B8D /* Main.wo */; };
+		022D13070059B68211CD2978 /* JavaXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022D13060059B68211CD2978 /* JavaXML.framework */; };
+		022D13080059B68211CD2978 /* JavaXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022D13060059B68211CD2978 /* JavaXML.framework */; };
+		085A02CA00150D1D11CD2B8D /* JavaFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096CB471FF7BFD6311CD2B9D /* JavaFoundation.framework */; };
+		085A02CB00150D1D11CD2B8D /* JavaEOControlframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096CB472FF7BFD6311CD2B9D /* JavaEOControlframework */; };
+		085A02CD00150D1D11CD2B8D /* JavaWebObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096CB46FFF7BFC8111CD2B9D /* JavaWebObjects.framework */; };
+		085A02CF00150D1D11CD2B8D /* JavaWOExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096CB475FF7BFD6311CD2B9D /* JavaWOExtensions.framework */; };
+		085A02D000150D1D11CD2B8D /* JavaFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096CB471FF7BFD6311CD2B9D /* JavaFoundation.framework */; };
+		085A02D100150D1D11CD2B8D /* JavaEOControlframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096CB472FF7BFD6311CD2B9D /* JavaEOControlframework */; };
+		085A02D300150D1D11CD2B8D /* JavaWebObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096CB46FFF7BFC8111CD2B9D /* JavaWebObjects.framework */; };
+		085A02D500150D1D11CD2B8D /* JavaWOExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096CB475FF7BFD6311CD2B9D /* JavaWOExtensions.framework */; };
+		2112DE3C0A63040B006537F3 /* help_bar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2112DE3B0A63040B006537F3 /* help_bar.gif */; };
+		2123FDFEFFD467417F000001 /* Application.java in Sources */ = {isa = PBXBuildFile; fileRef = 2123FDF6FFD467417F000001 /* Application.java */; settings = {ATTRIBUTES = (); }; };
+		2123FDFFFFD467417F000001 /* DirectAction.java in Sources */ = {isa = PBXBuildFile; fileRef = 2123FDF8FFD467417F000001 /* DirectAction.java */; settings = {ATTRIBUTES = (); }; };
+		2123FE00FFD467417F000001 /* Session.java in Sources */ = {isa = PBXBuildFile; fileRef = 2123FDF7FFD467417F000001 /* Session.java */; settings = {ATTRIBUTES = (); }; };
+		2123FE01FFD467417F000001 /* Main.java in Sources */ = {isa = PBXBuildFile; fileRef = 2123FDFBFFD467417F000001 /* Main.java */; settings = {ATTRIBUTES = (); }; };
+		2123FE02FFD467417F000001 /* Main.api in Resources */ = {isa = PBXBuildFile; fileRef = 2123FDFCFFD467417F000001 /* Main.api */; };
+		214A2FA30A62E98500172A42 /* migration_tab_active.gif in Resources */ = {isa = PBXBuildFile; fileRef = 214A2FA20A62E98500172A42 /* migration_tab_active.gif */; };
+		214A2FA50A62E98B00172A42 /* migration_tab_inactive.gif in Resources */ = {isa = PBXBuildFile; fileRef = 214A2FA40A62E98B00172A42 /* migration_tab_inactive.gif */; };
+		214A31000A62F14400172A42 /* preferences_bar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 214A30FA0A62F14300172A42 /* preferences_bar.gif */; };
+		214A31020A62F14400172A42 /* migration_bar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 214A30FC0A62F14300172A42 /* migration_bar.gif */; };
+		214A31030A62F14400172A42 /* applications_bar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 214A30FD0A62F14400172A42 /* applications_bar.gif */; };
+		214A31050A62F14400172A42 /* hosts_bar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 214A30FF0A62F14400172A42 /* hosts_bar.gif */; };
+		216B96CF0A5F722300CA6C8E /* MigrationPage.api in Resources */ = {isa = PBXBuildFile; fileRef = 216B96C80A5F722300CA6C8E /* MigrationPage.api */; };
+		216B96D00A5F722300CA6C8E /* MigrationPage.java in Sources */ = {isa = PBXBuildFile; fileRef = 216B96C90A5F722300CA6C8E /* MigrationPage.java */; };
+		216B96D10A5F722300CA6C8E /* MigrationPage.wo in Resources */ = {isa = PBXBuildFile; fileRef = 216B96CA0A5F722300CA6C8E /* MigrationPage.wo */; };
+		216B96D20A5F722300CA6C8E /* MigrationPage.api in Resources */ = {isa = PBXBuildFile; fileRef = 216B96C80A5F722300CA6C8E /* MigrationPage.api */; };
+		216B96DF0A5F723C00CA6C8E /* NavigationPage.api in Resources */ = {isa = PBXBuildFile; fileRef = 216B96D80A5F723C00CA6C8E /* NavigationPage.api */; };
+		216B96E00A5F723C00CA6C8E /* NavigationPage.java in Sources */ = {isa = PBXBuildFile; fileRef = 216B96D90A5F723C00CA6C8E /* NavigationPage.java */; };
+		216B96E10A5F723C00CA6C8E /* NavigationPage.wo in Resources */ = {isa = PBXBuildFile; fileRef = 216B96DA0A5F723C00CA6C8E /* NavigationPage.wo */; };
+		216B96E20A5F723C00CA6C8E /* NavigationPage.api in Resources */ = {isa = PBXBuildFile; fileRef = 216B96D80A5F723C00CA6C8E /* NavigationPage.api */; };
+		EBB133D20A5C74B400773CE3 /* AppConfirmDeletePage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB133D00A5C74B400773CE3 /* AppConfirmDeletePage.api */; };
+		EBB133D30A5C74B400773CE3 /* AppConfirmDeletePage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB133D10A5C74B400773CE3 /* AppConfirmDeletePage.java */; };
+		EBB133D60A5C750200773CE3 /* AppConfigurePage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB133D40A5C750200773CE3 /* AppConfigurePage.api */; };
+		EBB133D70A5C750200773CE3 /* AppConfigurePage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB133D50A5C750200773CE3 /* AppConfigurePage.java */; };
+		EBB133DD0A5C752400773CE3 /* AppConfirmDeletePage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB133D80A5C752400773CE3 /* AppConfirmDeletePage.wo */; };
+		EBB133F20A5C755100773CE3 /* AppConfigurePage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB133ED0A5C755100773CE3 /* AppConfigurePage.wo */; };
+		EBB133F60A5C758300773CE3 /* AppDeathPage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB133F50A5C758300773CE3 /* AppDeathPage.java */; };
+		EBB133FB0A5C75A000773CE3 /* AppDeathPage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB133F70A5C75A000773CE3 /* AppDeathPage.wo */; };
+		EBB134060A5C75C400773CE3 /* AppDetailPage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB134040A5C75C400773CE3 /* AppDetailPage.api */; };
+		EBB134070A5C75C400773CE3 /* AppDetailPage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB134050A5C75C400773CE3 /* AppDetailPage.java */; };
+		EBB134180A5C75F400773CE3 /* AppDetailPage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB134130A5C75F400773CE3 /* AppDetailPage.wo */; };
+		EBB1341D0A5C761000773CE3 /* ApplicationsPage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB1341B0A5C761000773CE3 /* ApplicationsPage.api */; };
+		EBB1341E0A5C761000773CE3 /* ApplicationsPage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB1341C0A5C761000773CE3 /* ApplicationsPage.java */; };
+		EBB134240A5C762000773CE3 /* ApplicationsPage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB1341F0A5C762000773CE3 /* ApplicationsPage.wo */; };
+		EBB134300A5C765A00773CE3 /* ConfigurePage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB1342E0A5C765A00773CE3 /* ConfigurePage.api */; };
+		EBB134310A5C765A00773CE3 /* ConfigurePage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB1342F0A5C765A00773CE3 /* ConfigurePage.java */; };
+		EBB134370A5C766E00773CE3 /* ConfigurePage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB134320A5C766E00773CE3 /* ConfigurePage.wo */; };
+		EBB134820A5C7D5900773CE3 /* AppleLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1346B0A5C7D5900773CE3 /* AppleLogo.gif */; };
+		EBB134840A5C7D5900773CE3 /* applications_tab_active.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1346D0A5C7D5900773CE3 /* applications_tab_active.gif */; };
+		EBB134850A5C7D5900773CE3 /* applications_tab_inactive.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1346E0A5C7D5900773CE3 /* applications_tab_inactive.gif */; };
+		EBB134860A5C7D5900773CE3 /* background.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1346F0A5C7D5900773CE3 /* background.gif */; };
+		EBB134870A5C7D5900773CE3 /* ButtonAddInstance.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134700A5C7D5900773CE3 /* ButtonAddInstance.gif */; };
+		EBB134880A5C7D5900773CE3 /* ButtonConfig.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134710A5C7D5900773CE3 /* ButtonConfig.gif */; };
+		EBB134890A5C7D5900773CE3 /* ButtonDelete.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134720A5C7D5900773CE3 /* ButtonDelete.gif */; };
+		EBB1348A0A5C7D5900773CE3 /* ButtonDetailView.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134730A5C7D5900773CE3 /* ButtonDetailView.gif */; };
+		EBB1348B0A5C7D5900773CE3 /* ButtonRefresh.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134740A5C7D5900773CE3 /* ButtonRefresh.gif */; };
+		EBB1348C0A5C7D5900773CE3 /* ButtonWOStats.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134750A5C7D5900773CE3 /* ButtonWOStats.gif */; };
+		EBB1348D0A5C7D5900773CE3 /* ButtonWOStatsOff.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134760A5C7D5900773CE3 /* ButtonWOStatsOff.gif */; };
+		EBB1348F0A5C7D5900773CE3 /* help_tab_active.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134780A5C7D5900773CE3 /* help_tab_active.gif */; };
+		EBB134900A5C7D5900773CE3 /* help_tab_inactive.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134790A5C7D5900773CE3 /* help_tab_inactive.gif */; };
+		EBB134920A5C7D5900773CE3 /* hosts_tab_active.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1347B0A5C7D5900773CE3 /* hosts_tab_active.gif */; };
+		EBB134930A5C7D5900773CE3 /* hosts_tab_inactive.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1347C0A5C7D5900773CE3 /* hosts_tab_inactive.gif */; };
+		EBB134940A5C7D5900773CE3 /* Panel_Off_Yellow.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1347D0A5C7D5900773CE3 /* Panel_Off_Yellow.gif */; };
+		EBB134950A5C7D5900773CE3 /* Panel_Off.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1347E0A5C7D5900773CE3 /* Panel_Off.gif */; };
+		EBB134960A5C7D5900773CE3 /* Panel_On_Green.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1347F0A5C7D5900773CE3 /* Panel_On_Green.gif */; };
+		EBB134970A5C7D5900773CE3 /* Panel_On_Yellow.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134800A5C7D5900773CE3 /* Panel_On_Yellow.gif */; };
+		EBB134980A5C7D5900773CE3 /* PathWizard.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134810A5C7D5900773CE3 /* PathWizard.gif */; };
+		EBB134A70A5C7D8200773CE3 /* PoweredByWebObjects.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134990A5C7D8200773CE3 /* PoweredByWebObjects.gif */; };
+		EBB134A80A5C7D8200773CE3 /* PowerSwitch_Off.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1349A0A5C7D8200773CE3 /* PowerSwitch_Off.gif */; };
+		EBB134A90A5C7D8200773CE3 /* PowerSwitch_On.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1349B0A5C7D8200773CE3 /* PowerSwitch_On.gif */; };
+		EBB134AB0A5C7D8200773CE3 /* preferences_tab_active.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1349D0A5C7D8200773CE3 /* preferences_tab_active.gif */; };
+		EBB134AC0A5C7D8200773CE3 /* preferences_tab_inactive.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1349E0A5C7D8200773CE3 /* preferences_tab_inactive.gif */; };
+		EBB134AD0A5C7D8200773CE3 /* site_bar.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB1349F0A5C7D8200773CE3 /* site_bar.gif */; };
+		EBB134AE0A5C7D8200773CE3 /* site_tab_active.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134A00A5C7D8200773CE3 /* site_tab_active.gif */; };
+		EBB134AF0A5C7D8200773CE3 /* site_tab_inactive.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134A10A5C7D8200773CE3 /* site_tab_inactive.gif */; };
+		EBB134B00A5C7D8200773CE3 /* start.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134A20A5C7D8200773CE3 /* start.gif */; };
+		EBB134B10A5C7D8200773CE3 /* stop.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134A30A5C7D8200773CE3 /* stop.gif */; };
+		EBB134B20A5C7D8200773CE3 /* TransparentPixel.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134A40A5C7D8200773CE3 /* TransparentPixel.gif */; };
+		EBB134B30A5C7D8200773CE3 /* Turning_Off.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134A50A5C7D8200773CE3 /* Turning_Off.gif */; };
+		EBB134B40A5C7D8200773CE3 /* Turning_On.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134A60A5C7D8200773CE3 /* Turning_On.gif */; };
+		EBB134B90A5C7DA900773CE3 /* FileBrowser.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB134B50A5C7DA900773CE3 /* FileBrowser.java */; };
+		EBB134C20A5C7DCD00773CE3 /* FileBrowser.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB134BE0A5C7DCD00773CE3 /* FileBrowser.wo */; };
+		EBB134C40A5C7DEE00773CE3 /* DirectoryIcon.gif in Resources */ = {isa = PBXBuildFile; fileRef = EBB134C30A5C7DEE00773CE3 /* DirectoryIcon.gif */; };
+		EBB134E70A5C7E1800773CE3 /* HelpPage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB134C50A5C7E1800773CE3 /* HelpPage.api */; };
+		EBB134E80A5C7E1800773CE3 /* HelpPage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB134C60A5C7E1800773CE3 /* HelpPage.java */; };
+		EBB134EB0A5C7E1800773CE3 /* HostConfigurePage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB134CA0A5C7E1800773CE3 /* HostConfigurePage.api */; };
+		EBB134EC0A5C7E1800773CE3 /* HostConfigurePage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB134CB0A5C7E1800773CE3 /* HostConfigurePage.java */; };
+		EBB134EF0A5C7E1800773CE3 /* HostConfirmDeletePage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB134CF0A5C7E1800773CE3 /* HostConfirmDeletePage.api */; };
+		EBB134F00A5C7E1800773CE3 /* HostConfirmDeletePage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB134D00A5C7E1800773CE3 /* HostConfirmDeletePage.java */; };
+		EBB134F40A5C7E1800773CE3 /* HostsPage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB134D50A5C7E1800773CE3 /* HostsPage.api */; };
+		EBB134F50A5C7E1800773CE3 /* HostsPage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB134D60A5C7E1800773CE3 /* HostsPage.java */; };
+		EBB134F90A5C7E1800773CE3 /* InstConfigurePage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB134DB0A5C7E1800773CE3 /* InstConfigurePage.api */; };
+		EBB134FA0A5C7E1800773CE3 /* InstConfigurePage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB134DC0A5C7E1800773CE3 /* InstConfigurePage.java */; };
+		EBB134FE0A5C7E1800773CE3 /* InstConfirmDeletePage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB134E10A5C7E1800773CE3 /* InstConfirmDeletePage.api */; };
+		EBB134FF0A5C7E1800773CE3 /* InstConfirmDeletePage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB134E20A5C7E1800773CE3 /* InstConfirmDeletePage.java */; };
+		EBB135240A5C7E4400773CE3 /* MonitorComponent.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB135030A5C7E4400773CE3 /* MonitorComponent.java */; };
+		EBB1352A0A5C7E4400773CE3 /* PathWizardPage1.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB1350A0A5C7E4400773CE3 /* PathWizardPage1.java */; };
+		EBB1352D0A5C7E4400773CE3 /* PathWizardPage2.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB1350E0A5C7E4400773CE3 /* PathWizardPage2.java */; };
+		EBB135310A5C7E4400773CE3 /* PrefsPage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB135130A5C7E4400773CE3 /* PrefsPage.api */; };
+		EBB135320A5C7E4400773CE3 /* PrefsPage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB135140A5C7E4400773CE3 /* PrefsPage.java */; };
+		EBB135350A5C7E4400773CE3 /* RemoteBrowseClient.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB135180A5C7E4400773CE3 /* RemoteBrowseClient.java */; };
+		EBB135360A5C7E4400773CE3 /* StopAllConfirmPage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB135190A5C7E4400773CE3 /* StopAllConfirmPage.api */; };
+		EBB135370A5C7E4400773CE3 /* StopAllConfirmPage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB1351A0A5C7E4400773CE3 /* StopAllConfirmPage.java */; };
+		EBB1353B0A5C7E4400773CE3 /* WotaskdInfoPage.api in Resources */ = {isa = PBXBuildFile; fileRef = EBB1351F0A5C7E4400773CE3 /* WotaskdInfoPage.api */; };
+		EBB1353C0A5C7E4400773CE3 /* WotaskdInfoPage.java in Sources */ = {isa = PBXBuildFile; fileRef = EBB135200A5C7E4400773CE3 /* WotaskdInfoPage.java */; };
+		EBB135670A5C848000773CE3 /* JavaMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB135660A5C848000773CE3 /* JavaMonitor.framework */; };
+		EBB1358F0A5C873200773CE3 /* HelpPage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB1358B0A5C873200773CE3 /* HelpPage.wo */; };
+		EBB1359C0A5C877200773CE3 /* HostConfigurePage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB135980A5C877200773CE3 /* HostConfigurePage.wo */; };
+		EBB135A80A5C87AA00773CE3 /* HostConfirmDeletePage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB135A30A5C87AA00773CE3 /* HostConfirmDeletePage.wo */; };
+		EBB135B70A5C87DC00773CE3 /* HostsPage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB135B20A5C87DC00773CE3 /* HostsPage.wo */; };
+		EBB135CC0A5C881300773CE3 /* InstConfigurePage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB135C70A5C881300773CE3 /* InstConfigurePage.wo */; };
+		EBB135E40A5C886D00773CE3 /* InstConfirmDeletePage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB135DF0A5C886D00773CE3 /* InstConfirmDeletePage.wo */; };
+		EBB135F60A5C88BE00773CE3 /* PathWizardPage1.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB135F20A5C88BE00773CE3 /* PathWizardPage1.wo */; };
+		EBB136010A5C890600773CE3 /* PathWizardPage2.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB135FD0A5C890600773CE3 /* PathWizardPage2.wo */; };
+		EBB1360F0A5C895000773CE3 /* PrefsPage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB1360B0A5C895000773CE3 /* PrefsPage.wo */; };
+		EBB1361A0A5C897F00773CE3 /* StopAllConfirmPage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB136150A5C897F00773CE3 /* StopAllConfirmPage.wo */; };
+		EBB136240A5C89AE00773CE3 /* WotaskdInfoPage.wo in Resources */ = {isa = PBXBuildFile; fileRef = EBB136200A5C89AE00773CE3 /* WotaskdInfoPage.wo */; };
+		EBC8FC230A683BF50055CDE1 /* help_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2112DE3B0A63040B006537F3 /* help_bar.gif */; };
+		EBC8FC240A683BF50055CDE1 /* hosts_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2112DE270A6301EE006537F3 /* hosts_bar.gif */; };
+		EBC8FC250A683BF50055CDE1 /* applications_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2112DE280A6301EE006537F3 /* applications_bar.gif */; };
+		EBC8FC260A683BF50055CDE1 /* site_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2112DE290A6301EE006537F3 /* site_bar.gif */; };
+		EBC8FC270A683BF50055CDE1 /* preferences_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2112DE2A0A6301EE006537F3 /* preferences_bar.gif */; };
+		EBC8FC280A683BF50055CDE1 /* migration_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 214A30FC0A62F14300172A42 /* migration_bar.gif */; };
+		EBC8FC290A683BF50055CDE1 /* migration_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 214A2FA40A62E98B00172A42 /* migration_tab_inactive.gif */; };
+		EBC8FC2A0A683BF50055CDE1 /* migration_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 214A2FA20A62E98500172A42 /* migration_tab_active.gif */; };
+		EBC8FC2B0A683BF50055CDE1 /* AppleLogo.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1346B0A5C7D5900773CE3 /* AppleLogo.gif */; };
+		EBC8FC2C0A683BF50055CDE1 /* applications_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1346D0A5C7D5900773CE3 /* applications_tab_active.gif */; };
+		EBC8FC2D0A683BF50055CDE1 /* applications_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1346E0A5C7D5900773CE3 /* applications_tab_inactive.gif */; };
+		EBC8FC2E0A683BF50055CDE1 /* background.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1346F0A5C7D5900773CE3 /* background.gif */; };
+		EBC8FC2F0A683BF50055CDE1 /* ButtonAddInstance.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134700A5C7D5900773CE3 /* ButtonAddInstance.gif */; };
+		EBC8FC300A683BF50055CDE1 /* ButtonConfig.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134710A5C7D5900773CE3 /* ButtonConfig.gif */; };
+		EBC8FC310A683BF50055CDE1 /* ButtonDelete.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134720A5C7D5900773CE3 /* ButtonDelete.gif */; };
+		EBC8FC320A683BF50055CDE1 /* ButtonDetailView.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134730A5C7D5900773CE3 /* ButtonDetailView.gif */; };
+		EBC8FC330A683BF50055CDE1 /* ButtonRefresh.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134740A5C7D5900773CE3 /* ButtonRefresh.gif */; };
+		EBC8FC340A683BF50055CDE1 /* ButtonWOStats.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134750A5C7D5900773CE3 /* ButtonWOStats.gif */; };
+		EBC8FC350A683BF50055CDE1 /* ButtonWOStatsOff.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134760A5C7D5900773CE3 /* ButtonWOStatsOff.gif */; };
+		EBC8FC360A683BF50055CDE1 /* DirectoryIcon.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134C30A5C7DEE00773CE3 /* DirectoryIcon.gif */; };
+		EBC8FC370A683BF50055CDE1 /* help_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134780A5C7D5900773CE3 /* help_tab_active.gif */; };
+		EBC8FC380A683BF50055CDE1 /* help_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134790A5C7D5900773CE3 /* help_tab_inactive.gif */; };
+		EBC8FC390A683BF50055CDE1 /* hosts_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1347B0A5C7D5900773CE3 /* hosts_tab_active.gif */; };
+		EBC8FC3A0A683BF50055CDE1 /* hosts_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1347C0A5C7D5900773CE3 /* hosts_tab_inactive.gif */; };
+		EBC8FC3B0A683BF50055CDE1 /* Panel_Off_Yellow.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1347D0A5C7D5900773CE3 /* Panel_Off_Yellow.gif */; };
+		EBC8FC3C0A683BF50055CDE1 /* Panel_Off.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1347E0A5C7D5900773CE3 /* Panel_Off.gif */; };
+		EBC8FC3D0A683BF50055CDE1 /* Panel_On_Green.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1347F0A5C7D5900773CE3 /* Panel_On_Green.gif */; };
+		EBC8FC3E0A683BF50055CDE1 /* Panel_On_Yellow.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134800A5C7D5900773CE3 /* Panel_On_Yellow.gif */; };
+		EBC8FC3F0A683BF50055CDE1 /* PathWizard.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134810A5C7D5900773CE3 /* PathWizard.gif */; };
+		EBC8FC400A683BF50055CDE1 /* PoweredByWebObjects.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134990A5C7D8200773CE3 /* PoweredByWebObjects.gif */; };
+		EBC8FC410A683BF50055CDE1 /* PowerSwitch_Off.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1349A0A5C7D8200773CE3 /* PowerSwitch_Off.gif */; };
+		EBC8FC420A683BF50055CDE1 /* PowerSwitch_On.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1349B0A5C7D8200773CE3 /* PowerSwitch_On.gif */; };
+		EBC8FC430A683BF50055CDE1 /* preferences_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1349D0A5C7D8200773CE3 /* preferences_tab_active.gif */; };
+		EBC8FC440A683BF50055CDE1 /* preferences_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1349E0A5C7D8200773CE3 /* preferences_tab_inactive.gif */; };
+		EBC8FC450A683BF50055CDE1 /* site_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A00A5C7D8200773CE3 /* site_tab_active.gif */; };
+		EBC8FC460A683BF50055CDE1 /* site_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A10A5C7D8200773CE3 /* site_tab_inactive.gif */; };
+		EBC8FC470A683BF50055CDE1 /* start.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A20A5C7D8200773CE3 /* start.gif */; };
+		EBC8FC480A683BF50055CDE1 /* stop.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A30A5C7D8200773CE3 /* stop.gif */; };
+		EBC8FC490A683BF50055CDE1 /* TransparentPixel.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A40A5C7D8200773CE3 /* TransparentPixel.gif */; };
+		EBC8FC4A0A683BF50055CDE1 /* Turning_Off.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A50A5C7D8200773CE3 /* Turning_Off.gif */; };
+		EBC8FC4B0A683BF50055CDE1 /* Turning_On.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A60A5C7D8200773CE3 /* Turning_On.gif */; };
+		EBC8FC4D0A683C3A0055CDE1 /* help_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2112DE3B0A63040B006537F3 /* help_bar.gif */; };
+		EBC8FC4E0A683C3A0055CDE1 /* hosts_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2112DE270A6301EE006537F3 /* hosts_bar.gif */; };
+		EBC8FC4F0A683C3A0055CDE1 /* applications_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2112DE280A6301EE006537F3 /* applications_bar.gif */; };
+		EBC8FC500A683C3A0055CDE1 /* site_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2112DE290A6301EE006537F3 /* site_bar.gif */; };
+		EBC8FC510A683C3A0055CDE1 /* preferences_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2112DE2A0A6301EE006537F3 /* preferences_bar.gif */; };
+		EBC8FC520A683C3A0055CDE1 /* migration_bar.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 214A30FC0A62F14300172A42 /* migration_bar.gif */; };
+		EBC8FC530A683C3A0055CDE1 /* migration_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 214A2FA40A62E98B00172A42 /* migration_tab_inactive.gif */; };
+		EBC8FC540A683C3A0055CDE1 /* migration_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = 214A2FA20A62E98500172A42 /* migration_tab_active.gif */; };
+		EBC8FC550A683C3A0055CDE1 /* AppleLogo.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1346B0A5C7D5900773CE3 /* AppleLogo.gif */; };
+		EBC8FC560A683C3A0055CDE1 /* applications_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1346D0A5C7D5900773CE3 /* applications_tab_active.gif */; };
+		EBC8FC570A683C3A0055CDE1 /* applications_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1346E0A5C7D5900773CE3 /* applications_tab_inactive.gif */; };
+		EBC8FC580A683C3A0055CDE1 /* background.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1346F0A5C7D5900773CE3 /* background.gif */; };
+		EBC8FC590A683C3A0055CDE1 /* ButtonAddInstance.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134700A5C7D5900773CE3 /* ButtonAddInstance.gif */; };
+		EBC8FC5A0A683C3A0055CDE1 /* ButtonConfig.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134710A5C7D5900773CE3 /* ButtonConfig.gif */; };
+		EBC8FC5B0A683C3A0055CDE1 /* ButtonDelete.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134720A5C7D5900773CE3 /* ButtonDelete.gif */; };
+		EBC8FC5C0A683C3A0055CDE1 /* ButtonDetailView.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134730A5C7D5900773CE3 /* ButtonDetailView.gif */; };
+		EBC8FC5D0A683C3A0055CDE1 /* ButtonRefresh.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134740A5C7D5900773CE3 /* ButtonRefresh.gif */; };
+		EBC8FC5E0A683C3A0055CDE1 /* ButtonWOStats.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134750A5C7D5900773CE3 /* ButtonWOStats.gif */; };
+		EBC8FC5F0A683C3A0055CDE1 /* ButtonWOStatsOff.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134760A5C7D5900773CE3 /* ButtonWOStatsOff.gif */; };
+		EBC8FC600A683C3A0055CDE1 /* DirectoryIcon.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134C30A5C7DEE00773CE3 /* DirectoryIcon.gif */; };
+		EBC8FC610A683C3A0055CDE1 /* help_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134780A5C7D5900773CE3 /* help_tab_active.gif */; };
+		EBC8FC620A683C3A0055CDE1 /* help_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134790A5C7D5900773CE3 /* help_tab_inactive.gif */; };
+		EBC8FC630A683C3A0055CDE1 /* hosts_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1347B0A5C7D5900773CE3 /* hosts_tab_active.gif */; };
+		EBC8FC640A683C3A0055CDE1 /* hosts_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1347C0A5C7D5900773CE3 /* hosts_tab_inactive.gif */; };
+		EBC8FC650A683C3A0055CDE1 /* Panel_Off_Yellow.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1347D0A5C7D5900773CE3 /* Panel_Off_Yellow.gif */; };
+		EBC8FC660A683C3A0055CDE1 /* Panel_Off.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1347E0A5C7D5900773CE3 /* Panel_Off.gif */; };
+		EBC8FC670A683C3A0055CDE1 /* Panel_On_Green.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1347F0A5C7D5900773CE3 /* Panel_On_Green.gif */; };
+		EBC8FC680A683C3A0055CDE1 /* Panel_On_Yellow.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134800A5C7D5900773CE3 /* Panel_On_Yellow.gif */; };
+		EBC8FC690A683C3A0055CDE1 /* PathWizard.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134810A5C7D5900773CE3 /* PathWizard.gif */; };
+		EBC8FC6A0A683C3A0055CDE1 /* PoweredByWebObjects.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134990A5C7D8200773CE3 /* PoweredByWebObjects.gif */; };
+		EBC8FC6B0A683C3A0055CDE1 /* PowerSwitch_Off.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1349A0A5C7D8200773CE3 /* PowerSwitch_Off.gif */; };
+		EBC8FC6C0A683C3A0055CDE1 /* PowerSwitch_On.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1349B0A5C7D8200773CE3 /* PowerSwitch_On.gif */; };
+		EBC8FC6D0A683C3A0055CDE1 /* preferences_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1349D0A5C7D8200773CE3 /* preferences_tab_active.gif */; };
+		EBC8FC6E0A683C3A0055CDE1 /* preferences_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB1349E0A5C7D8200773CE3 /* preferences_tab_inactive.gif */; };
+		EBC8FC6F0A683C3A0055CDE1 /* site_tab_active.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A00A5C7D8200773CE3 /* site_tab_active.gif */; };
+		EBC8FC700A683C3A0055CDE1 /* site_tab_inactive.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A10A5C7D8200773CE3 /* site_tab_inactive.gif */; };
+		EBC8FC710A683C3A0055CDE1 /* start.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A20A5C7D8200773CE3 /* start.gif */; };
+		EBC8FC720A683C3A0055CDE1 /* stop.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A30A5C7D8200773CE3 /* stop.gif */; };
+		EBC8FC730A683C3A0055CDE1 /* TransparentPixel.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A40A5C7D8200773CE3 /* TransparentPixel.gif */; };
+		EBC8FC740A683C3A0055CDE1 /* Turning_Off.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A50A5C7D8200773CE3 /* Turning_Off.gif */; };
+		EBC8FC750A683C3A0055CDE1 /* Turning_On.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB134A60A5C7D8200773CE3 /* Turning_On.gif */; };
+		FF70E86D02244EA903CD29B6 /* Properties in Resources */ = {isa = PBXBuildFile; fileRef = FF70E86C02244EA903CD29B6 /* Properties */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBundleTarget section */
+		017C60B4FFD2F2BB7F000001 /* Application Server */ = {
+			isa = PBXBundleTarget;
+			buildConfigurationList = EBB1336A0A5C73E800773CE3 /* Build configuration list for PBXBundleTarget "Application Server" */;
+			buildPhases = (
+				017C60B5FFD2F2BB7F000001 /* Sources */,
+				017C60C6FFD2F2BB7F000001 /* Resources */,
+				017C60D3FFD2F2BB7F000001 /* JavaArchive */,
+				017C60D4FFD2F2BB7F000001 /* Frameworks */,
+				0171C3300017AA3E11CD2B8D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Application Server";
+			productInstallPath = "$(USER_APPS_DIR)";
+			productName = "Server App";
+			productReference = 017C60B1FFD2F2BB7F000001 /* _WOServerJavaMonitor.tmp */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>_WO$(SERVER_UNIQUIFIER)JavaMonitor</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string></string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>CFBundleSignature</key>
+	<string>webo</string>
+	<key>CFBundleVersion</key>
+	<string>0.0.1d1</string>
+	<key>Java</key>
+	<dict>
+		<key>JVMVersion</key>
+		<string>1.4+</string>
+	</dict>
+</dict>
+</plist>
+";
+		};
+		017C60D6FFD2F2BB7F000001 /* Web Server */ = {
+			isa = PBXBundleTarget;
+			buildConfigurationList = EBB1336F0A5C73E800773CE3 /* Build configuration list for PBXBundleTarget "Web Server" */;
+			buildPhases = (
+				017C60D7FFD2F2BB7F000001 /* Sources */,
+				017C60D8FFD2F2BB7F000001 /* Resources */,
+				017C60EBFFD2F2BB7F000001 /* JavaArchive */,
+				017C60ECFFD2F2BB7F000001 /* Frameworks */,
+				16B190260028D0A611CD2B8D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Web Server";
+			productName = "Client App";
+			productReference = 017C60B2FFD2F2BB7F000001 /* _WOClientJavaMonitor.tmp */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>_WO$(CLIENT_UNIQUIFIER)JavaMonitor</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string></string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>CFBundleSignature</key>
+	<string>webo</string>
+	<key>CFBundleVersion</key>
+	<string>0.0.1d1</string>
+	<key>Java</key>
+	<dict>
+		<key>JVMVersion</key>
+		<string>1.4+</string>
+	</dict>
+</dict>
+</plist>
+";
+		};
+/* End PBXBundleTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		EBB133590A5C73E300773CE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 013357CCFF5DD5F011CD2B9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 017C60D6FFD2F2BB7F000001;
+			remoteInfo = "Web Server";
+		};
+		EBB1335A0A5C73E300773CE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 013357CCFF5DD5F011CD2B9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 017C60B4FFD2F2BB7F000001;
+			remoteInfo = "Application Server";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBC8FC860A683C990055CDE1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "$(LOCAL_LIBRARY_DIR)/WebServer/Documents/WebObjects/JavaMonitor.woa/Contents/WebServerResources";
+			dstSubfolderSpec = 0;
+			files = (
+				EBC8FC4D0A683C3A0055CDE1 /* help_bar.gif in CopyFiles */,
+				EBC8FC4E0A683C3A0055CDE1 /* hosts_bar.gif in CopyFiles */,
+				EBC8FC4F0A683C3A0055CDE1 /* applications_bar.gif in CopyFiles */,
+				EBC8FC500A683C3A0055CDE1 /* site_bar.gif in CopyFiles */,
+				EBC8FC510A683C3A0055CDE1 /* preferences_bar.gif in CopyFiles */,
+				EBC8FC520A683C3A0055CDE1 /* migration_bar.gif in CopyFiles */,
+				EBC8FC530A683C3A0055CDE1 /* migration_tab_inactive.gif in CopyFiles */,
+				EBC8FC540A683C3A0055CDE1 /* migration_tab_active.gif in CopyFiles */,
+				EBC8FC550A683C3A0055CDE1 /* AppleLogo.gif in CopyFiles */,
+				EBC8FC560A683C3A0055CDE1 /* applications_tab_active.gif in CopyFiles */,
+				EBC8FC570A683C3A0055CDE1 /* applications_tab_inactive.gif in CopyFiles */,
+				EBC8FC580A683C3A0055CDE1 /* background.gif in CopyFiles */,
+				EBC8FC590A683C3A0055CDE1 /* ButtonAddInstance.gif in CopyFiles */,
+				EBC8FC5A0A683C3A0055CDE1 /* ButtonConfig.gif in CopyFiles */,
+				EBC8FC5B0A683C3A0055CDE1 /* ButtonDelete.gif in CopyFiles */,
+				EBC8FC5C0A683C3A0055CDE1 /* ButtonDetailView.gif in CopyFiles */,
+				EBC8FC5D0A683C3A0055CDE1 /* ButtonRefresh.gif in CopyFiles */,
+				EBC8FC5E0A683C3A0055CDE1 /* ButtonWOStats.gif in CopyFiles */,
+				EBC8FC5F0A683C3A0055CDE1 /* ButtonWOStatsOff.gif in CopyFiles */,
+				EBC8FC600A683C3A0055CDE1 /* DirectoryIcon.gif in CopyFiles */,
+				EBC8FC610A683C3A0055CDE1 /* help_tab_active.gif in CopyFiles */,
+				EBC8FC620A683C3A0055CDE1 /* help_tab_inactive.gif in CopyFiles */,
+				EBC8FC630A683C3A0055CDE1 /* hosts_tab_active.gif in CopyFiles */,
+				EBC8FC640A683C3A0055CDE1 /* hosts_tab_inactive.gif in CopyFiles */,
+				EBC8FC650A683C3A0055CDE1 /* Panel_Off_Yellow.gif in CopyFiles */,
+				EBC8FC660A683C3A0055CDE1 /* Panel_Off.gif in CopyFiles */,
+				EBC8FC670A683C3A0055CDE1 /* Panel_On_Green.gif in CopyFiles */,
+				EBC8FC680A683C3A0055CDE1 /* Panel_On_Yellow.gif in CopyFiles */,
+				EBC8FC690A683C3A0055CDE1 /* PathWizard.gif in CopyFiles */,
+				EBC8FC6A0A683C3A0055CDE1 /* PoweredByWebObjects.gif in CopyFiles */,
+				EBC8FC6B0A683C3A0055CDE1 /* PowerSwitch_Off.gif in CopyFiles */,
+				EBC8FC6C0A683C3A0055CDE1 /* PowerSwitch_On.gif in CopyFiles */,
+				EBC8FC6D0A683C3A0055CDE1 /* preferences_tab_active.gif in CopyFiles */,
+				EBC8FC6E0A683C3A0055CDE1 /* preferences_tab_inactive.gif in CopyFiles */,
+				EBC8FC6F0A683C3A0055CDE1 /* site_tab_active.gif in CopyFiles */,
+				EBC8FC700A683C3A0055CDE1 /* site_tab_inactive.gif in CopyFiles */,
+				EBC8FC710A683C3A0055CDE1 /* start.gif in CopyFiles */,
+				EBC8FC720A683C3A0055CDE1 /* stop.gif in CopyFiles */,
+				EBC8FC730A683C3A0055CDE1 /* TransparentPixel.gif in CopyFiles */,
+				EBC8FC740A683C3A0055CDE1 /* Turning_Off.gif in CopyFiles */,
+				EBC8FC750A683C3A0055CDE1 /* Turning_On.gif in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		EBD795380A5EFDC70098C011 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "$(SYSTEM_LIBRARY_DIR)/WebObjects/WODocumentRoot/WebObjects/JavaMonitor.woa/Contents/WebServerResources";
+			dstSubfolderSpec = 0;
+			files = (
+				EBC8FC230A683BF50055CDE1 /* help_bar.gif in CopyFiles */,
+				EBC8FC240A683BF50055CDE1 /* hosts_bar.gif in CopyFiles */,
+				EBC8FC250A683BF50055CDE1 /* applications_bar.gif in CopyFiles */,
+				EBC8FC260A683BF50055CDE1 /* site_bar.gif in CopyFiles */,
+				EBC8FC270A683BF50055CDE1 /* preferences_bar.gif in CopyFiles */,
+				EBC8FC280A683BF50055CDE1 /* migration_bar.gif in CopyFiles */,
+				EBC8FC290A683BF50055CDE1 /* migration_tab_inactive.gif in CopyFiles */,
+				EBC8FC2A0A683BF50055CDE1 /* migration_tab_active.gif in CopyFiles */,
+				EBC8FC2B0A683BF50055CDE1 /* AppleLogo.gif in CopyFiles */,
+				EBC8FC2C0A683BF50055CDE1 /* applications_tab_active.gif in CopyFiles */,
+				EBC8FC2D0A683BF50055CDE1 /* applications_tab_inactive.gif in CopyFiles */,
+				EBC8FC2E0A683BF50055CDE1 /* background.gif in CopyFiles */,
+				EBC8FC2F0A683BF50055CDE1 /* ButtonAddInstance.gif in CopyFiles */,
+				EBC8FC300A683BF50055CDE1 /* ButtonConfig.gif in CopyFiles */,
+				EBC8FC310A683BF50055CDE1 /* ButtonDelete.gif in CopyFiles */,
+				EBC8FC320A683BF50055CDE1 /* ButtonDetailView.gif in CopyFiles */,
+				EBC8FC330A683BF50055CDE1 /* ButtonRefresh.gif in CopyFiles */,
+				EBC8FC340A683BF50055CDE1 /* ButtonWOStats.gif in CopyFiles */,
+				EBC8FC350A683BF50055CDE1 /* ButtonWOStatsOff.gif in CopyFiles */,
+				EBC8FC360A683BF50055CDE1 /* DirectoryIcon.gif in CopyFiles */,
+				EBC8FC370A683BF50055CDE1 /* help_tab_active.gif in CopyFiles */,
+				EBC8FC380A683BF50055CDE1 /* help_tab_inactive.gif in CopyFiles */,
+				EBC8FC390A683BF50055CDE1 /* hosts_tab_active.gif in CopyFiles */,
+				EBC8FC3A0A683BF50055CDE1 /* hosts_tab_inactive.gif in CopyFiles */,
+				EBC8FC3B0A683BF50055CDE1 /* Panel_Off_Yellow.gif in CopyFiles */,
+				EBC8FC3C0A683BF50055CDE1 /* Panel_Off.gif in CopyFiles */,
+				EBC8FC3D0A683BF50055CDE1 /* Panel_On_Green.gif in CopyFiles */,
+				EBC8FC3E0A683BF50055CDE1 /* Panel_On_Yellow.gif in CopyFiles */,
+				EBC8FC3F0A683BF50055CDE1 /* PathWizard.gif in CopyFiles */,
+				EBC8FC400A683BF50055CDE1 /* PoweredByWebObjects.gif in CopyFiles */,
+				EBC8FC410A683BF50055CDE1 /* PowerSwitch_Off.gif in CopyFiles */,
+				EBC8FC420A683BF50055CDE1 /* PowerSwitch_On.gif in CopyFiles */,
+				EBC8FC430A683BF50055CDE1 /* preferences_tab_active.gif in CopyFiles */,
+				EBC8FC440A683BF50055CDE1 /* preferences_tab_inactive.gif in CopyFiles */,
+				EBC8FC450A683BF50055CDE1 /* site_tab_active.gif in CopyFiles */,
+				EBC8FC460A683BF50055CDE1 /* site_tab_inactive.gif in CopyFiles */,
+				EBC8FC470A683BF50055CDE1 /* start.gif in CopyFiles */,
+				EBC8FC480A683BF50055CDE1 /* stop.gif in CopyFiles */,
+				EBC8FC490A683BF50055CDE1 /* TransparentPixel.gif in CopyFiles */,
+				EBC8FC4A0A683BF50055CDE1 /* Turning_Off.gif in CopyFiles */,
+				EBC8FC4B0A683BF50055CDE1 /* Turning_On.gif in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		016FA8CAFFE5B8A311CD2B8D /* Main.wo */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = folder; path = Main.wo; sourceTree = "<group>"; };
+		017C60B1FFD2F2BB7F000001 /* _WOServerJavaMonitor.tmp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = _WOServerJavaMonitor.tmp; sourceTree = BUILT_PRODUCTS_DIR; };
+		017C60B2FFD2F2BB7F000001 /* _WOClientJavaMonitor.tmp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = _WOClientJavaMonitor.tmp; sourceTree = BUILT_PRODUCTS_DIR; };
+		017C60FFFFD43DA37F000001 /* JavaMonitor.woa */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = JavaMonitor.woa; sourceTree = BUILT_PRODUCTS_DIR; };
+		022D13060059B68211CD2978 /* JavaXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaXML.framework; path = /System/Library/Frameworks/JavaXML.framework; sourceTree = "<absolute>"; };
+		096CB46FFF7BFC8111CD2B9D /* JavaWebObjects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaWebObjects.framework; path = /System/Library/Frameworks/JavaWebObjects.framework; sourceTree = "<absolute>"; };
+		096CB471FF7BFD6311CD2B9D /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = /System/Library/Frameworks/JavaFoundation.framework; sourceTree = "<absolute>"; };
+		096CB472FF7BFD6311CD2B9D /* JavaEOControlframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaEOControlframework; path = /System/Library/Frameworks/JavaEOControl.framework; sourceTree = "<absolute>"; };
+		096CB475FF7BFD6311CD2B9D /* JavaWOExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaWOExtensions.framework; path = /System/Library/Frameworks/JavaWOExtensions.framework; sourceTree = "<absolute>"; };
+		2112DE270A6301EE006537F3 /* hosts_bar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hosts_bar.gif; sourceTree = "<group>"; };
+		2112DE280A6301EE006537F3 /* applications_bar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = applications_bar.gif; sourceTree = "<group>"; };
+		2112DE290A6301EE006537F3 /* site_bar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = site_bar.gif; sourceTree = "<group>"; };
+		2112DE2A0A6301EE006537F3 /* preferences_bar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = preferences_bar.gif; sourceTree = "<group>"; };
+		2112DE3B0A63040B006537F3 /* help_bar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = help_bar.gif; sourceTree = "<group>"; };
+		2123FDF6FFD467417F000001 /* Application.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = Application.java; sourceTree = "<group>"; };
+		2123FDF7FFD467417F000001 /* Session.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = Session.java; sourceTree = "<group>"; };
+		2123FDF8FFD467417F000001 /* DirectAction.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = DirectAction.java; sourceTree = "<group>"; };
+		2123FDFBFFD467417F000001 /* Main.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = Main.java; sourceTree = "<group>"; };
+		2123FDFCFFD467417F000001 /* Main.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = Main.api; sourceTree = "<group>"; };
+		214A2FA20A62E98500172A42 /* migration_tab_active.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = migration_tab_active.gif; sourceTree = "<group>"; };
+		214A2FA40A62E98B00172A42 /* migration_tab_inactive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = migration_tab_inactive.gif; sourceTree = "<group>"; };
+		214A30FA0A62F14300172A42 /* preferences_bar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = preferences_bar.gif; sourceTree = "<group>"; };
+		214A30FC0A62F14300172A42 /* migration_bar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = migration_bar.gif; sourceTree = "<group>"; };
+		214A30FD0A62F14400172A42 /* applications_bar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = applications_bar.gif; sourceTree = "<group>"; };
+		214A30FF0A62F14400172A42 /* hosts_bar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hosts_bar.gif; sourceTree = "<group>"; };
+		216B96C80A5F722300CA6C8E /* MigrationPage.api */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.woapi; path = MigrationPage.api; sourceTree = "<group>"; };
+		216B96C90A5F722300CA6C8E /* MigrationPage.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = MigrationPage.java; sourceTree = "<group>"; };
+		216B96CA0A5F722300CA6C8E /* MigrationPage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MigrationPage.wo; sourceTree = "<group>"; };
+		216B96D80A5F723C00CA6C8E /* NavigationPage.api */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.woapi; path = NavigationPage.api; sourceTree = "<group>"; };
+		216B96D90A5F723C00CA6C8E /* NavigationPage.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = NavigationPage.java; sourceTree = "<group>"; };
+		216B96DA0A5F723C00CA6C8E /* NavigationPage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NavigationPage.wo; sourceTree = "<group>"; };
+		EBB133D00A5C74B400773CE3 /* AppConfirmDeletePage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = AppConfirmDeletePage.api; sourceTree = "<group>"; };
+		EBB133D10A5C74B400773CE3 /* AppConfirmDeletePage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = AppConfirmDeletePage.java; sourceTree = "<group>"; };
+		EBB133D40A5C750200773CE3 /* AppConfigurePage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = AppConfigurePage.api; sourceTree = "<group>"; };
+		EBB133D50A5C750200773CE3 /* AppConfigurePage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = AppConfigurePage.java; sourceTree = "<group>"; };
+		EBB133D80A5C752400773CE3 /* AppConfirmDeletePage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppConfirmDeletePage.wo; sourceTree = "<group>"; };
+		EBB133ED0A5C755100773CE3 /* AppConfigurePage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppConfigurePage.wo; sourceTree = "<group>"; };
+		EBB133F50A5C758300773CE3 /* AppDeathPage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = AppDeathPage.java; sourceTree = "<group>"; };
+		EBB133F70A5C75A000773CE3 /* AppDeathPage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppDeathPage.wo; sourceTree = "<group>"; };
+		EBB134040A5C75C400773CE3 /* AppDetailPage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = AppDetailPage.api; sourceTree = "<group>"; };
+		EBB134050A5C75C400773CE3 /* AppDetailPage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = AppDetailPage.java; sourceTree = "<group>"; };
+		EBB134130A5C75F400773CE3 /* AppDetailPage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppDetailPage.wo; sourceTree = "<group>"; };
+		EBB1341B0A5C761000773CE3 /* ApplicationsPage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = ApplicationsPage.api; sourceTree = "<group>"; };
+		EBB1341C0A5C761000773CE3 /* ApplicationsPage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = ApplicationsPage.java; sourceTree = "<group>"; };
+		EBB1341F0A5C762000773CE3 /* ApplicationsPage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ApplicationsPage.wo; sourceTree = "<group>"; };
+		EBB1342E0A5C765A00773CE3 /* ConfigurePage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = ConfigurePage.api; sourceTree = "<group>"; };
+		EBB1342F0A5C765A00773CE3 /* ConfigurePage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = ConfigurePage.java; sourceTree = "<group>"; };
+		EBB134320A5C766E00773CE3 /* ConfigurePage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ConfigurePage.wo; sourceTree = "<group>"; };
+		EBB1346B0A5C7D5900773CE3 /* AppleLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = AppleLogo.gif; sourceTree = "<group>"; };
+		EBB1346D0A5C7D5900773CE3 /* applications_tab_active.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = applications_tab_active.gif; sourceTree = "<group>"; };
+		EBB1346E0A5C7D5900773CE3 /* applications_tab_inactive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = applications_tab_inactive.gif; sourceTree = "<group>"; };
+		EBB1346F0A5C7D5900773CE3 /* background.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = background.gif; sourceTree = "<group>"; };
+		EBB134700A5C7D5900773CE3 /* ButtonAddInstance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ButtonAddInstance.gif; sourceTree = "<group>"; };
+		EBB134710A5C7D5900773CE3 /* ButtonConfig.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ButtonConfig.gif; sourceTree = "<group>"; };
+		EBB134720A5C7D5900773CE3 /* ButtonDelete.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ButtonDelete.gif; sourceTree = "<group>"; };
+		EBB134730A5C7D5900773CE3 /* ButtonDetailView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ButtonDetailView.gif; sourceTree = "<group>"; };
+		EBB134740A5C7D5900773CE3 /* ButtonRefresh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ButtonRefresh.gif; sourceTree = "<group>"; };
+		EBB134750A5C7D5900773CE3 /* ButtonWOStats.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ButtonWOStats.gif; sourceTree = "<group>"; };
+		EBB134760A5C7D5900773CE3 /* ButtonWOStatsOff.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ButtonWOStatsOff.gif; sourceTree = "<group>"; };
+		EBB134780A5C7D5900773CE3 /* help_tab_active.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = help_tab_active.gif; sourceTree = "<group>"; };
+		EBB134790A5C7D5900773CE3 /* help_tab_inactive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = help_tab_inactive.gif; sourceTree = "<group>"; };
+		EBB1347B0A5C7D5900773CE3 /* hosts_tab_active.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hosts_tab_active.gif; sourceTree = "<group>"; };
+		EBB1347C0A5C7D5900773CE3 /* hosts_tab_inactive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hosts_tab_inactive.gif; sourceTree = "<group>"; };
+		EBB1347D0A5C7D5900773CE3 /* Panel_Off_Yellow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Panel_Off_Yellow.gif; sourceTree = "<group>"; };
+		EBB1347E0A5C7D5900773CE3 /* Panel_Off.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Panel_Off.gif; sourceTree = "<group>"; };
+		EBB1347F0A5C7D5900773CE3 /* Panel_On_Green.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Panel_On_Green.gif; sourceTree = "<group>"; };
+		EBB134800A5C7D5900773CE3 /* Panel_On_Yellow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Panel_On_Yellow.gif; sourceTree = "<group>"; };
+		EBB134810A5C7D5900773CE3 /* PathWizard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PathWizard.gif; sourceTree = "<group>"; };
+		EBB134990A5C7D8200773CE3 /* PoweredByWebObjects.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PoweredByWebObjects.gif; sourceTree = "<group>"; };
+		EBB1349A0A5C7D8200773CE3 /* PowerSwitch_Off.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PowerSwitch_Off.gif; sourceTree = "<group>"; };
+		EBB1349B0A5C7D8200773CE3 /* PowerSwitch_On.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PowerSwitch_On.gif; sourceTree = "<group>"; };
+		EBB1349D0A5C7D8200773CE3 /* preferences_tab_active.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = preferences_tab_active.gif; sourceTree = "<group>"; };
+		EBB1349E0A5C7D8200773CE3 /* preferences_tab_inactive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = preferences_tab_inactive.gif; sourceTree = "<group>"; };
+		EBB1349F0A5C7D8200773CE3 /* site_bar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = site_bar.gif; sourceTree = "<group>"; };
+		EBB134A00A5C7D8200773CE3 /* site_tab_active.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = site_tab_active.gif; sourceTree = "<group>"; };
+		EBB134A10A5C7D8200773CE3 /* site_tab_inactive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = site_tab_inactive.gif; sourceTree = "<group>"; };
+		EBB134A20A5C7D8200773CE3 /* start.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = start.gif; sourceTree = "<group>"; };
+		EBB134A30A5C7D8200773CE3 /* stop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = stop.gif; sourceTree = "<group>"; };
+		EBB134A40A5C7D8200773CE3 /* TransparentPixel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TransparentPixel.gif; sourceTree = "<group>"; };
+		EBB134A50A5C7D8200773CE3 /* Turning_Off.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Turning_Off.gif; sourceTree = "<group>"; };
+		EBB134A60A5C7D8200773CE3 /* Turning_On.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Turning_On.gif; sourceTree = "<group>"; };
+		EBB134B50A5C7DA900773CE3 /* FileBrowser.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = FileBrowser.java; sourceTree = "<group>"; };
+		EBB134BE0A5C7DCD00773CE3 /* FileBrowser.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FileBrowser.wo; sourceTree = "<group>"; };
+		EBB134C30A5C7DEE00773CE3 /* DirectoryIcon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = DirectoryIcon.gif; sourceTree = "<group>"; };
+		EBB134C50A5C7E1800773CE3 /* HelpPage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = HelpPage.api; sourceTree = "<group>"; };
+		EBB134C60A5C7E1800773CE3 /* HelpPage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = HelpPage.java; sourceTree = "<group>"; };
+		EBB134CA0A5C7E1800773CE3 /* HostConfigurePage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = HostConfigurePage.api; sourceTree = "<group>"; };
+		EBB134CB0A5C7E1800773CE3 /* HostConfigurePage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = HostConfigurePage.java; sourceTree = "<group>"; };
+		EBB134CF0A5C7E1800773CE3 /* HostConfirmDeletePage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = HostConfirmDeletePage.api; sourceTree = "<group>"; };
+		EBB134D00A5C7E1800773CE3 /* HostConfirmDeletePage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = HostConfirmDeletePage.java; sourceTree = "<group>"; };
+		EBB134D50A5C7E1800773CE3 /* HostsPage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = HostsPage.api; sourceTree = "<group>"; };
+		EBB134D60A5C7E1800773CE3 /* HostsPage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = HostsPage.java; sourceTree = "<group>"; };
+		EBB134DB0A5C7E1800773CE3 /* InstConfigurePage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = InstConfigurePage.api; sourceTree = "<group>"; };
+		EBB134DC0A5C7E1800773CE3 /* InstConfigurePage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = InstConfigurePage.java; sourceTree = "<group>"; };
+		EBB134E10A5C7E1800773CE3 /* InstConfirmDeletePage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = InstConfirmDeletePage.api; sourceTree = "<group>"; };
+		EBB134E20A5C7E1800773CE3 /* InstConfirmDeletePage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = InstConfirmDeletePage.java; sourceTree = "<group>"; };
+		EBB135030A5C7E4400773CE3 /* MonitorComponent.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = MonitorComponent.java; sourceTree = "<group>"; };
+		EBB1350A0A5C7E4400773CE3 /* PathWizardPage1.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = PathWizardPage1.java; sourceTree = "<group>"; };
+		EBB1350E0A5C7E4400773CE3 /* PathWizardPage2.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = PathWizardPage2.java; sourceTree = "<group>"; };
+		EBB135130A5C7E4400773CE3 /* PrefsPage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = PrefsPage.api; sourceTree = "<group>"; };
+		EBB135140A5C7E4400773CE3 /* PrefsPage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = PrefsPage.java; sourceTree = "<group>"; };
+		EBB135180A5C7E4400773CE3 /* RemoteBrowseClient.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = RemoteBrowseClient.java; sourceTree = "<group>"; };
+		EBB135190A5C7E4400773CE3 /* StopAllConfirmPage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = StopAllConfirmPage.api; sourceTree = "<group>"; };
+		EBB1351A0A5C7E4400773CE3 /* StopAllConfirmPage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = StopAllConfirmPage.java; sourceTree = "<group>"; };
+		EBB1351F0A5C7E4400773CE3 /* WotaskdInfoPage.api */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.woapi; path = WotaskdInfoPage.api; sourceTree = "<group>"; };
+		EBB135200A5C7E4400773CE3 /* WotaskdInfoPage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = WotaskdInfoPage.java; sourceTree = "<group>"; };
+		EBB135660A5C848000773CE3 /* JavaMonitor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaMonitor.framework; path = /System/Library/PrivateFrameworks/JavaMonitor.framework; sourceTree = "<absolute>"; };
+		EBB1358B0A5C873200773CE3 /* HelpPage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HelpPage.wo; sourceTree = "<group>"; };
+		EBB135980A5C877200773CE3 /* HostConfigurePage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HostConfigurePage.wo; sourceTree = "<group>"; };
+		EBB135A30A5C87AA00773CE3 /* HostConfirmDeletePage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HostConfirmDeletePage.wo; sourceTree = "<group>"; };
+		EBB135B20A5C87DC00773CE3 /* HostsPage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HostsPage.wo; sourceTree = "<group>"; };
+		EBB135C70A5C881300773CE3 /* InstConfigurePage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = InstConfigurePage.wo; sourceTree = "<group>"; };
+		EBB135DF0A5C886D00773CE3 /* InstConfirmDeletePage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = InstConfirmDeletePage.wo; sourceTree = "<group>"; };
+		EBB135F20A5C88BE00773CE3 /* PathWizardPage1.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PathWizardPage1.wo; sourceTree = "<group>"; };
+		EBB135FD0A5C890600773CE3 /* PathWizardPage2.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PathWizardPage2.wo; sourceTree = "<group>"; };
+		EBB1360B0A5C895000773CE3 /* PrefsPage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PrefsPage.wo; sourceTree = "<group>"; };
+		EBB136150A5C897F00773CE3 /* StopAllConfirmPage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = StopAllConfirmPage.wo; sourceTree = "<group>"; };
+		EBB136200A5C89AE00773CE3 /* WotaskdInfoPage.wo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WotaskdInfoPage.wo; sourceTree = "<group>"; };
+		FF70E86C02244EA903CD29B6 /* Properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Properties; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		017C60D4FFD2F2BB7F000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				085A02CA00150D1D11CD2B8D /* JavaFoundation.framework in Frameworks */,
+				085A02CB00150D1D11CD2B8D /* JavaEOControlframework in Frameworks */,
+				085A02CD00150D1D11CD2B8D /* JavaWebObjects.framework in Frameworks */,
+				085A02CF00150D1D11CD2B8D /* JavaWOExtensions.framework in Frameworks */,
+				022D13070059B68211CD2978 /* JavaXML.framework in Frameworks */,
+				EBB135670A5C848000773CE3 /* JavaMonitor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017C60ECFFD2F2BB7F000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				085A02D000150D1D11CD2B8D /* JavaFoundation.framework in Frameworks */,
+				085A02D100150D1D11CD2B8D /* JavaEOControlframework in Frameworks */,
+				085A02D300150D1D11CD2B8D /* JavaWebObjects.framework in Frameworks */,
+				085A02D500150D1D11CD2B8D /* JavaWOExtensions.framework in Frameworks */,
+				022D13080059B68211CD2978 /* JavaXML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017C6106FFD43DA37F000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		013357CDFF5DD5F011CD2B9D = {
+			isa = PBXGroup;
+			children = (
+				013357DEFF5DD7CD11CD2B9D /* Classes */,
+				013357D6FF5DD68111CD2B9D /* Web Components */,
+				15D0BC7BFF5EC4B811CD2B9D /* Resources */,
+				15D0BC79FF5EC47311CD2B9D /* Web Server Resources */,
+				01D74EAA00210ABC11CD2B8D /* Interfaces */,
+				096CB46EFF7BFC8111CD2B9D /* Frameworks */,
+				2123FDFDFFD467417F000001 /* Documentation */,
+				013357CEFF5DD64811CD2B9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		013357CEFF5DD64811CD2B9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				017C60FFFFD43DA37F000001 /* JavaMonitor.woa */,
+				0B4F248B00221FBD11CD2B8D /* Intermediates */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		013357D6FF5DD68111CD2B9D /* Web Components */ = {
+			isa = PBXGroup;
+			children = (
+				EBB133E40A5C753700773CE3 /* AppConfirmDeletePage */,
+				EBB133CB0A5C748800773CE3 /* AppConfigurePage */,
+				EBB134000A5C75AA00773CE3 /* AppDeathPage */,
+				EBB134120A5C75DF00773CE3 /* AppDetailPage */,
+				EBB134290A5C762D00773CE3 /* ApplicationsPage */,
+				EBB1343C0A5C767A00773CE3 /* ConfigurePage */,
+				EBB135850A5C871000773CE3 /* FileBrowser */,
+				EBB135920A5C873700773CE3 /* HelpPage */,
+				EBB1359F0A5C878100773CE3 /* HostConfigurePage */,
+				EBB135AB0A5C87AF00773CE3 /* HostConfirmDeletePage */,
+				EBB135C20A5C87F300773CE3 /* HostsPage */,
+				EBB135D70A5C883000773CE3 /* InstConfigurePage */,
+				EBB135DE0A5C884500773CE3 /* InstConfirmDeletePage */,
+				2123FDF9FFD467417F000001 /* Main */,
+				EBB135030A5C7E4400773CE3 /* MonitorComponent.java */,
+				EBB135F90A5C88C200773CE3 /* PathWizardPage1 */,
+				EBB136040A5C892200773CE3 /* PathWizardPage2 */,
+				EBB1360A0A5C893600773CE3 /* PrefsPage */,
+				EBB135180A5C7E4400773CE3 /* RemoteBrowseClient.java */,
+				EBB136140A5C896700773CE3 /* StopAllConfirmPage */,
+				EBB1361F0A5C899300773CE3 /* WotaskdInfoPage */,
+				216B96C70A5F722300CA6C8E /* MigrationPage */,
+				216B96D70A5F723C00CA6C8E /* NavigationPage */,
+			);
+			name = "Web Components";
+			sourceTree = "<group>";
+		};
+		013357DEFF5DD7CD11CD2B9D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2123FDF6FFD467417F000001 /* Application.java */,
+				2123FDF7FFD467417F000001 /* Session.java */,
+				2123FDF8FFD467417F000001 /* DirectAction.java */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		01D74EAA00210ABC11CD2B8D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		096CB46EFF7BFC8111CD2B9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBB135660A5C848000773CE3 /* JavaMonitor.framework */,
+				096CB471FF7BFD6311CD2B9D /* JavaFoundation.framework */,
+				096CB472FF7BFD6311CD2B9D /* JavaEOControlframework */,
+				096CB46FFF7BFC8111CD2B9D /* JavaWebObjects.framework */,
+				096CB475FF7BFD6311CD2B9D /* JavaWOExtensions.framework */,
+				022D13060059B68211CD2978 /* JavaXML.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B4F248B00221FBD11CD2B8D /* Intermediates */ = {
+			isa = PBXGroup;
+			children = (
+				017C60B1FFD2F2BB7F000001 /* _WOServerJavaMonitor.tmp */,
+				017C60B2FFD2F2BB7F000001 /* _WOClientJavaMonitor.tmp */,
+			);
+			name = Intermediates;
+			sourceTree = "<group>";
+		};
+		15D0BC79FF5EC47311CD2B9D /* Web Server Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2112DE3B0A63040B006537F3 /* help_bar.gif */,
+				2112DE270A6301EE006537F3 /* hosts_bar.gif */,
+				2112DE280A6301EE006537F3 /* applications_bar.gif */,
+				2112DE290A6301EE006537F3 /* site_bar.gif */,
+				2112DE2A0A6301EE006537F3 /* preferences_bar.gif */,
+				214A30FA0A62F14300172A42 /* preferences_bar.gif */,
+				214A30FC0A62F14300172A42 /* migration_bar.gif */,
+				214A30FD0A62F14400172A42 /* applications_bar.gif */,
+				214A30FF0A62F14400172A42 /* hosts_bar.gif */,
+				214A2FA40A62E98B00172A42 /* migration_tab_inactive.gif */,
+				214A2FA20A62E98500172A42 /* migration_tab_active.gif */,
+				EBB1346B0A5C7D5900773CE3 /* AppleLogo.gif */,
+				EBB1346D0A5C7D5900773CE3 /* applications_tab_active.gif */,
+				EBB1346E0A5C7D5900773CE3 /* applications_tab_inactive.gif */,
+				EBB1346F0A5C7D5900773CE3 /* background.gif */,
+				EBB134700A5C7D5900773CE3 /* ButtonAddInstance.gif */,
+				EBB134710A5C7D5900773CE3 /* ButtonConfig.gif */,
+				EBB134720A5C7D5900773CE3 /* ButtonDelete.gif */,
+				EBB134730A5C7D5900773CE3 /* ButtonDetailView.gif */,
+				EBB134740A5C7D5900773CE3 /* ButtonRefresh.gif */,
+				EBB134750A5C7D5900773CE3 /* ButtonWOStats.gif */,
+				EBB134760A5C7D5900773CE3 /* ButtonWOStatsOff.gif */,
+				EBB134C30A5C7DEE00773CE3 /* DirectoryIcon.gif */,
+				EBB134780A5C7D5900773CE3 /* help_tab_active.gif */,
+				EBB134790A5C7D5900773CE3 /* help_tab_inactive.gif */,
+				EBB1347B0A5C7D5900773CE3 /* hosts_tab_active.gif */,
+				EBB1347C0A5C7D5900773CE3 /* hosts_tab_inactive.gif */,
+				EBB1347D0A5C7D5900773CE3 /* Panel_Off_Yellow.gif */,
+				EBB1347E0A5C7D5900773CE3 /* Panel_Off.gif */,
+				EBB1347F0A5C7D5900773CE3 /* Panel_On_Green.gif */,
+				EBB134800A5C7D5900773CE3 /* Panel_On_Yellow.gif */,
+				EBB134810A5C7D5900773CE3 /* PathWizard.gif */,
+				EBB134990A5C7D8200773CE3 /* PoweredByWebObjects.gif */,
+				EBB1349A0A5C7D8200773CE3 /* PowerSwitch_Off.gif */,
+				EBB1349B0A5C7D8200773CE3 /* PowerSwitch_On.gif */,
+				EBB1349D0A5C7D8200773CE3 /* preferences_tab_active.gif */,
+				EBB1349E0A5C7D8200773CE3 /* preferences_tab_inactive.gif */,
+				EBB1349F0A5C7D8200773CE3 /* site_bar.gif */,
+				EBB134A00A5C7D8200773CE3 /* site_tab_active.gif */,
+				EBB134A10A5C7D8200773CE3 /* site_tab_inactive.gif */,
+				EBB134A20A5C7D8200773CE3 /* start.gif */,
+				EBB134A30A5C7D8200773CE3 /* stop.gif */,
+				EBB134A40A5C7D8200773CE3 /* TransparentPixel.gif */,
+				EBB134A50A5C7D8200773CE3 /* Turning_Off.gif */,
+				EBB134A60A5C7D8200773CE3 /* Turning_On.gif */,
+			);
+			name = "Web Server Resources";
+			sourceTree = "<group>";
+		};
+		15D0BC7BFF5EC4B811CD2B9D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF70E86C02244EA903CD29B6 /* Properties */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2123FDF9FFD467417F000001 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				016FA8CAFFE5B8A311CD2B8D /* Main.wo */,
+				2123FDFBFFD467417F000001 /* Main.java */,
+				2123FDFCFFD467417F000001 /* Main.api */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		2123FDFDFFD467417F000001 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		216B96C70A5F722300CA6C8E /* MigrationPage */ = {
+			isa = PBXGroup;
+			children = (
+				216B96C80A5F722300CA6C8E /* MigrationPage.api */,
+				216B96C90A5F722300CA6C8E /* MigrationPage.java */,
+				216B96CA0A5F722300CA6C8E /* MigrationPage.wo */,
+			);
+			name = MigrationPage;
+			sourceTree = "<group>";
+		};
+		216B96D70A5F723C00CA6C8E /* NavigationPage */ = {
+			isa = PBXGroup;
+			children = (
+				216B96D80A5F723C00CA6C8E /* NavigationPage.api */,
+				216B96D90A5F723C00CA6C8E /* NavigationPage.java */,
+				216B96DA0A5F723C00CA6C8E /* NavigationPage.wo */,
+			);
+			name = NavigationPage;
+			sourceTree = "<group>";
+		};
+		EBB133CB0A5C748800773CE3 /* AppConfigurePage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB133D40A5C750200773CE3 /* AppConfigurePage.api */,
+				EBB133D50A5C750200773CE3 /* AppConfigurePage.java */,
+				EBB133ED0A5C755100773CE3 /* AppConfigurePage.wo */,
+			);
+			name = AppConfigurePage;
+			sourceTree = "<group>";
+		};
+		EBB133E40A5C753700773CE3 /* AppConfirmDeletePage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB133D00A5C74B400773CE3 /* AppConfirmDeletePage.api */,
+				EBB133D10A5C74B400773CE3 /* AppConfirmDeletePage.java */,
+				EBB133D80A5C752400773CE3 /* AppConfirmDeletePage.wo */,
+			);
+			name = AppConfirmDeletePage;
+			sourceTree = "<group>";
+		};
+		EBB134000A5C75AA00773CE3 /* AppDeathPage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB133F70A5C75A000773CE3 /* AppDeathPage.wo */,
+				EBB133F50A5C758300773CE3 /* AppDeathPage.java */,
+			);
+			name = AppDeathPage;
+			sourceTree = "<group>";
+		};
+		EBB134120A5C75DF00773CE3 /* AppDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB134130A5C75F400773CE3 /* AppDetailPage.wo */,
+				EBB134040A5C75C400773CE3 /* AppDetailPage.api */,
+				EBB134050A5C75C400773CE3 /* AppDetailPage.java */,
+			);
+			name = AppDetailPage;
+			sourceTree = "<group>";
+		};
+		EBB134290A5C762D00773CE3 /* ApplicationsPage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB1341F0A5C762000773CE3 /* ApplicationsPage.wo */,
+				EBB1341B0A5C761000773CE3 /* ApplicationsPage.api */,
+				EBB1341C0A5C761000773CE3 /* ApplicationsPage.java */,
+			);
+			name = ApplicationsPage;
+			sourceTree = "<group>";
+		};
+		EBB1343C0A5C767A00773CE3 /* ConfigurePage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB134320A5C766E00773CE3 /* ConfigurePage.wo */,
+				EBB1342E0A5C765A00773CE3 /* ConfigurePage.api */,
+				EBB1342F0A5C765A00773CE3 /* ConfigurePage.java */,
+			);
+			name = ConfigurePage;
+			sourceTree = "<group>";
+		};
+		EBB135850A5C871000773CE3 /* FileBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				EBB134B50A5C7DA900773CE3 /* FileBrowser.java */,
+				EBB134BE0A5C7DCD00773CE3 /* FileBrowser.wo */,
+			);
+			name = FileBrowser;
+			sourceTree = "<group>";
+		};
+		EBB135920A5C873700773CE3 /* HelpPage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB134C50A5C7E1800773CE3 /* HelpPage.api */,
+				EBB134C60A5C7E1800773CE3 /* HelpPage.java */,
+				EBB1358B0A5C873200773CE3 /* HelpPage.wo */,
+			);
+			name = HelpPage;
+			sourceTree = "<group>";
+		};
+		EBB1359F0A5C878100773CE3 /* HostConfigurePage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB134CB0A5C7E1800773CE3 /* HostConfigurePage.java */,
+				EBB134CA0A5C7E1800773CE3 /* HostConfigurePage.api */,
+				EBB135980A5C877200773CE3 /* HostConfigurePage.wo */,
+			);
+			name = HostConfigurePage;
+			sourceTree = "<group>";
+		};
+		EBB135AB0A5C87AF00773CE3 /* HostConfirmDeletePage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB134D00A5C7E1800773CE3 /* HostConfirmDeletePage.java */,
+				EBB134CF0A5C7E1800773CE3 /* HostConfirmDeletePage.api */,
+				EBB135A30A5C87AA00773CE3 /* HostConfirmDeletePage.wo */,
+			);
+			name = HostConfirmDeletePage;
+			sourceTree = "<group>";
+		};
+		EBB135C20A5C87F300773CE3 /* HostsPage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB134D50A5C7E1800773CE3 /* HostsPage.api */,
+				EBB135B20A5C87DC00773CE3 /* HostsPage.wo */,
+				EBB134D60A5C7E1800773CE3 /* HostsPage.java */,
+			);
+			name = HostsPage;
+			sourceTree = "<group>";
+		};
+		EBB135D70A5C883000773CE3 /* InstConfigurePage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB134DB0A5C7E1800773CE3 /* InstConfigurePage.api */,
+				EBB135C70A5C881300773CE3 /* InstConfigurePage.wo */,
+				EBB134DC0A5C7E1800773CE3 /* InstConfigurePage.java */,
+			);
+			name = InstConfigurePage;
+			sourceTree = "<group>";
+		};
+		EBB135DE0A5C884500773CE3 /* InstConfirmDeletePage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB135DF0A5C886D00773CE3 /* InstConfirmDeletePage.wo */,
+				EBB134E10A5C7E1800773CE3 /* InstConfirmDeletePage.api */,
+				EBB134E20A5C7E1800773CE3 /* InstConfirmDeletePage.java */,
+			);
+			name = InstConfirmDeletePage;
+			sourceTree = "<group>";
+		};
+		EBB135F90A5C88C200773CE3 /* PathWizardPage1 */ = {
+			isa = PBXGroup;
+			children = (
+				EBB1350A0A5C7E4400773CE3 /* PathWizardPage1.java */,
+				EBB135F20A5C88BE00773CE3 /* PathWizardPage1.wo */,
+			);
+			name = PathWizardPage1;
+			sourceTree = "<group>";
+		};
+		EBB136040A5C892200773CE3 /* PathWizardPage2 */ = {
+			isa = PBXGroup;
+			children = (
+				EBB1350E0A5C7E4400773CE3 /* PathWizardPage2.java */,
+				EBB135FD0A5C890600773CE3 /* PathWizardPage2.wo */,
+			);
+			name = PathWizardPage2;
+			sourceTree = "<group>";
+		};
+		EBB1360A0A5C893600773CE3 /* PrefsPage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB1360B0A5C895000773CE3 /* PrefsPage.wo */,
+				EBB135130A5C7E4400773CE3 /* PrefsPage.api */,
+				EBB135140A5C7E4400773CE3 /* PrefsPage.java */,
+			);
+			name = PrefsPage;
+			sourceTree = "<group>";
+		};
+		EBB136140A5C896700773CE3 /* StopAllConfirmPage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB135190A5C7E4400773CE3 /* StopAllConfirmPage.api */,
+				EBB136150A5C897F00773CE3 /* StopAllConfirmPage.wo */,
+				EBB1351A0A5C7E4400773CE3 /* StopAllConfirmPage.java */,
+			);
+			name = StopAllConfirmPage;
+			sourceTree = "<group>";
+		};
+		EBB1361F0A5C899300773CE3 /* WotaskdInfoPage */ = {
+			isa = PBXGroup;
+			children = (
+				EBB136200A5C89AE00773CE3 /* WotaskdInfoPage.wo */,
+				EBB1351F0A5C7E4400773CE3 /* WotaskdInfoPage.api */,
+				EBB135200A5C7E4400773CE3 /* WotaskdInfoPage.java */,
+			);
+			name = WotaskdInfoPage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		017C60D3FFD2F2BB7F000001 /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017C60EBFFD2F2BB7F000001 /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017C6105FFD43DA37F000001 /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		013357CCFF5DD5F011CD2B9D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = EBB133790A5C73E800773CE3 /* Build configuration list for PBXProject "JavaMonitor" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 013357CDFF5DD5F011CD2B9D;
+			productRefGroup = 013357CEFF5DD64811CD2B9D /* Products */;
+			projectDirPath = "";
+			targets = (
+				017C6100FFD43DA37F000001 /* JavaMonitor */,
+				017C60B4FFD2F2BB7F000001 /* Application Server */,
+				017C60D6FFD2F2BB7F000001 /* Web Server */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		017C60C6FFD2F2BB7F000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2123FE02FFD467417F000001 /* Main.api in Resources */,
+				016FA8CBFFE5B8A311CD2B8D /* Main.wo in Resources */,
+				FF70E86D02244EA903CD29B6 /* Properties in Resources */,
+				EBB133D20A5C74B400773CE3 /* AppConfirmDeletePage.api in Resources */,
+				EBB133D60A5C750200773CE3 /* AppConfigurePage.api in Resources */,
+				EBB133DD0A5C752400773CE3 /* AppConfirmDeletePage.wo in Resources */,
+				EBB133F20A5C755100773CE3 /* AppConfigurePage.wo in Resources */,
+				EBB133FB0A5C75A000773CE3 /* AppDeathPage.wo in Resources */,
+				EBB134060A5C75C400773CE3 /* AppDetailPage.api in Resources */,
+				EBB134180A5C75F400773CE3 /* AppDetailPage.wo in Resources */,
+				EBB1341D0A5C761000773CE3 /* ApplicationsPage.api in Resources */,
+				EBB134240A5C762000773CE3 /* ApplicationsPage.wo in Resources */,
+				EBB134300A5C765A00773CE3 /* ConfigurePage.api in Resources */,
+				EBB134370A5C766E00773CE3 /* ConfigurePage.wo in Resources */,
+				EBB134C20A5C7DCD00773CE3 /* FileBrowser.wo in Resources */,
+				EBB134E70A5C7E1800773CE3 /* HelpPage.api in Resources */,
+				EBB134EB0A5C7E1800773CE3 /* HostConfigurePage.api in Resources */,
+				EBB134EF0A5C7E1800773CE3 /* HostConfirmDeletePage.api in Resources */,
+				EBB134F40A5C7E1800773CE3 /* HostsPage.api in Resources */,
+				EBB134F90A5C7E1800773CE3 /* InstConfigurePage.api in Resources */,
+				EBB134FE0A5C7E1800773CE3 /* InstConfirmDeletePage.api in Resources */,
+				EBB135310A5C7E4400773CE3 /* PrefsPage.api in Resources */,
+				EBB135360A5C7E4400773CE3 /* StopAllConfirmPage.api in Resources */,
+				EBB1353B0A5C7E4400773CE3 /* WotaskdInfoPage.api in Resources */,
+				EBB1358F0A5C873200773CE3 /* HelpPage.wo in Resources */,
+				EBB1359C0A5C877200773CE3 /* HostConfigurePage.wo in Resources */,
+				EBB135A80A5C87AA00773CE3 /* HostConfirmDeletePage.wo in Resources */,
+				EBB135B70A5C87DC00773CE3 /* HostsPage.wo in Resources */,
+				EBB135CC0A5C881300773CE3 /* InstConfigurePage.wo in Resources */,
+				EBB135E40A5C886D00773CE3 /* InstConfirmDeletePage.wo in Resources */,
+				EBB135F60A5C88BE00773CE3 /* PathWizardPage1.wo in Resources */,
+				EBB136010A5C890600773CE3 /* PathWizardPage2.wo in Resources */,
+				EBB1360F0A5C895000773CE3 /* PrefsPage.wo in Resources */,
+				EBB1361A0A5C897F00773CE3 /* StopAllConfirmPage.wo in Resources */,
+				EBB136240A5C89AE00773CE3 /* WotaskdInfoPage.wo in Resources */,
+				216B96CF0A5F722300CA6C8E /* MigrationPage.api in Resources */,
+				216B96D10A5F722300CA6C8E /* MigrationPage.wo in Resources */,
+				216B96DF0A5F723C00CA6C8E /* NavigationPage.api in Resources */,
+				216B96E10A5F723C00CA6C8E /* NavigationPage.wo in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017C60D8FFD2F2BB7F000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB134820A5C7D5900773CE3 /* AppleLogo.gif in Resources */,
+				EBB134840A5C7D5900773CE3 /* applications_tab_active.gif in Resources */,
+				EBB134850A5C7D5900773CE3 /* applications_tab_inactive.gif in Resources */,
+				EBB134860A5C7D5900773CE3 /* background.gif in Resources */,
+				EBB134870A5C7D5900773CE3 /* ButtonAddInstance.gif in Resources */,
+				EBB134880A5C7D5900773CE3 /* ButtonConfig.gif in Resources */,
+				EBB134890A5C7D5900773CE3 /* ButtonDelete.gif in Resources */,
+				EBB1348A0A5C7D5900773CE3 /* ButtonDetailView.gif in Resources */,
+				EBB1348B0A5C7D5900773CE3 /* ButtonRefresh.gif in Resources */,
+				EBB1348C0A5C7D5900773CE3 /* ButtonWOStats.gif in Resources */,
+				EBB1348D0A5C7D5900773CE3 /* ButtonWOStatsOff.gif in Resources */,
+				EBB1348F0A5C7D5900773CE3 /* help_tab_active.gif in Resources */,
+				EBB134900A5C7D5900773CE3 /* help_tab_inactive.gif in Resources */,
+				EBB134920A5C7D5900773CE3 /* hosts_tab_active.gif in Resources */,
+				EBB134930A5C7D5900773CE3 /* hosts_tab_inactive.gif in Resources */,
+				EBB134940A5C7D5900773CE3 /* Panel_Off_Yellow.gif in Resources */,
+				EBB134950A5C7D5900773CE3 /* Panel_Off.gif in Resources */,
+				EBB134960A5C7D5900773CE3 /* Panel_On_Green.gif in Resources */,
+				EBB134970A5C7D5900773CE3 /* Panel_On_Yellow.gif in Resources */,
+				EBB134980A5C7D5900773CE3 /* PathWizard.gif in Resources */,
+				EBB134A70A5C7D8200773CE3 /* PoweredByWebObjects.gif in Resources */,
+				EBB134A80A5C7D8200773CE3 /* PowerSwitch_Off.gif in Resources */,
+				EBB134A90A5C7D8200773CE3 /* PowerSwitch_On.gif in Resources */,
+				EBB134AB0A5C7D8200773CE3 /* preferences_tab_active.gif in Resources */,
+				EBB134AC0A5C7D8200773CE3 /* preferences_tab_inactive.gif in Resources */,
+				EBB134AD0A5C7D8200773CE3 /* site_bar.gif in Resources */,
+				EBB134AE0A5C7D8200773CE3 /* site_tab_active.gif in Resources */,
+				EBB134AF0A5C7D8200773CE3 /* site_tab_inactive.gif in Resources */,
+				EBB134B00A5C7D8200773CE3 /* start.gif in Resources */,
+				EBB134B10A5C7D8200773CE3 /* stop.gif in Resources */,
+				EBB134B20A5C7D8200773CE3 /* TransparentPixel.gif in Resources */,
+				EBB134B30A5C7D8200773CE3 /* Turning_Off.gif in Resources */,
+				EBB134B40A5C7D8200773CE3 /* Turning_On.gif in Resources */,
+				EBB134C40A5C7DEE00773CE3 /* DirectoryIcon.gif in Resources */,
+				216B96D20A5F722300CA6C8E /* MigrationPage.api in Resources */,
+				216B96E20A5F723C00CA6C8E /* NavigationPage.api in Resources */,
+				214A2FA30A62E98500172A42 /* migration_tab_active.gif in Resources */,
+				214A2FA50A62E98B00172A42 /* migration_tab_inactive.gif in Resources */,
+				214A31000A62F14400172A42 /* preferences_bar.gif in Resources */,
+				214A31020A62F14400172A42 /* migration_bar.gif in Resources */,
+				214A31030A62F14400172A42 /* applications_bar.gif in Resources */,
+				214A31050A62F14400172A42 /* hosts_bar.gif in Resources */,
+				2112DE3C0A63040B006537F3 /* help_bar.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017C6104FFD43DA37F000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0171C3300017AA3E11CD2B8D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Copy the requisite files from the Server and Client directories into the final wrapper directory\n. \"${BUILD_FILES_DIR}/ComputeTargetClasspath.sh\" \"NO\" \"${SERVER_UNIQUIFIER}\"";
+		};
+		017C6107FFD43DA37F000001 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Copy the requisite files from the Server and Client directories into the final wrapper directory\n. \"${BUILD_FILES_DIR}/AssembleApplication.sh\"";
+		};
+		017C6108FFD43DA37F000001 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Create the run scripts and classpath files for all platforms\n. \"${BUILD_FILES_DIR}/CreateRunFiles.sh\"";
+		};
+		01CC6D570020D11111CD2B8D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Set the permissions for the build product\n. \"${BUILD_FILES_DIR}/SetPermissions.sh\"";
+		};
+		16B190260028D0A611CD2B8D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Copy the requisite files from the Server and Client directories into the final wrapper directory\nif [ \"${BUILD_CLIENT_LAUNCH_SCRIPT}\" = \"YES\" ]; then\n    . \"${BUILD_FILES_DIR}/ComputeTargetClasspath.sh\" \"YES\" \"${CLIENT_UNIQUIFIER}\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		017C60B5FFD2F2BB7F000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2123FDFEFFD467417F000001 /* Application.java in Sources */,
+				2123FDFFFFD467417F000001 /* DirectAction.java in Sources */,
+				2123FE00FFD467417F000001 /* Session.java in Sources */,
+				2123FE01FFD467417F000001 /* Main.java in Sources */,
+				EBB133D30A5C74B400773CE3 /* AppConfirmDeletePage.java in Sources */,
+				EBB133D70A5C750200773CE3 /* AppConfigurePage.java in Sources */,
+				EBB133F60A5C758300773CE3 /* AppDeathPage.java in Sources */,
+				EBB134070A5C75C400773CE3 /* AppDetailPage.java in Sources */,
+				EBB1341E0A5C761000773CE3 /* ApplicationsPage.java in Sources */,
+				EBB134310A5C765A00773CE3 /* ConfigurePage.java in Sources */,
+				EBB134B90A5C7DA900773CE3 /* FileBrowser.java in Sources */,
+				EBB134E80A5C7E1800773CE3 /* HelpPage.java in Sources */,
+				EBB134EC0A5C7E1800773CE3 /* HostConfigurePage.java in Sources */,
+				EBB134F00A5C7E1800773CE3 /* HostConfirmDeletePage.java in Sources */,
+				EBB134F50A5C7E1800773CE3 /* HostsPage.java in Sources */,
+				EBB134FA0A5C7E1800773CE3 /* InstConfigurePage.java in Sources */,
+				EBB134FF0A5C7E1800773CE3 /* InstConfirmDeletePage.java in Sources */,
+				EBB135240A5C7E4400773CE3 /* MonitorComponent.java in Sources */,
+				EBB1352A0A5C7E4400773CE3 /* PathWizardPage1.java in Sources */,
+				EBB1352D0A5C7E4400773CE3 /* PathWizardPage2.java in Sources */,
+				EBB135320A5C7E4400773CE3 /* PrefsPage.java in Sources */,
+				EBB135350A5C7E4400773CE3 /* RemoteBrowseClient.java in Sources */,
+				EBB135370A5C7E4400773CE3 /* StopAllConfirmPage.java in Sources */,
+				EBB1353C0A5C7E4400773CE3 /* WotaskdInfoPage.java in Sources */,
+				216B96D00A5F722300CA6C8E /* MigrationPage.java in Sources */,
+				216B96E00A5F723C00CA6C8E /* NavigationPage.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017C60D7FFD2F2BB7F000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		017C6103FFD43DA37F000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		017C6101FFD43DA37F000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 017C60B4FFD2F2BB7F000001 /* Application Server */;
+			targetProxy = EBB1335A0A5C73E300773CE3 /* PBXContainerItemProxy */;
+		};
+		017C6102FFD43DA37F000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 017C60D6FFD2F2BB7F000001 /* Web Server */;
+			targetProxy = EBB133590A5C73E300773CE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EBB1336B0A5C73E800773CE3 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_MODE_FLAG = "a+rX";
+				INSTALL_PATH_FOR_STYLE = "$(TARGET_BUILD_DIR)";
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER_FLAGS = "-extdirs /Library/WebObjects/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Frameworks/JavaVM.framework/Home/lib/ext:$(DSTROOT)/System/Library/PrivateFrameworks/JavaMonitor.framework/Resources/Java";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_FRAMEWORK_RESOURCES_DIRS = Resources;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				OTHER_JAVA_CLASS_PATH = "";
+				PRODUCT_NAME = "_WO$(SERVER_UNIQUIFIER)JavaMonitor";
+				SERVER_UNIQUIFIER = Server;
+				SPLIT_INSTALL = NO;
+				WRAPPER_EXTENSION = tmp;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		EBB1336C0A5C73E800773CE3 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				INSTALL_MODE_FLAG = "a+rX";
+				INSTALL_PATH_FOR_STYLE = "$(DSTROOT)/$(INSTALL_PATH)";
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER_FLAGS = "-extdirs /Library/WebObjects/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Frameworks/JavaVM.framework/Home/lib/ext:$(DSTROOT)/System/Library/PrivateFrameworks/JavaMonitor.framework/Resources/Java";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_FRAMEWORK_RESOURCES_DIRS = Resources;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				OTHER_JAVA_CLASS_PATH = "";
+				PRODUCT_NAME = "_WO$(SERVER_UNIQUIFIER)JavaMonitor";
+				SERVER_UNIQUIFIER = Server;
+				SPLIT_INSTALL = NO;
+				WRAPPER_EXTENSION = tmp;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		EBB1336D0A5C73E800773CE3 /* WebServer */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				INSTALL_MODE_FLAG = "a+rX";
+				INSTALL_PATH_FOR_STYLE = "$(DSTROOT)/$(INSTALL_PATH)";
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER_FLAGS = "-extdirs /Library/WebObjects/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Frameworks/JavaVM.framework/Home/lib/ext:$(DSTROOT)/System/Library/PrivateFrameworks/JavaMonitor.framework/Resources/Java";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_FRAMEWORK_RESOURCES_DIRS = Resources;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				OTHER_JAVA_CLASS_PATH = "";
+				PRODUCT_NAME = "_WO$(SERVER_UNIQUIFIER)JavaMonitor";
+				SERVER_UNIQUIFIER = Server;
+				SPLIT_INSTALL = YES;
+				WEBSERVER_DOCROOT = "$(DSTROOT)$(LOCAL_LIBRARY_DIR)/WebServer/Documents";
+				WEBSERVER_INSTALL_DIR_APPLICATION = "$(WEBSERVER_INSTALL_ROOT)";
+				WEBSERVER_INSTALL_DIR_FRAMEWORK = "$(WEBSERVER_INSTALL_ROOT)/Frameworks";
+				WEBSERVER_INSTALL_ROOT = "$(WEBSERVER_DOCROOT)/WebObjects";
+				WEBSERVER_RESOURCES_DIR = "$(WEBSERVER_CONTENTS_DIR)/WebServerResources";
+				WEBSERVER_RESOURCES_JAVA_DIR = "$(WEBSERVER_INSTALL_ROOT)/Java";
+				WEBSERVER_WRAPPER_DIR = "$(WEBSERVER_INSTALL_DIR)/$(WRAPPER_NAME)";
+				WRAPPER_EXTENSION = tmp;
+			};
+			name = WebServer;
+		};
+		EBB1336E0A5C73E800773CE3 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER_FLAGS = "-extdirs /Library/WebObjects/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Frameworks/JavaVM.framework/Home/lib/ext:$(DSTROOT)/System/Library/PrivateFrameworks/JavaMonitor.framework/Resources/Java";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_FRAMEWORK_RESOURCES_DIRS = Resources;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				OTHER_JAVA_CLASS_PATH = "";
+				PRODUCT_NAME = "_WO$(SERVER_UNIQUIFIER)JavaMonitor";
+				SERVER_UNIQUIFIER = Server;
+				WRAPPER_EXTENSION = tmp;
+			};
+			name = Default;
+		};
+		EBB133700A5C73E800773CE3 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_CLIENT_LAUNCH_SCRIPT = NO;
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				CLIENT_UNIQUIFIER = Client;
+				COMPILE_JAVA_SOURCES_IN_NIB_FILES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_MODE_FLAG = "a+rX";
+				INSTALL_PATH_FOR_STYLE = "$(TARGET_BUILD_DIR)";
+				JAVA_ARCHIVE_CLASSES = BOTH;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER_FLAGS = "-extdirs /Library/WebObjects/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Frameworks/JavaVM.framework/Home/lib/ext";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_FRAMEWORK_RESOURCES_DIRS = WebServerResources;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				OTHER_JAVA_CLASS_PATH = "";
+				PRODUCT_NAME = "_WO$(CLIENT_UNIQUIFIER)JavaMonitor";
+				SPLIT_INSTALL = NO;
+				WRAPPER_EXTENSION = tmp;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		EBB133710A5C73E800773CE3 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_CLIENT_LAUNCH_SCRIPT = NO;
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				CLIENT_UNIQUIFIER = Client;
+				COMPILE_JAVA_SOURCES_IN_NIB_FILES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				INSTALL_MODE_FLAG = "a+rX";
+				INSTALL_PATH_FOR_STYLE = "$(DSTROOT)/$(INSTALL_PATH)";
+				JAVA_ARCHIVE_CLASSES = BOTH;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER_FLAGS = "-extdirs /Library/WebObjects/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Frameworks/JavaVM.framework/Home/lib/ext";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_FRAMEWORK_RESOURCES_DIRS = WebServerResources;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				OTHER_JAVA_CLASS_PATH = "";
+				PRODUCT_NAME = "_WO$(CLIENT_UNIQUIFIER)JavaMonitor";
+				SPLIT_INSTALL = NO;
+				WRAPPER_EXTENSION = tmp;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		EBB133720A5C73E800773CE3 /* WebServer */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_CLIENT_LAUNCH_SCRIPT = NO;
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				CLIENT_UNIQUIFIER = Client;
+				COMPILE_JAVA_SOURCES_IN_NIB_FILES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				INSTALL_MODE_FLAG = "a+rX";
+				INSTALL_PATH_FOR_STYLE = "$(DSTROOT)/$(INSTALL_PATH)";
+				JAVA_ARCHIVE_CLASSES = BOTH;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER_FLAGS = "-extdirs /Library/WebObjects/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Frameworks/JavaVM.framework/Home/lib/ext";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_FRAMEWORK_RESOURCES_DIRS = WebServerResources;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				OTHER_JAVA_CLASS_PATH = "";
+				PRODUCT_NAME = "_WO$(CLIENT_UNIQUIFIER)JavaMonitor";
+				SPLIT_INSTALL = YES;
+				WEBSERVER_DOCROOT = "$(DSTROOT)$(LOCAL_LIBRARY_DIR)/WebServer/Documents";
+				WEBSERVER_INSTALL_DIR_APPLICATION = "$(WEBSERVER_INSTALL_ROOT)";
+				WEBSERVER_INSTALL_DIR_FRAMEWORK = "$(WEBSERVER_INSTALL_ROOT)/Frameworks";
+				WEBSERVER_INSTALL_ROOT = "$(WEBSERVER_DOCROOT)/WebObjects";
+				WEBSERVER_RESOURCES_DIR = "$(WEBSERVER_CONTENTS_DIR)/WebServerResources";
+				WEBSERVER_RESOURCES_JAVA_DIR = "$(WEBSERVER_INSTALL_ROOT)/Java";
+				WEBSERVER_WRAPPER_DIR = "$(WEBSERVER_INSTALL_DIR)/$(WRAPPER_NAME)";
+				WRAPPER_EXTENSION = tmp;
+			};
+			name = WebServer;
+		};
+		EBB133730A5C73E800773CE3 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_CLIENT_LAUNCH_SCRIPT = NO;
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				CLIENT_UNIQUIFIER = Client;
+				COMPILE_JAVA_SOURCES_IN_NIB_FILES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				JAVA_ARCHIVE_CLASSES = BOTH;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER_FLAGS = "-extdirs /Library/WebObjects/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Frameworks/JavaVM.framework/Home/lib/ext";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_FRAMEWORK_RESOURCES_DIRS = WebServerResources;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				OTHER_JAVA_CLASS_PATH = "";
+				PRODUCT_NAME = "_WO$(CLIENT_UNIQUIFIER)JavaMonitor";
+				WRAPPER_EXTENSION = tmp;
+			};
+			name = Default;
+		};
+		EBB133750A5C73E800773CE3 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_DIR_MACOS = "$(CONTENTS_DIR)/MacOS";
+				APPLICATION_DIR_UNIX = "$(CONTENTS_DIR)/UNIX";
+				APPLICATION_DIR_WINDOWS = "$(CONTENTS_DIR)/Windows";
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				BUNDLE_AS_JAR = NO;
+				CLIENT_UNIQUIFIER = Client;
+				CONTENTS_DIR = "$(WRAPPER_DIR)/Contents";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFO_FILE = "$(CONTENTS_DIR)/$(INFO_FILE_NAME)";
+				INFO_FILE_NAME = Info.plist;
+				INSTALL_MODE_FLAG = "a+rX";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/WebObjects/JavaApplications";
+				INSTALL_PATH_FOR_STYLE = "$(TARGET_BUILD_DIR)";
+				JAR_BUNDLE_INSTALL_DIR = "$(SYSTEM_LIBRARY_DIR)/WebObjects/JavaApplications";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_DEBUGGER = jdb;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				JAVA_VM = java;
+				JDB_OPTIONS = "";
+				JVM_OPTIONS = "-DWOAllowRapidTurnaround=false";
+				PRODUCT_NAME = JavaMonitor;
+				RESOURCES_DIR = "$(CONTENTS_DIR)/Resources";
+				RESOURCES_JAVA_DIR = "$(RESOURCES_DIR)/Java";
+				SERVER_UNIQUIFIER = Server;
+				SPLIT_INSTALL = NO;
+				WEBSERVER_CONTENTS_DIR = "$(WEBSERVER_WRAPPER_DIR)/Contents";
+				WEBSERVER_INSTALL_DIR = "$(WEBSERVER_INSTALL_DIR_APPLICATION)";
+				WEBSERVER_RESOURCES_DIR = "$(CONTENTS_DIR)/WebServerResources";
+				WEBSERVER_RESOURCES_JAVA_DIR = "$(WEBSERVER_RESOURCES_DIR)/Java";
+				WOAPPLICATION_CLASS_NAME = Application;
+				WO_TEMPLATE_MAJOR_VERSION = 5;
+				WO_TEMPLATE_MINOR_VERSION = 2;
+				WRAPPER_DIR = "$(INSTALL_PATH_FOR_STYLE)/$(WRAPPER_NAME)";
+				WRAPPER_EXTENSION = woa;
+				WRAPPER_NAME = "$(PRODUCT_NAME).$(WRAPPER_EXTENSION)";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		EBB133760A5C73E800773CE3 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_DIR_MACOS = "$(CONTENTS_DIR)/MacOS";
+				APPLICATION_DIR_UNIX = "$(CONTENTS_DIR)/UNIX";
+				APPLICATION_DIR_WINDOWS = "$(CONTENTS_DIR)/Windows";
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				BUNDLE_AS_JAR = YES;
+				CLIENT_UNIQUIFIER = Client;
+				CONTENTS_DIR = "$(WRAPPER_DIR)/Contents";
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				INFO_FILE = "$(CONTENTS_DIR)/$(INFO_FILE_NAME)";
+				INFO_FILE_NAME = Info.plist;
+				INSTALL_MODE_FLAG = "a+rX";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/WebObjects/Applications";
+				INSTALL_PATH_FOR_STYLE = "$(DSTROOT)/$(INSTALL_PATH)";
+				JAR_BUNDLE_INSTALL_DIR = "$(LOCAL_LIBRARY_DIR)/WebObjects/Applications";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_DEBUGGER = jdb;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				JAVA_VM = java;
+				JDB_OPTIONS = "";
+				JVM_OPTIONS = "-DWOAllowRapidTurnaround=false";
+				PRODUCT_NAME = JavaMonitor;
+				RESOURCES_DIR = "$(CONTENTS_DIR)/Resources";
+				RESOURCES_JAVA_DIR = "$(RESOURCES_DIR)/Java";
+				SERVER_UNIQUIFIER = Server;
+				SPLIT_INSTALL = NO;
+				WEBSERVER_CONTENTS_DIR = "$(WEBSERVER_WRAPPER_DIR)/Contents";
+				WEBSERVER_INSTALL_DIR = "$(WEBSERVER_INSTALL_DIR_APPLICATION)";
+				WEBSERVER_RESOURCES_DIR = "$(CONTENTS_DIR)/WebServerResources";
+				WEBSERVER_RESOURCES_JAVA_DIR = "$(WEBSERVER_RESOURCES_DIR)/Java";
+				WOAPPLICATION_CLASS_NAME = Application;
+				WO_TEMPLATE_MAJOR_VERSION = 5;
+				WO_TEMPLATE_MINOR_VERSION = 2;
+				WRAPPER_DIR = "$(INSTALL_PATH_FOR_STYLE)/$(WRAPPER_NAME)";
+				WRAPPER_EXTENSION = woa;
+				WRAPPER_NAME = "$(PRODUCT_NAME).$(WRAPPER_EXTENSION)";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		EBB133770A5C73E800773CE3 /* WebServer */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_DIR_MACOS = "$(CONTENTS_DIR)/MacOS";
+				APPLICATION_DIR_UNIX = "$(CONTENTS_DIR)/UNIX";
+				APPLICATION_DIR_WINDOWS = "$(CONTENTS_DIR)/Windows";
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				BUNDLE_AS_JAR = YES;
+				CLIENT_UNIQUIFIER = Client;
+				CONTENTS_DIR = "$(WRAPPER_DIR)/Contents";
+				COPY_PHASE_STRIP = YES;
+				INFO_FILE = "$(CONTENTS_DIR)/$(INFO_FILE_NAME)";
+				INFO_FILE_NAME = Info.plist;
+				INSTALL_MODE_FLAG = "a+rX";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/WebObjects/Applications";
+				INSTALL_PATH_FOR_STYLE = "$(DSTROOT)/$(INSTALL_PATH)";
+				JAR_BUNDLE_INSTALL_DIR = "$(LOCAL_LIBRARY_DIR)/WebObjects/Applications";
+				JAVA_DEBUGGER = jdb;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				JAVA_VM = java;
+				JDB_OPTIONS = "";
+				JVM_OPTIONS = "-DWOAllowRapidTurnaround=false";
+				PRODUCT_NAME = JavaMonitor;
+				RESOURCES_DIR = "$(CONTENTS_DIR)/Resources";
+				RESOURCES_JAVA_DIR = "$(RESOURCES_DIR)/Java";
+				SERVER_UNIQUIFIER = Server;
+				SPLIT_INSTALL = YES;
+				WEBSERVER_CONTENTS_DIR = "$(WEBSERVER_WRAPPER_DIR)/Contents";
+				WEBSERVER_DOCROOT = "$(DSTROOT)$(LOCAL_LIBRARY_DIR)/WebServer/Documents";
+				WEBSERVER_INSTALL_DIR = "$(WEBSERVER_INSTALL_DIR_APPLICATION)";
+				WEBSERVER_INSTALL_DIR_APPLICATION = "$(WEBSERVER_INSTALL_ROOT)";
+				WEBSERVER_INSTALL_DIR_FRAMEWORK = "$(WEBSERVER_INSTALL_ROOT)/Frameworks";
+				WEBSERVER_INSTALL_ROOT = "$(WEBSERVER_DOCROOT)/WebObjects";
+				WEBSERVER_RESOURCES_DIR = "$(WEBSERVER_CONTENTS_DIR)/WebServerResources";
+				WEBSERVER_RESOURCES_JAVA_DIR = "$(WEBSERVER_INSTALL_ROOT)/Java";
+				WEBSERVER_WRAPPER_DIR = "$(WEBSERVER_INSTALL_DIR)/$(WRAPPER_NAME)";
+				WOAPPLICATION_CLASS_NAME = Application;
+				WO_TEMPLATE_MAJOR_VERSION = 5;
+				WO_TEMPLATE_MINOR_VERSION = 2;
+				WRAPPER_DIR = "$(INSTALL_PATH_FOR_STYLE)/$(WRAPPER_NAME)";
+				WRAPPER_EXTENSION = woa;
+				WRAPPER_NAME = "$(PRODUCT_NAME).$(WRAPPER_EXTENSION)";
+			};
+			name = WebServer;
+		};
+		EBB133780A5C73E800773CE3 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_DIR_MACOS = "$(CONTENTS_DIR)/MacOS";
+				APPLICATION_DIR_UNIX = "$(CONTENTS_DIR)/UNIX";
+				APPLICATION_DIR_WINDOWS = "$(CONTENTS_DIR)/Windows";
+				BUILD_FILES_DIR = "$(LOCAL_LIBRARY_DIR)/Application Support/Apple/Developer Tools/WebObjects Support";
+				BUNDLE_AS_JAR = YES;
+				CLIENT_UNIQUIFIER = Client;
+				CONTENTS_DIR = "$(WRAPPER_DIR)/Contents";
+				COPY_PHASE_STRIP = NO;
+				INFO_FILE = "$(CONTENTS_DIR)/$(INFO_FILE_NAME)";
+				INFO_FILE_NAME = Info.plist;
+				INSTALL_MODE_FLAG = "a+rX";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/WebObjects/JavaApplications";
+				INSTALL_PATH_FOR_STYLE = "$(TARGET_BUILD_DIR)";
+				JAR_BUNDLE_INSTALL_DIR = "$(SYSTEM_LIBRARY_DIR)/WebObjects/JavaApplications";
+				JAVA_COMPILER_SOURCE_VERSION = 1.4;
+				JAVA_COMPILER_TARGET_VM_VERSION = 1.4;
+				JAVA_DEBUGGER = jdb;
+				JAVA_ONLY = YES;
+				JAVA_SOURCE_SUBDIR = .;
+				JAVA_VM = java;
+				JDB_OPTIONS = "";
+				JVM_OPTIONS = "-DWOAllowRapidTurnaround=false";
+				PRODUCT_NAME = JavaMonitor;
+				RESOURCES_DIR = "$(CONTENTS_DIR)/Resources";
+				RESOURCES_JAVA_DIR = "$(RESOURCES_DIR)/Java";
+				SERVER_UNIQUIFIER = Server;
+				SPLIT_INSTALL = NO;
+				WEBSERVER_CONTENTS_DIR = "$(WEBSERVER_WRAPPER_DIR)/Contents";
+				WEBSERVER_INSTALL_DIR = "$(WEBSERVER_INSTALL_DIR_APPLICATION)";
+				WEBSERVER_RESOURCES_DIR = "$(CONTENTS_DIR)/WebServerResources";
+				WEBSERVER_RESOURCES_JAVA_DIR = "$(WEBSERVER_RESOURCES_DIR)/Java";
+				WOAPPLICATION_CLASS_NAME = Application;
+				WO_TEMPLATE_MAJOR_VERSION = 5;
+				WO_TEMPLATE_MINOR_VERSION = 2;
+				WRAPPER_DIR = "$(INSTALL_PATH_FOR_STYLE)/$(WRAPPER_NAME)";
+				WRAPPER_EXTENSION = woa;
+				WRAPPER_NAME = "$(PRODUCT_NAME).$(WRAPPER_EXTENSION)";
+			};
+			name = Default;
+		};
+		EBB1337A0A5C73E800773CE3 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = "$(DSTROOT)";
+				INSTALL_PATH = "$(DSTROOT)/System/Library/WebObjects/JavaApplications";
+			};
+			name = Development;
+		};
+		EBB1337B0A5C73E800773CE3 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = "$(DSTROOT)";
+				INSTALL_PATH = "$(DSTROOT)/System/Library/WebObjects/JavaApplications";
+			};
+			name = Deployment;
+		};
+		EBB1337C0A5C73E800773CE3 /* WebServer */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = "$(DSTROOT)";
+				INSTALL_PATH = "$(DSTROOT)/System/Library/WebObjects/JavaApplications";
+			};
+			name = WebServer;
+		};
+		EBB1337D0A5C73E800773CE3 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = "$(DSTROOT)";
+				INSTALL_PATH = "$(DSTROOT)/System/Library/WebObjects/JavaApplications";
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBB1336A0A5C73E800773CE3 /* Build configuration list for PBXBundleTarget "Application Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB1336B0A5C73E800773CE3 /* Development */,
+				EBB1336C0A5C73E800773CE3 /* Deployment */,
+				EBB1336D0A5C73E800773CE3 /* WebServer */,
+				EBB1336E0A5C73E800773CE3 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		EBB1336F0A5C73E800773CE3 /* Build configuration list for PBXBundleTarget "Web Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB133700A5C73E800773CE3 /* Development */,
+				EBB133710A5C73E800773CE3 /* Deployment */,
+				EBB133720A5C73E800773CE3 /* WebServer */,
+				EBB133730A5C73E800773CE3 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		EBB133740A5C73E800773CE3 /* Build configuration list for PBXApplicationTarget "JavaMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB133750A5C73E800773CE3 /* Development */,
+				EBB133760A5C73E800773CE3 /* Deployment */,
+				EBB133770A5C73E800773CE3 /* WebServer */,
+				EBB133780A5C73E800773CE3 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		EBB133790A5C73E800773CE3 /* Build configuration list for PBXProject "JavaMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB1337A0A5C73E800773CE3 /* Development */,
+				EBB1337B0A5C73E800773CE3 /* Deployment */,
+				EBB1337C0A5C73E800773CE3 /* WebServer */,
+				EBB1337D0A5C73E800773CE3 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 013357CCFF5DD5F011CD2B9D /* Project object */;
+}

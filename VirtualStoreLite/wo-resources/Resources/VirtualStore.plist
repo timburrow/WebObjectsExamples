@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hotspot</key>
+	<array>
+		<string>59</string>
+		<string>172</string>
+		<string>66</string>
+	</array>
+	<key>Products</key>
+	<dict>
+		<key>172</key>
+		<dict>
+			<key>name</key>
+			<string>Powerbook G3</string>
+			<key>src</key>
+			<string>PowerbookG3.jpg</string>
+			<key>type</key>
+			<string>image</string>
+		</dict>
+		<key>59</key>
+		<dict>
+			<key>name</key>
+			<string>The New iMac</string>
+			<key>src</key>
+			<string>imac-vr.mov</string>
+			<key>type</key>
+			<string>movie</string>
+		</dict>
+		<key>66</key>
+		<dict>
+			<key>name</key>
+			<string>Powerbook 1400</string>
+			<key>src</key>
+			<string>Powerbook1400.jpg</string>
+			<key>type</key>
+			<string>image</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

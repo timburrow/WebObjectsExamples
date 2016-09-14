@@ -1,0 +1,9 @@
+Library/Java/Extensions/dom4j-1.6.1.jar
+Library/Java/Extensions/frontbasejdbc.jar
+Library/Java/Extensions/msbase.jar
+Library/Java/Extensions/mssqlserver.jar
+Library/Java/Extensions/msutil.jar
+Library/Java/Extensions/mysql-connector-java-5.0.3-bin.jar
+Library/Java/Extensions/OpenBaseJDBC.jar
+Developer/Examples/JavaWebObjects/Databases/db-derby-10.2.1.6-bin/lib/derby.war
+Developer/Examples/JavaWebObjects/Databases/db-derby-10.2.1.6-bin/lib/derbyclient.jar

@@ -1,0 +1,20 @@
+ 
+Content: WOComponentContent {}
+
+OptionContainer: WOGenericContainer {
+    elementName = "option";
+    value = currentIndex;
+    otherTagString = isCurrentItemSelected;
+}
+
+Repetition: WORepetition {
+    list = ^list;
+    item = currentItem;
+    index = currentIndex;
+}
+
+SelectContainer: WOGenericContainer {
+    elementName = "select";
+    name = context.elementID;
+    formValue = selection;
+}

@@ -1,0 +1,199 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = ADDRESS_ID;
+           externalType = integer;
+           name = addressID;
+           precision = 9;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = AGE;
+           externalType = int;
+           name = age;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = DATE_OF_BIRTH;
+           externalType = datetime;
+           name = dateOfBirth;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSCalendarDate;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = FIRST_NAME;
+           externalType = char;
+           name = firstName;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = LAST_NAME;
+           externalType = char;
+           name = lastName;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = LOGIN;
+           externalType = char;
+           name = login;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 8;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = PASSWORD;
+           externalType = char;
+           name = password;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSString;
+           width = 8;
+       }, 
+       
+       {
+           columnName = PERSON_ID;
+           externalType = integer;
+           name = personID;
+           precision = 9;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = STATUS;
+           externalType = int;
+           name = status;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       addressID, 
+       age, 
+       firstName, 
+       lastName, 
+       login, 
+       password, 
+       personID, 
+       status
+    );
+    className = webobjectsexamples.sophisticateddatabaseexample.Student;
+    classProperties = 
+    (
+       address, 
+       age, 
+       dateOfBirth, 
+       firstName, 
+       lastName, 
+       login, 
+       parents, 
+       password, 
+       scheduledClasses, 
+       status
+    );
+    externalName = STUDENT;
+    internalInfo = 
+    {
+        _javaClientClassName = EOGenericRecord;
+    };
+    maxNumberOfInstancesToBatchFetch = 10;
+    name = Student;
+    parent = Person;
+    primaryKeyAttributes = 
+    (
+       personID
+    );
+    relationships = 
+    (
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = Address;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = addressID;
+                  sourceAttribute = addressID;
+              }
+           );
+           name = address;
+           ownsDestination = Y;
+       }, 
+       
+       {
+           definition = studentParents.parent;
+           name = parents;
+       }, 
+       
+       {
+           definition = studentScheduledClasses.scheduledClass;
+           name = scheduledClasses;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = StudentParent;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = studentID;
+                  sourceAttribute = personID;
+              }
+           );
+           name = studentParents;
+           propagatesPrimaryKey = Y;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = StudentScheduledClass;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = studentID;
+                  sourceAttribute = personID;
+              }
+           );
+           name = studentScheduledClasses;
+           propagatesPrimaryKey = Y;
+       }
+    );
+    storedProcedureNames = 
+    {};
+}

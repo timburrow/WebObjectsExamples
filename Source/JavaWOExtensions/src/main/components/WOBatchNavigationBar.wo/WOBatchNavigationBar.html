@@ -1,0 +1,53 @@
+<webobject name="IsBatchedDisplay">
+    <webobject name="NavigationTable">
+        <tr>
+            <td>
+                <table border="0" width="100%">
+                    <tr>
+                        <td align="left" valign="baseline">
+                            <center>
+                                <webobject name="FontContainer">
+                                	<strong>
+                                		<webobject name="Count"></webobject>
+                                    	<webobject name="EntityName"></webobject>
+                                    </strong>
+                                 </webobject>
+                            </center>
+                        </td>
+                        <webobject name="SortKeyListConditional">
+				        <!--  WOB-Tokenizer Allow-Marker="FORM" As-Child-Of="tr" -->
+                        <!--   WOB-Tokenizer Allow-Marker="TD" As-Child-Of="FORM"-->
+                            <webobject name="KeyForm">
+                                <td align="center" valign="middle">
+                                    <webobject name="SortComponent"></webobject>
+                                </td>
+                            </webobject>
+                        </webobject>
+                        <webobject name="BatchForm">
+                            <td align="center" valign="middle"> <font size="-1"><webobject name="FontContainer2">Display
+                                    <webobject name="ItemsPerBatch"></webobject>
+                                    items</webobject></font> </td>
+                        </webobject>
+                        <webobject name="BatchNumberForm">
+                            <td align="right" valign="middle">
+                                <font size="-1"><webobject name="FontContainer3"><webobject name="PreviousBatchLink"><webobject name="LeftArrow"></webobject></webobject>&nbsp
+                                    Page
+                                </webobject></font><webobject name="BatchNumber"></webobject><webobject name="FontContainer4"><font size="-1">
+                                    of
+                                    <webobject name="TotalBatches"></webobject>
+                                    &nbsp<webobject name="NextBatchLink"><webobject name="RightArrow"></webobject></webobject></font></webobject>
+                            </td>
+                        </webobject>
+                        <!--  WOB-Tokenizer Restore-Original-Grammar -->
+                   </tr>
+                </table>
+            </td>
+        </tr>
+    </webobject>
+</webobject>
+<webobject name="IsNotBatchedDisplay"><webobject name="NavigationTable2">
+        <tr>
+            <td align="left"><strong><webobject name="Count2"></webobject>
+                <webobject name="EntityName2"></webobject></strong></td>
+        </tr>
+    </webobject></webobject>

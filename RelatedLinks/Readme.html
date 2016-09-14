@@ -1,0 +1,37 @@
+<HTML>
+	<HEAD>
+		<TITLE>RelatedLinks</TITLE>
+	</HEAD>
+	<BODY BGCOLOR=#FFFFFF>
+	<P ALIGN=CENTER><B>Related Links</B></P>
+	<B>Difficulty Level:</B> Intermediate
+	<P><B>Topics Covered:</B> WOHTTPConnections, WORequest and use of XML.</P>
+	<P><B>Framework Classes Used:</B></P>
+	<P><B>Reference Sites:</B></P>
+	<B>Overview:</B>
+	<P>This example application demonstrates the use of WOHTTPConnections, WORequests, and XML
+		for communication between web sites. This application takes a qualified website URL and
+		communicates with the Netscape related-link site (www-rl.netscape.com) to get a list of
+		sites with related information.</P>
+	<P><B>Usage:</B></P>
+	<P>Launch RelatedLinks - no special arguments are required. Input the name of a site for
+		which you'd like related links information and choose one of the submit buttons.</P>
+	<B>Description:</B>
+	<P>RelatedLinks demonstrates the creation of objects from XML. It utilizes
+		www-rl.netscape.com, which returns related site data as XML when queried. it also shows two
+		methods of object creation: </P>
+	<P>1.&nbsp;&nbsp;&nbsp;&nbsp;accessing each node of the XML document (walking the XML tree)
+		and instantiating each object in client code.</P>
+	<P>2.&nbsp;&nbsp;&nbsp;&nbsp;creating a WOXMLDecoder with an XML-to-object mapping file. </P>
+	<P>Given XML data, the decoder creates and returns objects to the client.RelatedLinks also
+		demonstrates three ways to display related links information:</P>
+	<P>1.&nbsp;&nbsp;&nbsp;&nbsp;as hyperlinks and collapsible components</P>
+	<P>2.&nbsp;&nbsp;&nbsp;&nbsp;as formatted text</P>
+	<P>3.&nbsp;&nbsp;&nbsp;&nbsp;as raw XMLand the use of a WOHTTPConnection object for sending a
+		WORequest and receiving a WOResponse.</P>
+	Finally, much of the code in ContentHelper is used to correct illegal characters in the XML
+	returned from www-rl.netscape.com.The XML returned from www-rl.netscape.com is in a
+	consistent format, so the MappingHelper creates a WOXMLDecoder from relatedMapping.xml just
+	once. If your application requires multiple mapping files, you only need to create one
+	decoder per mapping file for the life of your application.</BODY>
+</HTML>

@@ -1,0 +1,56 @@
+Form1: WOForm {
+}
+
+Hyperlink1: WOHyperlink {
+	action = schedulePage;
+}
+
+Hyperlink2: WOHyperlink {
+	action = mainPage;
+}
+
+TextField1: WOTextField {
+	value = student.firstName;
+}
+
+TextField2: WOTextField {
+	value = student.lastName;
+}
+
+TextField3: WOTextField {
+	value = student.address.street;
+}
+
+TextField4: WOTextField {
+	value = student.address.city;
+}
+
+TextField5: WOTextField {
+	value = student.address.state;
+}
+
+TextField6: WOTextField {
+	value = student.address.zip;
+}
+
+TextField7: WOTextField {
+	value = student.dateOfBirth;
+	dateformat = "%m/%d/%y";
+}
+
+TextField8: WOTextField {
+	value = homeAddress.emailAddress;
+}
+
+TextField9: WOTextField {
+	value = student.login;
+}
+
+UpdateActiveImage: WOImageButton {
+	action = saveChanges;
+	filename = "DBWizardUpdate.gif";
+}
+
+WOPasswordField: WOPasswordField {
+	value = student.password;
+}

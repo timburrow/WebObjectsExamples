@@ -1,0 +1,78 @@
+
+BodyTag: WOExampleBody {}
+
+EmailField: WOTextField {
+    value=email;
+}
+
+EndField: WOTextField {
+	value=stop;
+	numberformat="0";
+	size = 10;
+}
+
+Footer: WOExampleFooter {}
+
+Form: WOForm {
+	multipleSubmit=true;
+}
+
+ManualRefreshButton: WOImageButton {
+	filename = "arrow_button.gif";
+	alt = "Manual Refresh Page";
+	action = toManualRefreshPage;
+	border = "0";
+}
+
+RefreshField: WOTextField {
+	value=refresh;
+	numberformat="0";
+	size = 10;
+}
+
+RefreshWithCancelButton: WOImageButton {
+	filename = "arrow_button.gif";
+	alt = "Refresh Page With Cancel Button";
+	action = toRefreshWithCancelPage;
+	border = "0";
+}
+
+RefreshWithDataButton: WOImageButton {
+	filename = "arrow_button.gif";
+	alt = "Refresh Page With Data Updates";
+	action = toRefreshWithDataPage;
+	border = "0";
+}
+
+RefreshWithNotificationButton: WOImageButton {
+	filename = "arrow_button.gif";
+	alt = "Mail Me The Results";
+	action = toRefreshWithNotificationPage;
+	border = "0";
+}
+
+RefreshWithStatusButton: WOImageButton {
+	filename = "arrow_button.gif";
+	alt = "Refresh Page With Status";
+	action = toRefreshWithStatusPage;
+	border = "0";
+}
+
+SimpleRefreshButton: WOImageButton {
+	filename = "arrow_button.gif";
+	alt = "Simple Refresh Page";
+	action = toSimpleRefreshPage;
+	border = "0";
+}
+
+StartField: WOTextField {
+	value=start;
+	numberformat="0";
+	size = 10;
+}
+
+TitleImage: WOImage {
+	filename = "long_request_title.gif";
+	width = 260;
+	height = 150;
+}

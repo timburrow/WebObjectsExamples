@@ -1,0 +1,12 @@
+ 
+Content: WOComponentContent {}
+
+HyperlinkContainer: WOGenericContainer {
+    elementName = "a";
+    invokeAction = invokeAction;
+    href = context.componentActionURL;
+}
+
+String: WOString {
+    value = ^string;
+}

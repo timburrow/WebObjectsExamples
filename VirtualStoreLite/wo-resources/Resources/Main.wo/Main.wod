@@ -1,0 +1,14 @@
+
+Hyperlink1: WOHyperlink {
+	action = enterDemo;
+	string = "Enter the demo";
+}
+
+Movie1: WOQuickTime {
+	action = enterDemo;
+	controller = false;
+	filename = "Sample.mov";
+	height = 243;
+	width = 206;
+}
+

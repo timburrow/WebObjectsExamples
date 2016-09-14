@@ -1,0 +1,14 @@
+ 
+ActivePoweredByImage: WXActiveImage {
+    filename = "PoweredByWebObjects.gif";
+    framework = "JavaWOExtensions";
+    action = poweredByClicked;
+}
+
+ClickCountString: WOString {
+    value = clickCount;
+}
+
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXActiveImage";
+}

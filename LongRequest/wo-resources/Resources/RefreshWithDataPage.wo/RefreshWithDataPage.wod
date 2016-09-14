@@ -1,0 +1,39 @@
+
+BodyTag: WOExampleBody {}
+
+Count: WOString {
+	value=count;
+}
+
+Footer: WOExampleFooter {}
+
+Interval: WOString {
+	value=refreshInterval;
+}
+
+ProcessingImage: WOImage {
+	filename = "title_processing.gif";
+	width = 320;
+	height = 91;
+}
+
+ProgressBar: WOCompletionBar {
+    value = lastElement;
+    valueMin = start;
+    valueMax = stop;
+    align = "RIGHT";
+    numberformat = "0";
+    border = "0";
+}
+
+Start: WOString {
+	value=start;
+}
+
+Status: WOString {
+    value=status.toString;
+}
+
+Stop: WOString {
+	value=stop;
+}

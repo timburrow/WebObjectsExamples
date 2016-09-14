@@ -1,0 +1,77 @@
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+Hyperlink1: WOHyperlink {
+	action = mainPage;
+}
+
+Hyperlink2: WOHyperlink {
+	action = administrationPage;
+}
+
+Hyperlink3: WOHyperlink {
+	action = selectTeacher;
+}
+
+Repetition1: WORepetition {
+	item = selectedTeacher;
+	list = teachers;
+}
+
+String1: WOString {
+	value = selectedTeacher.department;
+}
+
+String2: WOString {
+	value = selectedTeacher.lastName;
+}
+
+String3: WOString {
+	value = selectedTeacher.firstName;
+}
+
+TextField1: WOTextField {
+	value = teacher.firstName;
+}
+
+TextField2: WOTextField {
+	value = teacher.lastName;
+}
+
+TextField3: WOTextField {
+	value = teacher.address.street;
+}
+
+TextField4: WOTextField {
+	value = teacher.address.city;
+}
+
+TextField5: WOTextField {
+	value = teacher.address.state;
+}
+
+TextField6: WOTextField {
+	value = teacher.address.zip;
+}
+
+TextField7: WOTextField {
+	value = teacher.dateOfBirth;
+	dateformat = "%m/%d/%y";
+}
+
+TextField8: WOTextField {
+	value = teacher.department;
+}
+
+UpdateActiveImage: WOImageButton {
+	action = deleteTeacher;
+	filename = "DBWizardDelete.gif";
+	framework = "app";
+}
+
+UpdateActiveImage2: WOImageButton {
+	action = saveChanges;
+	filename = "DBWizardUpdate.gif";
+}

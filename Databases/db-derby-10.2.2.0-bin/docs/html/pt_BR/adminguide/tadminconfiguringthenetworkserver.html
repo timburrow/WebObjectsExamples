@@ -1,0 +1,130 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br" xml:lang="pt-br">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="task" name="DC.Type" />
+<meta name="DC.Title" content="Configura????o do Network Server para tratar as conex??es" />
+<meta content="derby.drda.minthreads" name="DC.subject" />
+<meta content="derby.drda.minthreads" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content="cadminadvtops.html" />
+<meta scheme="URI" name="DC.Relation" content="cadminnetservsecurity.html" />
+<meta scheme="URI" name="DC.Relation" content="tadminnetservrun.html" />
+<meta scheme="URI" name="DC.Relation" content="tadminlogfile.html" />
+<meta scheme="URI" name="DC.Relation" content="tadmintracefacility.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="tadminconfiguringthenetworkserver" name="DC.Identifier" />
+<meta content="pt-br" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/pt_BR/adminguidetemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>Configura????o do Network Server para tratar as conex??es</title>
+</head>
+<body id="tadminconfiguringthenetworkserver"><a name="tadminconfiguringthenetworkserver"><!-- --></a>
+
+
+<h1 class="topictitle1">Configura????o do Network Server para tratar as conex??es</h1>
+
+
+<div>
+<div class="section">
+<p>O <em>Network Server</em> pode ser configurado para utilizar um n??mero
+espec??fico de <em>threads</em> para tratar as conex??es.
+A configura????o pode ser alterada na linha de comando, ou utilizando a interface
+<em>servlet</em>.</p>
+
+<p>O n??mero m??nimo de <em>threads</em> ?? o n??mero de <em>threads</em> inicializadas
+quando o <em>Network Server</em> ?? inicializado.
+Este valor ?? especificado como uma propriedade,
+<samp class="codeph">derby.drda.minThreads = &lt;<em>min</em>&gt;</samp>.
+O n??mero m??ximo de <em>threads</em> ?? o n??mero m??ximo de <em>threads</em> que
+ser??o utilizadas pelas conex??es.
+Se existirem mais conex??es ativas que o n??mero de <em>threads</em> dispon??veis,
+as conex??es extras dever??o aguardar at?? uma <em>thread</em> ficar dispon??vel.
+As <em>threads</em> podem se tornar dispon??veis ap??s um tempo espec??fico, que ??
+verificado apenas quando a <em>thread</em> termina o processamento da comunica????o.</p>
+
+</div>
+
+<ul>
+<li class="stepexpand">
+<span>O n??mero m??ximo de <em>threads</em> pode ser alterado utilizando o seguinte
+comando:</span>
+ 
+<pre>java org.apache.derby.drda.NetworkServerControl maxthreads &lt;<em>max</em>&gt; [-h &lt;<em>nome-do-hospedeiro</em>&gt;]
+[-p &lt;<em>n??mero-da-porta</em>&gt;] </pre>
+
+
+ Tamb??m pode ser utilizada a propriedade
+<samp class="codeph">derby.drda.maxThreads</samp> para definir o valor m??ximo.
+Um valor &lt;<em>m??ximo</em>&gt; igual a zero significa que n??o h?? valor m??ximo,
+e que ser?? gerada uma nova <em>thread</em> para a conex??o se n??o houver uma
+<em>thread</em> dispon??vel no momento.
+Este ?? o padr??o.
+Os valores &lt;<em>m??ximo</em>&gt; e &lt;<em>m??nimo</em>&gt; s??o armazenados como
+inteiros, portanto o valor m??ximo te??rico ?? 2147483647 (o tamanho m??ximo de um
+inteiro).
+Mas na pr??tica o valor m??ximo ?? determinado pela configura????o da m??quina.
+</li>
+
+<li class="stepexpand">
+<span>Para alterar o tempo que uma <em>thread</em> deve trabalhar na requisi????o
+de uma sess??o e verificar se existem sess??es aguardando, deve ser utilizado o
+seguinte comando:</span>
+ 
+<pre>java org.apache.derby.drda.NetworkServerControl
+timeslice &lt;<em>milissegundos</em>&gt; [-h &lt;<em>nome-do-hospedeiro</em>&gt;] [-p &lt;<em>n??mero-da-porta</em>&gt;]</pre>
+
+
+ 
+<p>Tamb??m pode ser utilizada a propriedade <em>derby.drda.timeSlice</em> para
+definir esse valor.
+O valor de 0 milissegundos indica que a <em>thread</em> n??o vai parar de trabalhar
+para a sess??o enquanto a sess??o n??o terminar.
+O valor de -1 milissegundos indica que deve ser utilizado o valor padr??o.
+O valor padr??o ?? 0.
+O n??mero m??ximo de milissegundos que pode ser especificado ?? 2147483647
+(o tamanho m??ximo de um inteiro).</p>
+
+
+</li>
+
+</ul>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>T??pico pai:</strong> <a href="cadminadvtops.html" title="">T??picos avan??ados do Network Server do Derby</a></div>
+</div>
+<div class="relconcepts"><strong>Conceitos relacionados</strong><br />
+<div><a href="cadminnetservsecurity.html" title="">Seguran??a do Network Server</a></div>
+</div>
+<div class="reltasks"><strong>Tarefas relacionadas</strong><br />
+<div><a href="tadminnetservrun.html" title="">Execu????o do Network Server sob o gerenciador de seguran??a</a></div>
+<div><a href="tadminlogfile.html" title="">Controle do registro pela utiliza????o do arquivo de log</a></div>
+<div><a href="tadmintracefacility.html" title="">Controle do rastreamento pela utiliza????o da facilidade de rastreamento</a></div>
+</div>
+</div>
+
+</body>
+</html>

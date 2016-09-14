@@ -1,0 +1,7 @@
+ 
+ActionURLString: WOString {
+    value = componentURL;
+}
+
+ResourceURLString: Unknown {
+}

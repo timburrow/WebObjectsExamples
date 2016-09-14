@@ -1,0 +1,110 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br" xml:lang="pt-br">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="concept" name="DC.Type" />
+<meta name="DC.Title" content="Utiliza????o de comandos do sistema operacional com os procedimentos do sistema de congelar e descongelar para realizar c??pias de seguran??a em linha" />
+<meta content="Procedimento do sistema SYSCS_FREEZE_DATABASE, Procedimento do sistema SYSCS_UNFREEZE_DATABASE" name="DC.subject" />
+<meta content="Procedimento do sistema SYSCS_FREEZE_DATABASE, Procedimento do sistema SYSCS_UNFREEZE_DATABASE" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content="cadminhubbkup63476.html" />
+<meta scheme="URI" name="DC.Relation" content="cadminhubbkup01.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="cadminhubbkup75469" name="DC.Identifier" />
+<meta content="pt-br" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/pt_BR/adminguidetemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>Utiliza????o de comandos do sistema operacional com os procedimentos do
+sistema de congelar e descongelar para realizar c??pias de seguran??a em linha</title>
+</head>
+<body id="cadminhubbkup75469"><a name="cadminhubbkup75469"><!-- --></a>
+
+
+<h1 class="topictitle1">Utiliza????o de comandos do sistema operacional com os procedimentos do
+sistema de congelar e descongelar para realizar c??pias de seguran??a em linha</h1>
+
+
+<div>
+<p>Normalmente, estes procedimentos s??o utilizados para acelerar a opera????o de
+c??pia envolvida na c??pia de seguran??a em linha.
+Neste cen??rio, o <span>Derby</span>
+n??o realiza a opera????o de c??pia.
+?? utilizado o procedimento SYSCS_UTIL.SYSCS_FREEZE_DATABASE para bloquear o
+banco de dados, e depois realizada a c??pia do diret??rio do banco de dados
+utilizando comandos do sistema operacional.</p>
+
+<p>Por exemplo, como o comando <em>tar</em> do UNIX utiliza rotinas de c??pia de
+arquivo do sistema operacional, e o procedimento
+SYSCS_UTIL.SYSCS_BACKUP_DATABASE utiliza chamada de E/S do Java, com
+sincroniza????o interna adicional para permitir que ocorram atualiza????es durante
+a c??pia de seguran??a, o comando <em>tar</em> pode gerar c??pias de seguran??a
+mais rapidamente que o procedimento SYSCS_UTIL.SYSCS_BACKUP_DATABASE.</p>
+
+<p>Para utilizar comandos do sistema operacional para realizar c??pias de
+seguran??a em linha, ?? chamado o procedimento do sistema
+SYSCS_UTIL.SYSCS_FREEZE_DATABASE.
+O procedimento do sistema SYSCS_UTIL.SYSCS_FREEZE_DATABASE coloca o banco de
+dados em um estado onde este pode ser copiado com seguran??a.
+Ap??s o banco de dados ter sido copiado, ?? utilizado o procedimento do sistema
+SYSCS_UTIL.SYSCS_UNFREEZE_DATABASE para continuar trabalhando com o banco
+de dados.
+Somente ap??s SYSCS_UTIL.SYSCS_UNFREEZE_DATABASE ter sido utilizado, as
+transa????es poder??o escrever novamente no banco de dados.
+As opera????es de leitura podem prosseguir enquanto o banco de dados estiver
+"congelado."</p>
+
+<div class="note"><span class="notetitle">Nota: </span>Para garantir uma c??pia de seguran??a do banco de dados consistente, o
+<span>Derby</span>
+dever?? bloquear os aplicativos que tentarem escrever no banco de dados
+congelado, at?? que a c??pia de seguran??a esteja completa e o procedimento do
+sistema SYSCS_UTIL.SYSCS_UNFREEZE_DATABASE seja chamado.</div>
+
+<p>O exemplo a seguir demonstra como os procedimentos de congelar e
+descongelar s??o utilizados para envolver o comando de c??pia do sistema
+operacional:</p>
+
+<pre>public static void backUpDatabaseWithFreeze(Connection conn)
+        throws SQLException
+{
+Statement s = conn.createStatement();
+s.executeUpdate(
+    "CALL SYSCS_UTIL.SYSCS_FREEZE_DATABASE()");
+<strong>// Copiar o diret??rio do banco de dados durante este intervalo</strong>
+s.executeUpdate(
+    "CALL SYSCS_UTIL.SYSCS_UNFREEZE_DATABASE()");
+s.close();
+}</pre>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>T??pico pai:</strong> <a href="cadminhubbkup63476.html" title="">C??pias de seguran??a em linha</a></div>
+</div>
+<div class="relconcepts"><strong>Conceitos relacionados</strong><br />
+<div><a href="cadminhubbkup01.html" title="O procedimento SYSCS_UTIL.SYSCS_BACKUP_DATABASE ?? utilizado para criar a c??pia de seguran??a do banco de dados em um local especificado.">Utiliza????o do procedimento de c??pia de seguran??a para realizar c??pia de seguran??a em linha</a></div>
+</div>
+</div>
+
+</body>
+</html>

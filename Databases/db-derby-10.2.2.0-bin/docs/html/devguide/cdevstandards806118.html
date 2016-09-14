@@ -1,0 +1,102 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="concept" name="DC.Type" />
+<meta name="DC.Title" content="Derby and standards" />
+<meta name="abstract" content="Derby adheres to SQL99 standards wherever possible. Below you will find a guide to those features currently in Derby that are not standard; these features are currently being evaluated and might be removed in future releases." />
+<meta name="description" content="Derby adheres to SQL99 standards wherever possible. Below you will find a guide to those features currently in Derby that are not standard; these features are currently being evaluated and might be removed in future releases." />
+<meta content="SQL99 standards, and Derby" name="DC.subject" />
+<meta content="SQL99 standards, and Derby" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards806027.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards805768.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards805975.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards805664.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards805949.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards805644.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards806001.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards805690.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards805893.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards805716.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards805742.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandards805841.html" />
+<meta scheme="URI" name="DC.Relation" content="cdevstandardsxml.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="cdevstandards806118" name="DC.Identifier" />
+<meta content="en-us" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/devguidetemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>Derby and standards</title>
+</head>
+<body id="cdevstandards806118"><a name="cdevstandards806118"><!-- --></a>
+
+
+<h1 class="topictitle1">Derby and standards</h1>
+
+
+
+<div><p><span>Derby</span> adheres
+to SQL99 standards wherever possible. Below you will find a guide to those
+features currently in <span>Derby</span> that
+are not standard; these features are currently being evaluated and might be
+removed in future releases.</p>
+
+<p>This section describes those parts of <span>Derby</span> that
+are non-standard or not typical for a database system.</p>
+
+</div>
+
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="cdevstandards806027.html">ALTER TABLE</a></strong><br />
+Derby uses a slightly different ALTER TABLE syntax for altering column defaults. While SQL99 uses DROP and SET, Derby uses DEFAULT.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards805768.html">Calling functions and procedures</a></strong><br />
+Derby supports the CALL (procedure) statement for calling external procedures declared by the CREATE PROCEDURE statement. Built-in functions and user-defined functions declared with the CREATE FUNCTION command can be called as part of an SQL select statement or by using either a VALUES clause or VALUES expression.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards805975.html">CLOB and BLOB</a></strong><br />
+Derby supports the standard CLOB and BLOB data types. BLOB and CLOB values are limited to a maximum of 2,147,483,647 characters.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards805664.html">Cursors</a></strong><br />
+Derby uses JDBC's result sets, and does not provide SQL for manipulating cursors except for positioned update and delete. Derby's scrollable insensitive cursors are provided through JDBC, not through SQL commands.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards805949.html">DECIMAL max precision</a></strong><br />
+For Derby, the maximum precision for DECIMAL columns is 31 digits. SQL99 does not require a specific maximum precision for decimals, but most products have a maximum precision of 15-32 digits.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards805644.html">Dynamic SQL</a></strong><br />
+Derby uses JDBC's Prepared Statement, and does not provide SQL commands for dynamic SQL.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards806001.html">Expressions on LONGs</a></strong><br />
+Derby permits expressions on LONG VARCHAR; however LONG VARCHAR data types are not allowed in the following clauses, operations, constraints, functions, and predicates.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards805690.html">Information schema</a></strong><br />
+Derby uses its own system catalog that can be accessed using standard JDBC DatabaseMetadata calls. Derby does not provide the standard Information Schema views.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards805893.html">NOT NULL characteristic</a></strong><br />
+The SQL standard says NOT NULL is a constraint, and can be named and viewed in the information schema as such. Derby does not provide naming for NOT NULL, nor does it present it as a constraint in the information schema, only as a characteristic of the column.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards805716.html">Transactions</a></strong><br />
+All operations in Derby are transactional. Derby supports transaction control using JDBC 3.0 Connection methods. This includes support for savepoints and for the four JDBC transaction isolation levels. The only SQL command provided for transaction control is SET TRANSACTION ISOLATION.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards805742.html">Stored routines and PSM</a></strong><br />
+Derby supports external procedures using the Java programming language. Procedures are managed using the CREATE PROCEDURE and DROP PROCEDURE statements.</li>
+<li class="ulchildlink"><strong><a href="cdevstandards805841.html">Unique constraints and nulls</a></strong><br />
+The SQL standard defines that unique constraints on nullable columns allow any number of nulls; Derby does not permit unique constraints on nullable columns.</li>
+<li class="ulchildlink"><strong><a href="cdevstandardsxml.html">XML data types and operators</a></strong><br />
+Derby supports the XML data type and a set of operators that work with the XML data type. The XML data type and operators are based on a small subset of the SQL/XML specification.</li>
+</ul>
+</div>
+
+</body>
+</html>

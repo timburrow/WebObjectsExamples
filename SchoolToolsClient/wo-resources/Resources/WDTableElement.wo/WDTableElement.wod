@@ -1,0 +1,13 @@
+
+Content: WOComponentContent {} 
+TableElement: WOGenericContainer {
+	elementName = ^elementName;
+	background = backgroundImage;
+	bgcolor = ^bgcolor;
+	cellpadding = ^cellpadding;
+	cellspacing = ^cellspacing;
+	border = ^border;
+	width = ^width;
+	align = ^align;
+	valign = ^valign;
+}

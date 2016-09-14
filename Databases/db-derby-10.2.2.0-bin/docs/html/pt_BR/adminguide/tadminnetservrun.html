@@ -1,0 +1,142 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br" xml:lang="pt-br">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="task" name="DC.Type" />
+<meta name="DC.Title" content="Execu????o do Network Server sob o gerenciador de seguran??a" />
+<meta content="Network Server, execu????o sob o gerenciador de seguran??a" name="DC.subject" />
+<meta content="Network Server, execu????o sob o gerenciador de seguran??a" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content="cadminadvtops.html" />
+<meta scheme="URI" name="DC.Relation" content="cadminnetservsecurity.html" />
+<meta scheme="URI" name="DC.Relation" content="tadminconfiguringthenetworkserver.html" />
+<meta scheme="URI" name="DC.Relation" content="tadminlogfile.html" />
+<meta scheme="URI" name="DC.Relation" content="tadmintracefacility.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="tadminnetservrun" name="DC.Identifier" />
+<meta content="pt-br" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/pt_BR/adminguidetemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>Execu????o do Network Server sob o gerenciador de seguran??a</title>
+</head>
+<body id="tadminnetservrun"><a name="tadminnetservrun"><!-- --></a>
+
+
+<h1 class="topictitle1">Execu????o do Network Server sob o gerenciador de seguran??a</h1>
+
+
+<div>
+<div class="section">
+<p>O <em>Network Server</em> deve ser executado sob o gerenciador de seguran??a do
+Java.
+Os pr??ximos exemplos mostram a utiliza????o de um arquivo de pol??tica de seguran??a
+exemplo.
+Deve ser feito um ajuste fino nesta pol??tica de seguran??a para adequ??-la ??s
+pr??prias necessidades.</p>
+
+<div class="cautiontitle">CUIDADO: </div><div class="caution">Abrir o servidor para todos os clientes,
+sem limitar o acesso utilizando uma pol??tica de seguran??a semelhante a do
+exemplo a seguir, ?? um s??rio risco de seguran??a.</div>
+
+<pre>// Conjunto de permiss??es recomendadas para inicializar o Network Server,
+// assumindo que o diret??rio 'd:/<span>derby</span>/lib' seja seguro.
+// Deve ser feito um ajuste fino baseado no pr??prio ambiente.
+grant codeBase "file:d:/<span>derby</span>/lib/-" {
+permission java.io.FilePermission "${derby.system.home}${/}-",
+        "read, write, delete";
+permission java.io.FilePermission "${derby.system.home}","read";
+permission java.io.FilePermission "${user.dir}${/}-", "read, write, delete";
+permission java.util.PropertyPermission "derby.*", "read";
+permission java.util.PropertyPermission "user.dir", "read";
+permission java.lang.RuntimePermission "createClassLoader";
+permission java.net.SocketPermission "minhamaquinacliente", "accept";
+};
+
+// Conjunto de permiss??es requerido para parar o Network Server, assumindo
+// que o diret??rio 'd:/<span>derby</span>/lib' seja seguro.
+// Deve ser feito um ajuste fino baseado no pr??prio ambiente.
+grant codeBase "file:d:/<span>derby</span>/lib/-"  {
+// O que vem a seguir ?? requerido quando o servidor ?? inicializado com
+// "-h localhost", ou sem a op????o -h.
+permission java.net.SocketPermission "localhost", "accept, connect, resolve";
+permission java.net.SocketPermission "127.0.0.1", "accept, connect, resolve";
+// O que vem a seguir ?? requerido apenas quando o servidor ?? inicializado com a
+// op????o -h &lt;hospedeiro&gt; (sen??o o acesso para "shutdown" ser?? negado).
+permission java.net.SocketPermission "&lt;hospedeiro&gt;:*", "accept, connect, resolve";
+};</pre>
+
+</div>
+
+<div class="example">
+<ul>
+<li>O exemplo a seguir mostra como inicializar o <em>Network Server</em> no
+gerenciador de seguran??a padr??o (escutando apenas os clientes no
+<samp class="codeph">localhost</samp>, que ?? o comportamento padr??o quando a op????o
+<samp class="codeph">-h</samp> n??o ?? utilizada para inicializar o servidor).
+Este exemplo assume que o arquivo de pol??tica de seguran??a se encontra em
+<span class="filepath">d:/nwsvr.policy</span>.
+<pre>java -Djava.security.manager -Djava.security.policy=d:/nwsvr.policy
+org.apache.derby.drda.NetworkServerControl start </pre>
+
+</li>
+
+<li>O mesmo comportamento pode ser obtido utilizando a op????o <samp class="codeph">-h</samp>
+ao inicializar o servidor, conforme mostrado no exemplo a seguir:
+<pre>java -Djava.security.manager -Djava.security.policy=d:/nwsvr.policy
+org.apache.derby.drda.NetworkServerControl start -h localhost</pre>
+
+</li>
+
+<li>O exemplo a seguir mostra como inicializar o <em>Network Server</em>
+(assumindo que o servidor ser?? inicializado na m??quina hospedeira
+<em>meuservidor</em>) no gerenciador de seguran??a padr??o (escutando requisi????es de
+clientes originadas a partir de outras m??quinas apenas).
+Este exemplo assume que o arquivo de pol??tica de seguran??a se encontra em
+<span class="filepath">d:/nwsvr.policy</span>.
+<pre>java -Djava.security.manager -Djava.security.policy=d:/nwsvr.policy
+org.apache.derby.drda.NetworkServerControl start -h <em>meuservidor</em></pre>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>T??pico pai:</strong> <a href="cadminadvtops.html" title="">T??picos avan??ados do Network Server do Derby</a></div>
+</div>
+<div class="relconcepts"><strong>Conceitos relacionados</strong><br />
+<div><a href="cadminnetservsecurity.html" title="">Seguran??a do Network Server</a></div>
+</div>
+<div class="reltasks"><strong>Tarefas relacionadas</strong><br />
+<div><a href="tadminconfiguringthenetworkserver.html" title="">Configura????o do Network Server para tratar as conex??es</a></div>
+<div><a href="tadminlogfile.html" title="">Controle do registro pela utiliza????o do arquivo de log</a></div>
+<div><a href="tadmintracefacility.html" title="">Controle do rastreamento pela utiliza????o da facilidade de rastreamento</a></div>
+</div>
+</div>
+
+</body>
+</html>

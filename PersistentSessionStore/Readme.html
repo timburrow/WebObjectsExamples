@@ -1,0 +1,55 @@
+
+<HTML>
+	<HEAD>
+		<TITLE>Persistent Session Store</TITLE>
+	</HEAD>
+	<BODY BGCOLOR=#FFFFFF>
+	<P ALIGN=CENTER><B>Persistent Session Store</B></P>
+	<P><B>Difficulty Level:</B> Intermediate</P>
+	<P><B>Topics Covered:</B> Session management</P>
+	<B>Framework Classes Used:</B> WOSessionStoreExample
+	<P><B>Reference Sites:</B></P>
+	<P><B>Usage:</B></P>
+	<P>Most of the interesting code for this example is actually in the WOSessionStoreExample.
+		The code within this project merely exercises the WXPersistentSessionStore and related
+		classes. Simply launch the app as you would any other WOF application and then begin making
+		&quot;guesses&quot; about the secret number. The app will keep track of the guesses you make
+		in the session object and will display the current context count. With each guess, your
+		session will be written out to disk. If you set your session timeout low , you can actually
+		observe the app restoring the session from the archive. Similarly, if you kill/restart the
+		app, you will still be able to use the same session you were using before.</P>
+	<P><B>Overview:</B></P>
+	The PersistentSessionStore application demonstrates one possible alternative session store
+	object -- WXPersistentSessionStore. In WebObjects, the session store is the object that
+	handles the storage of your session state between requests. The default session store is the
+	ServerSessionStore, but that only stores the session while the app is running and cannot deal
+	with interruptions in service and consumes virtual memory. The persistent session store
+	solves these problems by putting the session on disk as a backup in the event the app dies or
+	the in-memory session times out.
+	<P></P>
+	<B>Description:</B>
+	<P>Asynchronous Archiving</P>
+	<P>At present, there are two subclasses of WXSessionWriter -- WXSynchronousSessionWriter and
+		WXAsynchronousSessionWriter. The synchronous session writer is very straightforward and you
+		may find it easier to start by looking at this class first. Once you understand what's going
+		on with the synchronous version, you may then want to look at the asynchronous version. The
+		asynchronous version employs a &quot;write queue&quot; into which are placed NSData objects
+		to be written to disk. A separate thread is forked to handle writing these archived
+		sessions. When a new session archive is placed in the write queue, the thread which does the
+		writing is signalled and the data is written to disk asynchronously.</P>
+	<P>Session Timeouts</P>
+	<P>The scheme employed by this example allows for sessions to reside in memory and on disk to
+		support a fail-over mechanism. To restore a session, we first attempt to get the session
+		from the server session store and, if that fails because the session has timed out, then we
+		attempt to get the session from disk (via the WXPersistentSessionStore class). The session
+		timeout scheme employed by the server session store works the same way it always has in WOF,
+		but the time out scheme for archived session is managed by a separate class called
+		WXArchiveTimeOutManager.The ArchiveTimeOutManager is a utility class employed by the
+		WXSessionWriter superclass. Its job is to periodically scan the session archive directory
+		and purge any stale session archives. The user default WOSessionArchiveTimeOut can be used
+		to adjust the time which any archived session lives on disk; by default this is set to 86400
+		seconds (1 day). The timestamp on the file is used to determine if the file is stale. To
+		keep system resource consumption minimal, the scan and purge activity happens on a separate
+		thread and is only invoked every 600 seconds (10 minutes); this period is hard coded into
+		the class.</P></BODY>
+</HTML>

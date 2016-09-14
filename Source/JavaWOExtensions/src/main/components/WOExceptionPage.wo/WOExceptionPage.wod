@@ -1,0 +1,96 @@
+
+ApplicationNameString: WOString {
+    value = application.name;
+    escapeHTML = false;
+}
+
+CurrentExceptionReason: WOHyperlink {
+       string = currentException.message;
+       escapeHTML = true;
+       href = "#";
+       onClick = onClickForCurrentException;
+}
+
+ExclamationImage: WOImage {
+    filename = "exclamation.gif";
+    framework = "JavaWOExtensions";
+    border = "0";
+	height = "32";
+	width = "32";
+}
+
+Exceptions : WORepetition {
+    list = exceptions;
+    item = currentException;
+    index = exceptionIndex;
+}
+
+CurrentExceptionFrames : WORepetition {
+    list = currentException.frames;
+    item = currentExceptionFrame;
+}
+
+ReenterHyperlink: WOHyperlink {
+    directActionName = "default";
+    target = "_top";
+}
+
+VisibleConditional: WOCollapsibleComponentContent {
+    condition = showDetails;
+    closedLabel = "<b>An Exception has Occurred</b> (click triangle to view)";
+    openedLabel = "<b>Exception Description</b>";
+}
+
+filename:  WOString {
+	value = currentExceptionFrame.fileName;
+}
+
+line: WOString {
+	value = currentExceptionFrame.lineNumber;
+}
+
+methodname: WOHyperlink {
+    disabled = currentExceptionFrame.isDisable;
+    directActionName = "openInProjectBuilder";
+    actionClass = "WOProjectBuilderAction";
+    string = currentExceptionFrame.methodName;
+    ?methodName = currentExceptionFrame.methodName;
+    ?line = currentExceptionFrame.lineNumber;
+    ?filename = currentExceptionFrame.fileName;
+    ?errorMessage = errorMessage;
+    ?fullClassName = currentExceptionFrame.packageClassPath;
+}
+
+packagename: WOString {
+	value = currentExceptionFrame.packageName;
+}
+
+ShowEllipsis : WOConditional {
+    condition = currentException.showEllipsis;
+}
+
+Ellipsis : WOString {
+    value = currentException.ellipsis;
+}
+
+CollapsibleDiv : WOGenericContainer {
+    elementName = "div";
+    id = idForCurrentException;
+    style = styleForCurrentException;
+}
+
+DownTriangle : WOResourceURL {
+    filename = "DownTriangle.gif";
+    framework = "JavaWOExtensions";
+}
+
+RightTriangle : WOResourceURL {
+    filename = "RightTriangle.gif";
+    framework = "JavaWOExtensions";
+}
+
+CurrentExceptionTriangle : WOImage {
+    filename = currentExceptionImage;
+    framework = "JavaWOExtensions";
+    id = idForCurrentExceptionImage;
+}

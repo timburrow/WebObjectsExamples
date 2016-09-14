@@ -1,0 +1,40 @@
+ 
+Content: WOComponentContent {}
+
+Hyperlink: WXHyperlink {
+    action = ^action;
+}
+
+ListContainer: WOGenericContainer {
+    elementName = listTagName;
+}
+
+ListRepetition: WORepetition {
+    list = ^list;
+    item = ^item;
+    index = ^index;
+}
+
+PopLevel: com.webobjects.woextensions.WOMethodInvocation {
+    invoke = popLevel;
+}
+
+PushLevel: com.webobjects.woextensions.WOMethodInvocation {
+    invoke = pushLevel;
+}
+
+Sublist: WXNestedList {
+    list = ^sublist;
+    item = ^item;
+    index = ^index;
+    action = ^action;
+    sublist = ^sublist;
+    isOrdered = ^isOrdered;
+    level = currentLevel;
+}
+
+SublistConditional: WOConditional {
+    // ** Only generate the sublist if it exists.
+    // ** This is how the recursion is terminated.
+    condition = ^sublist;
+}

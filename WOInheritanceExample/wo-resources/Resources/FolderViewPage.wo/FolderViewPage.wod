@@ -1,0 +1,195 @@
+
+ActiveImage1: WOActiveImage {
+	action = cancel;
+	filename = "ButtonCancel.gif";
+	framework = "JavaDirectToWeb";
+}
+
+ActiveImage2: WOActiveImage {
+	action = save;
+	filename = "ButtonSave.gif";
+	framework = "JavaDirectToWeb";
+}
+
+ActiveImage3: WOActiveImage {
+	action = cancel;
+	filename = "ButtonCancel.gif";
+	framework = "JavaDirectToWeb";
+}
+
+ActiveImage4: WOActiveImage {
+	action = save;
+	filename = "ButtonSave.gif";
+	framework = "JavaDirectToWeb";
+}
+
+ActiveImage5: WOActiveImage {
+	action = newCreature;
+	filename = "ButtonNew.gif";
+	framework = "JavaDirectToWeb";
+}
+
+ActiveImage6: WOActiveImage {
+	action = editNewCreature;
+	filename = "ButtonEdit.gif";
+	framework = "JavaDirectToWeb";
+}
+
+ActiveImage7: WOActiveImage {
+	action = deleteCreature;
+	filename = "ButtonDelete.gif";
+	framework = "JavaDirectToWeb";
+	onClick = "return confirm('Are you sure you want to delete this creature from the database?')";
+}
+
+Conditional1: WOConditional {
+	condition = renameFolder;
+	negate = true;
+}
+
+Conditional10: WOConditional {
+	condition = isCreatingNewCreature;
+	negate = true;
+}
+
+Conditional11: WOConditional {
+	condition = isCreatingNewCreature;
+}
+
+Conditional12: WOConditional {
+	condition = isRootFolderSelected;
+	negate = true;
+}
+
+Conditional2: WOConditional {
+	condition = selectedCreature;
+}
+
+Conditional3: WOConditional {
+	condition = isAddingCreature;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = isAddingCreature;
+}
+
+Conditional5: WOConditional {
+	condition = selectedFolder;
+}
+
+Conditional6: WOConditional {
+	condition = selectedFolder;
+}
+
+Conditional7: WOConditional {
+	condition = isAddingCreature;
+	negate = true;
+}
+
+Conditional8: WOConditional {
+	condition = isCreatingNewCreature;
+	negate = true;
+}
+
+Conditional9: WOConditional {
+	condition = isCreatingNewCreature;
+}
+
+FolderViewComponent1: FolderViewComponent {
+	currentLevelString = "";
+	levelIncrementString = "&nbsp;&nbsp;&nbsp;&nbsp;";
+	parentFolder = rootFolder;
+	selectedFolder = selectedFolder;
+	editName = renameFolder;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+FullInheritanceEditorComponent1: FullInheritanceEditorComponent {
+	creature = selectedCreature;
+}
+
+Hyperlink1: WOHyperlink {
+	action = creatureClicked;
+}
+
+Hyperlink2: WOHyperlink {
+	action = selectRootFolder;
+}
+
+Hyperlink3: WOHyperlink {
+	pageName = "HelpPage";
+	target = "HelpPage";
+}
+
+Image1: WOImage {
+	filename = "Plus.gif";
+	framework = "JavaDirectToWeb";
+	height = 400;
+	width = 5;
+}
+
+Image2: WOImage {
+	filename = "Plus.gif";
+	framework = "JavaDirectToWeb";
+	height = 400;
+	width = 5;
+}
+
+PopUpButton1: WOPopUpButton {
+	displayString = anEntity.name;
+	item = anEntity;
+	list = nonAbstractCreatureEntities;
+	selection = selectedEntity;
+}
+
+Repetition1: WORepetition {
+	item = creature;
+	list = selectedFolder.creatures;
+}
+
+String1: WOString {
+	value = creature.customDescription;
+}
+
+String2: WOString {
+	value = selectedFolder.path;
+}
+
+String3: WOString {
+	value = selectedCreature.customDescription;
+}
+
+String4: WOString {
+	value = selectedModelType;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = newFolder;
+	value = "New SubFolder";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = editName;
+	value = "Rename Folder";
+}
+
+SubmitButton3: WOSubmitButton {
+	action = addReplaceCreatures;
+	value = "Add/Replace Creature(s)";
+}
+
+SubmitButton4: WOSubmitButton {
+	action = deleteSelectedFolder;
+	value = "Delete Folder";
+	onClick = "return confirm('Are you sure you want to delete this folder from the database?')";
+}
+
+ToManyRelationship: WOToManyRelationship { 	relationshipKey = "creatures";
+	destinationDisplayKey = "customDescription";
+	sourceObject = selectedFolder;
+	sourceEntityName = "Folder";
+}

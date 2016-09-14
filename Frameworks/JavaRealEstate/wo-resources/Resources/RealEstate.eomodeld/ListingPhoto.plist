@@ -1,0 +1,124 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = IS_PRIMARY_PHOTO;
+           externalType = integer;
+           name = isPrimaryPhoto;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = LISTING_ID;
+           externalType = integer;
+           internalInfo = 
+           {
+               _nameInObjectStore = PROPERTY_ID;
+           };
+           name = listingID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = LISTING_PHOTO_ID;
+           externalType = integer;
+           internalInfo = 
+           {
+               _nameInObjectStore = PROPERTY_PHOTO_ID;
+           };
+           name = listingPhotoID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = PHOTO;
+           externalType = blob;
+           name = photo;
+           valueClassName = NSData;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = DESCRIPTION;
+           externalType = varchar;
+           name = photoDescription;
+           valueClassName = NSString;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = PHOTO_TYPE;
+           externalType = char;
+           name = photoType;
+           valueClassName = NSString;
+           valueType = c;
+           width = 8;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       isPrimaryPhoto, 
+       listingID, 
+       listingPhotoID, 
+       photoDescription, 
+       photoType
+    );
+    className = webobjectsexamples.realestate.common.ListingPhoto;
+    classProperties = 
+    (
+       isPrimaryPhoto, 
+       listing, 
+       photo, 
+       photoDescription, 
+       photoType
+    );
+    externalName = LISTING_PHOTO;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           isPrimaryPhoto, 
+           listing, 
+           photo, 
+           photoDescription, 
+           photoType
+        );
+        _nameInObjectStore = PROPERTY_PHOTO;
+    };
+    name = ListingPhoto;
+    primaryKeyAttributes = 
+    (
+       listingPhotoID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Listing;
+           internalInfo = 
+           {
+               _nameInObjectStore = property;
+           };
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = listingID;
+                  sourceAttribute = listingID;
+              }
+           );
+           name = listing;
+       }
+    );
+}

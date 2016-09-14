@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+    <HEAD>
+        <META NAME="generator" CONTENT="WebObjects 5">
+		<TITLE><WEBOBJECT NAME=String1></WEBOBJECT></TITLE>
+    </HEAD>
+    <WEBOBJECT NAME=LayoutComponent>
+    	<TABLE CELLSPACING=0 BORDER=0 WIDTH="100%">
+    		<TR>
+    			<TD ALIGN=RIGHT>
+			<WEBOBJECT NAME="ifShowUserFromCookie">
+                <TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="75%">
+                    <TR>
+                        <TD BGCOLOR="#cbcbcb">
+                            <TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="100%">
+                                <TR>
+                                    <TD BGCOLOR="#ffffff">
+                                        <TABLE CELLPADDING=3 CELLSPACING=0 BORDER=0 WIDTH="100%">
+                                            <TR>
+                                                <TD BGCOLOR="#ddddbb" COLSPAN=2>
+    												Welcome, <B><WEBOBJECT NAME=UserNameFromCookie></WEBOBJECT></B>!
+                                                </TD>
+                                            </TR>
+                                        </TABLE>
+                                    </TD>
+                                </TR>
+                            </TABLE>
+                        </TD>
+                    </TR>
+                </TABLE>
+			</WEBOBJECT>
+            <WEBOBJECT NAME=Form1>
+                <TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="75%">
+                    <TR>
+                        <TD BGCOLOR="#cbcbcb">
+                            <TABLE CELLSPACING=0 CELLPADDING=1 BORDER=0 WIDTH="100%">
+                                <TR>
+                                    <TD BGCOLOR="#ffffff">
+                                        <TABLE CELLPADDING=3 CELLSPACING=0 BORDER=0 WIDTH="100%">
+                                            <TR>
+                                                <TD BGCOLOR="#ddddbb" COLSPAN=2><B>Sign in to iShacks!<B></TD>
+                                            </TR>
+                                        </TABLE>
+                                    </TD>
+                                </TR>
+                                <TR>
+                                    <WEBOBJECT NAME=Conditional1>
+                                        <TD>
+                                            <TABLE CELLPADDING=3 CELLSPACING=0 BORDER=0 WIDTH="100%">
+                                                <TR>
+                                                    <TD BGCOLOR="#e9ad7e" COLSPAN=2>You have entered an incorrect username or password.</TD>
+                                                </TR>
+                                            </TABLE>
+                                        </TD>
+                                    </WEBOBJECT>
+                                </TR>
+                                <TR>
+                                    <TD BGCOLOR="#ffffff">
+                                        <TABLE CELLPADDING=3 CELLSPACING=0 BORDER=0 WIDTH="100%">
+                                            <TR>
+                                                <TD ALIGN=RIGHT BGCOLOR="#f8f8f8"><B>Username:</B></TD>
+                                                <TD BGCOLOR="#f8f8f8"><WEBOBJECT NAME=TextField1></WEBOBJECT></TD>
+                                            </TR>
+                                            <TR>
+                                                <TD ALIGN=RIGHT BGCOLOR="#f8f8f8"><B>Password:</B></TD>
+                                                <TD BGCOLOR="#f8f8f8"><WEBOBJECT NAME=TextField2></WEBOBJECT></TD>
+                                            </TR>
+ 											<TR>
+                                                <TD BGCOLOR="#f8f8f8"></TD>
+                                                <TD BGCOLOR="#f8f8f8"><WEBOBJECT NAME=RemeberMyPasswordCheckBox></WEBOBJECT>Remember my password (for automatic login)</TD>
+                                            </TR>
+                                            <TR>
+                                                <TD BGCOLOR="#f8f8f8"></TD>
+                                                <TD BGCOLOR="#f8f8f8"><WEBOBJECT NAME=SubmitButton1></WEBOBJECT></TD>
+                                            </TR>
+                                        </TABLE>
+                                    </TD>
+                                </TR>
+                                <TR>
+                                    <TD BGCOLOR="#ffffff">
+                                        <TABLE CELLPADDING=3 CELLSPACING=0 BORDER=0 WIDTH="100%">
+                                            <TR>
+                                                <TD ALIGN=RIGHT BGCOLOR="#f8f8f8"> Or
+                                                    <WEBOBJECT NAME=Hyperlink1>Click Here</WEBOBJECT>
+                                                    to create a new user.</TD>
+                                            </TR>
+                                        </TABLE>
+                                    </TD>
+                                </TR>
+                            </TABLE>
+                        </TD>
+                    </TR>
+                </TABLE>
+			</WEBOBJECT>
+    </TD>
+    		</TR>
+    	</TABLE></WEBOBJECT>
+</HTML>

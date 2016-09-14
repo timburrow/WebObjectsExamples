@@ -1,0 +1,51 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = ITEM_NUMBER; 
+            externalType = char; 
+            name = itemNumber; 
+            valueClassName = NSString;
+            valueType = c;   
+            width = 30; 
+        }, 
+        {
+            columnName = OID; 
+            externalType = integer; 
+            name = oid; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = OID_ORDER; 
+            externalType = integer; 
+            name = oidOrder; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = QUANTITY; 
+            externalType = integer; 
+            name = quantity; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (oid, oidOrder, itemNumber, quantity); 
+    className = webobjectsexamples.SchoolTools.OrderItems; 
+    classProperties = (itemNumber, quantity, toOrder); 
+    externalName = ORDER_ITEMS; 
+    fetchSpecificationDictionary = {}; 
+    name = OrderItems; 
+    primaryKeyAttributes = (oid); 
+    relationships = (
+        {
+            destination = Order; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = oid; sourceAttribute = oidOrder; }); 
+            name = toOrder; 
+        }
+    ); 
+}

@@ -1,0 +1,106 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = ITEMID;
+           externalType = char;
+           name = itemid;
+           valueClassName = NSString;
+           valueType = c;
+           width = 10;
+       }, 
+       
+       {
+           columnName = LINEITEMID;
+           externalType = int;
+           name = lineitemid;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = ORDERID;
+           externalType = int;
+           name = orderid;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = QUANTITY;
+           externalType = int;
+           name = quantity;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = UNITPRICE;
+           externalType = decimal;
+           name = unitprice;
+           precision = 10;
+           scale = 2;
+           valueClassName = NSNumber;
+           valueType = B;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       itemid, 
+       lineitemid, 
+       orderid, 
+       quantity, 
+       unitprice
+    );
+    className = LineItem;
+    classProperties = 
+    (
+       item, 
+       itemid, 
+       lineitemid, 
+       orderid, 
+       quantity, 
+       unitprice
+    );
+    externalName = LINEITEM;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           itemid, 
+           lineitemid, 
+           orderid, 
+           quantity, 
+           unitprice
+        );
+    };
+    name = LineItem;
+    primaryKeyAttributes = 
+    (
+       lineitemid, 
+       orderid
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Item;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = itemid;
+                  sourceAttribute = itemid;
+              }
+           );
+           name = item;
+       }
+    );
+}

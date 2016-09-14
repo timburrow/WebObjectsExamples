@@ -1,0 +1,100 @@
+BackToMain: WOHyperlink {
+    pageName = "Main";
+    string = "[Back to Main]";
+}
+BodyTag: WOExampleBody {
+    leftmargin=0;
+    topmargin=0;
+}
+
+DataImage1: WOImage {
+    data = aFileContents1;
+    mimeType = "image/gif";
+}
+
+DataImage2: WOImage {
+    data = aFileContents2;
+    mimeType = "image/gif";
+}
+
+DataImage3: WOImage {
+    data = aFileContents3;
+    mimeType = "image/gif";
+}
+
+DataString1: WOText {
+    value = aFileContents1;
+    rows = 10;
+    cols = 50;
+    escapeHTML = "YES";
+}
+
+DataString2: WOText {
+    value = aFileContents2;
+    rows = 10;
+    cols = 50;
+    escapeHTML = "YES";
+}
+
+DataString3: WOText {
+    value = aFileContents3;
+    rows = 10;
+    cols = 50;
+    escapeHTML = "YES";
+}
+
+FileName1: WOString {
+    value = aFileName1;
+}
+
+FileName2: WOString {
+    value = aFileName2;
+}
+
+FileName3: WOString {
+    value = aFileName3;
+}
+
+Footer: WOExampleFooter {}
+
+Form1: WOForm {
+    enctype = "multipart/form-data";
+}
+
+ShowImage1: WOConditional {
+    condition = haveData1;
+}
+
+ShowImage2: WOConditional {
+    condition = haveData2;
+}
+
+ShowImage3: WOConditional {
+    condition = haveData3;
+}
+
+Submit: WOSubmitButton {
+    action = submitClicked;
+    value = "Click here when done";
+}
+
+Upload1: WOFileUpload {
+    outputStream = baos1;
+    bufferSize = 2000;
+    filePath = aFileName1;
+    size = "20";
+}
+
+Upload2: WOFileUpload {
+    outputStream = baos2;
+    bufferSize = 2000;
+    filePath = aFileName2;
+    size = "20";
+}
+
+Upload3: WOFileUpload {
+    outputStream = baos3;
+    bufferSize = 2000;
+    filePath = aFileName3;
+    size = "20";
+}

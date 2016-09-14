@@ -1,0 +1,48 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = ITEMID;
+           externalType = char;
+           name = itemid;
+           valueClassName = NSString;
+           valueType = c;
+           width = 10;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = QTY;
+           externalType = int;
+           name = qty;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       itemid, 
+       qty
+    );
+    className = Inventory;
+    classProperties = 
+    (
+       itemid, 
+       qty
+    );
+    externalName = INVENTORY;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           qty
+        );
+    };
+    name = Inventory;
+    primaryKeyAttributes = 
+    (
+       itemid
+    );
+}

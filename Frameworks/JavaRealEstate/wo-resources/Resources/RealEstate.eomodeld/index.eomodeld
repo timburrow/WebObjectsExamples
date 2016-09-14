@@ -1,0 +1,120 @@
+
+{
+    EOModelVersion = 2.1;
+    adaptorName = JDBC;
+    connectionDictionary = 
+    {
+        URL = jdbc:derby:realestate;
+        driver = org.apache.derby.jdbc.EmbeddedDriver;
+    };
+    entities = 
+    (
+       
+       {
+           className = webobjectsexamples.realestate.server.Administrator;
+           name = Administrator;
+           parent = User;
+       }, 
+       
+       {
+           className = webobjectsexamples.realestate.server.Agent;
+           name = Agent;
+           parent = User;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = AgentPhoto;
+       }, 
+       
+       {
+           className = webobjectsexamples.realestate.common.AgentRating;
+           name = AgentRating;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = ContactInfo;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = ContactType;
+       }, 
+       
+       {
+           className = webobjectsexamples.realestate.server.Customer;
+           name = Customer;
+           parent = User;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = Feature;
+       }, 
+       
+       {
+           className = webobjectsexamples.realestate.common.Listing;
+           name = Listing;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = ListingAddress;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = ListingFeature;
+       }, 
+       
+       {
+           className = webobjectsexamples.realestate.common.ListingPhoto;
+           name = ListingPhoto;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = ListingType;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = Rating;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = Suggestion;
+       }, 
+       
+       {
+           className = webobjectsexamples.realestate.common.User;
+           name = User;
+       }, 
+       
+       {
+           className = EOGenericRecord;
+           name = UserDefaults;
+       }
+    );
+    userInfo = 
+    {
+        _EntityModeler = 
+        {
+            activeDatabaseConfigName = Default;
+            databaseConfigs = 
+            {
+                Default = 
+                {
+                    adaptorName = JDBC;
+                    connectionDictionary = 
+                    {
+                        URL = jdbc:derby:realestate;
+                        driver = org.apache.derby.jdbc.EmbeddedDriver;
+                    };
+                };
+            };
+        };
+    };
+}

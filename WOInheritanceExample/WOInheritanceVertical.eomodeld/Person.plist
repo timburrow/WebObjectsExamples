@@ -1,0 +1,183 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = creature_id;
+           externalType = integer;
+           name = creatureId;
+           precision = 10;
+           serverTimeZone = US/Eastern;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = creature.dateOfBirth;
+           externalType = datetime;
+           name = dateOfBirth;
+           serverTimeZone = US/Eastern;
+           valueClassName = NSCalendarDate;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = favorite_domesticated_animal_id;
+           externalType = integer;
+           name = favoriteDomesticatedAnimald;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = creature.firstName;
+           externalType = char;
+           name = firstName;
+           serverTimeZone = US/Eastern;
+           valueClassName = NSString;
+           valueType = c;
+           width = 50;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = last_name;
+           externalType = char;
+           name = lastName;
+           valueClassName = NSString;
+           valueType = c;
+           width = 50;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = "";
+           definition = creature.numberOfLegs;
+           externalType = integer;
+           name = numberOfLegs;
+           precision = 10;
+           serverTimeZone = US/Eastern;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ssn;
+           externalType = char;
+           name = ssn;
+           valueClassName = NSString;
+           valueType = c;
+           width = 12;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       creatureId, 
+       dateOfBirth, 
+       favoriteDomesticatedAnimald, 
+       firstName, 
+       lastName, 
+       numberOfLegs, 
+       ssn
+    );
+    className = Person;
+    classProperties = 
+    (
+       dateOfBirth, 
+       favoriteDomesticatedAnimal, 
+       firstName, 
+       folders, 
+       lastName, 
+       numberOfLegs, 
+       ssn
+    );
+    externalName = Person;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           dateOfBirth, 
+           favoriteDomesticatedAnimal, 
+           firstName, 
+           lastName, 
+           numberOfLegs, 
+           ssn
+        );
+    };
+    isAbstractEntity = Y;
+    name = Person;
+    parent = Creature;
+    primaryKeyAttributes = 
+    (
+       creatureId
+    );
+    relationships = 
+    (
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = Creature;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = creatureId;
+                  sourceAttribute = creatureId;
+              }
+           );
+           name = creature;
+           ownsDestination = Y;
+       }, 
+       
+       {
+           destination = Domesticated;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = creatureId;
+                  sourceAttribute = favoriteDomesticatedAnimald;
+              }
+           );
+           name = favoriteDomesticatedAnimal;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = FolderData;
+           internalInfo = 
+           {
+               _nameInObjectStore = folderDatas;
+           };
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = dataId;
+                  sourceAttribute = creatureId;
+              }
+           );
+           name = folderDatas;
+           ownsDestination = Y;
+           propagatesPrimaryKey = Y;
+       }, 
+       
+       {
+           definition = folderDatas.folder;
+           name = folders;
+       }
+    );
+}

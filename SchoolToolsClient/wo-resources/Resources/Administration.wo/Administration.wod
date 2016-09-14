@@ -1,0 +1,154 @@
+Conditional1: WOConditional {
+	condition = orderList.count;
+}
+
+FirstName: WOTextField {
+	value = session.firstName;
+	name = "firstName";
+}
+
+Form1: WOForm {
+	multipleSubmit = false;
+}
+Form2: WOForm {
+	href = resultJSPPageHref;
+}
+
+Hyperlink2: WOHyperlink {
+	href = "http://localhost.apple.com:16000/cgi-bin/WebObjects/SchoolTools";
+}
+
+Image1: WOImage {
+	border = 0;
+	filename = "sl_img_schedule.jpg";
+	framework = "app";
+	width = 216;
+	height = 190;
+}
+
+Image2: WOImage {
+	filename = "Wakefield.jpg";
+	framework = "app";
+	width = 603;
+	height = 41;
+}
+
+JavaScript1: WOJavaScript {
+	hideInComment = true;
+	scriptFile = "Validations.javascript";
+}
+
+LastName: WOTextField {
+	value = session.lastName;
+	name = "lastName";
+}
+
+OrderCount: WOHiddenField {
+	value = orderCount;
+	name = "orderCount";
+}
+ 
+PageWrap: ToolsPageWrapper {
+    pageTitle = "Administrative Technology";
+}
+
+Pin: WOTextField {
+	maxlength = 5;
+	value = session.pin;
+	name = "pin";
+}
+
+PopUpButton1: WOPopUpButton {
+	displayString = vendor;
+	item = vendor;
+	list = vendorList;
+}
+
+PopUpButton2: WOPopUpButton {
+	item = product;
+	list = productList;
+	displayString = product.productName;
+	selection = productSelected;
+}
+
+PopUpButton3: WOPopUpButton {
+	displayString = department;
+	item = department;
+	list = departmentList;
+}
+
+Quantity: WOTextField {
+	maxlength = 5;
+	size = 10;
+	value = quantity;
+	numberformat = "0";
+	name = "quantity";
+}
+
+Reason: WOText {
+	cols = 80;
+	value = session.reason;
+	rows = 7;
+	name = "reason";
+}
+
+Repetition1: WORepetition {
+	item = orderItem;
+	list = orderList;
+}
+
+SteelTable: WDTableElement {
+    elementName = "TABLE";
+    filename = "aqua_steel_bg.gif";
+    framework = "app";
+    width = "465";
+    cellpadding = "5";
+    cellspacing = "0";
+}
+
+StepOneImage: WOImage {
+    filename = "school_tools_one.jpg";
+    width = 18;
+    height = 28;
+}
+
+StepThreeImage: WOImage {
+    filename = "school_tools_three.jpg";
+    width = 20;
+    height = 30;
+}
+
+StepTwoImage: WOImage {
+    filename = "school_tools_two.jpg";
+    width = 20;
+    height = 27;
+}
+
+String1: WOString {
+	value = orderItem.productName;
+}
+
+String2: WOString {
+	value = orderItem.quantity;
+}
+
+String3: WOString {
+	value = orderItem.price;
+	numberformat = "#,##0.00";
+}
+
+String4: WOString {
+	value = total;
+	numberformat = "$#,##0.00";
+}
+
+SubmitButton1: WOSubmitButton {
+	action = addItem;
+	value = "Add To Order";
+	onClick = "return validateQuantity(this.form)";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = submitOrder;
+	value = "Submit Order";
+}

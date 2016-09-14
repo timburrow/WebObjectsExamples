@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>Layouts</key>
+	<dict>
+		<key>Default</key>
+		<dict>
+			<key>EntityOption</key>
+			<string>All</string>
+			<key>RelationshipOption</key>
+			<string>None</string>
+			<key>ViewPositions</key>
+			<dict>
+				<key>Classroom</key>
+				<array>
+					<string>184.000000</string>
+					<string>70.000000</string>
+					<string>168.000000</string>
+					<string>96.000000</string>
+				</array>
+				<key>Course</key>
+				<array>
+					<string>761.000000</string>
+					<string>78.000000</string>
+					<string>171.000000</string>
+					<string>114.000000</string>
+				</array>
+				<key>Day</key>
+				<array>
+					<string>0.000000</string>
+					<string>457.000000</string>
+					<string>147.000000</string>
+					<string>96.000000</string>
+				</array>
+				<key>Schedule</key>
+				<array>
+					<string>272.000000</string>
+					<string>410.000000</string>
+					<string>168.000000</string>
+					<string>150.000000</string>
+				</array>
+				<key>ScheduledClass</key>
+				<array>
+					<string>480.000000</string>
+					<string>202.000000</string>
+					<string>177.000000</string>
+					<string>150.000000</string>
+				</array>
+				<key>Time</key>
+				<array>
+					<string>493.000000</string>
+					<string>485.000000</string>
+					<string>132.000000</string>
+					<string>78.000000</string>
+				</array>
+			</dict>
+			<key>orthoLines</key>
+			<string>Y</string>
+		</dict>
+	</dict>
+	<key>Version</key>
+	<string>1</string>
+</dict>
+</plist>

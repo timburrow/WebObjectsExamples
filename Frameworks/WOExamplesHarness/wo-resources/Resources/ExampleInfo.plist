@@ -1,0 +1,11 @@
+{
+     // ** Add example source here
+	HelloWorld = "/Developer/Examples/WebObjects/Java/HelloWorld";
+	ThinkMovies = "/Developer/Examples/WebObjects/Java/ThinkMovies";
+	FileUpload = "/Developer/Examples/WebObjects/Java/FileUpload";
+	LongRequest = "/Developer/Examples/WebObjects/Java/LongRequest";
+	CreatePlot = "/Developer/Examples/WebObjects/Java/CreatePlot";
+	WOExamples = "/Developer/Examples/WebObjects/Java/WOExamples";
+	VirtualStoreLite = "/Developer/Examples/WebObjects/Java/VirtualStoreLite";
+	PersistentSessionStore = "/Developer/Examples/WebObjects/Java/PersistentSessionStore";	
+}

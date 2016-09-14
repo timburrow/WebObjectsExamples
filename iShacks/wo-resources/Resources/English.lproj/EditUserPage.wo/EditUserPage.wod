@@ -1,0 +1,139 @@
+AddContactButton: WOSubmitButton {
+	value = "Add";
+	action = addContactInfoAction;
+}
+
+ApplicationName: WOString {
+	value = application.name;
+}
+
+ConfrimPasswordTextField: WOPasswordField {
+	value = confirmPassword;
+	maxlength = 20;
+	size = 20;
+}
+
+ContactInfoString: WOString {
+	value = contactInfo.contact;
+}
+
+ContactTextField: WOTextField {
+	value = contactString;
+	maxlength = 40;
+	size = 40;
+}
+
+ContactTypeString: WOString {
+	value = contactInfo.contactType.type;
+}
+
+ContactTypesPopUp: WOPopUpButton {
+	list = contactTypes;
+	displayString = contactType.type;
+	item = contactType;
+	selection = selectedContactType;
+}
+
+ContactsRepetition: WORepetition {
+	list = session.user.contactInfo;
+	item = contactInfo;
+}
+
+FirstNameLabel: ErrorLabel {
+	labelValue = "First Name:";
+	showErrorValue = firstNameValidationError;
+}
+
+FirstNameTextField: WOTextField {
+	value = user.firstName;
+	maxlength = 80;
+	size = 40;
+}
+
+Form: WOForm {
+	multipleSubmit = true;
+}
+
+IfShowAgentInfo: WOConditional {
+	condition = session.userHasAdministrationPrivileges;
+}
+
+IfShowBadPasswordMessage: WOConditional {
+	condition = incorrectPassword;
+}
+
+IfShowContactInfo: WOConditional {
+	condition = newUserMode;
+	negate = true;
+}
+
+IfShowDataMissingMessage: WOConditional {
+	condition = dataMissing;
+}
+
+IfShowDuplicateRecordMessage: WOConditional {
+	condition = duplicateRecord;
+}
+
+IfShowNewUserTitle: WOConditional {
+	condition = newUserMode;
+}
+
+LastNameLabel: ErrorLabel {
+	labelValue = "Last Name:";
+	showErrorValue = lastNameValidationError;
+}
+
+LastNameTextField: WOTextField {
+	value = user.lastName;
+	maxlength = 80;
+	size = 40;
+}
+
+LayoutComponent: LayoutComponent {
+}
+
+LoginLabel: ErrorLabel {
+	labelValue = "User Name:";
+	showErrorValue = loginValidationError;
+}
+
+PasswordLabel: ErrorLabel {
+	labelValue = "Password:";
+	showErrorValue = passwordValidationError;
+}
+
+PasswordTextField: WOPasswordField {
+	value = user.password;
+	maxlength = 20;
+	size = 20;
+}
+
+RemoveContactLink: WOHyperlink {
+	action = removeContactInfoAction;
+}
+
+SubmitChangesButton: WOSubmitButton {
+	action = submitAction;
+	value = "Save";
+}
+
+UserLoginTextField: WOTextField {
+	value = user.login;
+	maxlength = 20;
+	size = 20;
+}
+
+UserPhotoImage: WOImage {
+	data = user.photo.photo;
+	mimeType = "image/jpeg";
+}
+
+UserTypeString: WOString {
+	value = userTypeName;
+}
+
+changePhotoButton: WOSubmitButton {
+	action = changeAgentPhotoAction;
+	value = "Change Photo";
+}

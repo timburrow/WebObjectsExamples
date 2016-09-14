@@ -1,0 +1,147 @@
+{
+    attributes = (
+        {
+            columnName = creature_id; 
+            externalType = integer; 
+            name = creatureId; 
+            precision = 10; 
+            serverTimeZone = US/Eastern; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = date_of_birth; 
+            externalType = datetime; 
+            name = dateOfBirth; 
+            serverTimeZone = US/Eastern; 
+            valueClassName = NSCalendarDate; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = drivers_license; 
+            externalType = char; 
+            name = driversLicense; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = favorite_domesticated_animal_id; 
+            externalType = integer; 
+            name = favoriteDomesticatedAnimald; 
+            serverTimeZone = US/Eastern; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = first_name; 
+            externalType = char; 
+            name = firstName; 
+            serverTimeZone = US/Eastern; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = last_name; 
+            externalType = char; 
+            name = lastName; 
+            serverTimeZone = US/Eastern; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = number_of_legs; 
+            externalType = integer; 
+            name = numberOfLegs; 
+            precision = 10; 
+            serverTimeZone = US/Eastern; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = ssn; 
+            externalType = char; 
+            name = ssn; 
+            serverTimeZone = US/Eastern; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 12; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        driversLicense, 
+        creatureId, 
+        dateOfBirth, 
+        firstName, 
+        numberOfLegs, 
+        lastName, 
+        ssn, 
+        favoriteDomesticatedAnimald
+    ); 
+    className = Adult; 
+    classProperties = (
+        driversLicense, 
+        dateOfBirth, 
+        firstName, 
+        numberOfLegs, 
+        lastName, 
+        ssn, 
+        favoriteDomesticatedAnimal, 
+        folders
+    ); 
+    externalName = Adult; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (
+            driversLicense, 
+            ssn, 
+            numberOfLegs, 
+            lastName, 
+            firstName, 
+            dateOfBirth, 
+            favoriteDomesticatedAnimal
+        ); 
+    }; 
+    name = Adult; 
+    parent = Person; 
+    primaryKeyAttributes = (creatureId); 
+    relationships = (
+        {
+            destination = Domesticated; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = (
+                {
+                    destinationAttribute = creatureId; 
+                    sourceAttribute = favoriteDomesticatedAnimald; 
+                }
+            ); 
+            name = favoriteDomesticatedAnimal; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = FolderData; 
+            internalInfo = {_nameInObjectStore = treeNodeDatas; }; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = dataId; sourceAttribute = creatureId; }); 
+            name = folderDatas; 
+            ownsDestination = Y; 
+            propagatesPrimaryKey = Y; 
+        }, 
+        {
+            definition = folderDatas.folder; 
+            internalInfo = {_nameInObjectStore = folderDatas_folder; }; 
+            joinSemantic = EOInnerJoin; 
+            name = folders; 
+        }
+    ); 
+}

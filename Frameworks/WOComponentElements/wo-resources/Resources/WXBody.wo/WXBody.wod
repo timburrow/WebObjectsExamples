@@ -1,0 +1,8 @@
+ 
+BodyContainer: WOGenericContainer {
+    elementName = "BODY";
+    background = bgImageUrl;
+    bgcolor = bgColor;
+}
+
+Content: WOComponentContent {}

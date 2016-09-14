@@ -1,0 +1,35 @@
+BackToMain: WOHyperlink {
+    pageName = "Main";
+    string = "[Back to Main]";
+}
+
+BodyTag: WOExampleBody {
+    leftmargin=0;
+    topmargin=0;
+}
+
+FileLink: WOHyperlink {
+    href = fileLink;
+}
+
+FileName: WOString {
+    value = fileName;
+}
+
+FilePath: WOTextField {
+    size = "20";
+    value = filePath;
+}
+
+Footer: WOExampleFooter {}
+
+Form1: WOForm {
+}
+
+ShowHyperlink : WOConditional {
+    condition = hasHyperlink;
+}
+
+SubmitButton: WOSubmitButton {
+    action = submitClicked;
+}

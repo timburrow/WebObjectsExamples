@@ -1,0 +1,24 @@
+<apple-properties>
+	<apple>
+    	<log><verbose>true</verbose></log>
+    	<javac>
+			<arg>
+    			<source>1.5</source>
+    			<target>1.5</target>
+    		</arg>
+		</javac>
+    </apple>
+    <wo>
+    	<project_type>framework</project_type>
+    	<create_jar_bundle>true</create_jar_bundle>
+    	<create_legacy_bundle>true</create_legacy_bundle>
+		<path>
+		    <woroot>/</woroot>
+    	    <systemroot>/System</systemroot>
+    	    <localroot>/Library</localroot>
+			<installroot>/System/Library/Frameworks</installroot>
+			<other_java_class_path></other_java_class_path>
+    		<webobjects_documentroot>/Library/WebServer/Documents/WebObjects</webobjects_documentroot>
+    	</path>
+    </wo>
+</apple-properties>

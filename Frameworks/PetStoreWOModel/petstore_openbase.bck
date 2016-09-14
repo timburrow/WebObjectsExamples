@@ -1,0 +1,578 @@
+create table _SYS_APP_FIELDS (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+defaultValue varchar ,
+table_id longlong ,
+notNull int ,
+length int ,
+primaryKey int ,
+type varchar ,
+name varchar ,
+indexType int )
+go
+create table _SYS_APP_PREFERENCES (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+key varchar INDEX ,
+value varchar ,
+order long INDEX )
+go
+create table _SYS_APP_TABLES (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+height float ,
+y float ,
+clusteredFieldID longlong ,
+x float ,
+primaryKeyFieldID longlong ,
+name varchar ,
+width float )
+go
+delete from _SYS_APPS
+go
+delete from _SYS_GROUPS
+go
+create table _SYS_JDBC2v1 (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+typename char(50) ,
+type int ,
+searchable int ,
+precision int ,
+max_scale int ,
+order int )
+go
+delete from _SYS_PERM
+go
+create table _SYS_PROCEDURES (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+procedureName char(100) ,
+numberOfParameters int ,
+usage varchar ,
+path varchar )
+go
+create table _SYS_QUERY (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+title char(200) INDEX ,
+sql object )
+go
+delete from _SYS_RELATIONSHIP
+go
+delete from _SYS_REPLICATION
+go
+delete from _SYS_USERS
+go
+create table ACCOUNT (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+ADDR1 char(80) ,
+ADDR2 char(40) ,
+CITY char(80) ,
+COUNTRY char(20) ,
+EMAIL char(80) ,
+FIRSTNAME char(80) ,
+LASTNAME char(80) ,
+PASSWORD char(20) ,
+PHONE char(80) ,
+STATE char(80) ,
+STATUS char(2) ,
+ZIP char(20) ,
+USERID char(80) NOT NULL INDEX )
+go
+CREATE PRIMARY KEY ACCOUNT (USERID)
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'ACCOUNT' and source_column = 'USERID' and dest_column = 'USERID' and dest_table = 'ORDERS' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('ACCOUNT', 'USERID', 'orders', '=', '1', 'ORDERS', 'USERID', 0, 0) 
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'ACCOUNT' and source_column = 'USERID' and dest_column = 'USERID' and dest_table = 'PROFILE' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('ACCOUNT', 'USERID', 'profile', '=', '0', 'PROFILE', 'USERID', 0, 0) 
+go
+create table CATEGORY (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+DESCN char(255) ,
+NAME char(80) ,
+CATID char(10) NOT NULL INDEX )
+go
+CREATE PRIMARY KEY CATEGORY (CATID)
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'CATEGORY' and source_column = 'CATID' and dest_column = 'CATEGORY' and dest_table = 'PRODUCT' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('CATEGORY', 'CATID', 'products', '=', '1', 'PRODUCT', 'CATEGORY', 0, 0) 
+go
+create table EO_PK_TABLE (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+PK long ,
+NAME char(40) UNIQUE )
+go
+CREATE PRIMARY KEY EO_PK_TABLE (NAME)
+go
+create table INVENTORY (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+QTY int ,
+ITEMID char(10) NOT NULL INDEX )
+go
+CREATE PRIMARY KEY INVENTORY (ITEMID)
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'INVENTORY' and source_column = 'ITEMID' and dest_column = 'ITEMID' and dest_table = 'ITEM' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('INVENTORY', 'ITEMID', 'toItem', '=', '0', 'ITEM', 'ITEMID', 0, 0) 
+go
+create table ITEM (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+ATTR1 char(80) ,
+ATTR2 char(80) ,
+ATTR3 char(80) ,
+ATTR4 char(80) ,
+ATTR5 char(80) ,
+LISTPRICE int ,
+PRODUCTID char(10) NOT NULL ,
+STATUS char(2) ,
+SUPPLIER int ,
+UNITCOST int ,
+ITEMID char(10) NOT NULL INDEX )
+go
+CREATE PRIMARY KEY ITEM (ITEMID)
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'ITEM' and source_column = 'ITEMID' and dest_column = 'ITEMID' and dest_table = 'INVENTORY' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('ITEM', 'ITEMID', 'inventory', '=', '0', 'INVENTORY', 'ITEMID', 0, 0) 
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'ITEM' and source_column = 'PRODUCTID' and dest_column = 'PRODUCTID' and dest_table = 'PRODUCT' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('ITEM', 'PRODUCTID', 'product', '=', '0', 'PRODUCT', 'PRODUCTID', 0, 0) 
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'ITEM' and source_column = 'SUPPLIER' and dest_column = 'SUPPID' and dest_table = 'SUPPLIER' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('ITEM', 'SUPPLIER', 'supplier', '=', '0', 'SUPPLIER', 'SUPPID', 0, 0) 
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'ITEM' and source_column = 'ITEMID' and dest_column = 'ITEMID' and dest_table = 'LINEITEM' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('ITEM', 'ITEMID', 'toLineitem', '=', '1', 'LINEITEM', 'ITEMID', 0, 0) 
+go
+create table LINEITEM (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+ITEMID char(10) ,
+QUANTITY int ,
+UNITPRICE float ,
+LINEITEMID int NOT NULL INDEX ,
+ORDERID int NOT NULL INDEX )
+go
+CREATE PRIMARY KEY LINEITEM (LINEITEMID, ORDERID)
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'LINEITEM' and source_column = 'ORDERID' and dest_column = 'ORDERID' and dest_table = 'ORDERS' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('LINEITEM', 'ORDERID', 'order', '=', '0', 'ORDERS', 'ORDERID', 0, 0) 
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'LINEITEM' and source_column = 'LINEITEMID' and dest_column = 'LINENUM' and dest_table = 'ORDERSTATUS' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('LINEITEM', 'LINEITEMID', 'orderStatus', '=', '0', 'ORDERSTATUS', 'LINENUM', 0, 0) 
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'LINEITEM' and source_column = 'ITEMID' and dest_column = 'ITEMID' and dest_table = 'ITEM' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('LINEITEM', 'ITEMID', 'item', '=', '0', 'ITEM', 'ITEMID', 0, 0) 
+go
+create table ORDERS (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+BILLADDR1 char(80) ,
+BILLADDR2 char(80) ,
+BILLCITY char(80) ,
+BILLCOUNTRY char(20) ,
+BILLSTATE char(80) ,
+BILLTOFIRSTNAME char(80) ,
+BILLTOLASTNAME char(80) ,
+BILLZIP char(20) ,
+CARDTYPE char(80) ,
+COURIER char(80) ,
+CREDITCARD char(80) ,
+EXPRDATE char(7) ,
+ORDERDATE datetime ,
+SHIPADDR1 char(80) ,
+SHIPADDR2 char(80) ,
+SHIPCITY char(80) ,
+SHIPCOUNTRY char(20) ,
+SHIPSTATE char(80) ,
+SHIPTOFIRSTNAME char(80) ,
+SHIPTOLASTNAME char(80) ,
+SHIPZIP char(20) ,
+TOTALPRICE int ,
+USERID char(80) ,
+ORDERID int NOT NULL INDEX )
+go
+CREATE PRIMARY KEY ORDERS (ORDERID)
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'ORDERS' and source_column = 'ORDERID' and dest_column = 'ORDERID' and dest_table = 'LINEITEM' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('ORDERS', 'ORDERID', 'lineItems', '=', '1', 'LINEITEM', 'ORDERID', 0, 0) 
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'ORDERS' and source_column = 'USERID' and dest_column = 'USERID' and dest_table = 'ACCOUNT' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('ORDERS', 'USERID', 'toAccount', '=', '0', 'ACCOUNT', 'USERID', 0, 0) 
+go
+create table ORDERSTATUS (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+STATUS char(2) ,
+UPDATEDATE datetime ,
+LINENUM int NOT NULL INDEX ,
+ORDERID int NOT NULL INDEX )
+go
+CREATE PRIMARY KEY ORDERSTATUS (LINENUM, ORDERID)
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'ORDERSTATUS' and source_column = 'LINENUM' and dest_column = 'LINEITEMID' and dest_table = 'LINEITEM' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('ORDERSTATUS', 'LINENUM', 'toLineitem', '=', '0', 'LINEITEM', 'LINEITEMID', 0, 0) 
+go
+create table PRODUCT (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+CATEGORY char(10) NOT NULL ,
+DESCN char(255) ,
+NAME char(80) ,
+PRODUCTID char(10) NOT NULL INDEX )
+go
+CREATE PRIMARY KEY PRODUCT (PRODUCTID)
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'PRODUCT' and source_column = 'CATEGORY' and dest_column = 'CATID' and dest_table = 'CATEGORY' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('PRODUCT', 'CATEGORY', 'category', '=', '0', 'CATEGORY', 'CATID', 0, 0) 
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'PRODUCT' and source_column = 'PRODUCTID' and dest_column = 'PRODUCTID' and dest_table = 'ITEM' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('PRODUCT', 'PRODUCTID', 'items', '=', '1', 'ITEM', 'PRODUCTID', 0, 0) 
+go
+create table PROFILE (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+BANNEROPT int ,
+FAVCATEGORY char(30) ,
+LANGPREF char(80) ,
+MYLISTOPT int ,
+USER_TYPE char(80) ,
+USERID char(80) NOT NULL INDEX )
+go
+CREATE PRIMARY KEY PROFILE (USERID)
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'PROFILE' and source_column = 'USERID' and dest_column = 'USERID' and dest_table = 'ACCOUNT' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('PROFILE', 'USERID', 'account', '=', '0', 'ACCOUNT', 'USERID', 0, 0) 
+go
+create table SUPPLIER (
+_rowid longlong NOT NULL UNIQUE ,
+_timestamp datetime ,
+_version long ,
+ADDR1 char(80) ,
+ADDR2 char(80) ,
+CITY char(80) ,
+NAME char(80) ,
+PHONE char(80) ,
+STATE char(80) ,
+STATUS char(2) ,
+ZIP char(5) ,
+SUPPID int NOT NULL UNIQUE )
+go
+CREATE PRIMARY KEY SUPPLIER (SUPPID)
+go
+DELETE FROM _SYS_RELATIONSHIP WHERE source_table = 'SUPPLIER' and source_column = 'SUPPID' and dest_column = 'SUPPLIER' and dest_table = 'ITEM' 
+go
+INSERT INTO _SYS_RELATIONSHIP (source_table, source_column, relationshipName, operator, one_to_many, dest_table, dest_column, cascade_delete, block_delete) VALUES ('SUPPLIER', 'SUPPID', 'toItem', '=', '1', 'ITEM', 'SUPPLIER', 0, 0) 
+go
+TABLE _SYS_APP_FIELDS
+_rowid, _timestamp, _version, defaultValue, indexType, length, name, notNull, primaryKey, table_id, type
+'2' , '27214767.584477879106' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '1' , 'longlong' 
+'4' , '27214767.589148309081' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '1' , 'datetime' 
+'6' , '27214767.593140624463' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '1' , 'long' 
+'8' , '27214767.597383797168' , '7' , '' , '0' , '4' , 'PK' , '0' , '0' , '1' , 'long' 
+'10' , '27214767.613188233226' , '7' , '' , '2' , '40' , 'NAME' , '0' , '1' , '1' , 'char' 
+'12' , '27214767.731498938053' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '2' , 'longlong' 
+'14' , '27214767.736326664686' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '2' , 'datetime' 
+'16' , '27214767.740369886160' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '2' , 'long' 
+'18' , '27214767.743659213185' , '7' , '' , '0' , '80' , 'ADDR1' , '0' , '0' , '2' , 'char' 
+'20' , '27214767.753490217030' , '7' , '' , '0' , '40' , 'ADDR2' , '0' , '0' , '2' , 'char' 
+'22' , '27214767.758114024996' , '7' , '' , '0' , '80' , 'CITY' , '0' , '0' , '2' , 'char' 
+'24' , '27214767.761502321810' , '7' , '' , '0' , '20' , 'COUNTRY' , '0' , '0' , '2' , 'char' 
+'26' , '27214767.765280067920' , '7' , '' , '0' , '80' , 'EMAIL' , '0' , '0' , '2' , 'char' 
+'28' , '27214767.769266132265' , '7' , '' , '0' , '80' , 'FIRSTNAME' , '0' , '0' , '2' , 'char' 
+'30' , '27214767.772588621824' , '7' , '' , '0' , '80' , 'LASTNAME' , '0' , '0' , '2' , 'char' 
+'32' , '27214767.776090715080' , '7' , '' , '0' , '20' , 'PASSWORD' , '0' , '0' , '2' , 'char' 
+'34' , '27214767.780141066760' , '7' , '' , '0' , '80' , 'PHONE' , '0' , '0' , '2' , 'char' 
+'36' , '27214767.789649996906' , '7' , '' , '0' , '80' , 'STATE' , '0' , '0' , '2' , 'char' 
+'38' , '27214767.793182931840' , '7' , '' , '0' , '2' , 'STATUS' , '0' , '0' , '2' , 'char' 
+'40' , '27214767.796416498720' , '7' , '' , '0' , '20' , 'ZIP' , '0' , '0' , '2' , 'char' 
+'42' , '27214767.805156070740' , '7' , '' , '1' , '80' , 'USERID' , '1' , '1' , '2' , 'char' 
+'58' , '27214767.892563577741' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '4' , 'longlong' 
+'60' , '27214767.896470978856' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '4' , 'datetime' 
+'62' , '27214767.901067148894' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '4' , 'long' 
+'64' , '27214767.910024173557' , '7' , '' , '0' , '255' , 'DESCN' , '0' , '0' , '4' , 'char' 
+'66' , '27214767.913447115570' , '7' , '' , '0' , '80' , 'NAME' , '0' , '0' , '4' , 'char' 
+'68' , '27214767.918068122118' , '7' , '' , '1' , '10' , 'CATID' , '1' , '1' , '4' , 'char' 
+'70' , '27214768.004480164498' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '5' , 'longlong' 
+'72' , '27214768.014447394758' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '5' , 'datetime' 
+'74' , '27214768.022369459271' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '5' , 'long' 
+'76' , '27214768.025672443211' , '7' , '' , '0' , '4' , 'QTY' , '0' , '0' , '5' , 'integer' 
+'78' , '27214768.029225442558' , '7' , '' , '1' , '10' , 'ITEMID' , '1' , '1' , '5' , 'char' 
+'80' , '27214768.134161923080' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '6' , 'longlong' 
+'82' , '27214768.138558141887' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '6' , 'datetime' 
+'84' , '27214768.142139863222' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '6' , 'long' 
+'86' , '27214768.146032724530' , '7' , '' , '0' , '80' , 'ATTR1' , '0' , '0' , '6' , 'char' 
+'88' , '27214768.150237686932' , '7' , '' , '0' , '80' , 'ATTR2' , '0' , '0' , '6' , 'char' 
+'90' , '27214768.164358485490' , '7' , '' , '0' , '80' , 'ATTR3' , '0' , '0' , '6' , 'char' 
+'92' , '27214768.168446931988' , '7' , '' , '0' , '80' , 'ATTR4' , '0' , '0' , '6' , 'char' 
+'94' , '27214768.172034699470' , '7' , '' , '0' , '80' , 'ATTR5' , '0' , '0' , '6' , 'char' 
+'96' , '27214768.175522610545' , '7' , '' , '0' , '4' , 'LISTPRICE' , '0' , '0' , '6' , 'integer' 
+'98' , '27214768.179188445210' , '7' , '' , '0' , '10' , 'PRODUCTID' , '1' , '0' , '6' , 'char' 
+'100' , '27214768.183407746255' , '7' , '' , '0' , '2' , 'STATUS' , '0' , '0' , '6' , 'char' 
+'102' , '27214768.187024194747' , '7' , '' , '0' , '4' , 'SUPPLIER' , '0' , '0' , '6' , 'integer' 
+'104' , '27214768.190312795341' , '7' , '' , '0' , '4' , 'UNITCOST' , '0' , '0' , '6' , 'integer' 
+'106' , '27214768.199061419814' , '7' , '' , '1' , '10' , 'ITEMID' , '1' , '1' , '6' , 'char' 
+'108' , '27214768.291137076914' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '7' , 'longlong' 
+'110' , '27214768.295138884335' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '7' , 'datetime' 
+'112' , '27214768.304596181958' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '7' , 'long' 
+'114' , '27214768.308171693235' , '7' , '' , '0' , '10' , 'ITEMID' , '0' , '0' , '7' , 'char' 
+'116' , '27214768.322426874190' , '7' , '' , '1' , '4' , 'ORDERID' , '1' , '1' , '7' , 'integer' 
+'118' , '27214768.311417918652' , '7' , '' , '0' , '4' , 'QUANTITY' , '0' , '0' , '7' , 'integer' 
+'120' , '27214768.315552506595' , '7' , '' , '0' , '8' , 'UNITPRICE' , '0' , '0' , '7' , 'float' 
+'122' , '27214768.319187417626' , '7' , '' , '1' , '4' , 'LINEITEMID' , '1' , '1' , '7' , 'integer' 
+'124' , '27214768.487336151301' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '8' , 'longlong' 
+'126' , '27214768.491562779992' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '8' , 'datetime' 
+'128' , '27214768.497394662350' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '8' , 'long' 
+'130' , '27214768.506070826202' , '7' , '' , '0' , '80' , 'BILLADDR1' , '0' , '0' , '8' , 'char' 
+'132' , '27214768.509517680853' , '7' , '' , '0' , '80' , 'BILLADDR2' , '0' , '0' , '8' , 'char' 
+'134' , '27214768.513281647115' , '7' , '' , '0' , '80' , 'BILLCITY' , '0' , '0' , '8' , 'char' 
+'136' , '27214768.517370615154' , '7' , '' , '0' , '20' , 'BILLCOUNTRY' , '0' , '0' , '8' , 'char' 
+'138' , '27214768.520858485251' , '7' , '' , '0' , '80' , 'BILLSTATE' , '0' , '0' , '8' , 'char' 
+'140' , '27214768.524236131460' , '7' , '' , '0' , '80' , 'BILLTOFIRSTNAME' , '0' , '0' , '8' , 'char' 
+'142' , '27214768.527635324746' , '7' , '' , '0' , '80' , 'BILLTOLASTNAME' , '0' , '0' , '8' , 'char' 
+'144' , '27214768.532688111066' , '7' , '' , '0' , '20' , 'BILLZIP' , '0' , '0' , '8' , 'char' 
+'146' , '27214768.541859585791' , '7' , '' , '0' , '80' , 'CARDTYPE' , '0' , '0' , '8' , 'char' 
+'148' , '27214768.546078365296' , '7' , '' , '0' , '80' , 'COURIER' , '0' , '0' , '8' , 'char' 
+'150' , '27214768.550233017653' , '7' , '' , '0' , '80' , 'CREDITCARD' , '0' , '0' , '8' , 'char' 
+'152' , '27214768.553588591516' , '7' , '' , '0' , '7' , 'EXPRDATE' , '0' , '0' , '8' , 'char' 
+'154' , '27214768.557430986315' , '7' , '' , '0' , '8' , 'ORDERDATE' , '0' , '0' , '8' , 'datetime' 
+'156' , '27214768.561037659645' , '7' , '' , '0' , '80' , 'SHIPADDR1' , '0' , '0' , '8' , 'char' 
+'158' , '27214768.565331861376' , '7' , '' , '0' , '80' , 'SHIPADDR2' , '0' , '0' , '8' , 'char' 
+'160' , '27214768.574221674352' , '7' , '' , '0' , '80' , 'SHIPCITY' , '0' , '0' , '8' , 'char' 
+'162' , '27214768.577673938125' , '7' , '' , '0' , '20' , 'SHIPCOUNTRY' , '0' , '0' , '8' , 'char' 
+'164' , '27214768.582107327878' , '7' , '' , '0' , '80' , 'SHIPSTATE' , '0' , '0' , '8' , 'char' 
+'166' , '27214768.586427807807' , '7' , '' , '0' , '80' , 'SHIPTOFIRSTNAME' , '0' , '0' , '8' , 'char' 
+'168' , '27214768.590113505721' , '7' , '' , '0' , '80' , 'SHIPTOLASTNAME' , '0' , '0' , '8' , 'char' 
+'170' , '27214768.593481738120' , '7' , '' , '0' , '20' , 'SHIPZIP' , '0' , '0' , '8' , 'char' 
+'172' , '27214768.607603982090' , '7' , '' , '0' , '4' , 'TOTALPRICE' , '0' , '0' , '8' , 'integer' 
+'174' , '27214768.611460912972' , '7' , '' , '0' , '80' , 'USERID' , '0' , '0' , '8' , 'char' 
+'176' , '27214768.615658827126' , '7' , '' , '1' , '4' , 'ORDERID' , '1' , '1' , '8' , 'integer' 
+'178' , '27214768.702286876738' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '9' , 'longlong' 
+'180' , '27214768.711344275623' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '9' , 'datetime' 
+'182' , '27214768.716115765273' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '9' , 'long' 
+'184' , '27214768.731027912348' , '7' , '' , '1' , '4' , 'ORDERID' , '1' , '1' , '9' , 'integer' 
+'186' , '27214768.720034778118' , '7' , '' , '0' , '2' , 'STATUS' , '0' , '0' , '9' , 'char' 
+'188' , '27214768.723311606794' , '7' , '' , '0' , '8' , 'UPDATEDATE' , '0' , '0' , '9' , 'datetime' 
+'190' , '27214768.726848106831' , '7' , '' , '1' , '4' , 'LINENUM' , '1' , '1' , '9' , 'integer' 
+'192' , '27214768.822568006813' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '10' , 'longlong' 
+'194' , '27214768.826549306511' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '10' , 'datetime' 
+'196' , '27214768.833304356783' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '10' , 'long' 
+'198' , '27214768.837081979960' , '7' , '' , '0' , '10' , 'CATEGORY' , '1' , '0' , '10' , 'char' 
+'200' , '27214768.840694021433' , '7' , '' , '0' , '255' , 'DESCN' , '0' , '0' , '10' , 'char' 
+'202' , '27214768.850021343678' , '7' , '' , '0' , '80' , 'NAME' , '0' , '0' , '10' , 'char' 
+'204' , '27214768.854152686893' , '7' , '' , '1' , '10' , 'PRODUCTID' , '1' , '1' , '10' , 'char' 
+'206' , '27214768.941696498543' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '11' , 'longlong' 
+'208' , '27214768.951593391597' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '11' , 'datetime' 
+'210' , '27214768.956318017095' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '11' , 'long' 
+'212' , '27214768.960087873041' , '7' , '' , '0' , '4' , 'BANNEROPT' , '0' , '0' , '11' , 'integer' 
+'214' , '27214768.964232031255' , '7' , '' , '0' , '30' , 'FAVCATEGORY' , '0' , '0' , '11' , 'char' 
+'216' , '27214768.967580396682' , '7' , '' , '0' , '80' , 'LANGPREF' , '0' , '0' , '11' , 'char' 
+'218' , '27214768.971274506300' , '7' , '' , '0' , '4' , 'MYLISTOPT' , '0' , '0' , '11' , 'integer' 
+'222' , '27214768.978253457695' , '7' , '' , '1' , '80' , 'USERID' , '1' , '1' , '11' , 'char' 
+'224' , '27214769.094569310545' , '7' , '' , '2' , '8' , '_rowid' , '1' , '0' , '12' , 'longlong' 
+'226' , '27214769.100123412907' , '7' , '' , '0' , '8' , '_timestamp' , '0' , '0' , '12' , 'datetime' 
+'228' , '27214769.103464849293' , '7' , '' , '0' , '4' , '_version' , '0' , '0' , '12' , 'long' 
+'230' , '27214769.107022777200' , '7' , '' , '0' , '80' , 'ADDR1' , '0' , '0' , '12' , 'char' 
+'232' , '27214769.110384918750' , '7' , '' , '0' , '80' , 'ADDR2' , '0' , '0' , '12' , 'char' 
+'234' , '27214769.114443525671' , '7' , '' , '0' , '80' , 'CITY' , '0' , '0' , '12' , 'char' 
+'236' , '27214769.118037018924' , '7' , '' , '0' , '80' , 'NAME' , '0' , '0' , '12' , 'char' 
+'238' , '27214769.126655183732' , '7' , '' , '0' , '80' , 'PHONE' , '0' , '0' , '12' , 'char' 
+'240' , '27214769.131283719092' , '7' , '' , '0' , '80' , 'STATE' , '0' , '0' , '12' , 'char' 
+'242' , '27214769.135015122592' , '7' , '' , '0' , '2' , 'STATUS' , '0' , '0' , '12' , 'char' 
+'244' , '27214769.138265714050' , '7' , '' , '0' , '5' , 'ZIP' , '0' , '0' , '12' , 'char' 
+'246' , '27214769.141682051122' , '7' , '' , '2' , '4' , 'SUPPID' , '1' , '1' , '12' , 'integer' 
+'249' , '27214768.974554017186' , '4' , '' , '0' , '80' , 'USER_TYPE' , '0' , '0' , '11' , 'char' 
+TABLE _SYS_APP_PREFERENCES
+_rowid, _timestamp, _version, key, order, value
+'1' , '27214767.197702012956' , '12' , 'SchemaDatabaseVersion' , '0' , '1' 
+'2' , '23139750.326724819840' , '1' , 'SchemaVersion' , '0' , '' 
+'3' , '27214769.228183880448' , '9' , 'SchemaTimeStamp' , '0' , '1318;2001-11-11 15:39:04 -0800;12;2001-11-11 15:39:29 -0800;249;2001-11-11 15:39:29 -0800' 
+TABLE _SYS_APP_TABLES
+_rowid, _timestamp, _version, clusteredFieldID, height, name, primaryKeyFieldID, width, x, y
+'1' , '27214767.621877174824' , '9' , '0' , '250.0000000000000' , 'EO_PK_TABLE' , NULL, '150.0000000000000' , '0.0000000000000' , '0.0000000000000' 
+'2' , '27214767.812457095831' , '9' , '0' , '250.0000000000000' , 'ACCOUNT' , NULL, '150.0000000000000' , '200.0000000000000' , '0.0000000000000' 
+'4' , '27214767.925072707235' , '9' , '0' , '250.0000000000000' , 'CATEGORY' , NULL, '150.0000000000000' , '0.0000000000000' , '300.0000000000000' 
+'5' , '27214768.037063311785' , '9' , '0' , '250.0000000000000' , 'INVENTORY' , NULL, '150.0000000000000' , '200.0000000000000' , '300.0000000000000' 
+'6' , '27214768.212404407560' , '9' , '0' , '250.0000000000000' , 'ITEM' , NULL, '150.0000000000000' , '400.0000000000000' , '300.0000000000000' 
+'7' , '27214768.339022342115' , '9' , '0' , '250.0000000000000' , 'LINEITEM' , NULL, '150.0000000000000' , '0.0000000000000' , '600.0000000000000' 
+'8' , '27214768.623233739286' , '9' , '0' , '250.0000000000000' , 'ORDERS' , NULL, '150.0000000000000' , '200.0000000000000' , '600.0000000000000' 
+'9' , '27214768.738085530698' , '9' , '0' , '250.0000000000000' , 'ORDERSTATUS' , NULL, '150.0000000000000' , '400.0000000000000' , '600.0000000000000' 
+'10' , '27214768.862044669687' , '9' , '0' , '250.0000000000000' , 'PRODUCT' , NULL, '150.0000000000000' , '0.0000000000000' , '900.0000000000000' 
+'11' , '27214768.991474762558' , '9' , '0' , '250.0000000000000' , 'PROFILE' , NULL, '150.0000000000000' , '200.0000000000000' , '900.0000000000000' 
+'12' , '27214769.150350522250' , '9' , '0' , '250.0000000000000' , 'SUPPLIER' , NULL, '150.0000000000000' , '400.0000000000000' , '900.0000000000000' 
+TABLE _SYS_APPS
+_rowid, _timestamp, _version, appName
+'5' , '27199950.333490718156' , '1' , 'OpenSqlGui' 
+'3' , '23499157.752234555780' , '1' , 'OpenBaseManager' 
+'2' , '23499142.644380439072' , '1' , 'JDBC' 
+TABLE _SYS_GROUPS
+_rowid, _timestamp, _version, appAuthorizationEnabled, authorizedApps, blockedRadApps, group
+'1' , '23499138.511374000460' , '1' , NULL, NULL, NULL, 'admin' 
+TABLE _SYS_JDBC2v1
+_rowid, _timestamp, _version, max_scale, order, precision, searchable, type, typename
+'1' , '23500452.699449762701' , '1' , '0' , '0' , '0' , '3' , '1' , 'char' 
+'2' , '23500452.700751960277' , '1' , '0' , '0' , '10' , '2' , '4' , 'int' 
+'3' , '23500452.701876841485' , '1' , '0' , '0' , '0' , '1' , '-4' , 'object' 
+'4' , '23500452.702988062053' , '1' , '0' , '0' , '20' , '2' , '-5' , 'longlong' 
+'5' , '23500452.704624876380' , '1' , '0' , '1' , '20' , '2' , '8' , 'double' 
+'6' , '23500452.705919984728' , '1' , '6' , '0' , '20' , '2' , '93' , 'datetime' 
+'7' , '23500452.707102864980' , '1' , '2' , '0' , '20' , '2' , '3' , 'money' 
+'8' , '23500452.708231788128' , '1' , '15' , '0' , '20' , '2' , '8' , 'float' 
+'9' , '23500452.709352623671' , '1' , '0' , '1' , '10' , '2' , '4' , 'long' 
+'10' , '23500452.710464686155' , '1' , '0' , '0' , '0' , '2' , '91' , 'date' 
+'11' , '23500452.711575947701' , '1' , '0' , '0' , '0' , '2' , '92' , 'time' 
+TABLE _SYS_PERM
+_rowid, _timestamp, _version, name, p_delete, p_insert, p_select, p_update, table
+TABLE _SYS_PROCEDURES
+_rowid, _timestamp, _version, numberOfParameters, path, procedureName, usage
+TABLE _SYS_QUERY
+_rowid, _timestamp, _version, sql, title
+TABLE _SYS_REPLICATION
+_rowid, _timestamp, _version, conflict_code, local_date, remote_date, tablename, target_database, target_host, target_password
+TABLE _SYS_USERS
+_rowid, _timestamp, _version, appSecurity, authorizedApps, email, fullname, login, password, popLogin, popPassword, popServer, smtpServer, usergroup
+'1' , '23499138.493826687335' , '1' , '0' , NULL, NULL, 'admin' , 'admin' , '' , NULL, NULL, NULL, NULL, 'admin' 
+TABLE ACCOUNT
+_rowid, _timestamp, _version, ADDR1, ADDR2, CITY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, PHONE, STATE, STATUS, USERID, ZIP
+'1' , '27207251.280281718820' , '4' , '901 San Antonio Road' , 'MS UCUP02-206' , 'Palo Alto' , 'USA' , 'yourname@yourdomain.com' , 'WOUser' , 'XYZ' , 'wojava' , '555-555-5555' , 'California' , 'OK' , 'wojava' , '94303' 
+'2' , '27213921.657762400805' , '1' , '123 elm' , NULL, 'Seattle' , 'USA' , 'kelly@apple.com' , 'kelly' , 'kazem' , 'kellyk' , '555-1212' , 'New York' , NULL, 'kellyk' , '99999' 
+TABLE CATEGORY
+_rowid, _timestamp, _version, CATID, DESCN, NAME
+'1' , '27205498.000679541380' , '1' , 'FISH' , '<image src=../images/fish_icon.gif><font size=5 color=blue> Fish</font>' , 'Fish' 
+'2' , '27205498.004442788660' , '1' , 'DOGS' , '<image src=../images/dogs_icon.gif><font size=5 color=blue> Dogs</font>' , 'Dogs' 
+'3' , '27205498.007615994662' , '1' , 'REPTILES' , '<image src=../images/reptiles_icon.gif><font size=5 color=blue>Reptiles</font>' , 'Reptiles' 
+'4' , '27205498.010722752660' , '1' , 'CATS' , '<image src=../images/cats_icon.gif><font size=5 color=blue> Cats</font>' , 'Cats' 
+'5' , '27205498.013804316520' , '1' , 'BIRDS' , '<image src="../images/birds_icon.gif"><font size="5" color="blue"> Birds</font>' , 'Birds' 
+TABLE EO_PK_TABLE
+_rowid, _timestamp, _version, NAME, PK
+'1' , '27214998.761627718806' , '3' , 'ORDERS' , '2' 
+TABLE INVENTORY
+_rowid, _timestamp, _version, ITEMID, QTY
+'1' , '27208352.633244719356' , '2' , 'EST-1' , '0' 
+'2' , '27214855.638718679547' , '4' , 'EST-2' , '10' 
+'3' , '27214853.002260722220' , '4' , 'EST-3' , '10' 
+'4' , '27208363.520440880210' , '2' , 'EST-4' , '100' 
+'5' , '27208365.569423757493' , '2' , 'EST-5' , '100' 
+'6' , '27214962.898904662580' , '4' , 'EST-6' , '99' 
+'7' , '27214895.405544761568' , '3' , 'EST-7' , '0' 
+'8' , '27214962.898904662580' , '2' , 'EST-8' , '9' 
+'9' , '27205498.043788231910' , '1' , 'EST-9' , '10' 
+'10' , '27205498.046670246870' , '1' , 'EST-10' , '10' 
+'11' , '27205498.049577616155' , '1' , 'EST-11' , '10' 
+'12' , '27205498.052534010261' , '1' , 'EST-12' , '10' 
+'13' , '27215065.106068756431' , '2' , 'EST-13' , '0' 
+'14' , '27205498.058894086630' , '1' , 'EST-14' , '10' 
+'15' , '27205498.061777379363' , '1' , 'EST-15' , '10' 
+'16' , '27205498.064594749361' , '1' , 'EST-16' , '10' 
+'17' , '27205498.067572452127' , '1' , 'EST-17' , '10' 
+'18' , '27215072.174925722181' , '2' , 'EST-18' , '10' 
+'19' , '27205498.074449423700' , '1' , 'EST-19' , '10' 
+'20' , '27205498.077448517084' , '1' , 'EST-20' , '10' 
+'21' , '27205498.080816548317' , '1' , 'EST-21' , '10' 
+'22' , '27205498.083636399358' , '1' , 'EST-22' , '10' 
+'23' , '27205498.086767990142' , '1' , 'EST-23' , '10' 
+'24' , '27205498.090462181717' , '1' , 'EST-24' , '10' 
+'25' , '27214998.810988698154' , '2' , 'EST-25' , '9' 
+'26' , '27205498.096267066895' , '1' , 'EST-26' , '10' 
+'27' , '27205498.098869502544' , '1' , 'EST-27' , '10' 
+'28' , '27214998.810988698154' , '2' , 'EST-28' , '9' 
+TABLE ITEM
+_rowid, _timestamp, _version, ATTR1, ATTR2, ATTR3, ATTR4, ATTR5, ITEMID, LISTPRICE, PRODUCTID, STATUS, SUPPLIER, UNITCOST
+'1' , '27205498.186775643378' , '1' , 'Large' , NULL, NULL, NULL, NULL, 'EST-1' , '16' , 'FI-SW-01' , 'P' , '1' , '10' 
+'2' , '27205498.191806923598' , '1' , 'Small' , NULL, NULL, NULL, NULL, 'EST-2' , '16' , 'FI-SW-01' , 'P' , '1' , '10' 
+'3' , '27205498.196094635874' , '1' , 'Toothless' , NULL, NULL, NULL, NULL, 'EST-3' , '18' , 'FI-SW-02' , 'P' , '1' , '12' 
+'4' , '27205498.199887882918' , '1' , 'Spotted' , NULL, NULL, NULL, NULL, 'EST-4' , '18' , 'FI-FW-01' , 'P' , '1' , '12' 
+'5' , '27205498.203727632761' , '1' , 'Spotless' , NULL, NULL, NULL, NULL, 'EST-5' , '18' , 'FI-FW-01' , 'P' , '1' , '12' 
+'6' , '27205498.208485100418' , '1' , 'Male Adult' , NULL, NULL, NULL, NULL, 'EST-6' , '18' , 'K9-BD-01' , 'P' , '1' , '12' 
+'7' , '27205498.212422098964' , '1' , 'Female Puppy' , NULL, NULL, NULL, NULL, 'EST-7' , '18' , 'K9-BD-01' , 'P' , '1' , '12' 
+'8' , '27205498.216107439250' , '1' , 'Male Puppy' , NULL, NULL, NULL, NULL, 'EST-8' , '18' , 'K9-PO-02' , 'P' , '1' , '12' 
+'9' , '27205498.219914905726' , '1' , 'Spotless Male Puppy' , NULL, NULL, NULL, NULL, 'EST-9' , '18' , 'K9-DL-01' , 'P' , '1' , '12' 
+'10' , '27205498.224733173847' , '1' , 'Spotted Adult Female' , NULL, NULL, NULL, NULL, 'EST-10' , '18' , 'K9-DL-01' , 'P' , '1' , '12' 
+'11' , '27205498.228694446384' , '1' , 'Venomless' , NULL, NULL, NULL, NULL, 'EST-11' , '18' , 'RP-SN-01' , 'P' , '1' , '12' 
+'12' , '27205498.232549294830' , '1' , 'Rattleless' , NULL, NULL, NULL, NULL, 'EST-12' , '18' , 'RP-SN-01' , 'P' , '1' , '12' 
+'13' , '27205498.236406948417' , '1' , 'Green Adult' , NULL, NULL, NULL, NULL, 'EST-13' , '18' , 'RP-LI-02' , 'P' , '1' , '12' 
+'14' , '27205498.241570007055' , '1' , 'Tailless' , NULL, NULL, NULL, NULL, 'EST-14' , '58' , 'FL-DSH-01' , 'P' , '1' , '12' 
+'15' , '27205498.245506245642' , '1' , 'With tail' , NULL, NULL, NULL, NULL, 'EST-15' , '23' , 'FL-DSH-01' , 'P' , '1' , '12' 
+'16' , '27205498.249751981347' , '1' , 'Adult Female' , NULL, NULL, NULL, NULL, 'EST-16' , '93' , 'FL-DLH-02' , 'P' , '1' , '12' 
+'17' , '27205498.253816552460' , '1' , 'Adult Male' , NULL, NULL, NULL, NULL, 'EST-17' , '93' , 'FL-DLH-02' , 'P' , '1' , '12' 
+'18' , '27205498.258511699736' , '1' , 'Adult Male' , NULL, NULL, NULL, NULL, 'EST-18' , '193' , 'AV-CB-01' , 'P' , '1' , '92' 
+'19' , '27205498.262418899685' , '1' , 'Adult Male' , NULL, NULL, NULL, NULL, 'EST-19' , '15' , 'AV-SB-02' , 'P' , '1' , '2' 
+'20' , '27205498.266461759805' , '1' , 'Adult Male' , NULL, NULL, NULL, NULL, 'EST-20' , '5' , 'FI-FW-02' , 'P' , '1' , '2' 
+'21' , '27205498.271634429693' , '1' , 'Adult Female' , NULL, NULL, NULL, NULL, 'EST-21' , '5' , 'FI-FW-02' , 'P' , '1' , '1' 
+'22' , '27205498.275777187198' , '1' , 'Adult Male' , NULL, NULL, NULL, NULL, 'EST-22' , '135' , 'K9-RT-02' , 'P' , '1' , '100' 
+'23' , '27205498.279674895107' , '1' , 'Adult Female' , NULL, NULL, NULL, NULL, 'EST-23' , '145' , 'K9-RT-02' , 'P' , '1' , '100' 
+'24' , '27205498.283806238323' , '1' , 'Adult Male' , NULL, NULL, NULL, NULL, 'EST-24' , '255' , 'K9-RT-02' , 'P' , '1' , '92' 
+'25' , '27205498.287857152521' , '1' , 'Adult Female' , NULL, NULL, NULL, NULL, 'EST-25' , '325' , 'K9-RT-02' , 'P' , '1' , '90' 
+'26' , '27205498.292486164718' , '1' , 'Adult Male' , NULL, NULL, NULL, NULL, 'EST-26' , '125' , 'K9-CW-01' , 'P' , '1' , '92' 
+'27' , '27205498.297569956630' , '1' , 'Adult Female' , NULL, NULL, NULL, NULL, 'EST-27' , '155' , 'K9-CW-01' , 'P' , '1' , '90' 
+'28' , '27205498.301624875515' , '1' , 'Adult Female' , NULL, NULL, NULL, NULL, 'EST-28' , '155' , 'K9-RT-01' , 'P' , '1' , '90' 
+TABLE LINEITEM
+_rowid, _timestamp, _version, ITEMID, LINEITEMID, ORDERID, QUANTITY, UNITPRICE
+TABLE ORDERS
+_rowid, _timestamp, _version, BILLADDR1, BILLADDR2, BILLCITY, BILLCOUNTRY, BILLSTATE, BILLTOFIRSTNAME, BILLTOLASTNAME, BILLZIP, CARDTYPE, COURIER, CREDITCARD, EXPRDATE, ORDERDATE, ORDERID, SHIPADDR1, SHIPADDR2, SHIPCITY, SHIPCOUNTRY, SHIPSTATE, SHIPTOFIRSTNAME, SHIPTOLASTNAME, SHIPZIP, TOTALPRICE, USERID
+TABLE ORDERSTATUS
+_rowid, _timestamp, _version, LINENUM, ORDERID, STATUS, UPDATEDATE
+TABLE PRODUCT
+_rowid, _timestamp, _version, CATEGORY, DESCN, NAME, PRODUCTID
+'1' , '27205498.105573602020' , '1' , 'FISH' , '<image src="../images/fish1.jpg">Salt Water fish from Australia' , 'Angelfish' , 'FI-SW-01' 
+'2' , '27205498.109765585511' , '1' , 'FISH' , '<image src="../images/fish4.gif">Salt Water fish from Australia' , 'Tiger Shark' , 'FI-SW-02' 
+'3' , '27205498.113371215760' , '1' , 'FISH' , '<image src="../images/fish3.gif">Fresh Water fish from Japan' , 'Koi' , 'FI-FW-01' 
+'4' , '27205498.116603262722' , '1' , 'FISH' , '<image src="../images/fish2.gif">Fresh Water fish from China' , 'Goldfish' , 'FI-FW-02' 
+'5' , '27205498.119854297488' , '1' , 'DOGS' , '<image src="../images/dog2.gif">Friendly dog from England' , 'Bulldog' , 'K9-BD-01' 
+'6' , '27205498.124277792870' , '1' , 'DOGS' , '<image src="../images/dog6.gif">Cute dog from France' , 'Poodle' , 'K9-PO-02' 
+'7' , '27205498.127704504877' , '1' , 'DOGS' , '<image src="../images/dog5.gif">Great dog for a Fire Station' , 'Dalmation' , 'K9-DL-01' 
+'8' , '27205498.131101693958' , '1' , 'DOGS' , '<image src="../images/dog1.gif">Great family dog' , 'Golden Retriever' , 'K9-RT-01' 
+'9' , '27205498.134521275758' , '1' , 'DOGS' , '<image src="../images/dog5.gif">Great hunting dog' , 'Labrador Retriever' , 'K9-RT-02' 
+'10' , '27205498.138743821531' , '1' , 'DOGS' , '<image src="../images/dog4.gif">Great companion dog' , 'Chihuahua' , 'K9-CW-01' 
+'11' , '27205498.143390901386' , '1' , 'REPTILES' , '<image src="../images/lizard3.gif">Doubles as a watch dog' , 'Rattlesnake' , 'RP-SN-01' 
+'12' , '27205498.146897077560' , '1' , 'REPTILES' , '<image src="../images/lizard2.gif">Friendly green friend' , 'Iguana' , 'RP-LI-02' 
+'13' , '27205498.153470240533' , '1' , 'CATS' , '<image src="../images/cat3.gif">Great for reducing mouse populations' , 'Manx' , 'FL-DSH-01' 
+'14' , '27205498.161255642771' , '1' , 'CATS' , '<image src="../images/cat1.gif">Friendly house cat, doubles as a princess' , 'Persian' , 'FL-DLH-02' 
+'15' , '27205498.164537116885' , '1' , 'BIRDS' , '<image src="../images/bird4.gif">Great companion for up to 75 years' , 'Amazon Parrot' , 'AV-CB-01' 
+'16' , '27205498.167829763144' , '1' , 'BIRDS' , '<image src="../images/bird1.gif">Great stress reliever' , 'Finch' , 'AV-SB-02' 
+TABLE PROFILE
+_rowid, _timestamp, _version, BANNEROPT, FAVCATEGORY, LANGPREF, MYLISTOPT, USER_TYPE, USERID
+'1' , '27205497.996740859001' , '1' , '1' , 'dogs' , 'English' , '1' , NULL, 'wojava' 
+'2' , '27213921.657762400805' , '1' , '1' , 'Fish' , 'English' , '1' , NULL, 'kellyk' 
+TABLE SUPPLIER
+_rowid, _timestamp, _version, ADDR1, ADDR2, CITY, NAME, PHONE, STATE, STATUS, SUPPID, ZIP
+'1' , '27205498.171605907380' , '1' , '600 Avon Way' , '' , 'Los Angeles' , 'XYZ Pets' , '212-947-0797' , 'CA' , 'AC' , '1' , '94024' 
+'2' , '27205498.179311357438' , '1' , '700 Abalone Way' , '' , 'San Francisco' , 'ABC Pets' , '415-947-0797' , 'CA' , 'AC' , '2' , '94024' 

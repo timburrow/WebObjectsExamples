@@ -1,0 +1,218 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = ATTR1;
+           externalType = char;
+           name = attr1;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ATTR2;
+           externalType = char;
+           name = attr2;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ATTR3;
+           externalType = char;
+           name = attr3;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ATTR4;
+           externalType = char;
+           name = attr4;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ATTR5;
+           externalType = char;
+           name = attr5;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           columnName = ITEMID;
+           externalType = char;
+           name = itemid;
+           valueClassName = NSString;
+           valueType = c;
+           width = 10;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = LISTPRICE;
+           externalType = decimal;
+           name = listPrice;
+           precision = 10;
+           scale = 2;
+           valueClassName = NSNumber;
+           valueType = B;
+       }, 
+       
+       {
+           columnName = PRODUCTID;
+           externalType = char;
+           name = productid;
+           valueClassName = NSString;
+           valueType = c;
+           width = 10;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = STATUS;
+           externalType = char;
+           name = status;
+           valueClassName = NSString;
+           valueType = c;
+           width = 2;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SUPPLIER;
+           externalType = int;
+           name = supplierid;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = UNITCOST;
+           externalType = decimal;
+           name = unitCost;
+           precision = 10;
+           scale = 2;
+           valueClassName = NSNumber;
+           valueType = B;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       attr1, 
+       attr2, 
+       attr3, 
+       attr4, 
+       attr5, 
+       itemid, 
+       listPrice, 
+       productid, 
+       status, 
+       supplierid, 
+       unitCost
+    );
+    cachesObjects = Y;
+    className = Item;
+    classProperties = 
+    (
+       attr1, 
+       attr2, 
+       attr3, 
+       attr4, 
+       attr5, 
+       inventory, 
+       itemid, 
+       listPrice, 
+       product, 
+       productid, 
+       status, 
+       supplier, 
+       unitCost
+    );
+    externalName = ITEM;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           attr1, 
+           attr2, 
+           attr3, 
+           attr4, 
+           attr5, 
+           productid, 
+           status, 
+           supplier
+        );
+    };
+    isReadOnly = Y;
+    name = Item;
+    primaryKeyAttributes = 
+    (
+       itemid
+    );
+    relationships = 
+    (
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = Inventory;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = itemid;
+                  sourceAttribute = itemid;
+              }
+           );
+           name = inventory;
+           ownsDestination = Y;
+       }, 
+       
+       {
+           destination = Product;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = productid;
+                  sourceAttribute = productid;
+              }
+           );
+           name = product;
+       }, 
+       
+       {
+           destination = Supplier;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = suppid;
+                  sourceAttribute = supplierid;
+              }
+           );
+           name = supplier;
+       }
+    );
+}

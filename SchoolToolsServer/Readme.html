@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+    <TITLE>School Tools Example README (Server)</TITLE>
+</HTML>
+
+<BODY>
+<P>
+    <CENTER>
+    <FONT size+2><B>SchoolToolsServer</B></FONT>
+    </CENTER>
+</P>
+<P>
+<B>Difficulty Level:</B> Intermediate
+</P>
+<P>
+<B>Topics Covered:</B> WebObjects, EOF
+</P>
+<P>
+<B>Framework Classes Used:</B> EOGenericRecord
+</P>
+<P>
+<B>Useful Reference Sites:</B> 
+    <UL>
+	<LI><A HREF="http://xml.apache.org/axis/index.html">AXIS</A></LI>
+	<LI><A HREF="http://java.sun.com/products/javamail">JavaMail</A></LI>
+	<LI><A HREF="http://db.apache.org/derby/">Derby</A></LI>
+    </UL>
+</P>
+<P>
+<B>Overview: </B>
+<BR>
+    SchoolToolsClient and SchoolToolsServer make up the SchoolTools example. The Client is a WebObjects application with JSP and Servlet integration. The Server is a WebObjects application vending a SOAP service. The Client and Server applications communicate using the AXIS SOAP toolkit.
+</P>
+<P>
+<B>Usage: </B>
+<BR>
+    <OL>
+	<LI> Make sure that a standard WebObjects application without JSP/Servlet integration works on your machine.</LI>
+	<LI> Make sure that you have JavaMail libraries in your classpath.</LI>
+	<LI> Make sure that the WOVendor database is set up. The default customer ID is "1". If it is not, then you must first set it up:
+	    <OL>
+		<LI> Run the install database script for Derby database in the WebObjects examples folder and create a database called "WOVendor" </LI>
+		<LI> In the Derby console, create a customer. Remember the customer ID; this is used when submitting an order.</LI>
+	    </OL>
+	</LI>
+	<LI> Start SchoolToolsServer as a normal WebObjects application. </LI>
+	<LI> Follow the directions for setting up and running SchoolToolsClient. </LI>
+    </OL>
+</P>
+<P>
+<B>Description:</B>
+<BR>
+    SchoolToolsServer is a WebObjects application that provides a SOAP RPC service. When the container receives an XML message (a SOAP request) from the Client, the AXIS API will unmarshall the XML into objects and invoke the SubmitOrder method. A custom deserializer (ClientOrderDeserializer) is used to deserialize the ClientOrder objects, while the default BeanDeserializer is used to deserialize the ClientProduct objects. If the customer placing the order is validated against the database, a random Confirmation number is generated and the order is written to the database. 
+</P>
+
+</BODY>
+</HTML>    

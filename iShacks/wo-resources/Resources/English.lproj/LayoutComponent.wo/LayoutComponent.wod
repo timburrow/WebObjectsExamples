@@ -1,0 +1,13 @@
+ApplicationName: WOString {
+	value = application.name;
+}
+
+ComponentContent: WOComponentContent {
+}
+
+HeaderComponent: HeaderComponent {
+}
+
+ToolbarComponent: ToolbarComponent {
+}
+

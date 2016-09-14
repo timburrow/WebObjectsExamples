@@ -1,0 +1,9 @@
+
+Hyperlink: WXHyperlink {
+    action = ^action;
+}
+
+Image: WXImage {
+    filename = ^filename;
+    framework = ^framework;
+}

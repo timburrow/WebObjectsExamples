@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ThinkMovies</name>
+	<comment></comment>
+	<projects>
+		<project>JavaBusinessLogic</project>
+		<project>JavaEOAccess</project>
+		<project>JavaEOControl</project>
+		<project>JavaFoundation</project>
+		<project>JavaJDBCAdaptor</project>
+		<project>JavaWebObjects</project>
+		<project>JavaWOExtensions</project>
+		<project>JavaXML</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.objectstyle.wolips.incrementalbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.objectstyle.wolips.incrementalapplicationnature</nature>
+	</natures>
+</projectDescription>

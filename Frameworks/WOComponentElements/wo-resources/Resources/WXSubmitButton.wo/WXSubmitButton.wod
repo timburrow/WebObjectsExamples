@@ -1,0 +1,8 @@
+ 
+SubmitButton: WOGenericElement {
+    elementName = "INPUT";
+    type = "submit";
+    value = ^value;
+    invokeAction = ^action;
+    name = context.elementID;
+}

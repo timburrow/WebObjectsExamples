@@ -1,0 +1,107 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = USER_ID;
+           externalType = integer;
+           name = agentID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = AGENT_RATING_ID;
+           externalType = integer;
+           internalInfo = 
+           {
+               _nameInObjectStore = AGEN_TRATING_ID;
+           };
+           name = agentRatingID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SUMMARY;
+           externalType = blob;
+           name = comment;
+           valueClassName = NSString;
+       }, 
+       
+       {
+           columnName = RATING_ID;
+           externalType = integer;
+           name = ratingID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       agentID, 
+       agentRatingID, 
+       comment, 
+       ratingID
+    );
+    className = webobjectsexamples.realestate.common.AgentRating;
+    classProperties = 
+    (
+       agent, 
+       comment, 
+       rating
+    );
+    externalName = AGENT_RATING;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           agent, 
+           comment, 
+           rating
+        );
+        _javaClientClassName = webobjectsexamples.realestate.common.AgentRating;
+    };
+    name = AgentRating;
+    primaryKeyAttributes = 
+    (
+       agentRatingID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Agent;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = userID;
+                  sourceAttribute = agentID;
+              }
+           );
+           name = agent;
+       }, 
+       
+       {
+           destination = Rating;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = ratingID;
+                  sourceAttribute = ratingID;
+              }
+           );
+           name = rating;
+       }
+    );
+}

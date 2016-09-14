@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookmarks>
+	<site name="Maven" url="http://m2eclipse.codehaus.org/update/" web="false" selected="true" local="false" />
+	<site name="Mylyn" url="http://download.eclipse.org/tools/mylyn/update/e3.3" web="false" selected="true" local="false" />
+	<site name="WOLips" url="http://webobjects.mdimension.com/wolips/nightly/" web="false" selected="true" local="false" />
+	<site name="Andrei Loskutov plugins site" url="http://andrei.gmxhome.de/eclipse/" web="false" selected="true" local="false" />
+	<site name="Subclipse update site" url="http://subclipse.tigris.org/update_1.2.x" web="false" selected="true" local="false" />
+	<site name="TMate Software Update Site" url="http://svnkit.com/" web="false" selected="true" local="false" />
+	<site name="SF Eclipse JavaCC" url="http://eclipse-javacc.sourceforge.net/" web="false" selected="true" local="false"/>
+</bookmarks>

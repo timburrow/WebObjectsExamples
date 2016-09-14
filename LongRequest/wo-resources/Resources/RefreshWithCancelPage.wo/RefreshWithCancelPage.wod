@@ -1,0 +1,46 @@
+
+BodyTag: WOExampleBody {}
+
+Cancel: WOHyperlink {
+    action = cancel;
+}
+
+CancelImage: WOImage {
+	filename = "cancel_button.gif";
+	border = "0";
+	width = 104;
+	height = 25;
+}
+
+Count: WOString {
+	value=count;
+}
+
+Footer: WOExampleFooter {}
+
+Interval: WOString {
+	value=refreshInterval;
+}
+
+ProcessingImage: WOImage {
+	filename = "title_processing.gif";
+	width = 320;
+	height = 91;
+}
+
+ProgressBar: WOCompletionBar {
+    value = lastStatus;
+    valueMin = start;
+    valueMax = stop;
+    align = "RIGHT";
+    numberformat = "0";
+    border = "0";
+}
+
+Start: WOString {
+	value=start;
+}
+
+Stop: WOString {
+	value=stop;
+}

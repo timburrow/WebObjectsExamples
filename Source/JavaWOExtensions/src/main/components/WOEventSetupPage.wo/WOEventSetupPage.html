@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Event Logging Setup Page</title>
+	</head>
+	<body>
+		
+	<webobject name="Conditional1">
+	    WOEvent Logging Setup
+	    <p></p>
+	    <webobject name="Hyperlink2">Show Event Log</webobject>
+	    <br>
+	    You have the following classes registered for logging:
+	    <webobject name="LogClassListForm">
+	        <table>
+		<webobject name="ClassLoop">
+		    <webobject name="CategoryLoop">
+			<tr>
+				<td><webobject name="IsClassName"><webobject name="IsClassSelected"></webobject></webobject>
+				    <webobject name="IsNotClassName">&nbsp;</webobject>
+				</td>
+				<td><webobject name="ClassOrCategoryName"></webobject></td>
+			</tr>
+		    </webobject>
+			<tr>
+				<td>&nbsp;</td>
+				<td><hr></td>
+			</tr>
+		</webobject>
+		</table>
+		<p></p>
+		<webobject name="SelectAllButton"></webobject>&nbsp;&nbsp;&nbsp;
+		<webobject name="ClearAllButton"></webobject>&nbsp;&nbsp;&nbsp;
+		<webobject name="SetAsSelected"></webobject>
+		<p></p>
+		<webobject name="Hyperlink1">Show Event Log</webobject>
+		</webobject>
+		</webobject>
+		<webobject name="Conditional2">
+		<h2 align="center">This Request Requires A User Login</h2>
+		<br>
+		<webobject name="Form1">
+			<table cellpadding="2" border="1" bgcolor="#f6ffff" align="center" cellspacing="0">
+			<tr>
+			<td>
+				<table border="0" width="80%">
+					<tr align="center">
+						<td>User</td>
+						<td><webobject name="USERNAME"></webobject></td>
+					</tr>
+					<tr align="center">
+						<td>Password</td>
+						<td><webobject name="PASSWORD"></webobject></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><webobject name="SUBMIT"></webobject></td>
+					</tr>
+				</table>
+			</td>
+			</tr>
+			</table>
+			<br>
+		</webobject>
+		</webobject>
+		<p></p>
+	</body>
+</html>

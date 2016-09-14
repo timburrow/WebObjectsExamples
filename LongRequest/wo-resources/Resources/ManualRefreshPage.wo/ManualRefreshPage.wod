@@ -1,0 +1,38 @@
+
+BodyTag: WOExampleBody {}
+
+Footer: WOExampleFooter {}
+
+ProcessingImage: WOImage {
+	filename = "title_processing.gif";
+	width = 320;
+	height = 91;
+}
+
+ProgressBar: WOCompletionBar {
+    value = lastStatus;
+    valueMin = start;
+    valueMax = stop;
+    align = "RIGHT";
+    numberformat = "0";
+    border = "0";
+}
+
+Refresh: WOHyperlink {
+	action=refresh;
+}
+
+RefreshImage: WOImage {
+	filename = "update_button.gif";
+	border = "0";
+	width = 128;
+	height = 28;
+}
+
+Start: WOString {
+	value=start;
+}
+
+Stop: WOString {
+	value=stop;
+}

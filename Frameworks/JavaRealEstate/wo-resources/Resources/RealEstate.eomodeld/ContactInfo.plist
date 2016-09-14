@@ -1,0 +1,116 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = CONTACT;
+           externalType = char;
+           name = contact;
+           valueClassName = NSString;
+           valueType = c;
+           width = 40;
+       }, 
+       
+       {
+           columnName = CONTACT_ID;
+           externalType = integer;
+           name = contactID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = CONTACT_TYPE_ID;
+           externalType = integer;
+           name = contactTypeID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = NOTES;
+           externalType = varchar;
+           name = notes;
+           valueClassName = NSString;
+           width = 255;
+       }, 
+       
+       {
+           columnName = USER_ID;
+           externalType = integer;
+           name = userID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       contact, 
+       contactID, 
+       contactTypeID, 
+       notes, 
+       userID
+    );
+    className = EOGenericRecord;
+    classProperties = 
+    (
+       contact, 
+       contactType, 
+       notes, 
+       user
+    );
+    externalName = CONTACT_INFO;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           contact, 
+           contactType, 
+           notes, 
+           user
+        );
+    };
+    maxNumberOfInstancesToBatchFetch = 10;
+    name = ContactInfo;
+    primaryKeyAttributes = 
+    (
+       contactID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = ContactType;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = contactTypeID;
+                  sourceAttribute = contactTypeID;
+              }
+           );
+           name = contactType;
+       }, 
+       
+       {
+           destination = User;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = userID;
+                  sourceAttribute = userID;
+              }
+           );
+           name = user;
+       }
+    );
+}

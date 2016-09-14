@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+	<HEAD>
+		<TITLE>Handling long requests</TITLE>
+	</HEAD>
+	<BODY BGCOLOR=#FFFFFF>
+	<P ALIGN=CENTER><FONT SIZE+2><B>Handling long requests</B></FONT></P>
+	<P><B>Difficulty Level: </B>Intermediate</P>
+	<B>Topics Covered:</B> Use of the WOLongResponsePage/ Sending mail through the application.
+	<P><B>Framework Classes Used:</B> WOExtensions</P>
+	<P><B>Reference Site:</B></P>
+	<P><B>Overview:</B></P>
+	<P>This example application demonstrates the creation and use of long running
+		request/response pages which enables web-based applications to perform lengthy tasks while
+		providing feedback and means of interruption to the user.</P>
+	<P><B>Usage:</B></P>
+	<P>Start the application using project builder . The application then will try to open a
+		browser window with the proper URL and so it will establish a connection to the
+		application.</P>
+	<P><B>Description:</B></P>
+	<P>When is a request a long one ?</P>
+	<P>The developer decides when a request will take a long enough time so that the special
+		handling makes sense. For example, when an action is known to take more than 5 seconds.</P>
+	<P>How does the developer implement a long request ?</P>
+	<P>Only the action part -the business logic- is supposed to take long. The request
+		pre-processing and the response generation are assumed to be negligible. Therefore, the
+		developer has to encapsulate the expensive code in a separate method.</P>
+	<P>We provide the WOLongResponsePage as an abstract subclass of component.The developer
+		subclasses it, and implements the component bundle that corresponds to his class.This
+		component bundle contains the html template and wod for a &quot;refresh&quot; page. The
+		subclassimplements as well at least one method in his subclass :public WOComponent
+		performAction()which is the method encapsulating the long lasting calls.</P>
+	<P>Another important method in the LongResponsePage is :</P>
+	<P>public void setStatus(Object anObject)</P>
+	<P>which can be called during the performAction() method to inform any callback of the
+		current status of the long computation.If an exception occurs in the long running thread,
+		this exception should be put in the status object and the thread should exit. At next
+		refresh, the refreshPageForStatus() handles it. This example shows several simple refresh
+		pages, with a dummy long action.</P>
+	<P>How does it work ?</P>
+	<P>Returning will trigger the following sequence of events :</P>
+	<P>- executes the performAction() method on MyLRP in a separate thread. </P>
+	<P>*&nbsp;&nbsp;&nbsp;&nbsp;The temporary and final results are set in private ivars of
+		WOLongResponsePage until it requested. The method setStatus() enables you to set a temporary
+		result while your long action is being processed. Your long action should return the result
+		of the long computation. </P>
+	<P>*&nbsp;&nbsp;&nbsp;&nbsp;Before your long action completes, refreshPageForStatus() is
+		called after every check for its status, to allow you to return a custom status page. A
+		check for status is normally done automatically for you with a meta-refresh tag inserted in
+		the WOLongResponsePage (see below), or you can trigger it on an action by calling
+		refreshPageForStatus() your self.</P>
+	<P>*&nbsp;&nbsp;&nbsp;&nbsp;Once the long action is complete, the next check to occur will
+		automatically call pageForResult() to allow you to return a custom result page. </P>
+	<P>*&nbsp;&nbsp;&nbsp;&nbsp;If the cancel() action is ever called while the long action is
+		running, then the long action thread is destroyed and the cancelPageForStatus() method to
+		allow you to return a custom cancel page.- returns self, which is the developer's
+		implementation of a refresh page. </P>
+	<P>The LongRequest Example</P>
+	<P>Here is a description of the 5 examples of refresh pages in the LongRequest example:</P>
+	<P>1.</P>
+	<P>&nbsp;&nbsp;&nbsp;&nbsp;The page can self-refresh at regular or increasing intervals (set
+		by setRefreshInterval()) to check for the completion of the computation, display a progress
+		bar, etc... When a result page is found in the WOLongResponsePage, it is returned instead of
+		self. This should be the most common scheme used.Setting the refreshInterval to non-zero
+		forces the super class to add necessary refresh tags for you to the html generated :
+		&lt;META HTTP-EQUIV=&quot;Refresh&quot; CONTENT=[time interval in secs]&gt;, so that you do
+		not have to bother about it. Of course, this is added only as long as the action is not
+		cancelled.</P>
+	<P>2.</P>
+	<P>&nbsp;&nbsp;&nbsp;&nbsp;Another feature is the possibility for the performAction() task to
+		set a status object, which can be just a progress number or some data to display in the
+		refreshed page as the computation progresses (this actually simulates a push of data to the
+		client).</P>
+	<P>3.</P>
+	<P>&nbsp;&nbsp;&nbsp;&nbsp;For longer requests, the page can never refresh, but provide a
+		check-in button for the user to come back at will.</P>
+	<P>4.</P>
+	<P>&nbsp;&nbsp;&nbsp;&nbsp;The LRP also shows a cancel button tied to a cancel action in LRP,
+		which switches a flag in the LRP (this flag can be checked in the performAction() loop to
+		abort a calculation if possible). For example cancelling could return the refresh page with
+		an &quot;Operation Suspended&quot;, or the previous page by implementing
+		cancelPageForStatus(), etc...</P>
+	<P>5.&nbsp;</P>
+	<P>&nbsp;&nbsp;&nbsp;For extremely long running requests, the page can be the last page
+		accessed by the user, and the result page is emailed to him when it is ready, using the new
+		mailing feature (see documentation of the WOMailDelivery class).</P></BODY>
+</HTML>

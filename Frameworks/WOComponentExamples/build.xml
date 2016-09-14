@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="WOComponentExamples" default="build" basedir=".">
+	<description>
+		Builds a Basic WebObjects Framework
+	</description>
+ 
+  	<!-- ==================================================== -->
+	<!--			Global properties						  -->
+    <!-- ==================================================== -->
+	<!--NOTE: a project can be made self-contained if the following properties are reconfigured -->
+	<property name="wo.path.installed.support_files_dir" location="/Library/Application Support/Apple/Developer Tools/WebObjects Support"/>
+	<property name="wo.build.modulefile" location="${wo.path.installed.support_files_dir}/framework-modules.xml"/>
+	
+	<!-- ==================================================== -->
+	<!--			Basic clean target						  -->
+    <!-- ==================================================== -->
+	<target name="clean" description="Cleans out temporary directories (dist, bin, build)">
+		<echo message="Start top level Clean task"/>
+		<ant antfile="${wo.build.modulefile}" target="clean"></ant>
+		<echo message="Finished top level Clean task"/>
+	</target>
+
+	<!-- ==================================================== -->
+	<!--			Global build all target					  -->
+    <!-- ==================================================== -->
+	<target name="build" description="Default build target that compiles and assembles all bundle types">
+		<echo message="Start top level Build task"/>
+		<ant antfile="${wo.build.modulefile}" target="all" inheritAll="true">
+			<property name="wo.create_legacy_bundle" value="true"/>
+			<property name="wo.create_jar_bundle" value="true"/>
+		</ant>
+		
+		<!-- bogus javac target so this will be importable in Eclipse -->
+		<javac srcdir="bin" destdir="bin">
+			<classpath>
+				<pathelement path="${java.class.path}"/>
+			</classpath>
+		</javac>
+		
+		<echo message="Finished top level Build task"/>
+	</target>
+
+	<!-- ==================================================== -->
+	<!--			Build self contained jar bundle			  -->
+    <!-- ==================================================== -->
+	<target name="jar" description="Assembles a self contained jar that includes Resources and WebServerResources">
+		<echo message="Build only self contained jar bundle"/>
+		<ant antfile="${wo.build.modulefile}" target="all" inheritAll="true">
+			<!-- override other build properties to force only war bundle -->
+			<property name="wo.create_legacy_bundle" value="false"/>
+			<property name="wo.create_jar_bundle" value="true"/>
+		</ant>
+		<echo message="Finished build only self contained jar bundle"/>
+	</target>
+
+	<!-- ==================================================== -->
+	<!--			Build legacy framework bundle only 		  -->
+    <!-- ==================================================== -->
+	<target name="framework" description="Build a legacy .framework style bundle">
+		<echo message="Build only framework bundle"/>
+		<ant antfile="${wo.build.modulefile}" target="all" inheritAll="true">
+			<!-- override other build properties to force only framework bundle -->
+			<property name="wo.create_legacy_bundle" value="true"/>
+			<property name="wo.create_jar_bundle" value="false"/>
+		</ant>
+		<echo message="Finished build only framework bundle"/>
+	</target>
+	
+	<!-- ==================================================== -->
+	<!--			Deploy framework bundles				  -->
+    <!-- ==================================================== -->
+	<target name="deployment" description="Analogous to the split install from the old Xcode build system.  Where resources are copied is specified by the wo.path.webobjects_documentroot.">
+		<echo message="Start split install for deployment"/>
+		<ant antfile="${wo.build.modulefile}" target="split-install" inheritAll="true">
+			<!-- override other build properties to force only split install bundle -->
+			<property name="wo.create_legacy_bundle" value="true"/>
+			<property name="wo.create_jar_bundle" value="true"/>
+		</ant>
+		<echo message="Finished split install for deployment"/>
+	</target>
+	
+	<!-- ==================================================== -->
+	<!--			Documentation target					  -->
+	<!--       Developers must configure this target		  -->
+    <!-- ==================================================== -->
+	<target name="javadoc" description="Default javadoc generation target">
+		<echo message="Start javadoc generation"/>
+		<mkdir dir="doc"/>
+		<javadoc sourcepath="src" destdir="doc"/>
+		<echo message="Finished javadoc generation"/>
+	</target>
+	
+</project>
+
+
+

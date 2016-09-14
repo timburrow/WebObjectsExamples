@@ -1,0 +1,52 @@
+Template: Template {
+	isFrontPage = false;
+}
+
+Conditional2: WOConditional {
+	condition = showSignOnFailureMessage;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = isLoggedIn;
+}
+
+Hyperlink3: WOHyperlink {
+	action = gotoMain;
+}
+
+Conditional3: WOConditional {
+	condition = isLoggedIn;
+	negate = true;
+}
+
+Form1: WOForm {
+}
+
+TextField1: WOTextField {
+	name = "j2ee";
+	value = userID;
+}
+
+TextField2: WOPasswordField {
+	value = password;
+}
+
+ActiveImage1: WOActiveImage {
+	action = login;
+	filename = "button_submit.gif";
+	framework = "app";
+}
+
+Hyperlink1: WOHyperlink {
+	action = newAccount;
+}
+
+Conditional1: WOConditional {
+	condition = showSignOnFailureMessage;
+}
+
+Hyperlink2: WOHyperlink {
+	action = tryAgain;
+}
+

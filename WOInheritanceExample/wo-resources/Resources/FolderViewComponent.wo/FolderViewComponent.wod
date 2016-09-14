@@ -1,0 +1,88 @@
+
+ActiveImage1: WOActiveImage {
+	action = toggleVisibility;
+	filename = "DownTriangle.gif";
+	framework = "JavaWOExtensions";
+}
+
+ActiveImage2: WOActiveImage {
+	action = toggleVisibility;
+	filename = "RightTriangle.gif";
+	framework = "JavaWOExtensions";
+}
+
+ActiveImage3: WOActiveImage {
+	action = updateName;
+	filename = "back.gif";
+	framework = "JavaWOExtensions";
+}
+
+Conditional1: WOConditional {
+	condition = isShowingChildrenFolders;
+}
+
+Conditional2: WOConditional {
+	condition = isShowingChildrenFolders;
+}
+
+Conditional3: WOConditional {
+	condition = isShowingChildrenFolders;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = isOneToEdit;
+	negate = true;
+}
+
+Conditional5: WOConditional {
+	condition = isOneToEdit;
+}
+
+Conditional6: WOConditional {
+	condition = isSelectedFolder;
+}
+
+Conditional7: WOConditional {
+	condition = isSelectedFolder;
+	negate = true;
+}
+
+FolderViewComponent1: FolderViewComponent {
+	currentLevelString = nextLevelString;
+	levelIncrementString = ^levelIncrementString;
+	parentFolder = aFolder;
+	selectedFolder = ^selectedFolder;
+	editName = ^editName;
+}
+
+Hyperlink1: WOHyperlink {
+	action = folderClicked;
+}
+
+Hyperlink2: WOHyperlink {
+	action = folderClicked;
+}
+
+IndentSpaces: WOString {
+	escapeHTML = false;
+	value = ^currentLevelString;
+}
+
+Repetition1: WORepetition {
+	item = aFolder;
+	list = ^parentFolder.children;
+}
+
+String1: WOString {
+	value = aFolder.name;
+}
+
+String2: WOString {
+	value = aFolder.name;
+}
+
+TextField1: WOTextField {
+	value = aFolder.name;
+	size = 15;
+}

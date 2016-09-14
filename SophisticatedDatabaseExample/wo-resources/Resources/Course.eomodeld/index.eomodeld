@@ -1,0 +1,58 @@
+
+{
+    EOModelVersion = 2.1;
+    adaptorName = JDBC;
+    connectionDictionary = 
+    {
+        URL = jdbc:derby:school;
+        driver = org.apache.derby.jdbc.EmbeddedDriver;
+        password = "";
+        plugin = "";
+        username = "";
+    };
+    entities = 
+    (
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Classroom;
+           name = Classroom;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Course;
+           name = Course;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.Schedule;
+           name = Schedule;
+       }, 
+       
+       {
+           className = webobjectsexamples.sophisticateddatabaseexample.ScheduledClass;
+           name = ScheduledClass;
+       }
+    );
+    userInfo = 
+    {
+        _EntityModeler = 
+        {
+            activeDatabaseConfigName = Default;
+            databaseConfigs = 
+            {
+                Default = 
+                {
+                    adaptorName = JDBC;
+                    connectionDictionary = 
+                    {
+                        URL = jdbc:derby:school;
+                        driver = org.apache.derby.jdbc.EmbeddedDriver;
+                        password = "";
+                        plugin = "";
+                        username = "";
+                    };
+                };
+            };
+        };
+    };
+}

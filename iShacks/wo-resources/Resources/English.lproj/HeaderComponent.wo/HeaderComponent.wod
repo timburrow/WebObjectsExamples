@@ -1,0 +1,25 @@
+ClickHereLink: WOHyperlink {
+	action = logUserOut;
+}
+
+
+IfShowUserInformation: WOConditional {
+	condition = session.userLoggedIn;
+}
+
+IfShowWrongUserMessage: WOConditional {
+	condition = session.userLoggedInAutomatically;
+}
+
+UserFirstNameString: WOString {
+	value = session.user.firstName;
+}
+
+UserLastNameString: WOString {
+	value = session.user.lastName;
+}
+
+iShacksImage: WOImage {
+	filename = "iShacksTitle.jpg";
+	framework = "app";
+}

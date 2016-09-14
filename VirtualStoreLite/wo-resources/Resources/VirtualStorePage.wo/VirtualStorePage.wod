@@ -1,0 +1,33 @@
+
+Conditional2: WOConditional {
+	condition = shoppingCartNotEmpty;
+}
+
+Conditional4: WOConditional {
+	condition = shoppingCartNotEmpty;
+	negate = true;
+}
+Hyperlink1: WOHyperlink {
+	action = order;
+}
+
+Movie1: WOQuickTime {
+	action = viewProduct;
+	filename = "Store07.mov";
+ 	height = 256;
+	width = 320;
+	hotspotList = storeHotspot;
+	selection = selectedHotspot;
+	controller = true;
+}
+
+Repetition1: WORepetition {
+	list = session.shoppingCart;
+	item = item;
+}
+String1: WOString {
+	value = itemProduct;
+}
+String2: WOString {
+	value = itemQuantity;
+}

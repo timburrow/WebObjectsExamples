@@ -1,0 +1,331 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = AGENT_ID;
+           externalType = integer;
+           name = agentID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = ASKING_PRICE;
+           externalType = decimal;
+           name = askingPrice;
+           precision = 10;
+           scale = 2;
+           valueClassName = NSDecimalNumber;
+           valueType = B;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = BATHROOMS;
+           externalType = double;
+           name = bathrooms;
+           valueClassName = NSNumber;
+           valueType = d;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = BEDROOMS;
+           externalType = double;
+           name = bedrooms;
+           valueClassName = NSNumber;
+           valueType = d;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ISSOLD;
+           externalType = boolean;
+           name = isSold;
+           valueClassName = NSNumber;
+           valueType = c;
+       }, 
+       
+       {
+           columnName = LISTING_ID;
+           externalType = integer;
+           internalInfo = 
+           {
+               _nameInObjectStore = PROPERTY_ID;
+           };
+           name = listingID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = LISTING_IDENTIFIER;
+           externalType = varchar;
+           internalInfo = 
+           {
+               _nameInObjectStore = PROPERTY_IDENTIFIER;
+           };
+           name = listingNumber;
+           valueClassName = NSString;
+           width = 20;
+       }, 
+       
+       {
+           columnName = LISTING_TYPE_ID;
+           externalType = integer;
+           internalInfo = 
+           {
+               _nameInObjectStore = PROPERTY_TYPE_ID;
+           };
+           name = listingTypeID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = LOT_SQFT;
+           externalType = int;
+           name = lotSqFt;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SELLING_PRICE;
+           externalType = money;
+           name = sellingPrice;
+           precision = 10;
+           scale = 2;
+           valueClassName = NSDecimalNumber;
+           valueType = B;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = SIZE_SQFT;
+           externalType = int;
+           name = sizeSqFt;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = MOVIE_URL;
+           externalType = varchar;
+           name = virtualTourURL;
+           valueClassName = NSString;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = YEAR_BUILT;
+           externalType = int;
+           name = yearBuilt;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       agentID, 
+       askingPrice, 
+       bathrooms, 
+       bedrooms, 
+       isSold, 
+       listingID, 
+       listingNumber, 
+       listingTypeID, 
+       lotSqFt, 
+       sellingPrice, 
+       sizeSqFt, 
+       virtualTourURL, 
+       yearBuilt
+    );
+    className = webobjectsexamples.realestate.common.Listing;
+    classProperties = 
+    (
+       address, 
+       agent, 
+       askingPrice, 
+       bathrooms, 
+       bedrooms, 
+       features, 
+       isSold, 
+       listingNumber, 
+       listingPhotos, 
+       listingType, 
+       lotSqFt, 
+       sellingPrice, 
+       sizeSqFt, 
+       suggestedCustomers, 
+       virtualTourURL, 
+       yearBuilt
+    );
+    externalName = LISTING;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           address, 
+           agent, 
+           askingPrice, 
+           bathrooms, 
+           bedrooms, 
+           features, 
+           isSold, 
+           listingNumber, 
+           listingPhotos, 
+           listingType, 
+           lotSqFt, 
+           sellingPrice, 
+           sizeSqFt, 
+           suggestedCustomers, 
+           virtualTourURL, 
+           yearBuilt
+        );
+        _nameInObjectStore = PROPERTY;
+    };
+    maxNumberOfInstancesToBatchFetch = 25;
+    name = Listing;
+    primaryKeyAttributes = 
+    (
+       listingID
+    );
+    relationships = 
+    (
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = ListingAddress;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = listingID;
+                  sourceAttribute = listingID;
+              }
+           );
+           name = address;
+           ownsDestination = Y;
+           propagatesPrimaryKey = Y;
+       }, 
+       
+       {
+           destination = Agent;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = userID;
+                  sourceAttribute = agentID;
+              }
+           );
+           name = agent;
+       }, 
+       
+       {
+           definition = listingFeatures.feature;
+           name = features;
+           numberOfToManyFaultsToBatchFetch = 0;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = ListingFeature;
+           internalInfo = 
+           {
+               _nameInObjectStore = propertyFeatures;
+           };
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = listingID;
+                  sourceAttribute = listingID;
+              }
+           );
+           name = listingFeatures;
+           ownsDestination = Y;
+           propagatesPrimaryKey = Y;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = ListingPhoto;
+           internalInfo = 
+           {
+               _nameInObjectStore = propertyPhotos;
+           };
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = listingID;
+                  sourceAttribute = listingID;
+              }
+           );
+           name = listingPhotos;
+           ownsDestination = Y;
+       }, 
+       
+       {
+           destination = ListingType;
+           internalInfo = 
+           {
+               _nameInObjectStore = propertyType;
+           };
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = listingTypeID;
+                  sourceAttribute = listingTypeID;
+              }
+           );
+           name = listingType;
+       }, 
+       
+       {
+           definition = suggestions.customer;
+           name = suggestedCustomers;
+           numberOfToManyFaultsToBatchFetch = 0;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = Suggestion;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = listingID;
+                  sourceAttribute = listingID;
+              }
+           );
+           name = suggestions;
+           ownsDestination = Y;
+           propagatesPrimaryKey = Y;
+       }
+    );
+}

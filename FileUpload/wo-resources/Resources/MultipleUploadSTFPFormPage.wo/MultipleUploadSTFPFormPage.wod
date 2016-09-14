@@ -1,0 +1,117 @@
+BackToForm: WOHyperlink {
+    string = "[Back to Form Values]";
+    action = backToFormValues;
+}
+
+BackToMain: WOHyperlink {
+    pageName = "Main";
+    string = "[Back to Main]";
+}
+
+BodyTag: WOExampleBody {
+    leftmargin=0;
+    topmargin=0;
+}
+
+Browser1: WOBrowser {
+    size = "3";
+    list = colorList;
+    item = anItem;
+    selections = browserSelection;
+}
+
+CheckBox1: WOCheckBox {
+    checked = isCheckbox;
+}
+
+Footer: WOExampleFooter {}
+
+Form1: WOForm {
+    enctype = "multipart/form-data";
+    multipleSubmit = true;
+}
+
+OutputInfo: WOText {
+    value = outputInfo;
+    rows = 12;
+    cols = 50;
+}
+
+PopUpButton1: WOPopUpButton {
+    list = numberList;
+    item = anItem;
+    selection = popupSelection;
+}
+
+RadioButton1: WORadioButton {
+    selection = radioButtonSelection;
+    value = "male";
+    name = "gender";
+}
+
+RadioButton2: WORadioButton {
+    selection = radioButtonSelection;
+    value = "female";
+    name = "gender";
+}
+
+ShowForm: WOConditional {
+    condition = showOutputInfo;
+    negate = true;
+}
+
+ShowOutput: WOConditional {
+    condition = showOutputInfo;
+}
+
+SubmitButton1: WOSubmitButton {
+    action = submitClicked1;
+    value = Submit1;
+}
+
+SubmitButton2: WOSubmitButton {
+    action = submitClicked2;
+    value = Submit2;
+}
+
+SubmitButton3: WOSubmitButton {
+    action = submitClicked3;
+    value = Submit3;
+}
+
+Text1: WOText {
+    value = aTextArea;
+}
+
+TextField1: WOTextField {
+    name = "text1";
+    size = "20";
+    value = aTextField;
+}
+
+Upload1: WOFileUpload {
+    streamToFilePath = dynamicName1;
+    finalFilePath = actualFilePath1;
+    overwrite = true;
+    bufferSize = 2000;
+    filePath = aFileName1;
+    size = "20";
+}
+
+Upload2: WOFileUpload {
+    streamToFilePath = dynamicName2;
+    finalFilePath = actualFilePath2;
+    overwrite = false;
+    bufferSize = 2000;
+    filePath = aFileName2;
+    size = "20";
+}
+
+Upload3: WOFileUpload {
+    streamToFilePath = dynamicName3;
+    finalFilePath = actualFilePath3;
+    overwrite = false;
+    bufferSize = 2000;
+    filePath = aFileName3;
+    size = "20";
+}

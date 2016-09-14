@@ -1,0 +1,168 @@
+ActiveImage1: WOActiveImage {
+	action = search;
+	filename = "search.gif";
+	framework = "app";
+	border = 0;
+}
+
+BirdsLabel: WOActiveImage {
+	filename = "birds.gif";
+	framework = "app";
+	border = 0;
+	action = showBirds;
+}
+
+CatsLabel: WOActiveImage {
+	filename = "cats.gif";
+	framework = "app";
+	border = 0;
+	action = showCats;
+}
+
+ComponentContent1: WOComponentContent {
+}
+
+Conditional1: WOConditional {
+	condition = parent.isLoggedIn;
+	negate = true;
+}
+
+Conditional2: WOConditional {
+	condition = parent.isLoggedIn;
+}
+
+Conditional3: WOConditional {
+	condition = account.profile.banneropt;
+}
+
+Conditional4: WOConditional {
+	condition = isFrontPage;
+	negate = true;
+}
+
+Conditional5: WOConditional {
+	condition = enableJavascript;
+}
+
+ConditionalSignOut: WOConditional {
+	condition = parent.isLoggedIn;
+}
+
+ConditionalWelcome: WOConditional {
+	condition = parent.isLoggedIn;
+}
+
+DogsLabel: WOActiveImage {
+	filename = "dogs.gif";
+	framework = "app";
+	border = 0;
+	action = showDogs;
+}
+
+FishLabel: WOActiveImage {
+	filename = "fish.gif";
+	framework = "app";
+	border = 0;
+	action = showFish;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+	action = search;
+}
+
+GenericContainer1:WOGenericContainer{
+elementName ="TABLE";
+bgcolor = "#336666";
+}
+
+HtmlBody: WOComponentContent {
+}
+
+Hyperlink1: WOHyperlink {
+	action = showCart;
+	onmouseout = "img_off('cart')";
+	onmouseover = "img_on('cart')";
+}
+
+SeparatorImage: WOImage {
+	filename = "separator.gif";
+	framework = "app";
+	width = 1;
+	height = 18;
+}
+
+Image20: WOActiveImage {
+	filename = "help.gif";
+	framework = "app";
+	action = showHelpPage;
+}
+
+Image3: WOImage {
+	filename = "banner.gif";
+	framework = "app";
+	width = 127;
+	height = 39;
+}
+
+Image6: WOImage {
+	filename = "cart.gif";
+	framework = "app";
+	width = 16;
+	height = 18;
+}
+
+JavaScript1: WOJavaScript {
+	scriptFile = "main.js";
+}
+
+MainLogo: WOActiveImage {
+	filename = "logo-topbar.gif";
+	framework = "app";
+	border = 0;
+	action = showMain;
+}
+
+MyAccount: WOActiveImage {
+	filename = "my_account.gif";
+	framework = "app";
+	border = 0;
+	action = showAccount;
+}
+
+PetTipsBanner1: PetTipsBanner {
+	petPreference = account.profile.favcategory;
+}
+
+ReptilesLabel: WOActiveImage {
+	filename = "reptiles.gif";
+	framework = "app";
+	border = 0;
+	action = showReptiles;
+}
+
+SignIn: WOActiveImage {
+	filename = "sign-in.gif";
+	framework = "app";
+	border = 0;
+	action = signIn;
+}
+
+SignOut: WOActiveImage {
+	filename = "sign-out.gif";
+	framework = "app";
+	border = 0;
+	action = signOut;
+}
+
+String1: WOString {
+	value = account.displayName;
+}
+
+TextField1: WOTextField {
+	value = keywords;
+	maxlength = 50;
+	size = 15;
+}
+
+

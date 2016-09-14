@@ -1,0 +1,6 @@
+ 
+FrameElement: WOGenericElement {
+    elementName = "frame";
+    src = context.componentActionURL;
+    invokeAction = getPage;
+}

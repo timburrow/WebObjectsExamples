@@ -1,0 +1,27 @@
+ 
+CurrentIndexString: WOString {
+    value = currentIndex;
+}
+
+CurrentLabel: WOString {
+    value = getLabel;
+}
+
+CurrentSelectionString: WOString {
+    value = radioListSelection;
+}
+
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXRadioButtonList";
+}
+
+RadioButtonList: WXRadioButtonList {
+    list = application.list;
+    item = currentItem;
+    index = currentIndex;
+    selection = radioListSelection;
+}
+
+RadioButtonListForm: WXForm {
+    action = radioButtonListSubmitted;
+}

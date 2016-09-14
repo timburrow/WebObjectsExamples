@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ignoredPackages</key>
+	<array>
+		<string>com.webobjects.</string>
+		<string>java.applet.</string>
+		<string>java.awt.</string>
+		<string>java.awt.datatransfer.</string>
+		<string>java.awt.event.</string>
+		<string>java.awt.image.</string>
+		<string>java.beans.</string>
+		<string>java.io.</string>
+		<string>java.lang.</string>
+		<string>java.lang.reflect.</string>
+		<string>java.math.</string>
+		<string>java.net.</string>
+		<string>java.rmi.</string>
+		<string>java.rmi.dgc.</string>
+		<string>java.rmi.registry.</string>
+		<string>java.rmi.server.</string>
+		<string>java.security.</string>
+		<string>java.security.acl.</string>
+		<string>java.security.interfaces.</string>
+		<string>java.sql.</string>
+		<string>java.text.</string>
+		<string>java.util.</string>
+		<string>java.util.zip.</string>
+	</array>
+</dict>
+</plist>

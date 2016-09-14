@@ -1,0 +1,76 @@
+BATHROOMS: WOPopUpButton {
+	selectedValue = queryDict.bathrooms;
+	list = lookupDict.bathrooms;
+	item = bathroom;
+	displayString = bathroom.displayValue;
+	name = "bathrooms";
+	value = bathroom.value;
+}
+
+BEDROOMS: WOPopUpButton {
+	selectedValue = queryDict.bedrooms;
+	list = lookupDict.bedrooms;
+	item = bedroom;
+	displayString = bedroom.displayValue;
+	name = "bedrooms";
+	value = bedroom.value;
+}
+
+CITY: WOTextField {
+	maxlength = 40;
+	value = queryDict.city;
+	size = 40;
+	name = "city";
+}
+
+FORM: WOForm {
+	directActionName = "FindListings";
+}
+
+LOWER_LIMIT_PRICE: WOPopUpButton {
+	selectedValue = queryDict.lowerLimitPrice;
+	list = lowerLimitPrices;
+	item = lowerLimitPrice;
+	displayString = lowerLimitPrice.displayValue;
+	name = "lowerLimitPrice";
+	value = lowerLimitPrice.value;
+}
+
+LayoutComponent: LayoutComponent {
+}
+
+STATE: WOPopUpButton {
+	selectedValue = queryDict.state;
+	list = lookupDict.states;
+	item = state;
+	displayString = state.name;
+	value = state.abbreviation;
+	name = "state";
+}
+
+STREET_NAME: WOTextField {
+	maxlength = 80;
+	value = queryDict.street;
+	size = 40;
+	name = "street";
+}
+
+ApplicationName: WOString {
+	value = application.name;
+}
+
+TextField1: WOTextField {
+	maxlength = 10;
+	value = queryDict.zip;
+	size = 10;
+	name = "zip";
+}
+
+UPPER_LIMIT_PRICE: WOPopUpButton {
+	selectedValue = queryDict.upperLimitPrice;
+	list = upperLimitPrices;
+	item = upperLimitPrice;
+	displayString = upperLimitPrice.displayValue;
+	name = "upperLimitPrice";
+	value = upperLimitPrice.value;
+}

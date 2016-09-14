@@ -1,0 +1,3 @@
+
+Hyperlink1: WOHyperlink { href = backThroughWebserver; }
+Image1: WOImage { filename = "exclamation.gif"; framework = "WOExtensions"; }

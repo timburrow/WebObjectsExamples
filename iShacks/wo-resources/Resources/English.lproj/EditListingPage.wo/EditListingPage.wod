@@ -1,0 +1,176 @@
+ApplicationNameString: WOString {
+	value = application.name;
+}
+
+CancelButton: WOSubmitButton {
+	value = "Cancel";
+	action = cancelEdits;
+}
+
+Form: WOForm {
+	multipleSubmit = true;
+}
+
+LayoutComponent: LayoutComponent {
+}
+
+ListingAptNumberTextField: WOTextField {
+	value = listing.address.aptNum;
+	maxlength = 10;
+	size = 10;
+}
+
+ListingAskingPriceTextField: WOTextField {
+	value = listing.askingPrice;
+	numberformat = "#,##0.00";
+}
+
+ListingBathroomsTextField: WOTextField {
+	value = listing.bathrooms;
+	numberformat = "0.00";
+}
+
+ListingCityTextField: WOTextField {
+	value = listing.address.city;
+	maxlength = 40;
+	size = 40;
+}
+
+ListingFeatureString: WOString {
+	value = currentFeature.feature;
+}
+
+ListingFeaturesCheckBoxMatrix: WOCheckboxMatrix {
+	displayString = currentFeature.feature;
+	item = currentFeature;
+	list = allFeatures;
+	selections = listing.features;
+}
+
+ListingImage: WOImage {
+	data = photo;
+	mimeType = "image/jpeg";
+}
+
+ListingLotSqFtTextField: WOTextField {
+	value = listing.lotSqFt;
+	numberformat = "0.00";
+}
+
+ListingNumBedroomsTextField: WOTextField {
+	value = listing.bedrooms;
+	numberformat = "0.00";
+}
+
+ListingSellingPriceTextField: WOTextField {
+	value = listing.sellingPrice;
+	numberformat = "#,##0.00";
+}
+
+ListingSizeSqFtTextField: WOTextField {
+	value = listing.sizeSqFt;
+	numberformat = "0.00";
+}
+
+ListingStateTextField: WOTextField {
+	value = listing.address.state;
+	maxlength = 20;
+	size = 20;
+}
+
+ListingStreetTextField: WOTextField {
+	value = listing.address.street;
+	maxlength = 80;
+	size = 40;
+}
+
+ListingTypesPopUp: WOPopUpButton {
+	displayString = listingType.listingType;
+	item = listingType;
+	list = allListingTypes;
+	selection = listing.listingType;
+}
+
+ListingYearBuiltTextField: WOTextField {
+	value = listing.yearBuilt;
+}
+
+ListingZipTextField: WOTextField {
+	value = listing.address.zip;
+	maxlength = 10;
+	size = 10;
+}
+
+SaveButton: WOSubmitButton {
+	value = "Save";
+	action = saveEdits;
+}
+
+SoldCheckBox: WOCheckBox {
+	checked = listing.isSold;
+}
+
+askingPriceLabel: ErrorLabel {
+	showErrorValue = askingPriceValidationError;
+	labelValue = "Asking Price:";
+}
+
+askingPriceLabel2: ErrorLabel {
+	showErrorValue = streetValidationError;
+	labelValue = "Street:";
+}
+
+askingPriceLabel4: ErrorLabel {
+	showErrorValue = cityValidationError;
+	labelValue = "City:";
+}
+
+askingPriceLabel5: ErrorLabel {
+	showErrorValue = stateValidationError;
+	labelValue = "State:";
+}
+
+askingPriceLabel6: ErrorLabel {
+	showErrorValue = zipValidationError;
+	labelValue = "Zip:";
+}
+
+bathroomsLabel: ErrorLabel {
+	labelValue = "Bathrooms:";
+	showErrorValue = bathroomsValidationError;
+}
+
+bedroomsLabel: ErrorLabel {
+	labelValue = "Bedrooms:";
+	showErrorValue = bedroomsValidationError;
+}
+
+changePhotoButton: WOSubmitButton {
+	action = changePhotoAction;
+	value = "Change Photo";
+}
+
+ifShowInputErrorMessage: WOConditional {
+	condition = isValidUserInputInformation;
+    negate = true;
+}
+
+lotSqFeetLabel: ErrorLabel {
+	labelValue = "Lot sq feet:";
+	showErrorValue = lotSqFtValidationError;
+}
+
+sellingPriceLabel: ErrorLabel {
+	showErrorValue = sellingPriceValidationError;
+	labelValue = "Selling Price:";
+}
+
+sizeSqFeetLabel: ErrorLabel {
+	labelValue = "Size sq feet:";
+	showErrorValue = sizeSqFtValidationError;
+}
+
+yearBuiltLabel: ErrorLabel {
+	labelValue = "Year Built:";
+	showErrorValue = yearBuiltValidationError;
+}

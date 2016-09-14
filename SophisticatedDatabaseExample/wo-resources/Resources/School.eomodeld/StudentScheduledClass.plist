@@ -1,0 +1,70 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = SCHEDULED_CLASS_ID;
+           externalType = integer;
+           name = scheduledClassID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = STUDENT_ID;
+           externalType = integer;
+           name = studentID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       scheduledClassID, 
+       studentID
+    );
+    className = webobjectsexamples.sophisticateddatabaseexample.StudentScheduledClass;
+    externalName = STUDENT_SCHEDULED_CLASS;
+    internalInfo = 
+    {};
+    name = StudentScheduledClass;
+    primaryKeyAttributes = 
+    (
+       scheduledClassID, 
+       studentID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = ScheduledClass;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = scheduledClassID;
+                  sourceAttribute = scheduledClassID;
+              }
+           );
+           name = scheduledClass;
+       }, 
+       
+       {
+           destination = Person;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = personID;
+                  sourceAttribute = studentID;
+              }
+           );
+           name = student;
+       }
+    );
+}

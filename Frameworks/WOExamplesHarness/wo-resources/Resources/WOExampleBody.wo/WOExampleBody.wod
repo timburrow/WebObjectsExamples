@@ -1,0 +1,10 @@
+ 
+BodyTag: WOBody {
+	filename = "aqua_bg.jpg";
+	framework = "WOExamplesHarness";
+	bgcolor = "#C8C8C8";
+	topmargin = ^topmargin;
+	leftmargin = ^leftmargin;
+}
+
+Content: WOComponentContent {}

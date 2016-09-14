@@ -1,0 +1,64 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = CONTACT_TYPE_ID;
+           externalType = integer;
+           name = contactTypeID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = TYPE;
+           externalType = char;
+           name = type;
+           valueClassName = NSString;
+           valueType = c;
+           width = 40;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       contactTypeID, 
+       type
+    );
+    className = EOGenericRecord;
+    classProperties = 
+    (
+       type
+    );
+    externalName = CONTACT_TYPE;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           type
+        );
+    };
+    name = ContactType;
+    primaryKeyAttributes = 
+    (
+       contactTypeID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = ContactInfo;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = contactTypeID;
+                  sourceAttribute = contactTypeID;
+              }
+           );
+           name = contacts;
+       }
+    );
+}

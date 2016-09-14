@@ -1,0 +1,55 @@
+Hyperlink1: WOHyperlink {
+	action = showListingDetailAction;
+}
+
+Image1: WOImage {
+	height = 90;
+	mimeType = "image/jpeg";
+	width = 192;
+	data = listing.primaryPhoto.photo;
+}
+
+LayoutComponent: LayoutComponent {
+}
+
+Repetition1: WORepetition {
+	item = listing;
+	list = listingDisplayGroup.displayedObjects;
+}
+
+String1: WOString {
+	value = listing.address.city;
+}
+
+String2: WOString {
+	value = listing.address.state;
+}
+
+String3: WOString {
+	value = listing.bedrooms;
+	numberformat = "0.0";
+}
+
+String4: WOString {
+	value = listing.bathrooms;
+	numberformat = "0.0";
+}
+
+String5: WOString {
+	numberformat = "$#,##0";
+	value = listing.askingPrice;
+}
+
+String6: WOString {
+	value = listing.listingType.listingType;
+}
+
+String7: WOString {
+	numberformat = "#,##0.00";
+	value = listing.sizeSqFt;
+}
+
+String8: WOString {
+	value = application.name;
+}
+

@@ -1,0 +1,80 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = CUSTOMER_ID;
+           externalType = integer;
+           name = customerID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = LISTING_ID;
+           externalType = integer;
+           internalInfo = 
+           {
+               _nameInObjectStore = PROPERTY_ID;
+           };
+           name = listingID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       customerID, 
+       listingID
+    );
+    className = EOGenericRecord;
+    externalName = SUGGESTIONS;
+    internalInfo = 
+    {};
+    name = Suggestion;
+    primaryKeyAttributes = 
+    (
+       customerID, 
+       listingID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Customer;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = userID;
+                  sourceAttribute = customerID;
+              }
+           );
+           name = customer;
+       }, 
+       
+       {
+           destination = Listing;
+           internalInfo = 
+           {
+               _nameInObjectStore = property;
+           };
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = listingID;
+                  sourceAttribute = listingID;
+              }
+           );
+           name = listing;
+       }
+    );
+}

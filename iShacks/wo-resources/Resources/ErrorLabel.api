@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wodefinitions>
+	<wo class="ErrorLabel" wocomponentcontent="false">
+
+		<binding name="errorLabelValue"/>
+		<binding name="labelValue"/>
+		<binding name="showErrorValue" defaults="Boolean"/>
+
+		<validation message="&apos;labelValue&apos; is a required binding">
+			<unbound name="labelValue"/>
+		</validation>
+	</wo>
+</wodefinitions>

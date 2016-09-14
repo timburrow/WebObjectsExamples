@@ -1,0 +1,92 @@
+AgentFirstNameString: WOString {
+	value = session.user.agent.firstName;
+}
+
+AgentLastNameString: WOString {
+	value = session.user.agent.lastName;
+}
+
+AgentPhotoImage: WOActiveImage {
+	action = viewAgentAction;
+	data = session.user.agent.photo.photo;
+	mimeType = "image/jpeg";
+}
+
+ApplicationNameString: WOString {
+	value = application.name;
+}
+
+ChangeAgentLink: WOHyperlink {
+	action = selectAgentAction;
+}
+
+CustomerFirstNameString: WOString {
+	value = aCustomer.firstName;
+}
+
+CustomerLastNameString: WOString {
+	value = aCustomer.lastName;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteSelectedListingAction;
+}
+
+IfShowAgentInfo: WOConditional {
+	condition = session.agent;
+}
+
+IfShowCustomerInfo: WOConditional {
+	condition = session.customer;
+}
+
+IfShowNoListYetMessage: WOConditional {
+	condition = session.customer.suggestedListings.@count;
+	negate = true;
+}
+
+IfShowPropertiesList: WOConditional {
+	condition = session.customer.suggestedListings.@count;
+}
+
+IterateForCustomers: WORepetition {
+	item = aCustomer;
+	list = session.agent.customers;
+}
+
+IterateForListings: WORepetition {
+	item = listing;
+	list = session.agent.listings;
+}
+
+IterateForSuggestedListings: WORepetition {
+	item = listing;
+	list = session.user.suggestedListings;
+}
+
+LayoutComponent: LayoutComponent {
+}
+
+ListingApartmentNumberString: WOString {
+	value = listing.address.aptNum;
+}
+
+ListingCityString: WOString {
+	value = listing.address.city;
+}
+
+ListingStreetString: WOString {
+	value = listing.address.street;
+}
+
+SelectListingLink: WOHyperlink {
+	action = selectListingAction;
+}
+
+SelectPropertyLink: WOHyperlink {
+	action = selectListingAction;
+}
+
+ViewAgentLink: WOHyperlink {
+	action = viewAgentAction;
+}

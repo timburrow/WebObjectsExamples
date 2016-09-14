@@ -1,0 +1,45 @@
+Conditional1: WOConditional {
+	condition = hasSearchResults;
+	negate = true;
+}
+
+Conditional2: WOConditional {
+	condition = hasSearchResults;
+}
+
+Hyperlink1: WOHyperlink {
+	action = showProductItem;
+}
+
+Image1: WOImage {
+	filename = currentProduct.imageName;
+	framework = "app";
+	key = currentProduct.imageName;
+	mimeType = "image/gif";
+}
+
+PageBack1: PageBack {
+}
+
+Repetition2: WORepetition {
+	list = products;
+	item = currentProduct;
+}
+
+String1: WOString {
+	value = currentProduct.productid;
+}
+
+String2: WOString {
+	value = currentProduct.name;
+}
+
+String3: WOString {
+	value = currentProduct.description;
+	escapeHTML = false;
+}
+
+Template: Template {
+}
+
+

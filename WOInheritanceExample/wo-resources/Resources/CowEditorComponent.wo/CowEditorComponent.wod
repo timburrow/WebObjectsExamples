@@ -1,0 +1,4 @@
+ 
+CheckBox1: WOCheckBox {
+	checked = creature.isDairyBreed;
+}

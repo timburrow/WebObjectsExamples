@@ -1,0 +1,142 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = ADDRESS_ID;
+           externalType = integer;
+           name = addressID;
+           precision = 9;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = AGE;
+           externalType = int;
+           name = age;
+           serverTimeZone = US/Pacific;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = DATE_OF_BIRTH;
+           externalType = datetime;
+           name = dateOfBirth;
+           valueClassName = NSCalendarDate;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = FIRST_NAME;
+           externalType = char;
+           name = firstName;
+           valueClassName = NSString;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = LAST_NAME;
+           externalType = char;
+           name = lastName;
+           valueClassName = NSString;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = LOGIN;
+           externalType = char;
+           name = login;
+           valueClassName = NSString;
+           width = 8;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = PASSWORD;
+           externalType = char;
+           name = password;
+           valueClassName = NSString;
+           width = 8;
+       }, 
+       
+       {
+           columnName = PERSON_ID;
+           externalType = integer;
+           name = personID;
+           precision = 9;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = STATUS;
+           externalType = int;
+           name = status;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       addressID, 
+       age, 
+       firstName, 
+       lastName, 
+       login, 
+       password, 
+       personID, 
+       status
+    );
+    className = webobjectsexamples.sophisticateddatabaseexample.Person;
+    classProperties = 
+    (
+       address, 
+       age, 
+       dateOfBirth, 
+       firstName, 
+       lastName, 
+       login, 
+       password, 
+       status
+    );
+    internalInfo = 
+    {
+        _javaClientClassName = EOGenericRecord;
+    };
+    isAbstractEntity = Y;
+    maxNumberOfInstancesToBatchFetch = 10;
+    name = Person;
+    primaryKeyAttributes = 
+    (
+       personID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Address;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = addressID;
+                  sourceAttribute = addressID;
+              }
+           );
+           name = address;
+       }
+    );
+    storedProcedureNames = 
+    {};
+}

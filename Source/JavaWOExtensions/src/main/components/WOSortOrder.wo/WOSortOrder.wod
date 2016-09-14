@@ -1,0 +1,14 @@
+Toggle: WOHyperlink {
+	action = toggleClicked;
+	name = helpString;
+}
+
+ToggleImage: WOImage {
+	align = "MIDDLE";
+	border = "0";
+	alt = helpString;
+	filename = imageName;
+	framework = "JavaWOExtensions";
+	height = "11";
+	width = "9";
+}

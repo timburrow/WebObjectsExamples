@@ -1,0 +1,45 @@
+AgentFirstNameString: WOString {
+	value = agent.firstName;
+}
+
+AgentLastNameString: WOString {
+	value = agent.lastName;
+}
+
+AgentPhotoActiveImage: WOActiveImage {
+	action = viewAgentAction;
+	data = agent.photo.photo;
+	mimeType = "image/gif";
+}
+
+ApplicationNameString: WOString {
+	value = application.name;
+}
+
+ChooseAgentButton: WOActiveImage {
+	action = selectAgentAction;
+	filename = "ChooseAgentButton.jpg";
+	framework = "app";
+}
+
+ChooseThisAgentLink: WOHyperlink {
+	action = viewAgentAction;
+}
+
+DisplayListRepetition: WORepetition {
+	item = agent;
+	list = agentDisplayGroup.displayedObjects;
+}
+
+IfShowRatingImage: WOConditional {
+	condition = shouldShowRatingImage;
+}
+
+LayoutComponent: LayoutComponent {
+}
+
+StarsRaitingImage: WOImage {
+	filename = starsImageName;
+}
+
+

@@ -1,0 +1,232 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = ADDR1;
+           externalType = char;
+           name = addr1;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ADDR2;
+           externalType = char;
+           name = addr2;
+           valueClassName = NSString;
+           valueType = c;
+           width = 40;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = CITY;
+           externalType = char;
+           name = city;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = COUNTRY;
+           externalType = char;
+           name = country;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = EMAIL;
+           externalType = char;
+           name = email;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = FIRSTNAME;
+           externalType = char;
+           name = firstname;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = LASTNAME;
+           externalType = char;
+           name = lastname;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = PASSWORD;
+           externalType = char;
+           name = password;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = PHONE;
+           externalType = char;
+           name = phone;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = STATE;
+           externalType = char;
+           name = state;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = STATUS;
+           externalType = char;
+           name = status;
+           valueClassName = NSString;
+           valueType = c;
+           width = 2;
+       }, 
+       
+       {
+           columnName = USERID;
+           externalType = char;
+           name = userID;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = ZIP;
+           externalType = char;
+           name = zip;
+           valueClassName = NSString;
+           valueType = c;
+           width = 20;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       addr1, 
+       addr2, 
+       city, 
+       country, 
+       email, 
+       firstname, 
+       lastname, 
+       password, 
+       phone, 
+       state, 
+       status, 
+       userID, 
+       zip
+    );
+    className = Account;
+    classProperties = 
+    (
+       addr1, 
+       addr2, 
+       city, 
+       country, 
+       email, 
+       firstname, 
+       lastname, 
+       orders, 
+       password, 
+       phone, 
+       profile, 
+       state, 
+       status, 
+       userID, 
+       zip
+    );
+    externalName = ACCOUNT;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           addr1, 
+           addr2, 
+           city, 
+           country, 
+           email, 
+           firstname, 
+           lastname, 
+           password, 
+           phone, 
+           state, 
+           status, 
+           zip
+        );
+    };
+    name = Account;
+    primaryKeyAttributes = 
+    (
+       userID
+    );
+    relationships = 
+    (
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = Order;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = userID;
+                  sourceAttribute = userID;
+              }
+           );
+           name = orders;
+           ownsDestination = Y;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = Profile;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = userID;
+                  sourceAttribute = userID;
+              }
+           );
+           name = profile;
+           ownsDestination = Y;
+           propagatesPrimaryKey = Y;
+       }
+    );
+}

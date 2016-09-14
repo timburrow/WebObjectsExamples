@@ -1,0 +1,13 @@
+
+Back: WOHyperlink {
+        pageName="Main";
+        string="Go Back Home";
+}
+
+BodyTag: WOExampleBody {}
+
+Footer: WOExampleFooter {}
+
+RESULTS: WOString {
+	value=cancelledAt;
+}

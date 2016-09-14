@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ExamplePages</key>
+	<dict>
+		<key>Active Images</key>
+		<string>PCActiveImagePage</string>
+		<key>Browser</key>
+		<string>PCBrowserPage</string>
+		<key>CheckBox List</key>
+		<string>PCCheckBoxListPage</string>
+		<key>Dictionary Repetition</key>
+		<string>PCDictionaryRepetitionPage</string>
+		<key>Frames</key>
+		<string>PCFramePage</string>
+		<key>Hyperlink</key>
+		<string>PCHyperlinkPage</string>
+		<key>Image</key>
+		<string>PCImagePage</string>
+		<key>Inline Frames</key>
+		<string>PCIFramePage</string>
+		<key>Introduction</key>
+		<string>PCIntroductionPage</string>
+		<key>Localized Strings</key>
+		<string>PCLocalizedStringPage</string>
+		<key>Multiple Submit Buttons</key>
+		<string>PCMultipleSubmitButtonPage</string>
+		<key>Nested List</key>
+		<string>PCNestedListPage</string>
+		<key>Optional Containers</key>
+		<string>PCOptionalContainerPage</string>
+		<key>PopUp Button</key>
+		<string>PCPopUpPage</string>
+		<key>RadioButton List</key>
+		<string>PCRadioButtonListPage</string>
+	</dict>
+</dict>
+</plist>

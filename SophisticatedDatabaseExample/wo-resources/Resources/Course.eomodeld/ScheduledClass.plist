@@ -1,0 +1,162 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = CLASSROOM_ID;
+           externalType = integer;
+           name = classroomID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = COURSE_ID;
+           externalType = integer;
+           name = courseID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = SCHEDULE_ID;
+           externalType = integer;
+           name = scheduleID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = SCHEDULED_CLASS_ID;
+           externalType = integer;
+           name = scheduledClassID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = TEACHER_ID;
+           externalType = integer;
+           name = teacherID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       classroomID, 
+       courseID, 
+       scheduleID, 
+       scheduledClassID, 
+       teacherID
+    );
+    className = webobjectsexamples.sophisticateddatabaseexample.ScheduledClass;
+    classProperties = 
+    (
+       classroom, 
+       course, 
+       schedule, 
+       scheduledClassStudents, 
+       teacher
+    );
+    externalName = SCHEDULED_CLASS;
+    internalInfo = 
+    {};
+    name = ScheduledClass;
+    primaryKeyAttributes = 
+    (
+       scheduledClassID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Classroom;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = classroomID;
+                  sourceAttribute = classroomID;
+              }
+           );
+           name = classroom;
+       }, 
+       
+       {
+           destination = Course;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = courseID;
+                  sourceAttribute = courseID;
+              }
+           );
+           name = course;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = Schedule;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = scheduleID;
+                  sourceAttribute = scheduleID;
+              }
+           );
+           name = schedule;
+           ownsDestination = Y;
+       }, 
+       
+       {
+           deleteRule = EODeleteRuleCascade;
+           destination = StudentScheduledClass;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = scheduledClassID;
+                  sourceAttribute = scheduledClassID;
+              }
+           );
+           name = scheduledClassStudents;
+           propagatesPrimaryKey = Y;
+       }, 
+       
+       {
+           definition = scheduledClassStudents.student;
+           name = students;
+       }, 
+       
+       {
+           destination = Teacher;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = personID;
+                  sourceAttribute = teacherID;
+              }
+           );
+           name = teacher;
+       }
+    );
+}

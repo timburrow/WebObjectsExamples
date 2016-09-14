@@ -1,0 +1,12 @@
+ 
+CycleLink: WOHyperlink {
+    action = cyclePage;
+}
+
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXLocalizedString";
+}
+
+LocalizedString: WXLocalizedString {
+    value = "Hello world";
+}

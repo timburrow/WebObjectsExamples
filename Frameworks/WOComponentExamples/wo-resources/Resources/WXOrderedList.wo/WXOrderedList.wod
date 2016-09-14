@@ -1,0 +1,11 @@
+ 
+Content: WOComponentContent {}
+
+Link: WOHyperlink {
+    action = linkClicked;
+}
+
+Repetition: WORepetition {
+    list = ^list;
+    item = ^item;
+}

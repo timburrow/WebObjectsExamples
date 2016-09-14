@@ -1,0 +1,38 @@
+ 
+CollapsibleNestedList: WXCollapsibleNestedList {
+    list = ^sublist;
+    item = ^item;
+    sublist = ^sublist;
+}
+
+Content: WOComponentContent {}
+
+ExpandToggleImage: WOImage {
+    filename = currentToggleImageName;
+    framework = "WOExtensions";
+    border = 0;
+}
+
+ExpandToggleLink: WOHyperlink {
+    action = toggleExpansion;
+}
+
+IsExpandedConditional: WOConditional {
+    condition = isExpanded;
+}
+
+NoSublistConditional: WOConditional {
+    condition = ^sublist;
+    negate = true;
+}
+
+SpacerImage: WOImage {
+    filename = "TransparentPixel.gif";
+    framework = "WOExtensions";
+    height = 1;
+    width = 7;
+}
+
+SublistConditional: WOConditional {
+    condition = ^sublist;
+}

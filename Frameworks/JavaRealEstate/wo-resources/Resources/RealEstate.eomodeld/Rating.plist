@@ -1,0 +1,75 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = RATING;
+           externalType = int;
+           name = rating;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = RATING_DESCRIPTION;
+           externalType = char;
+           name = ratingDescription;
+           valueClassName = NSString;
+           valueType = c;
+           width = 40;
+       }, 
+       
+       {
+           columnName = RATING_ID;
+           externalType = integer;
+           name = ratingID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       rating, 
+       ratingDescription, 
+       ratingID
+    );
+    className = EOGenericRecord;
+    classProperties = 
+    (
+       rating, 
+       ratingDescription
+    );
+    externalName = RATING;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           rating, 
+           ratingDescription
+        );
+    };
+    name = Rating;
+    primaryKeyAttributes = 
+    (
+       ratingID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = AgentRating;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = ratingID;
+                  sourceAttribute = ratingID;
+              }
+           );
+           name = agentRatings;
+       }
+    );
+}

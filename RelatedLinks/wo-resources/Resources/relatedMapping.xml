@@ -1,0 +1,18 @@
+<model>
+    <entity name="MappingHelper$RDF" xmlTag="RDF:RDF">
+        <property name="links" xmlTag="RelatedLinks"/>
+    </entity>
+    <entity name="MappingHelper$RelatedLinks" xmlTag="RelatedLinks">
+        <property name="relatedLinks" xmlTag="child"  forceList="YES"/>
+        <property name="relatedLinks" xmlTag="Topic" forceList="YES"/>
+    </entity>
+    <entity name="Topic" xmlTag="Topic">
+        <property name="name" xmlTag="name"/>
+        <property name="relatedLinks" xmlTag="child" forceList="YES"/>
+    </entity>
+    <entity name="RelatedLink" xmlTag="child" ignoreUnmappedTags="YES">
+        <property name="name" xmlTag="name"/>
+        <property name="href" xmlTag="href"/>
+        <property name="instanceOf" xmlTag="instanceOf"/>
+    </entity>
+</model>

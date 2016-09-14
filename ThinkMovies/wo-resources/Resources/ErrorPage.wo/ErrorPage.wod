@@ -1,0 +1,5 @@
+ 
+MessageString: WOString {
+    value = message;
+    escapeHTML = false;
+}

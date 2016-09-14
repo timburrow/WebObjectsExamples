@@ -1,0 +1,17 @@
+
+{
+    FetchAll = 
+    {
+        class = EOFetchSpecification;
+        entityName = Category;
+        fetchLimit = 0;
+        isDeep = YES;
+        qualifier = 
+        {
+            class = EOKeyValueQualifier;
+            key = name;
+            selectorName = isLike:;
+            value = "*";
+        };
+    };
+}

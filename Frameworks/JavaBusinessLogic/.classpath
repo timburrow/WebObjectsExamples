@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaEOControl"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaFoundation"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="/Developer/Examples/JavaWebObjects/Databases/db-derby-10.2.1.6-bin/lib/derby.war"/>
+	<classpathentry exported="true" kind="lib" path="/Developer/Examples/JavaWebObjects/Databases/db-derby-10.2.1.6-bin/lib/derbyclient.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

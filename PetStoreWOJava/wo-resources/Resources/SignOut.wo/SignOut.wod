@@ -1,0 +1,8 @@
+Hyperlink1: WOHyperlink {
+	directActionName = "default";
+}
+
+Template: Template {
+	isFrontPage = false;
+}
+

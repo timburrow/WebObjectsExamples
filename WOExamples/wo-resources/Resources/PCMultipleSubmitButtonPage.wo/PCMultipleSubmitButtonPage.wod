@@ -1,0 +1,32 @@
+ 
+ButtonNameString: WOString {
+    value = buttonNameString;
+}
+
+HeaderFooter: PCHeaderFooter {
+    sharedComponentName = "WXTextField";
+}
+
+MSSubmitButton1: WXSubmitButton {
+    value = "MS Button 1";
+    action = msSubmitButton1Clicked;
+}
+
+MSSubmitButton2: WXSubmitButton {
+    value = "MS Button 2";
+    action = msSubmitButton2Clicked;
+}
+
+MSTextField: WXTextField {
+    value = msTextFieldValue;
+}
+
+MultipleSubmitButtonForm: WXForm {
+    // ** with this commented out, the submit buttons (below)
+    // ** will be used to invoke the action.
+    //action = msFormSubmitted;
+}
+
+TextFieldValueString: WOString {
+    value = msTextFieldValue;
+}

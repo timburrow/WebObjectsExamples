@@ -1,0 +1,19 @@
+
+Form2: WOForm {
+}
+
+Image2: WOImage {
+	filename = "stop.gif";
+	framework = "app";
+	width = 32;
+	height = 32;
+}
+
+String1: WOString {
+	value = errorMsg;
+}
+
+SubmitButton2: WOSubmitButton {
+	action = returnPage;
+	value = "Ok";
+}

@@ -1,0 +1,41 @@
+
+BodyTag: WOExampleBody {}
+
+CongratsConditional: WOConditional {
+    condition = isGuessCorrect;
+}
+
+ContextIdString: WOString {
+    value = context.contextID;
+}
+
+Footer: webobjectsexamples.examplesharness.WOExampleFooter {}
+
+GuessesConditional: WOConditional {
+    condition = session.guesses.count;
+}
+
+GuessesString: WOString {
+    value = session.guesses;
+}
+
+NumberLink: WOHyperlink {
+    action = numberClicked;
+}
+
+NumberString: WOString {
+    value = currentNumber;
+}
+
+NumberTable: WOTable {
+	maxColumns = 5;
+	list = list;
+    index = currentIndex;
+	item = listItem;
+}
+
+TitleImage: WOImage {
+	filename = "title_session_store.gif";
+	width = 326;
+	height = 148;
+}

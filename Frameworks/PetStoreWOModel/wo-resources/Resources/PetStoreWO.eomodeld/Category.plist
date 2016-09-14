@@ -1,0 +1,82 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = CATID;
+           externalType = char;
+           name = catid;
+           valueClassName = NSString;
+           valueType = c;
+           width = 10;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = DESCN;
+           externalType = varchar;
+           name = descn;
+           valueClassName = NSString;
+           valueType = S;
+           width = 255;
+       }, 
+       
+       {
+           allowsNull = Y;
+           columnName = NAME;
+           externalType = char;
+           name = name;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       catid, 
+       descn, 
+       name
+    );
+    cachesObjects = Y;
+    className = Category;
+    classProperties = 
+    (
+       catid, 
+       descn, 
+       name, 
+       products
+    );
+    externalName = CATEGORY;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           descn, 
+           name
+        );
+    };
+    name = Category;
+    primaryKeyAttributes = 
+    (
+       catid
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Product;
+           isToMany = Y;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = catid;
+                  sourceAttribute = catid;
+              }
+           );
+           name = products;
+       }
+    );
+}

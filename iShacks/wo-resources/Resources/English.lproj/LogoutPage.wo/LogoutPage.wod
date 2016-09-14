@@ -1,0 +1,14 @@
+Hyperlink1: WOHyperlink {
+	action = okAction;
+}
+
+Hyperlink2: WOHyperlink {
+	action = cancelAction;
+}
+
+LayoutComponent: LayoutComponent {
+}
+
+String1: WOString {
+	value = application.name;
+}

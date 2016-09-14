@@ -1,0 +1,37 @@
+KeyPopup: WOPopUpButton {
+	item = currentKey;
+	list = ^keyList;
+	selection = selectedKey;
+}
+
+SortAscendingImage: WOImage {
+	align = "MIDDLE";
+	alt = "Sorts in ascending order according to the selected key";
+	border = "0";
+	filename = "Ascending.gif";
+	framework = "JavaWOExtensions";
+	height = "11";
+	width = "9";
+}
+
+SortAscendingLink: WOHyperlink {
+	action = sortAscendingClicked;
+	border = "0";
+	name = "Sorts in ascending order according to the selected key";
+}
+
+SortDescendingImage: WOImage {
+	align = "MIDDLE";
+	alt = "Sorts in descending order according to the selected key";
+	border = "0";
+	filename = "Descending.gif";
+	framework = "JavaWOExtensions";
+	height = "11";
+	width = "9";
+}
+
+SortDescendingLink: WOHyperlink {
+	action = sortDescendingClicked;
+	border = "0";
+	name = "Sorts in descending order according to the selected key";
+}

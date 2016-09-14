@@ -1,0 +1,181 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="task" name="DC.Type" />
+<meta name="DC.Title" content="Introduction and prerequisites" />
+<meta name="abstract" content="Welcome to Derby! To help you get up and running with Derby as quickly as possible, this self-study guide highlights some of the more important features of Derby through a series of activities designed to demonstrate the use of Derby in embedded and client-server configurations. After performing these activities, you will find Derby to be an easy to use and fully functional RDBMS. This section provides a brief description of Derby, followed by information on the skills and software required to perform the activities presented in this document, and ends with a brief description of what is presented by each of the Working With Derby activities." />
+<meta name="description" content="Welcome to Derby! To help you get up and running with Derby as quickly as possible, this self-study guide highlights some of the more important features of Derby through a series of activities designed to demonstrate the use of Derby in embedded and client-server configurations. After performing these activities, you will find Derby to be an easy to use and fully functional RDBMS. This section provides a brief description of Derby, followed by information on the skills and software required to perform the activities presented in this document, and ends with a brief description of what is presented by each of the Working With Derby activities." />
+<meta content="JAVA, verifying, Derby, downloading, getting help" name="DC.subject" />
+<meta content="JAVA, verifying, Derby, downloading, getting help" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content="rwwdcopyright.html" />
+<meta scheme="URI" name="DC.Relation" content="twwdactivity1_Setup.html" />
+<meta scheme="URI" name="DC.Relation" content="cwwdactivities.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="twwdIntro" name="DC.Identifier" />
+<meta content="en-us" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/workingwithderbytemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>Introduction and prerequisites</title>
+</head>
+<body id="twwdIntro"><a name="twwdIntro"><!-- --></a>
+
+
+<h1 class="topictitle1">Introduction and prerequisites</h1>
+
+
+
+<div><p>Welcome to Derby!
+To help you get up and running with Derby as quickly as possible,
+this self-study guide highlights some of the more important features of Derby
+through a series of activities designed to demonstrate the use of Derby in
+embedded and client-server configurations.
+After performing these activities, you will find Derby to be an easy to use and
+fully functional RDBMS.
+This section provides a brief description of Derby, followed by information on
+the skills and software required to perform the activities presented in this
+document, and ends with a brief description of what is presented by each of the
+Working With Derby activities.</p>
+
+<div class="section"><p>Derby is a full featured, open source relational database engine.
+It is written and implemented completely in Java, and provides users with a
+small footprint standards-based database engine that can be tightly embedded
+into any Java based solution. Derby ensures data integrity and provides sophisticated
+transaction support. In its default configuration there is no separate
+database server to be installed or maintained by the end user. For more information
+on Derby visit the Derby website at: <a href="http://db.apache.org/derby">http://db.apache.org/derby</a>.</p>
+<p>Performing the Working
+With Derby activities requires no prior knowledge of Java, JDBC or SQL. Each
+Activity Sequence section provides the complete command syntax needed to execute
+each operation on a Windows machine or in a UNIX/Linux Korn shell.  This document
+demonstrates, but does not teach, the Java, JDBC and SQL presented, so readers
+wishing a deeper understanding of these topics will need additional reference
+materials.</p>
+<div class="p">Performing the Working With Derby activities does require
+that Java and Derby software be installed on the computer, and the ability
+to enter computer operating system commands. Specifically:<ul>
+<li>A Java development kit version 1.3 or higher</li>
+
+<li>The binary (<samp class="codeph">bin</samp>) installation of Apache Derby version
+<span>10.2</span></li>
+
+<li>A basic knowledge of the computer command line interface<ul>
+<li>how to start a command shell or window</li>
+
+<li>how to navigate the filesystem hierarchy</li>
+
+</ul>
+</li>
+
+</ul>
+</div>
+<p>If unsure about the Java or Derby environments installed, perform
+the following steps before attempting the subsequent activities:</p>
+</div>
+
+<ol>
+<li class="stepexpand"><span>Verify that the JAVA_HOME environment variable is set and points
+to a Java development kit version 1.3 or higher.</span> Open a command
+window and run the command <samp class="codeph">java -version</samp> using the appropriate
+syntax for your system: <dl>
+<dt class="dlterm">On Windows platforms:</dt>
+
+<dd><hr /><pre><strong>"%JAVA_HOME%\bin\java" -version</strong></pre><hr />
+</dd>
+
+
+<dt class="dlterm">On UNIX Korn Shell platforms:</dt>
+
+<dd><hr /><pre><strong>"$JAVA_HOME/bin/java" -version</strong></pre><hr />
+</dd>
+
+</dl>
+ The output from the command will look
+something like this:<hr /><pre><em>java version "1.4.2_04"  
+Java(TM) 2 Runtime Environment, Standard Edition (build 1.4.2_04-b05)  
+Java HotSpot(TM) Client VM (build 1.4.2_04-b05, mixed mode)</em></pre><hr />
+
+The output you see
+may be different from what is shown here, because the <kbd class="userinput">java -version</kbd> command
+outputs vendor-specific information. If the command produced an error or the
+version listed is not 1.3 or higher, please install a Java development kit
+before continuing.</li>
+
+<li class="stepexpand"><span>Verify that the DERBY_HOME environment variable is set and points to
+the filesystem path to the root directory of the Derby <span>10.2</span> installation:</span>
+ Open a command window and run the appropriate command for your system:
+ <dl>
+<dt class="dlterm">On Windows platforms:</dt>
+
+<dd><hr /><pre><strong>echo %DERBY_HOME%</strong></pre><hr />
+</dd>
+
+
+<dt class="dlterm">On UNIX Korn Shell platforms:</dt>
+
+<dd><hr /><pre><strong>echo $DERBY_HOME</strong></pre><hr />
+</dd>
+
+</dl>
+
+
+ The output from the command will look something like this:
+<hr /><pre><em>Windows: C:\derby
+Unix/Linux: /opt/derby</em></pre><hr />
+
+If Derby is not installed or cannot be found, please install a copy now.
+The most recent version of Derby can be downloaded from:
+<a href="http://db.apache.org/derby/derby_downloads.html">http://db.apache.org/derby/derby_downloads.html</a>.  From the Download page use the link to the 'Latest
+Official Release', then locate the <samp class="codeph">bin</samp> distribution (e.g.
+db-derby-&lt;version&gt;-bin.zip and db-derby-&lt;version&gt;-bin.tar.gz).
+Download the appropriate file for your platform, '-bin.zip' for Windows or
+'-bin.tar.gz' for Unix/Linux, and unzip/untar this file. After decompressing
+the downloaded file, move the directory created to the filesystem path chosen
+to be the root directory of the Derby installation
+(e.g. move db-derby-&lt;version&gt;-bin C:\derby).
+
+</li>
+
+</ol>
+
+<div class="section">Anyone having problems with any aspect of these activities can gain
+assistance via e-mail by writing to derby-user@db.apache.org.  The questions
+and feedback received will be used to make this document even more useful. </div>
+
+</div>
+
+<div>
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="cwwdactivities.html">Activity overview</a></strong><br />
+What you can expect to learn in each activity.</li>
+</ul>
+
+<div class="familylinks">
+<div class="previouslink"><strong>Previous topic:</strong> <a href="rwwdcopyright.html" title="">Copyright</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="twwdactivity1_Setup.html" title="In this section the Derby database engine is loaded by the Derby IJ tool. The Derby embedded driver is used to create and connect to the database firstdb. A few basic SQL commands are demonstrated.">Activity 1: Run SQL using the Embedded driver</a></div>
+</div>
+</div>
+
+</body>
+</html>

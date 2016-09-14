@@ -1,0 +1,31 @@
+ 
+Content: WOComponentContent {}
+
+ContentCellContainer: WOGenericContainer {
+    elementName = "td";
+    colspan = list.count;
+    bgcolor = bgcolor;
+}
+
+TabCellContainer:  WOGenericContainer {
+    elementName = "td";
+    align = "center";
+    valign = "top";
+    bgcolor = tabBackgroundColor;
+    // ** rowSpan = rowSpan;    
+}
+
+TabLabelString: WOString {
+    value = ^tabLabel;
+}
+
+TabLink: WOGenericContainer {
+    elementName = "a";
+    href = context.componentActionURL;
+    invokeAction = tabLinkClicked;
+    omitTags = isCurrentItemSelected;
+}
+TabRepetition: WORepetition {
+    list = list;
+    item = currentItem;
+}

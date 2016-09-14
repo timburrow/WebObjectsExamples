@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+    <TITLE>Virtual Store Example README</TITLE>
+</HTML>
+
+<BODY>
+<P>
+    <CENTER>
+    <FONT size+2><B>VirtualStore</B></FONT>
+    </CENTER>
+</P>
+<P>
+<B>Difficulty Level:</B> Beginner
+</P>
+<P>
+<B>Topics Covered:</B> WebObjects, QuickTime integration 
+</P>
+<P>
+<B>Overview: </B>
+<BR>
+The VirtualStore Lite application presents potential customers with a virtual store.  In this store, users will see the merchandise using a QuickTime virtual reality movie.  Three different PowerBooks are available in the store.  Users can select a PowerBook from the virtual reality image and then indicate the quantity to order.
+<P>VirtualStore Lite demonstrates the integration of the WOQuickTime element with a WebObjects application. The <A HREF="http://www.apple.com/quicktime">QuickTime plug-in</A> must be installed with the user's browser.<P>
+<B>Usage: </B>
+<BR>
+Launch the application and click the <B> "Enter the demo"</B> link on the initial page. Move the cursor over the virtual reality image.  Hold down the mouse button and move the cursor around to pan through the virtual store.  The &quot;<B>-</B>&quot; and &quot;<B>+</B>&quot; buttons on the toolbar at the bottom of the QuickTime component can be used to zoom in and out of the image. Locate a PowerBook in the store and click on it to see order information for that model. You can add multiple items to the shopping cart. Enter a quantity of zero to remove an item from the shopping cart. <P>
+<B>Description:</B>
+<BR>
+<DL><I>Application</I>
+<BR>The Application class loads the data used by the Virtual Store; it is a good example of reading a property list from the file system. </P>
+
+<I>Session</I>
+<BR>The session class has two instance variables: One for the shopping cart, <I>shoppingCart</I> and one for the selected product, <I>selectedProduct</I>. The method <B>quantityForCurrentProduct</B> returns the quantity ordered for the selected product if it is already in the shopping cart , or 1 if not. The method <B>addCurrentProductToShoppingCart</B> adds the selected product to the shopping cart, if not present. If the product is already present then the quantity is automatically adjusted. If the quantity ordered is set to 0, the product is removed from the shopping cart.</P>
+
+<I>Main</I>
+<BR>This page is a welcome page. It shows how to embed a QuickTime movie.</P>
+
+<I>VirtualStore</I>
+<BR>The VirtualStore page shows how the <i>hotspot</i> feature provided with the QuickTime plug-in is integrated with WebObjects. When the user clicks on a product, the <B>viewProduct</B> method sets the <code>selectedProduct</code> for the current session by using the <I>String </I><B>selectedHotspot </B> that is automatically set by the WOQuickTime component. After choosing a product; the user can validate his order by clicking on the <I>Order</I> link.</P>
+
+<I>Product</I>
+<BR>This page displays an image corresponding to the selected product or a movie. The user can order any quantity of this product which will be added to the shopping cart (method <B>takeOrder</B>). A quantity of <B>0</B> removes a product from the shopping cart, if it was already present.</P>
+
+<I>Order</I>
+<BR>This page displays the shopping cart selected by the user. Entering a name validates the order, and resets the shopping cart. Of course, in a real on-line store this page is normally very complex.</P>
+</DL>
+</BODY>
+</HTML>    

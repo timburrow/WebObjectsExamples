@@ -1,0 +1,6 @@
+ 
+ImageElement: WOGenericElement {
+    elementName = "img";
+    src = imageUrl;
+    border = 0;
+}

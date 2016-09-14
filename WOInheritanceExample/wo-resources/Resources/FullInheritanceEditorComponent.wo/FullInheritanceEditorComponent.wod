@@ -1,0 +1,14 @@
+ 
+Conditional1: WOConditional {
+	condition = currentClass;
+}
+
+FullInheritanceEditorComponent1: FullInheritanceEditorComponent {
+	currentClass = parentClass;
+	creature = creature;
+}
+
+SwitchComponent1: WOSwitchComponent {
+	WOComponentName = detailCreatureEditorComponentName;
+	creature = creature;
+}

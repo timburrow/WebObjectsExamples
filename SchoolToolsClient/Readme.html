@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+    <TITLE>School Tools Example README (Client)</TITLE>
+</HTML>
+
+<BODY>
+<P>
+    <CENTER>
+    <FONT size+2><B>SchoolToolsClient</B></FONT>
+    </CENTER>
+</P>
+<P>
+<B>Difficulty Level:</B> Intermediate
+</P>
+<P>
+<B>Topics Covered:</B> WebObjects, JSP/Servlet Integration
+</P>
+<P>
+<B>Framework Classes Used:</B> None
+</P>
+<P>
+<B>Useful Reference Sites:</B> 
+    <UL>
+	<LI><A HREF="http://xml.apache.org/axis/index.html">AXIS</A></LI>
+    </UL>
+</P>
+<P>
+<B>Overview: </B>
+<BR>
+    Together, SchoolToolsClient and SchoolToolsServer make up the SchoolTools example. The Client is a WebObjects application with JSP and Servlet integration. The Server is a WebObjects application providing a SOAP RPC service. The Client and Server applications communicate using the AXIS toolkit.
+</P>
+<P>
+<B>Usage: </B>
+<BR>
+    <OL>
+	<LI> Make sure that SchoolToolsServer is running.</LI>
+	<LI> Make sure that a standard WebObjects application recompiled with JSP/Servlet integration runs inside of your Servlet Container. Remember to set the WOROOT, LOCALROOT and WOAINSTALLROOT properties in your container.</LI>
+	<LI>If you rebuild SchoolToolsClient, make sure that you use the correct war file (typically it will be created inside the build directory, unless SERVLET_WEBAPPS_DIR has been set).</LI>
+	<LI> If necessary, edit the Properties file so that the correct serviceURL property is set. By default, on Tomcat installations, the serviceURL will be set to http://localhost:8080/SchoolToolsServer/servlet/rpcrouter. On WebLogic, the serviceURL will likely be set to http://localhost:7001/SchoolToolsServer/servlet/rpcrouter. If the serviceURL is incorrect, set it by editing the Properties file inside SchoolToolsClient.woa.</LI>
+	<LI> Copy or link the SchoolToolClient.war archive into the Servlet Container's deployment directory. For tomcat, this is $TOMCAT_HOME/webapps.</LI>
+	<LI> Restart the Servlet Container.</LI>
+	<LI> Connect to the client application. For Tomact, this will be http://localhost:8080/SchoolToolsClient/jsp/Login.jsp</LI>
+	<LI> Login as with any username and password.</LI>
+	<LI> Create and submit a purchase order, using the Customer Number that you created earlier during Server setup.</LI>
+	<LI> Get back a generated confirmation number.</LI>
+    </OL>
+</P>
+<P>
+<B>Description:</B>
+<BR>
+    SchoolToolsClient is a WebObjects application that uses JSP and Servlet integration. It must run inside a Servlet container. Both the Login and Confirmation pages are actually JSP pages with embedded WebObjects components. Internally, the Client sends a purchase order to the Server (which is vending a SOAP service) using SOAP. The XML is generated using the AXIS API. A custom serializer (ClientOrderSerializer) is used to serialize the ClientOrder objects, while the default BeanSerializer is used to serialize the ClientProduct objects.
+</P>
+
+</BODY>
+</HTML>    

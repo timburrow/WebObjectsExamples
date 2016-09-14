@@ -1,0 +1,126 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           allowsNull = Y;
+           columnName = APTNUM;
+           externalType = char;
+           name = aptNum;
+           valueClassName = NSString;
+           valueType = c;
+           width = 10;
+       }, 
+       
+       {
+           columnName = CITY;
+           externalType = char;
+           name = city;
+           valueClassName = NSString;
+           valueType = c;
+           width = 40;
+       }, 
+       
+       {
+           columnName = LISTING_ID;
+           externalType = integer;
+           internalInfo = 
+           {
+               _nameInObjectStore = PROPERTY_ID;
+           };
+           name = listingID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = STATE;
+           externalType = char;
+           name = state;
+           valueClassName = NSString;
+           valueType = c;
+           width = 2;
+       }, 
+       
+       {
+           columnName = STREET;
+           externalType = char;
+           name = street;
+           valueClassName = NSString;
+           valueType = c;
+           width = 80;
+       }, 
+       
+       {
+           columnName = ZIP;
+           externalType = char;
+           name = zip;
+           valueClassName = NSString;
+           valueType = c;
+           width = 10;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       aptNum, 
+       city, 
+       listingID, 
+       state, 
+       street, 
+       zip
+    );
+    className = EOGenericRecord;
+    classProperties = 
+    (
+       aptNum, 
+       city, 
+       listing, 
+       state, 
+       street, 
+       zip
+    );
+    externalName = LISTING_ADDRESS;
+    internalInfo = 
+    {
+        _clientClassPropertyNames = 
+        (
+           aptNum, 
+           city, 
+           listing, 
+           state, 
+           street, 
+           zip
+        );
+        _nameInObjectStore = PROPERTY_ADDRESS;
+    };
+    maxNumberOfInstancesToBatchFetch = 25;
+    name = ListingAddress;
+    primaryKeyAttributes = 
+    (
+       listingID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Listing;
+           internalInfo = 
+           {
+               _nameInObjectStore = property;
+           };
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = listingID;
+                  sourceAttribute = listingID;
+              }
+           );
+           name = listing;
+       }
+    );
+}

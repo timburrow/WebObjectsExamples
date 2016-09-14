@@ -1,0 +1,83 @@
+ActiveImage1: WOActiveImage {
+	action = selectAgentAction;
+	filename = "ChooseAgentButton.jpg";
+	framework = "app";
+}
+
+AddCommentButton: WOSubmitButton {
+	value = "Add";
+	action = addRatingAction;
+}
+
+AgentFirstNameString: WOString {
+	value = agent.firstName;  
+}
+
+AgentLastNameString: WOString {
+	value = agent.lastName;  
+}
+
+AgentPhotoImage: WOImage {
+	align = "ABSMIDDLE";
+	data = agent.photo.photo;
+	mimeType = "image/gif";
+}
+
+AgentRaitingsRepetition: WORepetition {
+	list = agent.ratings;
+	item = agentRating;
+}
+
+AgentRatingCommentString: WOString {
+	value = agentRating.comment;
+}
+
+ApplicationNameString: WOString {
+	value = application.name;
+}
+
+Conditional1: WOConditional {
+	condition = shouldShowRatingImage;
+}
+
+Conditional2: WOConditional {
+	condition = shouldShowRatingImage;
+}
+
+Conditional3: WOConditional {
+	condition = shouldShowRatingImage;
+	negate = true;
+}
+
+Conditional4: WOConditional {
+	condition = shouldShowChooseAgentButton;
+}
+
+CoomentTextField: WOTextField {
+	value = commentString;
+}
+
+Form: WOForm {
+}
+
+LayoutComponent: LayoutComponent {
+}
+
+RaitingsPopUpButton: WOPopUpButton {
+	list = ratings;
+	displayString = rating.ratingDescription;
+	item = rating;
+	selection = selectedRating;
+}
+
+RatingDescriptionString: WOString {
+	value = agentRating.rating.ratingDescription;
+}
+
+RemoveCommentLink: WOHyperlink {
+	action = removeRatingAction;
+}
+
+StarsRaitingImage: WOImage {
+	filename = starsImageName;
+}

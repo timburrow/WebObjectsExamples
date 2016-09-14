@@ -1,0 +1,11 @@
+Conditional1: WOConditional {
+	condition = parent.hasLastPage;
+}
+
+Hyperlink6: WOHyperlink {
+	action = parent.goBackToLastPage;
+}
+
+String5: WOString {
+	value = parent.lastPage.pageDisplayName;
+}

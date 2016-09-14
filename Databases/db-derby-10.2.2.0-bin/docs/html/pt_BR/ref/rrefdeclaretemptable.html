@@ -1,0 +1,392 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br" xml:lang="pt-br">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="reference" name="DC.Type" />
+<meta name="DC.Title" content="Instru????o DECLARE GLOBAL TEMPORARY TABLE" />
+<meta content="Instru????o DECLARE GLOBAL TEMPORARY, Tabelas, Tempor??rias" name="DC.subject" />
+<meta content="Instru????o DECLARE GLOBAL TEMPORARY, Tabelas, Tempor??rias" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj39374.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj22771.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj81859.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj95081.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj80721.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqljrenamestatements.html" />
+<meta scheme="URI" name="DC.Relation" content="crefsqlj35312.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefcallprocedure.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj13590.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj35981.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj31783.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj21583.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj32654.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj14854.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj35034.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj40774.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj29840.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj18922.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj40506.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj13658.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj21571.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj57522.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefscalarsubquery.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefselectexpression.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj41360.html" />
+<meta scheme="URI" name="DC.Relation" content="rreftableexpression.html" />
+<meta scheme="URI" name="DC.Relation" content="rreftablesubquery.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj26498.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj11277.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj33602.html" />
+<meta scheme="URI" name="DC.Relation" content="rrefsqlj15309.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="rrefdeclaretemptable" name="DC.Identifier" />
+<meta content="pt-br" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/pt_BR/reftemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>Instru????o DECLARE GLOBAL TEMPORARY TABLE</title>
+</head>
+<body id="rrefdeclaretemptable"><a name="rrefdeclaretemptable"><!-- --></a>
+
+
+<h1 class="topictitle1">Instru????o DECLARE GLOBAL TEMPORARY TABLE</h1>
+
+
+<div>
+<div class="section">
+<p>A instru????o DECLARE GLOBAL TEMPORARY TABLE define uma tabela
+tempor??ria para a conex??o corrente.
+Estas tabelas n??o residem nos cat??logos do sistema, e n??o s??o persistentes.
+As tabelas tempor??rias existem somente durante a conex??o em que foram
+declaradas, n??o podendo ser referenciadas de fora da conex??o.
+Ao fechar a conex??o, as linhas da tabela s??o exclu??das e a descri????o em-mem??ria
+da tabela tempor??ria ?? removida.</p>
+
+</div>
+
+<div class="section">
+<div class="p">As tabelas tempor??rias s??o ??teis quando:
+<ul>
+<li>a estrutura da tabela n??o ?? conhecida antes de utilizar o aplicativo.</li>
+
+<li>os outros usu??rios n??o necessitam da mesma estrutura de tabela.</li>
+
+<li>os dados da tabela tempor??ria s??o necess??rios durante o uso do aplicativo.</li>
+
+<li>a tabela pode ser declarada e removida sem manter bloqueios no cat??logo do sistema.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Sintaxe</h4>
+
+<pre><strong>DECLARE GLOBAL TEMPORARY TABLE <em><a href="rrefdeclaretemptable.html#rrefdeclaretemptable__tempcoltablename">nome-da-tabela</a></em>
+    { defini????o-da-coluna [ , defini????o-da-coluna ] * }
+[ ON COMMIT {DELETE | PRESERVE} ROWS ]
+NOT LOGGED [ON ROLLBACK DELETE ROWS]
+ </strong>
+</pre>
+
+</div>
+
+<div class="section" id="rrefdeclaretemptable__tempcoltablename"><a name="rrefdeclaretemptable__tempcoltablename"><!-- --></a><h4 class="sectiontitle">nome-da-tabela</h4>
+
+<p>O nome da tabela tempor??ria.
+Se for especificado um nome-do-esquema diferente de SESSION, ocorrer?? um erro
+(SQLState 428EK).
+Se o nome-do-esquema n??o for especificado, ser?? atribu??do SESSION.
+V??rias conex??es podem definir tabelas tempor??rias globais declaradas com o mesmo
+nome, porque cada conex??o possui seu pr??prio descritor de tabela ??nico.</p>
+
+<p>A utiliza????o de SESSION como nome do esquema de uma tabela f??sica n??o gera
+erro, mas ?? desestimulado.
+O nome de esquema SESSION deve ser reservado para o esquema de tabelas
+tempor??rias.</p>
+
+</div>
+
+<div class="section" id="rrefdeclaretemptable__tempcolcolumndef"><a name="rrefdeclaretemptable__tempcolcolumndef"><!-- --></a><h4 class="sectiontitle">defini????o-da-coluna</h4>
+
+<p>Para obter mais informa????es sobre a <samp class="codeph">defini????o-da-coluna</samp>
+deve ser consultada <a href="rrefsqlj30540.html#rrefsqlj30540">defini????o-da-coluna</a> em
+<samp class="codeph">CREATE TABLE</samp>.
+A instru????o <samp class="codeph">DECLARE GLOBAL TEMPORARY TABLE</samp> n??o permite
+<samp class="codeph">especifica????o-de-coluna-gerada</samp> na
+<samp class="codeph">defini????o-da-coluna</samp>.</p>
+
+</div>
+
+<div class="section" id="rrefdeclaretemptable__rreftemptabledatatype"><a name="rrefdeclaretemptable__rreftemptabledatatype"><!-- --></a><h4 class="sectiontitle">Tipo-de-dado</h4>
+
+<div class="p">Os tipos-de-dado suportados s??o:
+<ul>
+<li>BIGINT</li>
+
+<li>CHAR</li>
+
+<li>DATE</li>
+
+<li>DECIMAL</li>
+
+<li>DOUBLE PRECISION</li>
+
+<li>FLOAT</li>
+
+<li>INTEGER</li>
+
+<li>NUMERIC</li>
+
+<li>REAL</li>
+
+<li>SMALLINT</li>
+
+<li>TIME</li>
+
+<li>TIMESTAMP</li>
+
+<li>VARCHAR</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="section" id="rrefdeclaretemptable__rreftemptableoncommit"><a name="rrefdeclaretemptable__rreftemptableoncommit"><!-- --></a><h4 class="sectiontitle">ON COMMIT</h4>
+
+<p>Especifica a a????o a ser executada na tabela tempor??ria global quando ??
+realizada uma opera????o de COMMIT.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">DELETE ROWS</h4>
+
+<p>Todas as linhas da tabela ser??o exclu??das, se n??o houver nenhum cursor com
+possibilidade de HOLD aberto na tabela.
+Este ?? o valor padr??o para ON COMMIT.
+Se for especificado ON ROLLBACK DELETE ROWS, ser??o exclu??das todas as linhas da
+tabela somente se a tabela tempor??ria tiver sido utilizada.
+ON COMMIT DELETE ROWS exclui as linhas da tabela, mesmo que a tabela n??o tenha
+sido utilizada (se a tabela n??o possuir nenhum cursor com possibilidade
+de HOLD aberto na mesma).</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">PRESERVE ROWS</h4>
+
+<p>As linhas da tabela s??o preservadas.</p>
+
+</div>
+
+<div class="section" id="rrefdeclaretemptable__rreftemptablenotlogged"><a name="rrefdeclaretemptable__rreftemptablenotlogged"><!-- --></a><h4 class="sectiontitle">NOT LOGGED</h4>
+
+<p>Especifica a a????o realizada na tabela tempor??ria global quando uma opera????o
+de desfazer ?? realizada.
+Quando ?? realizada uma opera????o de ROLLBACK (ou ROLLBACK TO SAVEPOINT),
+se a tabela foi criada na unidade de trabalho (ou no ponto de salvamento),
+a tabela ser?? removida.
+Se a tabela foi removida na unidade de trabalho (ou no ponto de salvamento),
+a tabela ser?? restaurada sem nenhuma linha.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">ON ROLLBACK DELETE ROWS</h4>
+
+<p>Este ?? o valor padr??o para NOT LOGGED.
+NOT LOGGED [ON ROLLBACK DELETE ROWS ]] especifica a a????o a ser realizada na
+tabela tempor??ria global quando ?? realizada uma opera????o de ROLLBACK
+(ou ROLLBACK TO SAVEPOINT).
+Se os dados da tabela foram modificados, todas as linhas ser??o exclu??das.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Exemplos</h4>
+
+<pre><strong>SET SCHEMA MYAPP;
+
+CREATE TABLE T1(C11 INT, C12 DATE);
+
+DECLARE GLOBAL TEMPORARY TABLE SESSION.T1(C11 INT) NOT LOGGED;</strong>
+-- A qualifica????o SESSION ?? redundante, porque as tabelas tempor??rias
+-- somente podem existir no esquema SESSION.
+
+<strong>DECLARE GLOBAL TEMPORARY TABLE T2(C21 INT) NOT LOGGED;</strong>
+-- A tabela tempor??ria n??o ?? qualificada neste caso com SESSION, porque
+-- as tabelas tempor??rias somente podem existir no esquema SESSION.
+
+<strong>INSERT INTO SESSION.T1 VALUES (1); </strong>
+-- Neste caso a qualifica????o SESSION ?? obrigat??ria para utilizar a
+-- tabela tempor??ria, porque o esquema corrente ?? MYAPP.
+
+<strong>SELECT * FROM T1;</strong>
+-- Esta instru????o SELECT est?? fazendo refer??ncia ?? tabela f??sica
+-- "MYAPP.T1", uma vez que a tabela n??o foi qualificada com SESSION.
+
+</pre>
+
+<p>Deve ser observado que as tabelas tempor??rias somente podem ser declaradas
+no esquema SESSION.
+Nunca deve ser declarado um esquema f??sico com o nome SESSION.</p>
+
+<div class="p">A seguir est?? mostrada uma lista de fun????es da instru????o
+DECLARE GLOBAL TEMPORARY TABLE do DB2 UDB que n??o s??o suportadas pelo
+<span>Derby</span>:
+<ul>
+<li>IDENTITY op????es-de-coluna </li>
+
+<li>IDENTITY atributo nas op????es-de-c??pia</li>
+
+<li>AS (<em>FULLSELECT</em>) DEFINITION ONLY</li>
+
+<li>NOT LOGGED ON ROLLBACK PRESERVE ROWS</li>
+
+<li> IN nome-do-espa??o-de-tabelas</li>
+
+<li>PARTITIONING KEY</li>
+
+<li>WITH REPLACE </li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Restri????es das tabelas tempor??rias globais declaradas</h4>
+
+<div class="p">As tabelas tempor??rias n??o podem ser especificadas nas seguintes instru????es:
+<ul>
+<li>ALTER TABLE </li>
+
+<li>CREATE SYNONYM</li>
+
+<li>CREATE TRIGGER</li>
+
+<li>CREATE VIEW</li>
+
+<li>LOCK</li>
+
+<li>RENAME</li>
+
+</ul>
+
+</div>
+
+<p>As tabelas tempor??rias n??o pode ser especificadas nas restri????es
+referenciais.</p>
+
+<p>N??o h?? suporte para restri????o de verifica????o nas colunas.</p>
+
+<div class="p">N??o podem ser utilizados os seguintes tipos de dado nas
+tabelas tempor??rias globais declaradas:
+<ul>
+<li>BLOB</li>
+
+<li>CLOB</li>
+
+<li>LONG VARCHAR</li>
+
+</ul>
+
+</div>
+
+<p>As tabelas tempor??rias n??o podem ser referenciadas por uma
+instru????o-SQL-engatilhada.</p>
+
+<p>Se uma instru????o realizando uma inser????o, atualiza????o ou exclus??o em uma
+tabela tempor??ria encontrar um erro, todas as linhas da tabela ser??o
+exclu??das.</p>
+
+</div>
+
+<div class="section"><h4 class="sectiontitle">Restri????es espec??ficas do Derby</h4>
+
+<p>O <span>Derby</span>
+n??o d?? suporte em tabelas tempor??rias a:</p>
+ <ul>
+<li>??ndices</li>
+
+<li>sin??nimos, gatilhos e vis??es em tabelas no esquema SESSION
+(incluindo as tabelas f??sicas e as tabelas tempor??rias)</li>
+
+<li>LOCK TABLE</li>
+
+<li>restri????es e chaves prim??rias</li>
+
+<li>especifica????o-de-coluna-gerada</li>
+
+<li>importa????o em tabelas tempor??rias</li>
+
+</ul>
+
+<p>As instru????es fazendo refer??ncia a tabelas e vis??es no esquema SESSION
+n??o ficam no <em>cache</em>.</p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>T??pico pai:</strong> <a href="crefsqlj39374.html" title="">Instru????es</a></div>
+</div>
+<div class="relconcepts"><strong>Conceitos relacionados</strong><br />
+<div><a href="crefsqlj22771.html" title="">Intera????o com o sistema de depend??ncias</a></div>
+<div><a href="crefsqlj95081.html" title="">Instru????es CREATE</a></div>
+<div><a href="crefsqlj80721.html" title="">Instru????es DROP</a></div>
+<div><a href="crefsqljrenamestatements.html" title="">Instru????es RENAME</a></div>
+<div><a href="crefsqlj35312.html" title="">Instru????es SET</a></div>
+</div>
+<div class="relref"><strong>Refer??ncias relacionadas</strong><br />
+<div><a href="rrefsqlj81859.html" title="">Instru????o ALTER TABLE</a></div>
+<div><a href="rrefcallprocedure.html" title="">CALL (PROCEDIMENTO)</a></div>
+<div><a href="rrefsqlj13590.html" title="">Cl??usula CONSTRAINT</a></div>
+<div><a href="rrefsqlj35981.html" title="">Instru????o DELETE</a></div>
+<div><a href="rrefsqlj31783.html" title="">Cl??usula FOR UPDATE</a></div>
+<div><a href="rrefsqlj21583.html" title="">Cl??usula FROM</a></div>
+<div><a href="rrefsqlj32654.html" title="">Cl??usula GROUP BY</a></div>
+<div><a href="rrefsqlj14854.html" title="">Cl??usula HAVING</a></div>
+<div><a href="rrefsqlj35034.html" title="">INNER JOIN</a></div>
+<div><a href="rrefsqlj40774.html" title="">Instru????o INSERT</a></div>
+<div><a href="rrefsqlj29840.html" title="">Opera????o JOIN</a></div>
+<div><a href="rrefsqlj18922.html" title="">LEFT OUTER JOIN</a></div>
+<div><a href="rrefsqlj40506.html" title="">Instru????o LOCK TABLE</a></div>
+<div><a href="rrefsqlj13658.html" title="">Cl??usula ORDER BY</a></div>
+<div><a href="rrefsqlj21571.html" title="">Consulta</a></div>
+<div><a href="rrefsqlj57522.html" title="">RIGHT OUTER JOIN</a></div>
+<div><a href="rrefscalarsubquery.html" title="">SubconsultaEscalar</a></div>
+<div><a href="rrefselectexpression.html" title="">Express??oSele????o</a></div>
+<div><a href="rrefsqlj41360.html" title="">Instru????o SELECT</a></div>
+<div><a href="rreftableexpression.html" title="">Express??oTabela</a></div>
+<div><a href="rreftablesubquery.html" title="">SubconsultaTabela</a></div>
+<div><a href="rrefsqlj26498.html" title="">Instru????o UPDATE</a></div>
+<div><a href="rrefsqlj11277.html" title="">VALUES Express??o</a></div>
+<div><a href="rrefsqlj33602.html" title="">Cl??usula WHERE</a></div>
+<div><a href="rrefsqlj15309.html" title="">Cl??usula WHERE CURRENT OF</a></div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br" xml:lang="pt-br">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="public" name="security" />
+<meta content="index,follow" name="Robots" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta content="task" name="DC.Type" />
+<meta name="DC.Title" content="Obten????o das propriedades do Network Server utilizando o m??todo getCurrentProperties" />
+<meta scheme="URI" name="DC.Relation" content="tadminconfig815853.html" />
+<meta scheme="URI" name="DC.Relation" content="tadminappsruntimeinfo.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="tadminconfig815822" name="DC.Identifier" />
+<meta content="pt-br" name="DC.Language" />
+<link href="/export/home/rh161140/derby/docs/10.2/out/pt_BR/adminguidetemp/commonltr.css" type="text/css" rel="stylesheet" />
+<title>Obten????o das propriedades do Network Server utilizando o m??todo getCurrentProperties</title>
+</head>
+<body id="tadminconfig815822"><a name="tadminconfig815822"><!-- --></a>
+
+
+<h1 class="topictitle1">Obten????o das propriedades do Network Server utilizando o m??todo getCurrentProperties</h1>
+
+<div>
+<div class="section">
+<p>O m??todo <em>getCurrentProperties</em> ?? um m??todo Java que pode ser
+utilizado para obter informa????es sobre o <em>Network Server</em>.
+Este m??todo retorna um objeto <em>Properties</em>, com valores de todas as
+propriedades <em>NetServer</em> na forma como est??o atualmente definidas.</p>
+
+<p>A assinatura deste m??todo ??:</p>
+
+<pre>Properties getCurrentProperties();</pre>
+
+</div>
+
+<div class="example">
+Por exemplo:
+<pre>NetworkServerControl servidor = new NetworkServerControl();
+Properties p = servidor.getCurrentProperties();
+p.list(System.out);
+System.out.println(p.getProperty("derby.drda.host"));</pre>
+
+<p>Conforme mostrado no exemplo anterior, pode ser feita procura nas
+propriedades correntes e trabalhar com as propriedades individuais
+se for necess??rio, utilizando as v??rias APIs da classe <em>Properties</em>.
+Tamb??m podem ser listadas todas as propriedades utilizando o m??todo
+<em>Properties.list()</em>.</p>
+
+</div>
+
+<div class="section">
+<p>Para obter informa????es sobre a obten????o de informa????es do sistema utilizando
+a interface <em>servlet</em>, deve ser consultado
+<a href="cadminservlet98430.html#cadminservlet98430">Gerenciamento remoto do Network Server do Derby utilizando a interface servlet</a>.</p>
+
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>T??pico pai:</strong> <a href="tadminconfig815853.html" title="">Obten????o de informa????es do sistema utilizando a API</a></div>
+</div>
+<div class="reltasks"><strong>Tarefas relacionadas</strong><br />
+<div><a href="tadminappsruntimeinfo.html" title="">Obten????o de informa????es sobre o Network Server em tempo de execu????o</a></div>
+</div>
+</div>
+
+</body>
+</html>

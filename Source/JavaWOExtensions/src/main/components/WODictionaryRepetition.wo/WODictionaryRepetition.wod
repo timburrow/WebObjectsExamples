@@ -1,0 +1,7 @@
+Content: WOComponentContent {
+}
+
+Repetition: WORepetition {
+	item = currentKey;
+	list = keyList;
+}

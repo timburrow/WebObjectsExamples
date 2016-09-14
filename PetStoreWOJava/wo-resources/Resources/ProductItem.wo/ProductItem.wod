@@ -1,0 +1,63 @@
+Conditional1: WOConditional {
+	condition = currentItem.inStock;
+}
+
+Conditional2: WOConditional {
+	condition = currentItem.inStock;
+	negate = true;
+}
+
+Form1: WOForm {}
+
+Form2:WOForm{}
+
+Hyperlink1: WOHyperlink {
+	action = showItemDetails;
+}
+
+Image2: WOActiveImage {
+	border = 0;
+	filename = "button_cart-add.gif";
+	framework = "app";
+	action = addToShoppingCart;
+}
+
+PageBack1: PageBack {}
+
+Repetition1: WORepetition {
+	item = currentItem;
+	list = currentProduct.items;
+}
+
+String5: WOString {
+	value = currentItem.attr1;
+}
+
+String6: WOString {
+	value = currentProduct.name;
+}
+
+String7: WOString {
+	numberformat = "$###,##0.00";
+	value = currentItem.listPrice;
+}
+
+String8: WOString {
+	value = currentItem.itemid;
+}
+
+String9: WOString {
+	value = currentProduct.name;
+}
+
+Template: Template {
+	isFrontPage = false;
+}
+
+TextField2: WOTextField {
+	maxlength = 4;
+	size = 3;
+	value = qty;
+	numberformat = "0";
+}
+

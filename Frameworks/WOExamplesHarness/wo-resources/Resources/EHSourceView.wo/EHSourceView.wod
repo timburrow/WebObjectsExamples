@@ -1,0 +1,17 @@
+
+ 
+Form: WOForm {}
+
+SourceText: WOText {
+    value = sourceString;
+    rows = 25;
+    cols = 80;
+}
+
+TabPanel: EHTabPanel {
+    list = suffixes;
+    item = currentSuffix;
+    tabLabel = currentSuffix;
+    selection = selectedSuffix;
+    bgcolor = "#ddeeff";
+}

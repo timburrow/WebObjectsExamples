@@ -1,0 +1,8 @@
+ 
+Frame1: WXFrame {
+    pageName = "PCFrameOnePage";
+}
+
+Frame2: WXFrame {
+    pageName = "PCFrameTwoPage";
+}

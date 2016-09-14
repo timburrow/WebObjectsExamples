@@ -1,0 +1,72 @@
+
+{
+    attributes = 
+    (
+       
+       {
+           columnName = PARENT_ID;
+           externalType = integer;
+           name = parentID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }, 
+       
+       {
+           columnName = STUDENT_ID;
+           externalType = integer;
+           name = studentID;
+           valueClassName = NSNumber;
+           valueType = i;
+       }
+    );
+    attributesUsedForLocking = 
+    (
+       parentID, 
+       studentID
+    );
+    className = webobjectsexamples.sophisticateddatabaseexample.StudentParent;
+    externalName = STUDENTPARENT;
+    internalInfo = 
+    {};
+    name = StudentParent;
+    primaryKeyAttributes = 
+    (
+       parentID, 
+       studentID
+    );
+    relationships = 
+    (
+       
+       {
+           destination = Parent;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = personID;
+                  sourceAttribute = parentID;
+              }
+           );
+           name = parent;
+       }, 
+       
+       {
+           destination = Student;
+           isMandatory = Y;
+           isToMany = N;
+           joinSemantic = EOInnerJoin;
+           joins = 
+           (
+              
+              {
+                  destinationAttribute = personID;
+                  sourceAttribute = parentID;
+              }
+           );
+           name = student;
+       }
+    );
+}

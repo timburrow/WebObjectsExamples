@@ -1,0 +1,181 @@
+<!--
+  -- FormElementsUploadPage.html
+  -- [FileUpload Project]
+  --
+   -- Copyright:  Copyright 2001-2007 Apple, Inc. All rights reserved.
+  --
+  -- Disclaimer:
+  --      IMPORTANT:  This Apple software is supplied to you by Apple Computer, Inc.
+  --      ("Apple") in consideration of your agreement to the following terms, and your
+  --      use, installation, modification or redistribution of this Apple software
+  --      constitutes acceptance of these terms.  If you do not agree with these terms,
+  --      please do not use, install, modify or redistribute this Apple software.
+  --
+  --      In consideration of your agreement to abide by the following terms, and subject
+  --      to these terms, Apple grants you a personal, non-exclusive license, under AppleUs
+  --      copyrights in this original Apple software (the "Apple Software"), to use,
+  --      reproduce, modify and redistribute the Apple Software, with or without
+  --      modifications, in source and/or binary forms; provided that if you redistribute
+  --      the Apple Software in its entirety and without modifications, you must retain
+  --      this notice and the following text and disclaimers in all such redistributions of
+  --      the Apple Software.  Neither the name, trademarks, service marks or logos of
+  --      Apple Computer, Inc. may be used to endorse or promote products derived from the
+  --      Apple Software without specific prior written permission from Apple.  Except as
+  --      expressly stated in this notice, no other rights or licenses, express or implied,
+  --      are granted by Apple herein, including but not limited to any patent rights that
+  --      may be infringed by your derivative works or by other works in which the Apple
+  --      Software may be incorporated.
+  --
+  --      The Apple Software is provided by Apple on an "AS IS" basis.  APPLE MAKES NO
+  --      WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED
+  --      WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+  --      PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN
+  --      COMBINATION WITH YOUR PRODUCTS.
+  --
+  --      IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR
+  --      CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+  --      GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  --      ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION
+  --      OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT
+  --      (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN
+  --      ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+--> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+	<HEAD>
+		<META NAME="generator" CONTENT="WebObjects 5.0">
+		<TITLE>FileUpload: Multiple Component OutputStream Upload in Form (Component Action with 'outputStream' Binding)</TITLE>
+	</HEAD>
+	<WEBOBJECT NAME=BodyTag>
+	
+		<CENTER>
+            <P>
+            <TABLE BORDER=0 CELLPADDING=5 CELLSPACING=10 WIDTH="80%">
+                <TR>
+                    <TD COLSPAN=3 ALIGN=LEFT VALIGN=TOP>
+                        <FONT FACE="Geneva, Arial" SIZE=3>
+                            <B> Multiple Component OutputStream Upload in Form (Component Action with 'outputStream' Binding) </B>
+                        </FONT>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD ALIGN=LEFT VALIGN=TOP WIDTH="50%">
+                        <P>
+                        <FONT FACE="Geneva, Arial" SIZE=1>
+                            This page demonstrates the use of several WOFileUpload elements using the 'outputStream' 
+			    binding inside of a page with other form elements using component actions.  This example 
+			    is designed to take an image as the uploaded file and then display the content along with 
+			    other form values after is has been submitted.  For the example, please upload an image 
+                            of some kind.
+			    <BR><BR>
+			    Multiple uploads with the 'outputStream' binding work basically like the single 
+			    upload. Just be careful to use a different java.io.OutputStream for each 
+			    file upload element.
+			    <BR><BR>
+			    The 'outputStream' binding has no restrictions. WOFileUpload elements using it can 
+			    be placed anywhere in the form, and work well with both multiple submit buttons and other 
+			    WOFileUpload elements.
+			    <BR><BR>
+			    This example defeats the purpose of using the outputStream binding as the data is 
+			    loaded into memory anyway by the ByteArrayOutputStream.
+			    <BR><BR>
+                            If you do not have any images, you can still test the upload by selecting
+                            any file (but, obviously, the image will not render).
+			</FONT>
+			</P>
+			
+			<CENTER><P>
+			<FONT FACE="Geneva, Arial" SIZE=1>
+                                <WEBOBJECT NAME=BackToMain></WEBOBJECT>
+			</FONT>
+			</P></CENTER>
+                    </TD>
+					
+                    <TD ALIGN=LEFT VALIGN=TOP WIDTH="5">&nbsp;</TD>
+					
+                    <TD ALIGN=LEFT VALIGN=TOP WIDTH="45%">
+                            <WEBOBJECT name=Form1>
+								<BR>
+                                <WEBOBJECT NAME=ShowForm>
+                       		    <FONT FACE="Geneva, Arial" SIZE=1>
+                                    <B>Enter your name</B>:<BR>
+                                    <WEBOBJECT NAME=TextField1></WEBOBJECT>
+								</FONT><P>
+                                <FONT FACE="Geneva, Arial" SIZE=1>
+                                    <B>Enter your favorite food</B>:<BR>
+                                    <WEBOBJECT NAME=Text1></WEBOBJECT>
+								</FONT><HR><WEBOBJECT NAME=Upload1></WEBOBJECT><HR><P>
+                                <FONT FACE="Geneva, Arial" SIZE=1>
+                                   <B>Select your favorite color</B>:<BR>
+                                    <WEBOBJECT NAME=Browser1></WEBOBJECT>
+								</FONT><P>
+                       		    <FONT FACE="Geneva, Arial" SIZE=1>
+                                    <B>Pick a number between 1 and 10</B>:<BR>
+                                    <WEBOBJECT NAME=PopUpButton1></WEBOBJECT>
+								</FONT><HR><WEBOBJECT NAME=Upload2></WEBOBJECT><HR><P>
+                                <FONT FACE="Geneva, Arial" SIZE=1>
+                                    <B>Check here if you are over 21</B>&nbsp;&nbsp;
+                                    <WEBOBJECT NAME=CheckBox1></WEBOBJECT>
+								</FONT><P>
+                                <FONT FACE="Geneva, Arial" SIZE=1>
+                                    <B>Gender:</B><BR>
+								</FONT>
+                                    <WEBOBJECT NAME=RadioButton1></WEBOBJECT>&nbsp;<FONT FACE="Geneva, Arial" SIZE=1>Male</FONT><P>
+                                    <WEBOBJECT NAME=RadioButton2></WEBOBJECT>&nbsp;<FONT FACE="Geneva, Arial" SIZE=1>Female</FONT><P>
+                                    <HR>
+                                    <WEBOBJECT NAME=Upload3></WEBOBJECT><HR><P>
+                                    <WEBOBJECT NAME=SubmitButton1></WEBOBJECT>
+				    <WEBOBJECT NAME=SubmitButton2></WEBOBJECT>
+				    <WEBOBJECT NAME=SubmitButton3></WEBOBJECT><BR>
+                                </WEBOBJECT>
+                                <WEBOBJECT NAME=ShowOutput>
+                                    <P>
+                                    <WEBOBJECT NAME=OutputInfo></WEBOBJECT>
+                                    </P>
+                                    <WEBOBJECT NAME=ShowImage1>
+					<HR>
+					<FONT SIZE=1 FACE="Geneva, Arial">
+					<B>File</B>: <WEBOBJECT NAME=FileName1></WEBOBJECT>
+					</FONT>
+					<P>
+					<WEBOBJECT NAME=DataImage1></WEBOBJECT>
+					<P>
+					<FONT SIZE=1 FACE="Geneva, Arial">
+					<B>Raw data (NSData)</B>:</FONT><BR>
+					<WEBOBJECT NAME=DataString1></WEBOBJECT>
+				    </WEBOBJECT>
+				    <WEBOBJECT NAME=ShowImage2>
+				    <HR>
+				    <FONT SIZE=1 FACE="Geneva, Arial">
+				    <B>File</B>: <WEBOBJECT NAME=FileName2></WEBOBJECT>
+				    </FONT>
+				    <P>
+				    <WEBOBJECT NAME=DataImage2></WEBOBJECT>
+				    <P>
+				    <FONT SIZE=1 FACE="Geneva, Arial"><B>Raw data (NSData)</B>:</FONT><BR>
+				    <WEBOBJECT NAME=DataString2></WEBOBJECT>
+				</WEBOBJECT>
+				<WEBOBJECT NAME=ShowImage3>
+				    <HR>
+				    <FONT SIZE=1 FACE="Geneva, Arial"><B>File</B>: <WEBOBJECT NAME=FileName3></WEBOBJECT>
+				    </FONT>
+				    <P>
+				    <WEBOBJECT NAME=DataImage3></WEBOBJECT>
+				    <P>
+				    <FONT SIZE=1 FACE="Geneva, Arial">
+				    <B>Raw data (NSData)</B>:</FONT><BR>
+				    <WEBOBJECT NAME=DataString3></WEBOBJECT>
+				</WEBOBJECT>
+				<P>
+                                <WEBOBJECT NAME=BackToForm></WEBOBJECT>
+			    </WEBOBJECT>
+			</WEBOBJECT>
+                   </TD>
+                </TR>
+            </TABLE>
+        </CENTER>		
+
+        <WEBOBJECT NAME=Footer></WEBOBJECT>
+
+	</WEBOBJECT>
+</HTML>
